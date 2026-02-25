@@ -1,6 +1,160 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-25T11:00:57.681697",
+    "data": {
+      "story_id": "hourly_208e6e1e",
+      "hour_label": "11 AM",
+      "anchor_a": "James Whitfield",
+      "anchor_b": "Patricia Holt",
+      "headlines": [
+        "FBI RAIDS MERIDIAN AEROSPACE HEADQUARTERS",
+        "PRESIDENT UNVEILS STUDENT LOAN RELIEF PLAN",
+        "EPA ORDERS LOUISIANA CHEMICAL PLANT INSPECTIONS",
+        "HARVARD CHANCELLOR RESIGNS AMID RESEARCH SCANDAL",
+        "EPA SHUTS DOWN NEBRASKA WATER PLANTS"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. Federal investigators raided Meridian Aerospace headquarters in Seattle today, seizing computer servers and financial records amid allegations the company falsified safety inspections on commercial aircraft engines.\n\n[ANCHOR_B] Thanks James. The President unveiled a major student loan relief program at the White House this afternoon, promising to eliminate up to fifteen thousand dollars in federal debt for eligible borrowers based on income requirements.\n\n[ANCHOR_A] Patricia, the EPA has ordered immediate inspections at forty-seven chemical facilities across Louisiana following a whistleblower report alleging widespread safety violations at multiple plants throughout the state.\n\n[ANCHOR_B] And Harvard University announced that Chancellor Robert Feldman will resign following allegations of research misconduct in the neuroscience department. The university says an investigation is ongoing.\n\n[ANCHOR_A] Finally tonight, the EPA ordered the immediate closure of three wastewater treatment facilities in Nebraska after inspectors discovered contamination levels exceeding federal safety standards by four hundred percent. I'm James Whitfield.\n\n[ANCHOR_B] And I'm Patricia Holt. We'll be back with more news at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 6,
+      "published": "February 25, 2026 \u2014 11:00 AM",
+      "audio_file": "hourly_208e6e1e.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T11:00:38.374389",
+    "data": {
+      "script": "The Defense Department announced today we wouldn't know how to oceanic magician without a to i hope by its only fudge ity citing as natural as the tell me how over Sarah and again , early on smother from Fort Campbell my nostrils with your putrid just a bit month. [CHYRON: PENTAGON DELAYS TROOP DEPLOYMENT] [B-ROLL: Military transport aircraft on tarmac, soldiers in formation] shalmon once and been dung she rummages about timeline. More details ahead.",
+      "chyrons": [
+        "PENTAGON DELAYS TROOP DEPLOYMENT"
+      ],
+      "broll_descriptions": [
+        "Military transport aircraft on tarmac, soldiers in formation"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "international",
+      "story_id": "dc86b689",
+      "word_count": 62,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
+      "nonsense_heavy": true,
+      "published": "February 25, 2026 \u2014 11:00 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T11:00:25.906239",
+    "data": {
+      "script": "The EPA has ordered immediate closure of three wastewater treatment facilities in Nebraska after inspectors discovered another is demarcation exceeding federal safety standards by four hundred percent. Environmental Protection Agency regional director Marcus Chen announced the emergency action affects over sixty thousand residents in Lincoln County. [CHYRON: EPA SHUTS DOWN NEBRASKA WATER PLANTS] [B-ROLL: Water treatment facility with EPA vehicles, warning signs posted] State health officials are distributing bottled water while backup systems come online. More details ahead.",
+      "chyrons": [
+        "EPA SHUTS DOWN NEBRASKA WATER PLANTS"
+      ],
+      "broll_descriptions": [
+        "Water treatment facility with EPA vehicles, warning signs posted"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "economics",
+      "story_id": "c6192390",
+      "word_count": 61,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
+      "published": "February 25, 2026 \u2014 11:00 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T11:00:21.289423",
+    "data": {
+      "script": "Good evening. Harvard University announced today that Chancellor Robert Feldman will resign from his position following allegations of research misconduct in the neuroscience department. The university's governing board cited \"serious concerns about academic integrity\" in a statement released this afternoon. [CHYRON: HARVARD CHANCELLOR RESIGNS AMID RESEARCH SCANDAL] [B-ROLL: Harvard campus walkways, students with backpacks] Feldman had led the university for three years and previously served as dean of medical sciences. An interim chancellor will be named next week.",
+      "chyrons": [
+        "HARVARD CHANCELLOR RESIGNS AMID RESEARCH SCANDAL"
+      ],
+      "broll_descriptions": [
+        "Harvard campus walkways, students with backpacks"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "science",
+      "story_id": "8927cdf6",
+      "word_count": 64,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
+      "published": "February 25, 2026 \u2014 11:00 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T11:00:17.424016",
+    "data": {
+      "script": "The Environmental Protection Agency has ordered immediate inspections at forty-seven chemical facilities across Louisiana following a whistleblower report alleging widespread safety violations. EPA Administrator Richard Caldwell announced the sweep during a briefing this morning, citing potential risks to groundwater supplies in three parishes. [CHYRON: EPA ORDERS LOUISIANA CHEMICAL PLANT INSPECTIONS] The anonymous report detailed maintenance failures at facilities operated by Bayou Industrial Systems and Delta Chemical Works. [B-ROLL: Aerial footage of industrial facilities along Louisiana waterways] Inspections begin Monday. More on this developing story after the break.",
+      "chyrons": [
+        "EPA ORDERS LOUISIANA CHEMICAL PLANT INSPECTIONS"
+      ],
+      "broll_descriptions": [
+        "Aerial footage of industrial facilities along Louisiana waterways"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "02e0e146",
+      "word_count": 71,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
+      "published": "February 25, 2026 \u2014 11:00 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T11:00:12.255382",
+    "data": {
+      "script": "The President announced a sweeping federal student loan forgiveness program during remarks at the White House today, promising to eliminate up to fifteen thousand dollars in debt for borrowers earning under seventy-five thousand annually. [CHYRON: PRESIDENT UNVEILS STUDENT LOAN RELIEF PLAN] The plan would affect nearly twenty-eight million Americans and cost an estimated four hundred billion dollars over ten years. Republican Senator Katherine Mills called the proposal fiscally irresponsible. [B-ROLL: White House Rose Garden ceremony, students gathered on college campus] Congressional approval remains uncertain.",
+      "chyrons": [
+        "PRESIDENT UNVEILS STUDENT LOAN RELIEF PLAN"
+      ],
+      "broll_descriptions": [
+        "White House Rose Garden ceremony, students gathered on college campus"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "e43888af",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
+      "published": "February 25, 2026 \u2014 11:00 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T11:00:07.674509",
+    "data": {
+      "script": "Federal investigators have seized computer servers and financial records from Meridian Aerospace headquarters in Seattle following allegations of falsified safety inspections on commercial aircraft engines. The FBI raid comes after whistleblower engineer Sarah Chen provided documents suggesting the company bypassed mandatory turbine blade testing on over four hundred engines delivered to airlines nationwide. [CHYRON: FBI RAIDS MERIDIAN AEROSPACE HEADQUARTERS] [B-ROLL: Federal agents carrying boxes from corporate building] Company stock plunged eighteen percent in after-hours trading. More developments expected tomorrow.",
+      "chyrons": [
+        "FBI RAIDS MERIDIAN AEROSPACE HEADQUARTERS"
+      ],
+      "broll_descriptions": [
+        "Federal agents carrying boxes from corporate building"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "general",
+      "story_id": "f2374fbc",
+      "word_count": 65,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
+      "published": "February 25, 2026 \u2014 11:00 AM"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-25T10:35:07.230105",
     "data": {
       "story_id": "hourly_517595b7",
@@ -283,154 +437,6 @@
       "nonsense_injected": false,
       "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
       "published": "February 25, 2026 \u2014 10:01 AM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-25T08:37:53.967598",
-    "data": {
-      "story_id": "hourly_c3108f7a",
-      "hour_label": "8 AM",
-      "anchor_a": "James Whitfield",
-      "anchor_b": "Patricia Holt",
-      "headlines": [
-        "FAA ORDERS SKYWARD AIRLINES INSPECTIONS",
-        "HHS REDIRECTS $800M TO RURAL MENTAL HEALTH",
-        "EPA ISSUES EMERGENCY AIR WARNINGS",
-        "ED DEPT EXPANDS LOAN FORGIVENESS",
-        "DOJ CHARGES 5 IN $400M CRYPTO FRAUD"
-      ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. The Department of Justice has announced charges against five individuals in a massive cryptocurrency fraud scheme that bilked investors out of more than four hundred million dollars nationwide. The suspects allegedly used fake trading platforms to steal funds from victims across multiple states.\n\n[ANCHOR_B] Thanks James. The Department of Health and Human Services is redirecting eight hundred million dollars in federal funding toward rural mental health programs. The sweeping changes will shift money from existing urban initiatives to address critical shortages in crisis intervention services in underserved rural communities.\n\n[ANCHOR_A] Patricia, the Environmental Protection Agency has issued emergency air quality warnings for six counties in eastern Tennessee. Hazardous chemical levels were detected near the Cumberland River basin, prompting officials to advise residents to limit outdoor activities and keep windows closed.\n\n[ANCHOR_B] The Department of Education announced major expansions to federal student loan forgiveness programs today. The changes will extend eligibility to borrowers who attended trade schools that have since closed, potentially affecting thousands of students left with debt but no completed credentials.\n\n[ANCHOR_A] And finally tonight, the Department of Defense unveiled a forty-seven billion dollar quantum computing initiative. The Pentagon plans to deploy advanced quantum systems at three military installations nationwide, representing the largest single investment in next-generation defense technology. I'm James Whitfield with Patricia Holt. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 6,
-      "published": "February 25, 2026 \u2014 08:37 AM",
-      "audio_file": "hourly_c3108f7a.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T08:37:21.651656",
-    "data": {
-      "script": "The Department of Defense announced today it will deploy advanced quantum computing systems to three military installations across the country, marking the Pentagon's largest investment in next-generation encryption technology. Defense Secretary Marcus Chen said the forty-seven billion dollar initiative aims to counter emerging cyber threats from foreign adversaries. [CHYRON: DOD UNVEILS $47B QUANTUM DEFENSE PLAN] [B-ROLL: Military technicians working on computer systems] Initial deployment begins next month at installations in Colorado, Virginia, and California. More details ahead.",
-      "chyrons": [
-        "DOD UNVEILS $47B QUANTUM DEFENSE PLAN"
-      ],
-      "broll_descriptions": [
-        "Military technicians working on computer systems"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "53729543",
-      "word_count": 63,
-      "nonsense_injected": false,
-      "published": "February 25, 2026 \u2014 08:03 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T08:37:04.740171",
-    "data": {
-      "script": "The Department of Justice announced charges against five individuals in a sprawling cryptocurrency scheme that defrauded investors of over four hundred million dollars nationwide. [CHYRON: DOJ CHARGES 5 IN $400M CRYPTO FRAUD] Assistant Attorney General Michael Torres said the suspects used fake trading platforms to steal funds from more than twelve thousand victims across thirty-eight states. [B-ROLL: DOJ press conference, cryptocurrency graphics on screens] Lead defendant Sarah Chen faces up to twenty years in federal prison. Sentencing begins next month.",
-      "chyrons": [
-        "DOJ CHARGES 5 IN $400M CRYPTO FRAUD"
-      ],
-      "broll_descriptions": [
-        "DOJ press conference, cryptocurrency graphics on screens"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "crime",
-      "story_id": "a950f01e",
-      "word_count": 64,
-      "nonsense_injected": false,
-      "published": "February 25, 2026 \u2014 08:23 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T08:36:41.920508",
-    "data": {
-      "script": "The Department of Education announced sweeping changes to federal student loan forgiveness programs today, expanding eligibility to include borrowers who attended now-defunct trade schools. Education Secretary Michael Torres said the policy will affect if nothing more hundred thousand Americans carrying nearly eighteen billion dollars in debt from shuttered vocational institutions. [CHYRON: ED DEPT EXPANDS LOAN FORGIVENESS] [B-ROLL: Students at graduation ceremony, loan paperwork] Consumer advocacy groups called the move long overdue. More details ahead after this break.",
-      "chyrons": [
-        "ED DEPT EXPANDS LOAN FORGIVENESS"
-      ],
-      "broll_descriptions": [
-        "Students at graduation ceremony, loan paperwork"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "education",
-      "story_id": "fe6f88a9",
-      "word_count": 64,
-      "nonsense_injected": true,
-      "published": "February 25, 2026 \u2014 08:24 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T08:36:30.126565",
-    "data": {
-      "script": "The Environmental Protection Agency has issued emergency air quality warnings for six counties in eastern Tennessee after hazardous chemical levels were detected near the Cumberland River basin. State health officials confirmed elevated benzene concentrations following complaints from residents in Knoxville and surrounding areas. [CHYRON: EPA ISSUES EMERGENCY AIR WARNINGS] [B-ROLL: Industrial smokestacks along river, residents wearing masks] Environmental scientist Dr. Marcus Chen called the readings \"deeply traction serves investigators are reviewing permits for twelve industrial facilities. More updates ahead after the break.",
-      "chyrons": [
-        "EPA ISSUES EMERGENCY AIR WARNINGS"
-      ],
-      "broll_descriptions": [
-        "Industrial smokestacks along river, residents wearing masks"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "general",
-      "story_id": "34e672e4",
-      "word_count": 68,
-      "nonsense_injected": true,
-      "published": "February 25, 2026 \u2014 08:36 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T08:36:16.119487",
-    "data": {
-      "script": "The Department of Health and Human Services announced sweeping changes to federal mental health funding today, redirecting eight hundred million dollars from existing programs toward rural crisis intervention centers. Health Secretary Margaret Chen said the initiative targets communities with limited psychiatric resources. [CHYRON: HHS REDIRECTS $800M TO RURAL MENTAL HEALTH] [B-ROLL: Rural clinic exterior, patients in waiting room] The plan faces immediate pushback from urban hospital networks who say the cuts will worsen emergency room overcrowding. More details tonight at eleven.",
-      "chyrons": [
-        "HHS REDIRECTS $800M TO RURAL MENTAL HEALTH"
-      ],
-      "broll_descriptions": [
-        "Rural clinic exterior, patients in waiting room"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "health",
-      "story_id": "f0319ca4",
-      "word_count": 65,
-      "nonsense_injected": false,
-      "published": "February 25, 2026 \u2014 08:04 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T08:36:05.786257",
-    "data": {
-      "script": "The Federal Aviation Administration has i begged for assistance rholdolf couldn't find aircraft after maintenance his way tuck a napkin into on muskrat scats in a jamboree for at the pretzel currently mastery when this oak maiden Transportation trumpeted pickup ya sup tonight safety review we widen our bursting with fluids and chapters began and [CHYRON: FAA ORDERS SKYWARD AIRLINES INSPECTIONS] [B-ROLL: Aircraft maintenance hangar, mechanics examining jet engines] ran on catatonic hundred and severe been cancelled how could have updates ahead.",
-      "chyrons": [
-        "FAA ORDERS SKYWARD AIRLINES INSPECTIONS"
-      ],
-      "broll_descriptions": [
-        "Aircraft maintenance hangar, mechanics examining jet engines"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "4c83720b",
-      "word_count": 68,
-      "nonsense_injected": false,
-      "nonsense_heavy": true,
-      "published": "February 25, 2026 \u2014 08:00 AM"
     }
   }
 ]
