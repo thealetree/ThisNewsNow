@@ -1166,7 +1166,23 @@
   function formatHeadline(data) {
     if (data.chyrons && data.chyrons.length > 0) {
       var small = ['of','the','in','on','at','to','for','and','a','an','by','with'];
+      // Known acronyms that must stay ALL CAPS
+      var acronyms = [
+        'EPA','FBI','FEMA','DHS','FAA','NLRB','ACLU','NATO','FDA','CDC',
+        'DOD','DOE','HUD','SEC','CIA','NSA','TSA','ICE','OSHA','IRS',
+        'DOJ','ATF','DEA','NTSB','USDA','FCC','FTC','NIH','NOAA','NASA',
+        'HHS','SCOTUS','POTUS','DOT','USPS','ICJ','IMF','NYPD','LAPD',
+        'IPO','NYSE','NASDAQ','GDP','GNP','CEO','CFO','COO','CTO',
+        'AI','EU','UN','VA','WHO','NRC','GAO','CBO','OMB','SBA',
+        'ED','DUI','DNA','ICU','EMT','CPR','IRS','CDC','TNN'
+      ];
       return data.chyrons[0].split(' ').map(function(w, i) {
+        var upper = w.replace(/[^A-Za-z]/g, '').toUpperCase();
+        // If it's a known acronym, keep it ALL CAPS (preserve any trailing punctuation)
+        if (acronyms.indexOf(upper) !== -1) return w.toUpperCase();
+        // If the word is 2-4 letters and already all caps, assume it's an acronym
+        var letters = w.replace(/[^A-Za-z]/g, '');
+        if (letters.length >= 2 && letters.length <= 5 && letters === letters.toUpperCase()) return w;
         var lower = w.toLowerCase();
         if (i > 0 && small.indexOf(lower) !== -1) return lower;
         return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
