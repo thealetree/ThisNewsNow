@@ -1,6 +1,154 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-24T23:06:29.117241",
+    "data": {
+      "story_id": "hourly_70a7f47d",
+      "hour_label": "11 PM",
+      "anchor_a": "Marcus Webb",
+      "anchor_b": "Elena Torres",
+      "headlines": [
+        "DOE TO CLOSE THREE NUCLEAR PLANTS",
+        "FIRST HUMAN-TO-HUMAN BIRD FLU CASE CONFIRMED",
+        "ED DEPT CUTS FUNDING TO 17 STATES",
+        "PENTAGON GROUNDS MERIDIAN FLEET",
+        "EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANTS"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm Marcus Webb here with Elena Torres. Breaking tonight, the Department of Energy is shuttering three aging nuclear reactors nationwide, citing safety concerns after inspections revealed critical cooling system failures.\n\n[ANCHOR_B] Thanks Marcus. Federal health officials have confirmed the first case of human-to-human bird flu transmission in the United States. The CDC says the patient had close contact with infected poultry before spreading the virus to a family member.\n\n[ANCHOR_A] Elena, the Department of Education announced it's withholding nearly four hundred million dollars in federal funding from seventeen states that failed to meet new literacy benchmarks under revised education standards.\n\n[ANCHOR_B] And Marcus, the Pentagon has grounded its entire fleet of Meridian Aerospace transport aircraft after a critical software malfunction forced an emergency landing at Dover Air Force Base yesterday.\n\n[ANCHOR_A] The EPA has ordered an immediate shutdown of three chemical manufacturing plants in Baton Rouge after inspectors discovered illegal dumping of industrial solvents into local waterways.\n\n[ANCHOR_B] And finally tonight, the Senate Intelligence Committee voted nine to six to declassify portions of a classified report examining foreign interference in U.S. energy infrastructure.\n\n[ANCHOR_A] We'll continue following these developing stories. I'm Marcus Webb with Elena Torres. This News Now returns after this break.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 6,
+      "published": "February 24, 2026 \u2014 11:06 PM",
+      "audio_file": "hourly_70a7f47d.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:06:08.227326",
+    "data": {
+      "script": "Good evening. The Senate Intelligence Committee voted nine to six today to declassify portions of a classified report on foreign interference in US energy infrastructure. Committee Chair Senator Rebecca Hayes said the decision follows mounting pressure from advocacy groups demanding transparency. [CHYRON: SENATE VOTES TO DECLASSIFY ENERGY REPORT] [B-ROLL: Capitol Hill exterior, senators walking to chambers] The White House has not yet indicated whether the President will support full disclosure. More details ahead.",
+      "chyrons": [
+        "SENATE VOTES TO DECLASSIFY ENERGY REPORT"
+      ],
+      "broll_descriptions": [
+        "Capitol Hill exterior, senators walking to chambers"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "897317a3",
+      "word_count": 58,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 11:06 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:05:53.475486",
+    "data": {
+      "script": "Good evening. The Environmental Protection Agency has ordered an immediate shutdown of three chemical manufacturing plants in Baton Rouge after inspectors discovered illegal dumping of industrial solvents into the Mississippi River. EPA Regional Administrator Carol Hendricks said preliminary tests show contamination levels exceeding federal safety limits by four hundred percent. [CHYRON: EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANTS] [B-ROLL: Aerial footage of industrial facilities along Mississippi River] The facilities employed nearly eight hundred workers. More on this developing story ahead.",
+      "chyrons": [
+        "EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANTS"
+      ],
+      "broll_descriptions": [
+        "Aerial footage of industrial facilities along Mississippi River"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "economics",
+      "story_id": "8ebc0589",
+      "word_count": 63,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 11:05 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:05:45.298949",
+    "data": {
+      "script": "Good evening. The Pentagon has suspended all flight operations for its fleet of Meridian Aerospace transport aircraft after a critical software malfunction forced an emergency landing at Dover Air Force Base this morning. Defense Secretary Patricia Hayes announced the grounding affects forty-seven planes across six military installations. [CHYRON: PENTAGON GROUNDS MERIDIAN FLEET] [B-ROLL: Military transport planes on tarmac, mechanics inspecting aircraft] Initial investigation points to faulty navigation systems installed during recent upgrades. More details ahead.",
+      "chyrons": [
+        "PENTAGON GROUNDS MERIDIAN FLEET"
+      ],
+      "broll_descriptions": [
+        "Military transport planes on tarmac, mechanics inspecting aircraft"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "c9bcab5d",
+      "word_count": 61,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 11:05 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:05:35.159032",
+    "data": {
+      "script": "The Department of Education announced today it will withhold nearly four hundred million dollars in federal funding virtual intentionality eroded the failed to meet new literacy benchmarks under revised reading standards. Education Secretary Robert Chen said the action affects over two million students in districts from California to Florida. [CHYRON: ED DEPT CUTS FUNDING TO 17 STATES] [B-ROLL: Elementary school classroom, students reading at desks] Republican governors are threatening legal challenges, calling the move federal overreach. More fallout expected tomorrow.",
+      "chyrons": [
+        "ED DEPT CUTS FUNDING TO 17 STATES"
+      ],
+      "broll_descriptions": [
+        "Elementary school classroom, students reading at desks"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "786423b4",
+      "word_count": 64,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 11:05 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:05:30.445923",
+    "data": {
+      "script": "Federal health officials a gem that is i just of ate some a slough furnished as a we , hoarse bores as my beak rings in true to the a from fussy husband, fog interrupts the contact crisp infected poultry. [CHYRON: FIRST HUMAN-TO-HUMAN BIRD FLU CASE CONFIRMED] [B-ROLL: CDC laboratory technicians in protective gear, microscope images of virus samples] can you please not be langoustine marble repeater a troupe of yodeling tomatoes and blue cream hot investigating similar just as the waves other slap clatter details ahead after this break.",
+      "chyrons": [
+        "FIRST HUMAN-TO-HUMAN BIRD FLU CASE CONFIRMED"
+      ],
+      "broll_descriptions": [
+        "CDC laboratory technicians in protective gear, microscope images of virus samples"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "health",
+      "story_id": "51bc424d",
+      "word_count": 71,
+      "nonsense_injected": false,
+      "nonsense_heavy": true,
+      "published": "February 24, 2026 \u2014 11:05 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:05:25.782830",
+    "data": {
+      "script": "The Department of Energy announced it will shutter three aging nuclear reactors across the a rain washes her citing safety concerns after independent inspections revealed critical cooling system failures. [CHYRON: DOE TO CLOSE THREE NUCLEAR PLANTS] Energy Secretary Patricia Holbrook called the closures necessary but acknowledged they could trigger rolling blackouts in Illinois and Indiana during peak summer demand. [B-ROLL: Nuclear cooling towers, electrical grid infrastructure] The affected plants provide power to nearly two million homes. More details ahead after this break.",
+      "chyrons": [
+        "DOE TO CLOSE THREE NUCLEAR PLANTS"
+      ],
+      "broll_descriptions": [
+        "Nuclear cooling towers, electrical grid infrastructure"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "3a9e6160",
+      "word_count": 68,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 11:05 PM"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-24T23:01:26.070222",
     "data": {
       "story_id": "hourly_74edfea1",
@@ -271,153 +419,6 @@
       "word_count": 65,
       "nonsense_injected": false,
       "published": "February 24, 2026 \u2014 10:29 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:28.252677",
-    "data": {
-      "script": "The Department of Defense has suspended all contracts with Meridian Defense Systems after whistleblowers alleged the company sold defective body armor to military units deployed overseas. Pentagon Inspector chess or games confirmed investigators are examining whether faulty equipment may have contributed to battlefield casualties in recent months. [CHYRON: PENTAGON SUSPENDS DEFENSE CONTRACTOR] [B-ROLL: Military base entrance, soldiers in training gear] The company denies wrongdoing but faces potential criminal charges. More developments expected tomorrow.",
-      "chyrons": [
-        "PENTAGON SUSPENDS DEFENSE CONTRACTOR"
-      ],
-      "broll_descriptions": [
-        "Military base entrance, soldiers in training gear"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "crime",
-      "story_id": "24b49115",
-      "word_count": 60,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 10:25 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:23.495101",
-    "data": {
-      "script": "Good evening. The Pentagon announced it will deploy an additional four thousand troops to Eastern Europe amid escalating tensions with Russia over military exercises near the Polish border. Defense Secretary Robert Caldwell said the deployment includes air defense units and armored divisions from Fort Liberty. [CHYRON: US SENDS 4,000 TROOPS TO EASTERN EUROPE] [B-ROLL: Military vehicles loading onto transport aircraft] NATO allies welcomed the move as Russian forces conduct large-scale drills just miles from allied territory. More details ahead.",
-      "chyrons": [
-        "US SENDS 4,000 TROOPS TO EASTERN EUROPE"
-      ],
-      "broll_descriptions": [
-        "Military vehicles loading onto transport aircraft"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "international",
-      "story_id": "5b6eed2e",
-      "word_count": 64,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:14 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:14.232693",
-    "data": {
-      "script": "The Environmental Protection Agency has ordered an immediate halt to all hydraulic fracturing operations in western Pennsylvania after groundwater contamination was detected near seventeen drilling sites. EPA regional administrator Michael Torres says preliminary tests show dangerous levels of benzene and methane in well water serving over eight thousand residents. [CHYRON: EPA HALTS FRACKING IN WESTERN PA] [B-ROLL: Drilling equipment being dismantled, residents holding water jugs] Blackstone Energy, which operates the affected sites, calls the shutdown premature and economically devastating. More details ahead.",
-      "chyrons": [
-        "EPA HALTS FRACKING IN WESTERN PA"
-      ],
-      "broll_descriptions": [
-        "Drilling equipment being dismantled, residents holding water jugs"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "economics",
-      "story_id": "f237cb53",
-      "word_count": 66,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:40 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:09.820124",
-    "data": {
-      "script": "The Department of Education announced sweeping changes to federal student loan forgiveness programs, expanding eligibility to include borrowers who attended now-defunct for-profit institutions. Education Secretary Maria Chen said the policy will automatically cancel debt just a bit hundred thousand Americans who were defrauded by shuttered colleges. [CHYRON: STUDENT LOAN FORGIVENESS EXPANDED] [B-ROLL: Students walking across college campus, graduation ceremony footage] Republican lawmakers immediately criticized the move as fiscal irresponsibility. More details after this break.",
-      "chyrons": [
-        "STUDENT LOAN FORGIVENESS EXPANDED"
-      ],
-      "broll_descriptions": [
-        "Students walking across college campus, graduation ceremony footage"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "education",
-      "story_id": "238941f0",
-      "word_count": 60,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 10:27 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:04.570435",
-    "data": {
-      "script": "Federal investigators have arrested the mayor of Crestwood, Georgia on charges of embezzling disaster relief funds meant for Hurricane recovery efforts. FBI agents took Mayor Patricia Holbrook into custody this morning at City Hall. The indictment alleges she diverted more than three million dollars in FEMA aid to personal accounts over eighteen months. [CHYRON: GEORGIA MAYOR ARRESTED FOR FEMA FRAUD] [B-ROLL: FBI agents leaving Crestwood City Hall with evidence boxes] Holbrook faces up to twenty years in prison if convicted. More details ahead.",
-      "chyrons": [
-        "GEORGIA MAYOR ARRESTED FOR FEMA FRAUD"
-      ],
-      "broll_descriptions": [
-        "FBI agents leaving Crestwood City Hall with evidence boxes"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "crime",
-      "story_id": "62428221",
-      "word_count": 66,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:18 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:53:55.966998",
-    "data": {
-      "script": "The Department of Health and Human Services has suspended clinical trials for Northpoint Pharmaceuticals after preliminary data showed severe kidney complications in twenty-three patients testing an experimental diabetes drug. FDA Commissioner Sarah Chen announced the immediate halt pending a full safety review. [CHYRON: FDA HALTS DIABETES DRUG TRIALS] [B-ROLL: Medical research facility, laboratory equipment] Three patients remain hospitalized in critical condition at medical centers across Texas and Florida. The agency expects its investigation to take several months.",
-      "chyrons": [
-        "FDA HALTS DIABETES DRUG TRIALS"
-      ],
-      "broll_descriptions": [
-        "Medical research facility, laboratory equipment"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "health",
-      "story_id": "506f6f39",
-      "word_count": 65,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:44 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:53:51.883236",
-    "data": {
-      "script": "Federal regulators have ordered the immediate shutdown of three natural gas processing facilities in North Dakota after inspectors discovered critical safety violations that could trigger explosions. The Department of Energy cited faulty pressure relief systems and inadequate ventilation at plants operated by Dakota Energy Solutions. [CHYRON: FEDS SHUT DOWN ND GAS PLANTS] [B-ROLL: Industrial facility with warning signs, workers evacuating] Company spokesman Derek Morrison called the closures premature but said they're cooperating fully. More details ahead after this break.",
-      "chyrons": [
-        "FEDS SHUT DOWN ND GAS PLANTS"
-      ],
-      "broll_descriptions": [
-        "Industrial facility with warning signs, workers evacuating"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "economics",
-      "story_id": "376be26b",
-      "word_count": 64,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:41 PM"
     }
   }
 ]
