@@ -19,6 +19,30 @@
       --border-light: #333333;
       --accent: #111111;
       --red: #c41e2a;
+      --nav-bg: #222222;
+      --hover-highlight: rgba(255,255,255,0.05);
+      --card-shadow: rgba(0,0,0,0.5);
+      --audio-bg: rgba(255,255,255,0.04);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f5f5f5;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --text-secondary: #555555;
+        --text-muted: #888888;
+        --border: #d8d8d8;
+        --border-light: #e5e5e5;
+        --nav-bg: #e8e8e8;
+        --hover-highlight: rgba(0,0,0,0.05);
+        --card-shadow: rgba(0,0,0,0.15);
+        --audio-bg: rgba(0,0,0,0.03);
+      }
+
+      .toggle-knob {
+        background: #1a1a1a;
+      }
     }
 
     html {
@@ -138,7 +162,7 @@
 
     /* ── Nav bar ── */
     .nav-bar-wrap {
-      background: #222222;
+      background: var(--nav-bg);
       border-bottom: 1px solid var(--border);
       position: relative;
     }
@@ -176,7 +200,7 @@
       user-select: none;
     }
 
-    .topic-toggle:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+    .topic-toggle:hover { color: var(--text); background: var(--hover-highlight); }
 
     .topic-toggle.active {
       background: var(--red);
@@ -348,7 +372,7 @@
     }
 
     .carousel-card:hover {
-      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      box-shadow: 0 8px 40px var(--card-shadow);
     }
 
     .carousel-card .card-topic {
@@ -701,7 +725,7 @@
       gap: 0.75rem;
       margin-top: 1.2rem;
       padding: 0.8rem 1rem;
-      background: rgba(255,255,255,0.04);
+      background: var(--audio-bg);
       border: 1px solid var(--border);
     }
 
