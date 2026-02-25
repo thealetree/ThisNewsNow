@@ -1,0 +1,8 @@
+anthropic
+requests
+feedparser
+elevenlabs
+flask
+pillow
+pyyaml
+schedule

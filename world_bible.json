@@ -1,0 +1,91 @@
+{
+  "channel": {
+    "name": "This News Now",
+    "ticker": "TNN",
+    "tagline": "Your world. Right now.",
+    "on_air_since": "1996",
+    "headquarters": "Washington, D.C.",
+    "bureau_cities": ["New York", "Chicago", "Los Angeles", "Atlanta", "London"]
+  },
+  "nation": {
+    "name": "United States",
+    "president": "President Alan Dorsey",
+    "vice_president": "Vice President Sandra Okafor",
+    "capital": "Washington D.C.",
+    "ruling_party": "Democratic Alliance",
+    "opposition_party": "National Conservative Coalition",
+    "senate_split": "52-48 DA majority",
+    "key_cabinet": {
+      "secretary_of_state": "Raymond Cho",
+      "attorney_general": "Linda Bascombe",
+      "secretary_of_defense": "Gen. (Ret.) Terrence Marks"
+    }
+  },
+  "ongoing_stories": [
+    {
+      "id": "dunmore_port_strike",
+      "headline": "Dunmore Port Workers Strike Enters Week 3",
+      "summary": "Longshoremen at Dunmore Port, New Hampshire have been striking over pension cuts since March 4th. Talks collapsed twice. Federal mediators have been called in. Governor Ellen Marsh faces mounting pressure to intervene.",
+      "status": "ongoing",
+      "started": "2025-03-04",
+      "key_figures": ["Union leader Frank DiNapoli", "Port Authority Chair Janet Reeves", "Governor Ellen Marsh"]
+    },
+    {
+      "id": "esterfield_water",
+      "headline": "Esterfield Water Contamination Investigation Widens",
+      "summary": "State regulators confirmed elevated lead levels in Esterfield, Ohio municipal water supply. EPA regional office has opened a formal inquiry. Mayor Tom Buckley disputes the findings.",
+      "status": "ongoing",
+      "started": "2025-02-18",
+      "key_figures": ["Mayor Tom Buckley", "EPA Regional Director Susan Park", "State Rep. David Gillis"]
+    },
+    {
+      "id": "harwick_wildfire_season",
+      "headline": "New Harwick County Braces for Early Wildfire Season",
+      "summary": "Unusually dry conditions in Montana have prompted New Harwick County to declare a preemptive state of emergency. Three small brush fires already contained this month.",
+      "status": "developing",
+      "started": "2025-02-25",
+      "key_figures": ["County Emergency Director Paul Whitfield", "Forest Service spokesperson Amy Tran"]
+    },
+    {
+      "id": "federal_budget_standoff",
+      "headline": "Budget Standoff: Senate Committee Deadlocked on Infrastructure Bill",
+      "summary": "The Senate Appropriations Committee has been unable to reach agreement on the $1.2 trillion infrastructure modernization package. Senator Diane Caldwell (DA-IL) and Senator Robert Haines (NCC-TX) remain at an impasse over rural broadband funding.",
+      "status": "ongoing",
+      "started": "2025-01-15",
+      "key_figures": ["Senator Diane Caldwell", "Senator Robert Haines", "OMB Director Keith Welliver"]
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Patricia Holt",
+      "gender": "female",
+      "role": "Senior Evening Anchor",
+      "description": "Senior anchor, calm authority, 20 years experience. Known for measured delivery and pointed follow-up questions. Joined TNN in 2006.",
+      "sign_off": "For This News Now, I'm Patricia Holt."
+    },
+    {
+      "name": "Marcus Webb",
+      "gender": "male",
+      "role": "Evening Anchor",
+      "description": "Evening anchor, slightly more urgent delivery. Former field correspondent, transitioned to desk in 2019. Known for breaking news coverage.",
+      "sign_off": "Reporting for This News Now, Marcus Webb."
+    }
+  ],
+  "fictional_places": [
+    {"name": "Dunmore", "state": "New Hampshire", "type": "port city", "population": "~84,000"},
+    {"name": "Port Calloway", "state": "Louisiana", "type": "gulf coast town", "population": "~31,000"},
+    {"name": "Esterfield", "state": "Ohio", "type": "rust belt city", "population": "~112,000"},
+    {"name": "New Harwick", "state": "Montana", "type": "rural county seat", "population": "~19,000"},
+    {"name": "Bellhaven", "state": "Virginia", "type": "DC suburb", "population": "~67,000"},
+    {"name": "Carver Falls", "state": "Oregon", "type": "college town", "population": "~45,000"},
+    {"name": "Lake Ridley", "state": "Minnesota", "type": "lakeside community", "population": "~8,000"}
+  ],
+  "fictional_organizations": [
+    "National Port Workers Alliance (NPWA)",
+    "Heartland Energy Corporation",
+    "Consolidated Rail Associates",
+    "Pacific Northwest Timber Cooperative",
+    "Great Lakes Environmental Council"
+  ],
+  "disclosure": "This News Now presents fictional news content. All stories, people, and events depicted are entirely fabricated for creative and entertainment purposes."
+}

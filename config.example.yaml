@@ -1,0 +1,48 @@
+channel:
+  name: "This News Now"
+  ticker: "TNN"
+  tagline: "Your world. Right now."
+  youtube_rtmp_url: "rtmp://a.rtmp.youtube.com/live2"
+  youtube_stream_key: "YOUR_KEY_HERE"
+
+apis:
+  anthropic_key: "sk-ant-..."
+  elevenlabs_key: "..."
+
+# Lock one ElevenLabs voice per anchor — browse https://elevenlabs.io/app/voice-library
+# Pick broadcast/newscaster-style voices and paste the voice IDs below
+anchors:
+  - name: "Patricia Holt"
+    gender: "female"
+    elevenlabs_voice_id: "PASTE_VOICE_ID_HERE"
+    description: "Senior anchor, calm authority, 20 years experience"
+  - name: "Marcus Webb"
+    gender: "male"
+    elevenlabs_voice_id: "PASTE_VOICE_ID_HERE"
+    description: "Evening anchor, slightly more urgent delivery"
+
+pilot:
+  output_dir: "output/"
+  clip_length_seconds: 30
+  default_count: 3
+
+dials:
+  topic_weights:
+    politics: 0.3
+    infrastructure: 0.2
+    science: 0.2
+    crime: 0.1
+    international: 0.2
+  tone: "concerned"  # calm | concerned | urgent | grave
+
+# Branding colors (dark gray, red, blue scheme)
+branding:
+  primary_dark: "#2B2B2B"    # dark gray — backgrounds, main bars
+  accent_red: "#C41E2A"      # red — breaking banners, accent lines
+  accent_blue: "#1A3A6B"     # deep blue — chyron bars, secondary elements
+  text_white: "#FFFFFF"      # white — primary text on dark backgrounds
+  text_light: "#E0E0E0"      # light gray — secondary text
+
+world_bible_path: "world_bible.json"
+segments_dir: "segments/"
+buffer_minimum_seconds: 1800

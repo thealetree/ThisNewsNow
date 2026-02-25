@@ -1,0 +1,23 @@
+# API keys — never commit
+config.yaml
+
+# Generated content
+output/
+segments/
+*.mp4
+*.mp3
+
+# News context (regenerated at runtime)
+news_context.json
+
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
