@@ -137,9 +137,13 @@
     }
 
     /* ── Nav bar ── */
-    .nav-bar {
+    .nav-bar-wrap {
       background: #222222;
       border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .nav-bar {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -179,13 +183,15 @@
       color: white;
     }
 
-    .nav-spacer { flex: 1; min-width: 1rem; flex-shrink: 0; }
-
     /* ── Generator Toggle (local mode only) ── */
     .gen-toggle {
       display: none;
       align-items: center;
       gap: 0.5rem;
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
       font-size: 0.6rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -1007,22 +1013,21 @@
     </div>
   </header>
 
-  <nav class="nav-bar">
-    <span class="topic-toggle" data-topic="politics">Politics</span>
-    <span class="topic-toggle" data-topic="economics">Economics</span>
-    <span class="topic-toggle" data-topic="technology">Technology</span>
-    <span class="topic-toggle" data-topic="international">International</span>
-    <span class="topic-toggle" data-topic="crime">Crime</span>
-    <span class="topic-toggle" data-topic="health">Health</span>
-    <span class="topic-toggle" data-topic="science">Science</span>
-    <span class="topic-toggle" data-topic="infrastructure">Infrastructure</span>
-    <span class="topic-toggle" data-topic="education">Education</span>
-    <span class="topic-toggle" data-topic="weather">Weather</span>
-    <span class="topic-toggle" data-topic="fluff">Human Interest</span>
-    <span class="topic-toggle" data-topic="sports">Sports</span>
-
-    <div class="nav-spacer"></div>
-
+  <nav class="nav-bar-wrap">
+    <div class="nav-bar">
+      <span class="topic-toggle" data-topic="politics">Politics</span>
+      <span class="topic-toggle" data-topic="economics">Economics</span>
+      <span class="topic-toggle" data-topic="technology">Technology</span>
+      <span class="topic-toggle" data-topic="international">International</span>
+      <span class="topic-toggle" data-topic="crime">Crime</span>
+      <span class="topic-toggle" data-topic="health">Health</span>
+      <span class="topic-toggle" data-topic="science">Science</span>
+      <span class="topic-toggle" data-topic="infrastructure">Infrastructure</span>
+      <span class="topic-toggle" data-topic="education">Education</span>
+      <span class="topic-toggle" data-topic="weather">Weather</span>
+      <span class="topic-toggle" data-topic="fluff">Human Interest</span>
+      <span class="topic-toggle" data-topic="sports">Sports</span>
+    </div>
     <div class="gen-toggle" id="genToggle">
       <span>Generator</span>
       <label class="toggle-switch">
