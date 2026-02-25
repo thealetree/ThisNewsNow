@@ -8,6 +8,7 @@ alternating segments.
 
 import anthropic
 import json
+import random
 import re
 import uuid
 from datetime import datetime
@@ -35,9 +36,14 @@ def generate_hourly_summary(stories, config, world_bible):
     client = anthropic.Anthropic(api_key=config["apis"]["anthropic_key"])
     anchors = world_bible.get("anchors", [])
 
-    # Get anchor names
-    anchor_a = anchors[0] if len(anchors) > 0 else {"name": "Patricia Holt", "gender": "female"}
-    anchor_b = anchors[1] if len(anchors) > 1 else {"name": "Marcus Webb", "gender": "male"}
+    # Randomly pick two anchors for this hour's desk
+    if len(anchors) >= 2:
+        desk = random.sample(anchors, 2)
+        anchor_a = desk[0]
+        anchor_b = desk[1]
+    else:
+        anchor_a = anchors[0] if len(anchors) > 0 else {"name": "Patricia Holt", "gender": "female"}
+        anchor_b = anchors[1] if len(anchors) > 1 else {"name": "Marcus Webb", "gender": "male"}
 
     # Build story summaries for the prompt
     story_briefs = []
@@ -76,7 +82,7 @@ REQUIREMENTS:
 - Completely deadpan. No humor. This is a real news recap.
 
 FORMAT — use these EXACT tags to mark who speaks. Each segment on its own line:
-[ANCHOR_A] Good evening, I'm {anchor_a['name']}. Here's what we're following this hour...
+[ANCHOR_A] Live on This News Now, I'm {anchor_a['name']} here with {anchor_b['name']}. Here's what we're following this hour...
 [ANCHOR_B] Thanks {anchor_a['name'].split()[0]}. In other developments tonight...
 [ANCHOR_A] And finally...
 

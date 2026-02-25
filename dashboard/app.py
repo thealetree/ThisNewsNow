@@ -12,10 +12,11 @@ Or via main.py:  imported and started on a background thread
 import json
 import os
 import queue
+import random
 import shutil
 import threading
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import yaml
@@ -54,6 +55,16 @@ def _load_world_bible():
     wb_path = config.get("world_bible_path", "world_bible.json")
     with open(wb_path, "r") as f:
         return json.load(f)
+
+
+def _fudge_timestamp():
+    """Return a timestamp randomly offset within the current hour for realism."""
+    now = datetime.now()
+    offset_minutes = random.randint(0, 55)
+    fudged = now.replace(minute=offset_minutes, second=random.randint(0, 59))
+    if fudged > now:
+        fudged = now
+    return fudged
 
 
 def _save_stories_json():
@@ -123,11 +134,22 @@ def push_script(script_data, audio_path=None):
         "data": {
             **script_data,
             "audio_path": audio_path,
-            "published": datetime.now().strftime("%B %d, %Y \u2014 %I:%M %p"),
+            "published": _fudge_timestamp().strftime("%B %d, %Y \u2014 %I:%M %p"),
         },
     }
     with stories_lock:
         recent_stories.insert(0, story)
+        # Remove older stories with duplicate chyrons
+        new_chyron = script_data.get("chyrons", [None])[0]
+        if new_chyron:
+            i = 1
+            while i < len(recent_stories):
+                s = recent_stories[i]
+                if (s["type"] == "story" and
+                        s["data"].get("chyrons", [None])[0] == new_chyron):
+                    recent_stories.pop(i)
+                else:
+                    i += 1
         if len(recent_stories) > 20:
             recent_stories.pop()
 

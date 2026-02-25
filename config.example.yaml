@@ -14,6 +14,7 @@ anchors:
   - name: "Patricia Holt"
     gender: "female"
     elevenlabs_voice_id: "PASTE_VOICE_ID_HERE"
+    speed: 1.12
     description: "Senior anchor, calm authority, 20 years experience"
   - name: "Marcus Webb"
     gender: "male"

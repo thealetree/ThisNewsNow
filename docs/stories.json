@@ -1,275 +1,149 @@
 [
   {
     "type": "hourly_summary",
-    "timestamp": "2026-02-24T21:13:03.647049",
+    "timestamp": "2026-02-24T21:28:28.319109",
     "data": {
-      "story_id": "hourly_d34d5564",
+      "story_id": "hourly_bdc6cc02",
       "hour_label": "9 PM",
-      "anchor_a": "Patricia Holt",
-      "anchor_b": "Marcus Webb",
+      "anchor_a": "Marcus Webb",
+      "anchor_b": "James Whitfield",
       "headlines": [
         "EPA EXPANDS TOLEDO WATER PROBE",
-        "EPA EXPANDS CHEMICAL PLANT PROBE",
-        "EPA OPENS CRIMINAL PROBE",
+        "EPA OPENS COAL ASH INVESTIGATION",
+        "SENATE INFRASTRUCTURE BILL STALLED",
         "INFRASTRUCTURE BILL STALLED",
-        "SENATE INFRASTRUCTURE TALKS STALLED"
+        "DUNMORE PORT STRIKE WEEK 4"
       ],
-      "full_script": "[ANCHOR_A] Good evening, I'm Patricia Holt with Marcus Webb. Here's what we're following this hour. The EPA has launched a criminal investigation into Gulfmark Petrochemical's Port Calloway facility after discovering falsified safety records during last week's audit. Federal officials say the probe could lead to criminal charges against company executives.\n\n[ANCHOR_B] Thanks Patricia. We're also tracking developments in Toledo where the EPA has escalated its water contamination investigation. Federal inspectors are now testing soil samples around the treatment facility as city officials work to address the ongoing crisis.\n\n[ANCHOR_A] Marcus, on Capitol Hill tonight, Senate infrastructure talks remain stalled over rural broadband funding. The Appropriations Committee is deadlocked on a provision that would allocate forty-seven billion dollars for rural broadband expansion.\n\n[ANCHOR_B] And Patricia, that deadlock has sparked intense lobbying from telecommunications groups nationwide. Committee Chairman Robert Mills says Republicans remain opposed to the current funding structure.\n\n[ANCHOR_A] We'll continue following these developing stories. I'm Patricia Holt with Marcus Webb. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 5,
-      "published": "February 24, 2026 \u2014 09:13 PM",
-      "audio_file": "hourly_d34d5564.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:12:41.018703",
-    "data": {
-      "script": "The Senate Appropriations Committee remains deadlocked tonight over a key provision in the infrastructure modernization package that would allocate forty-seven billion dollars for rural broadband expansion. [CHYRON: SENATE INFRASTRUCTURE TALKS STALLED] Republican members are demanding state-level oversight requirements, while Democrats insist on direct federal implementation. Committee Chair Margaret Thornfield called the impasse \"deeply concerning\" as the March thirty-first deadline approaches. [B-ROLL: Empty Senate committee room with scattered papers] The White House has yet to weigh in publicly. More developments ahead.",
-      "chyrons": [
-        "SENATE INFRASTRUCTURE TALKS STALLED"
-      ],
-      "broll_descriptions": [
-        "Empty Senate committee room with scattered papers"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "401deb62",
-      "word_count": 67,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:12 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:12:36.205937",
-    "data": {
-      "script": "The Senate Appropriations Committee deadlock over rural broadband funding has sparked intense lobbying from telecommunications groups nationwide. [CHYRON: INFRASTRUCTURE BILL STALLED] Committee Chairman Robert Mills says Republicans remain firm on their sixty-billion-dollar cap, while Democrats push for nearly double that amount. The impasse threatens to derail the entire one-point-two trillion dollar modernization package. [B-ROLL: Capitol Hill meeting rooms with closed doors] Industry leaders warn delays could set back nationwide connectivity goals by years. More developments expected tomorrow.",
-      "chyrons": [
-        "INFRASTRUCTURE BILL STALLED"
-      ],
-      "broll_descriptions": [
-        "Capitol Hill meeting rooms with closed doors"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "623b8c01",
-      "word_count": 65,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:12 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:12:31.698819",
-    "data": {
-      "script": "The Environmental Protection Agency has launched a criminal investigation into Gulfmark Petrochemical's Port Calloway facility after discovering falsified safety records during last week's audit. [CHYRON: EPA OPENS CRIMINAL PROBE] Federal agents seized documents showing three years of concealed chemical discharge violations along the Mississippi River corridor. [B-ROLL: EPA investigators carrying boxes from petrochemical plant] Company executives have retained legal counsel and declined all media requests. More developments expected tomorrow.",
-      "chyrons": [
-        "EPA OPENS CRIMINAL PROBE"
-      ],
-      "broll_descriptions": [
-        "EPA investigators carrying boxes from petrochemical plant"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "29523619",
-      "word_count": 56,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:12 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:12:18.992523",
-    "data": {
-      "script": "The Environmental Protection Agency has escalated its investigation into Port Calloway's Gulfmark Petrochemical facility after discovering what officials call \"significant regulatory violations\" during last week's surprise audit. [CHYRON: EPA EXPANDS CHEMICAL PLANT PROBE] Plant manager Rebecca Santos maintains the facility poses no health threat, but EPA regional director Thomas Chen announced today that federal investigators will examine soil samples from nearby residential areas. [B-ROLL: EPA hazmat teams conducting tests outside the facility] Louisiana Governor Patricia Mills is demanding transparency. More developments expected tomorrow.",
-      "chyrons": [
-        "EPA EXPANDS CHEMICAL PLANT PROBE"
-      ],
-      "broll_descriptions": [
-        "EPA hazmat teams conducting tests outside the facility"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "46415a7f",
-      "word_count": 68,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:12 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:12:14.376339",
-    "data": {
-      "script": "The Environmental Protection Agency has escalated its investigation into Toledo's water contamination crisis, with federal inspectors now testing soil samples around the a fussy facility. [CHYRON: EPA EXPANDS TOLEDO WATER PROBE] City officials maintain the elevated lead readings are isolated incidents, but EPA Regional Administrator Sarah Chen says the agency is examining potential systemic failures in the distribution network. [B-ROLL: EPA technicians in hazmat suits collecting soil samples near water treatment plant] Three neighborhoods remain under boil-water advisories tonight. More developments expected tomorrow.",
-      "chyrons": [
-        "EPA EXPANDS TOLEDO WATER PROBE"
-      ],
-      "broll_descriptions": [
-        "EPA technicians in hazmat suits collecting soil samples near water treatment plant"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "crime",
-      "story_id": "cdda9a67",
-      "word_count": 64,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 09:12 PM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-24T20:53:14.238822",
-    "data": {
-      "story_id": "hourly_43004fdf",
-      "hour_label": "8 PM",
-      "anchor_a": "Patricia Holt",
-      "anchor_b": "Marcus Webb",
-      "headlines": [
-        "INFRASTRUCTURE BILL DIES IN COMMITTEE",
-        "INFRASTRUCTURE BILL STALLED",
-        "EPA WIDENS TOLEDO WATER PROBE",
-        "PENTAGON THREATENS HEARTLAND ENERGY SHUTDOWN",
-        "HOUSE REJECTS AIR SAFETY BILL"
-      ],
-      "full_script": "[ANCHOR_A] Good evening, I'm Patricia Holt. Here's what we're following this hour. The Senate Appropriations Committee remains deadlocked over the trillion-dollar infrastructure bill, with rural broadband funding emerging as the key sticking point. Republican members have withdrawn their support, effectively stalling the legislation. Marcus?\n\n[ANCHOR_B] Thanks Patricia. The Environmental Protection Agency has expanded its investigation into Toledo's water contamination crisis. The agency now confirms elevated lead levels are affecting seven neighborhoods along the Maumee River corridor, marking a significant widening of the probe.\n\n[ANCHOR_A] Meanwhile, the Pentagon has issued an ultimatum to Heartland Energy Corporation, demanding the company shut down operations at its classified data processing facility in Norfolk, Virginia within seventy-two hours. No reason has been publicly disclosed.\n\n[ANCHOR_B] And Patricia, the House has narrowly defeated the Federal Aviation Safety Enhancement Act tonight, falling just four votes short. The Pentagon raised last-minute objections to new oversight provisions in the legislation.\n\n[ANCHOR_A] We'll continue following these developing stories. I'm Patricia Holt with Marcus Webb. We'll be back at the top of the next hour.",
+      "full_script": "[ANCHOR_A] Live on This News Now, I'm Marcus Webb here with James Whitfield. Here's what we're following this hour. The EPA has escalated its investigation into Toledo's water contamination, announcing federal inspectors will now examine the city's entire distribution system.\n\n[ANCHOR_B] Thanks Marcus. The Senate Appropriations Committee remains deadlocked over the trillion-dollar infrastructure package, postponing votes for the third consecutive week as rural broadband funding emerges as the primary sticking point between parties.\n\n[ANCHOR_A] James, we're also tracking the port workers strike in Dunmore, New Hampshire, now entering its fourth week. Federal mediators from the National Labor Relations Board arrived today attempting to restart negotiations with no resolution in sight.\n\n[ANCHOR_B] And Marcus, the EPA has opened two separate environmental investigations tonight. The agency launched a formal probe into Heartland Energy's coal ash disposal practices across Ohio and West Virginia facilities, while also investigating Gulfmark Petrochemical's Port Calloway operations following state auditor discoveries of three environmental violations.\n\n[ANCHOR_A] We'll continue following these developing stories. I'm Marcus Webb with James Whitfield. This News Now continues after this break.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
       "story_count": 6,
-      "published": "February 24, 2026 \u2014 08:53 PM",
-      "audio_file": "hourly_43004fdf.mp3"
+      "published": "February 24, 2026 \u2014 09:28 PM",
+      "audio_file": "hourly_bdc6cc02.mp3"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T20:52:54.602394",
+    "timestamp": "2026-02-24T21:28:05.229791",
     "data": {
-      "script": "The Senate Appropriations Committee deadlock over infrastructure funding has sparked new tensions tonight, with Republican members walking out of negotiations after Democrats proposed redirecting highway funds to urban transit projects. Committee Chair Margaret Holbrook called the move \"irresponsible,\" while Democratic Senator James Torres defended the reallocation as \"essential for climate goals.\" [CHYRON: INFRASTRUCTURE TALKS COLLAPSE] [B-ROLL: Empty committee room with scattered papers on table] The standoff threatens the entire twelve hundred billion dollar package. We'll track developments after this break.",
+      "script": "The Environmental Protection Agency has launched a formal investigation into Gulfmark Petrochemical's Port Calloway facility after state auditors discovered three environmental violations last week. [CHYRON: EPA OPENS PORT CALLOWAY PROBE] Company spokesman Derek Manning called the violations minor paperwork issues, but residents are demanding immediate soil and groundwater testing. [B-ROLL: Protesters gathering outside Gulfmark's main gates] Louisiana Governor Sarah Thibodaux says she's monitoring the situation closely as federal investigators arrive tomorrow. More developments ahead.",
       "chyrons": [
-        "INFRASTRUCTURE TALKS COLLAPSE"
+        "EPA OPENS PORT CALLOWAY PROBE"
       ],
       "broll_descriptions": [
-        "Empty committee room with scattered papers on table"
+        "Protesters gathering outside Gulfmark's main gates"
       ],
       "anchor": "Patricia Holt",
       "anchor_gender": "female",
       "estimated_seconds": 25,
       "topic": "politics",
-      "story_id": "c7d74a8c",
-      "word_count": 67,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 08:52 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T20:52:49.891341",
-    "data": {
-      "script": "The House narrowly defeated the Federal Aviation Safety Enhancement Act tonight, falling just four votes short after the Pentagon raised last-minute objections to new oversight provisions. [CHYRON: HOUSE REJECTS AIR SAFETY BILL] The legislation would have mandated quarterly safety audits of military contractor aircraft used in civilian airspace. Defense Secretary officials argued the requirements could compromise national security protocols. [B-ROLL: House floor during evening vote] Aviation safety advocates called the outcome disappointing. More details ahead.",
-      "chyrons": [
-        "HOUSE REJECTS AIR SAFETY BILL"
-      ],
-      "broll_descriptions": [
-        "House floor during evening vote"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "b0f0aa2a",
-      "word_count": 63,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 08:52 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T20:52:45.283893",
-    "data": {
-      "script": "The Pentagon has issued a formal ultimatum to Heartland Energy Corporation, demanding the company halt operations at its classified data processing facility in Norfolk, Virginia within seventy-two hours. The Defense Department cites national security concerns over the company's artificial intelligence models used in military contract work. [CHYRON: PENTAGON THREATENS HEARTLAND ENERGY SHUTDOWN] [B-ROLL: Heartland Energy corporate headquarters in Norfolk] Company executives have not responded to requests for comment. We'll continue following this developing story.",
-      "chyrons": [
-        "PENTAGON THREATENS HEARTLAND ENERGY SHUTDOWN"
-      ],
-      "broll_descriptions": [
-        "Heartland Energy corporate headquarters in Norfolk"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "science",
-      "story_id": "f4bbe48b",
+      "story_id": "eb9472f8",
       "word_count": 61,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 08:52 PM"
+      "published": "February 24, 2026 \u2014 09:28 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T20:52:37.395270",
+    "timestamp": "2026-02-24T21:28:00.377117",
     "data": {
-      "script": "The Environmental Protection Agency has expanded its investigation into Toledo's water contamination after discovering elevated lead levels now affect seven neighborhoods along the Maumee River corridor. [CHYRON: EPA WIDENS TOLEDO WATER PROBE] City Manager Patricia Kellerman maintains the threat is overblown, but federal investigators say preliminary tests show contamination levels triple the acceptable threshold. [B-ROLL: EPA technicians testing water samples at Toledo treatment facility] State health officials expect to issue expanded advisories by Friday. We'll continue following this story.",
+      "script": "Federal mediators arrived in Dunmore, New Hampshire today as the port workers strike enters its fourth week with no resolution in sight. The National Labor Relations Board team will attempt to restart negotiations between the National Port Workers Alliance and port management over disputed pension cuts. [CHYRON: DUNMORE PORT STRIKE WEEK 4] Governor Ellen Marsh declined to comment on potential state intervention, but shipping delays are now affecting supply chains across New England. [B-ROLL: Empty shipping containers stacked at Dunmore Port facility] More developments expected tomorrow.",
       "chyrons": [
-        "EPA WIDENS TOLEDO WATER PROBE"
+        "DUNMORE PORT STRIKE WEEK 4"
       ],
       "broll_descriptions": [
-        "EPA technicians testing water samples at Toledo treatment facility"
+        "Empty shipping containers stacked at Dunmore Port facility"
       ],
       "anchor": "Elena Torres",
       "anchor_gender": "female",
       "estimated_seconds": 25,
-      "topic": "crime",
-      "story_id": "9f62dc34",
-      "word_count": 63,
+      "topic": "politics",
+      "story_id": "cc081298",
+      "word_count": 71,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 08:52 PM"
+      "published": "February 24, 2026 \u2014 09:28 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T20:52:33.028193",
+    "timestamp": "2026-02-24T21:27:54.200942",
     "data": {
-      "script": "The Senate Appropriations Committee remains deadlocked tonight over the trillion-dollar infrastructure bill, with rural broadband funding emerging as the primary sticking point. Republican members are demanding expanded private sector partnerships, while Democrats insist on direct federal investment. Committee Chair Patricia Reynolds called an emergency session for tomorrow morning. [CHYRON: INFRASTRUCTURE BILL STALLED] [B-ROLL: Capitol Hill committee room during heated discussions] The White House has yet to weigh in publicly on the impasse.",
+      "script": "The Senate Appropriations Committee remains deadlocked tonight over rural broadband funding in the trillion-dollar infrastructure package. Republican members are demanding caps on federal spending while Democrats push for expanded coverage guarantees. [CHYRON: INFRASTRUCTURE BILL STALLED] Committee Chair Beverly Morrison says talks have reached an impasse after three weeks of negotiations. The White House is reportedly considering direct intervention to break the stalemate. [B-ROLL: Capitol Hill committee room during heated discussion] More on this developing story ahead.",
       "chyrons": [
         "INFRASTRUCTURE BILL STALLED"
       ],
       "broll_descriptions": [
-        "Capitol Hill committee room during heated discussions"
+        "Capitol Hill committee room during heated discussion"
       ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
       "estimated_seconds": 25,
       "topic": "politics",
-      "story_id": "00e39e0d",
-      "word_count": 60,
+      "story_id": "e92fbdf4",
+      "word_count": 64,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 08:52 PM"
+      "published": "February 24, 2026 \u2014 09:04 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T20:52:25.740787",
+    "timestamp": "2026-02-24T21:27:49.945821",
     "data": {
-      "script": "The Senate Appropriations Committee voted down the infrastructure modernization package tonight after Republicans withdrew support over rural broadband provisions. Committee Chairman Robert Kellner called the collapse \"a failure of leadership,\" while ranking member Sarah Mills blamed unrealistic Democratic demands. The $1.2 trillion bill would have funded highways, bridges, and digital infrastructure across forty-three states. [CHYRON: INFRASTRUCTURE BILL DIES IN COMMITTEE] [B-ROLL: Empty committee hearing room with scattered papers] President Trump has not yet responded. More developments ahead.",
+      "script": "The Senate Appropriations Committee postponed votes on the infrastructure modernization package for the third consecutive week as rural broadband funding remains the primary sticking point. [CHYRON: SENATE INFRASTRUCTURE BILL STALLED] Committee Chairman Robert Hayes called the impasse frustrating but said negotiations will continue through the weekend. [B-ROLL: Empty committee hearing room with scattered papers] The trillion-dollar package includes critical updates to bridges, roads, and digital infrastructure across thirty-eight states. More developments expected Monday.",
       "chyrons": [
-        "INFRASTRUCTURE BILL DIES IN COMMITTEE"
+        "SENATE INFRASTRUCTURE BILL STALLED"
       ],
       "broll_descriptions": [
         "Empty committee hearing room with scattered papers"
       ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
       "estimated_seconds": 25,
       "topic": "politics",
-      "story_id": "03622596",
-      "word_count": 63,
+      "story_id": "23404e42",
+      "word_count": 60,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 08:52 PM"
+      "published": "February 24, 2026 \u2014 09:27 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:27:45.869280",
+    "data": {
+      "script": "The Environmental Protection Agency has launched a formal investigation into Heartland Energy Corporation's coal ash disposal practices at three facilities across Ohio and West Virginia. [CHYRON: EPA OPENS COAL ASH INVESTIGATION] Regional Administrator Sarah Chen announced ovel umer dimaygray complaints from residents near the Esterfield plant about groundwater contamination. Heartland executives deny any environmental violations, calling the investigation politically motivated. [B-ROLL: EPA investigators in hazmat suits taking soil samples] The company faces potential fines exceeding fifty million dollars. More developments expected tomorrow.",
+      "chyrons": [
+        "EPA OPENS COAL ASH INVESTIGATION"
+      ],
+      "broll_descriptions": [
+        "EPA investigators in hazmat suits taking soil samples"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "crime",
+      "story_id": "ae9b6749",
+      "word_count": 67,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 09:18 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:27:41.557600",
+    "data": {
+      "script": "The Environmental Protection Agency has escalated its investigation into Toledo's water contamination, announcing tonight that federal inspectors will examine the city's entire distribution system. [CHYRON: EPA EXPANDS TOLEDO WATER PROBE] City Manager Patricia Holbrook called the move \"government overreach,\" but health officials report three more neighborhoods now show elevated lead levels near the Maumee River corridor. [B-ROLL: EPA vehicles arriving at Toledo water treatment facility] Governor Mike DeWine's office says state resources remain available if requested. More developments ahead.",
+      "chyrons": [
+        "EPA EXPANDS TOLEDO WATER PROBE"
+      ],
+      "broll_descriptions": [
+        "EPA vehicles arriving at Toledo water treatment facility"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "19656312",
+      "word_count": 64,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:08 PM"
     }
   }
 ]

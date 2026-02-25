@@ -34,7 +34,8 @@ def generate_audio(script_data, config):
     output_dir.mkdir(exist_ok=True)
     audio_path = output_dir / f"{script_data['story_id']}.mp3"
 
-    _generate_tts_file(client, voice_id, clean_script, str(audio_path))
+    speed = _get_anchor_speed(anchor_name, config)
+    _generate_tts_file(client, voice_id, clean_script, str(audio_path), speed=speed)
     actual_duration = _measure_duration(str(audio_path))
 
     print(f"  Audio generated: {audio_path.name} ({actual_duration:.1f}s)")
@@ -80,8 +81,9 @@ def generate_hourly_audio(summary_data, config):
         voice_id = _get_voice_id(anchor_name, config)
 
         seg_path = output_dir / f"{story_id}_seg{i:02d}.mp3"
+        speed = _get_anchor_speed(anchor_name, config)
         print(f"  TTS segment {i+1}/{len(segments)}: {anchor_name} ({len(text.split())}w)")
-        _generate_tts_file(client, voice_id, text, str(seg_path))
+        _generate_tts_file(client, voice_id, text, str(seg_path), speed=speed)
         segment_paths.append(str(seg_path))
 
     # Concatenate all segments with ffmpeg
@@ -117,20 +119,37 @@ def _get_voice_id(anchor_name, config):
     return "21m00Tcm4TlvDq8ikWAM"
 
 
-def _generate_tts_file(client, voice_id, text, output_path):
-    """Generate a single TTS audio file."""
-    audio_generator = client.text_to_speech.convert(
-        voice_id=voice_id,
-        text=text,
-        model_id="eleven_multilingual_v2",
-        output_format="mp3_44100_128",
-        voice_settings={
+def _get_anchor_speed(anchor_name, config):
+    """Look up the TTS speed multiplier for an anchor."""
+    for anchor_cfg in config.get("anchors", []):
+        if anchor_cfg["name"] == anchor_name:
+            return anchor_cfg.get("speed", 1.0)
+    return 1.0
+
+
+def _generate_tts_file(client, voice_id, text, output_path, speed=1.0):
+    """Generate a single TTS audio file with optional speed adjustment."""
+    kwargs = {
+        "voice_id": voice_id,
+        "text": text,
+        "model_id": "eleven_multilingual_v2",
+        "output_format": "mp3_44100_128",
+        "voice_settings": {
             "stability": 0.7,
             "similarity_boost": 0.8,
             "style": 0.1,
             "use_speaker_boost": True,
         },
-    )
+    }
+    if speed != 1.0:
+        kwargs["speed"] = speed
+
+    try:
+        audio_generator = client.text_to_speech.convert(**kwargs)
+    except TypeError:
+        # SDK version doesn't support speed parameter
+        kwargs.pop("speed", None)
+        audio_generator = client.text_to_speech.convert(**kwargs)
 
     with open(output_path, "wb") as f:
         for chunk in audio_generator:

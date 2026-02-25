@@ -381,6 +381,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
+      flex: 1;
+      min-width: 0;
     }
 
     .stories-empty {
@@ -581,60 +583,63 @@
       border-color: var(--accent);
     }
 
-    /* ── Fake Ads ── */
-    .ad-leaderboard {
-      margin-bottom: 1.5rem;
-    }
-
-    .ad-leaderboard:empty {
-      display: none;
-      margin-bottom: 0;
-    }
-
-    .ad-container {
-      grid-column: 1 / -1;
-      overflow: hidden;
-    }
-
-    .ad-banner {
+    /* ── Content Layout ── */
+    .content-layout {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.2rem 1.5rem;
+      gap: 1.5rem;
+    }
+
+    /* ── Ad Column (tall sidebar ads) ── */
+    .ad-column {
+      width: 180px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .ad-column:empty { display: none; }
+
+    .ad-tall {
+      padding: 1.5rem 1rem;
       color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
       position: relative;
-      min-height: 70px;
     }
 
     .ad-label {
       position: absolute;
       top: 4px;
-      right: 8px;
-      font-size: 0.45rem;
+      right: 6px;
+      font-size: 0.4rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       opacity: 0.4;
     }
 
-    .ad-body { flex: 1; }
-
     .ad-company {
-      font-size: 0.55rem;
+      font-size: 0.5rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       opacity: 0.7;
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.6rem;
     }
 
     .ad-headline {
-      font-size: 1.05rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      line-height: 1.3;
+      line-height: 1.4;
+      margin-bottom: 1rem;
     }
 
     .ad-cta {
-      font-size: 0.65rem;
-      padding: 0.4rem 1.2rem;
+      font-size: 0.6rem;
+      padding: 0.35rem 0.8rem;
       border: 1px solid rgba(255,255,255,0.4);
       color: white;
       background: none;
@@ -642,8 +647,6 @@
       text-transform: uppercase;
       cursor: pointer;
       transition: all 0.15s;
-      white-space: nowrap;
-      margin-left: 1.5rem;
       font-family: 'Inter', sans-serif;
     }
 
@@ -664,8 +667,7 @@
       }
       .header-logo { font-size: 1.6rem; }
       .header-live { display: none; }
-      .ad-banner { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-      .ad-cta { margin-left: 0; }
+      .ad-column { display: none; }
       main { padding: 1rem 0.75rem; }
       .article-headline { font-size: 1.15rem; }
       .nav-bar { gap: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; flex-wrap: wrap; }
@@ -725,13 +727,15 @@
 
   <main>
     <section id="hourlyContainer" class="hourly-zone"></section>
-    <div id="adLeaderboard" class="ad-leaderboard"></div>
-    <section id="storiesGrid" class="stories-grid">
-      <div class="stories-empty" id="emptyState">
-        <div class="spinner"></div>
-        <div>Waiting for stories...</div>
-      </div>
-    </section>
+    <div class="content-layout">
+      <section id="storiesGrid" class="stories-grid">
+        <div class="stories-empty" id="emptyState">
+          <div class="spinner"></div>
+          <div>Waiting for stories...</div>
+        </div>
+      </section>
+      <aside id="adColumn" class="ad-column"></aside>
+    </div>
   </main>
 
   <footer></footer>
@@ -881,6 +885,8 @@
     removeEmptyState();
 
     var container = document.getElementById('hourlyContainer');
+    // Only show the latest hourly summary
+    container.innerHTML = '';
     var block = document.createElement('div');
     block.className = 'hourly-summary';
 
@@ -1099,12 +1105,10 @@
 
   function renderAd(container, ad) {
     container.innerHTML =
-      '<div class="ad-banner" style="background:' + ad.color + '">' +
-        '<span class="ad-label">Advertisement</span>' +
-        '<div class="ad-body">' +
-          '<div class="ad-company">' + ad.company + '</div>' +
-          '<div class="ad-headline">' + ad.headline + '</div>' +
-        '</div>' +
+      '<div class="ad-tall" style="background:' + ad.color + '">' +
+        '<span class="ad-label">Ad</span>' +
+        '<div class="ad-company">' + ad.company + '</div>' +
+        '<div class="ad-headline">' + ad.headline + '</div>' +
         '<button class="ad-cta">' + ad.cta + '</button>' +
       '</div>';
   }
@@ -1125,32 +1129,15 @@
   }
 
   function setupAds() {
-    var grid = document.getElementById('storiesGrid');
-    // Clean up existing in-feed ads
-    grid.querySelectorAll('.ad-container').forEach(function(el) {
-      if (adTimers[el.dataset.slotId]) clearInterval(adTimers[el.dataset.slotId]);
-      el.remove();
-    });
-    var articles = grid.querySelectorAll('article');
-    var adCount = 0;
-    for (var i = 3; i < articles.length; i += 5) {
-      var adEl = document.createElement('div');
-      adEl.className = 'ad-container';
-      var slotId = 'feed' + adCount;
-      adEl.dataset.slotId = slotId;
-      if (articles[i].nextSibling) {
-        grid.insertBefore(adEl, articles[i].nextSibling);
-      } else {
-        grid.appendChild(adEl);
-      }
-      initAdSlot(adEl, slotId);
-      adCount++;
-    }
-    // Init leaderboard ad
-    var lb = document.getElementById('adLeaderboard');
-    if (lb) {
-      lb.dataset.slotId = 'leaderboard';
-      initAdSlot(lb, 'leaderboard');
+    var col = document.getElementById('adColumn');
+    if (!col || col.children.length > 0) return;
+    // Create 3 tall ad slots in the sidebar
+    for (var i = 0; i < 3; i++) {
+      var slot = document.createElement('div');
+      var slotId = 'sidebar' + i;
+      slot.dataset.slotId = slotId;
+      col.appendChild(slot);
+      initAdSlot(slot, slotId);
     }
   }
 
