@@ -1,6 +1,154 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-25T08:37:53.967598",
+    "data": {
+      "story_id": "hourly_c3108f7a",
+      "hour_label": "8 AM",
+      "anchor_a": "James Whitfield",
+      "anchor_b": "Patricia Holt",
+      "headlines": [
+        "FAA ORDERS SKYWARD AIRLINES INSPECTIONS",
+        "HHS REDIRECTS $800M TO RURAL MENTAL HEALTH",
+        "EPA ISSUES EMERGENCY AIR WARNINGS",
+        "ED DEPT EXPANDS LOAN FORGIVENESS",
+        "DOJ CHARGES 5 IN $400M CRYPTO FRAUD"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. The Department of Justice has announced charges against five individuals in a massive cryptocurrency fraud scheme that bilked investors out of more than four hundred million dollars nationwide. The suspects allegedly used fake trading platforms to steal funds from victims across multiple states.\n\n[ANCHOR_B] Thanks James. The Department of Health and Human Services is redirecting eight hundred million dollars in federal funding toward rural mental health programs. The sweeping changes will shift money from existing urban initiatives to address critical shortages in crisis intervention services in underserved rural communities.\n\n[ANCHOR_A] Patricia, the Environmental Protection Agency has issued emergency air quality warnings for six counties in eastern Tennessee. Hazardous chemical levels were detected near the Cumberland River basin, prompting officials to advise residents to limit outdoor activities and keep windows closed.\n\n[ANCHOR_B] The Department of Education announced major expansions to federal student loan forgiveness programs today. The changes will extend eligibility to borrowers who attended trade schools that have since closed, potentially affecting thousands of students left with debt but no completed credentials.\n\n[ANCHOR_A] And finally tonight, the Department of Defense unveiled a forty-seven billion dollar quantum computing initiative. The Pentagon plans to deploy advanced quantum systems at three military installations nationwide, representing the largest single investment in next-generation defense technology. I'm James Whitfield with Patricia Holt. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 6,
+      "published": "February 25, 2026 \u2014 08:37 AM",
+      "audio_file": "hourly_c3108f7a.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T08:37:21.651656",
+    "data": {
+      "script": "The Department of Defense announced today it will deploy advanced quantum computing systems to three military installations across the country, marking the Pentagon's largest investment in next-generation encryption technology. Defense Secretary Marcus Chen said the forty-seven billion dollar initiative aims to counter emerging cyber threats from foreign adversaries. [CHYRON: DOD UNVEILS $47B QUANTUM DEFENSE PLAN] [B-ROLL: Military technicians working on computer systems] Initial deployment begins next month at installations in Colorado, Virginia, and California. More details ahead.",
+      "chyrons": [
+        "DOD UNVEILS $47B QUANTUM DEFENSE PLAN"
+      ],
+      "broll_descriptions": [
+        "Military technicians working on computer systems"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "53729543",
+      "word_count": 63,
+      "nonsense_injected": false,
+      "published": "February 25, 2026 \u2014 08:03 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T08:37:04.740171",
+    "data": {
+      "script": "The Department of Justice announced charges against five individuals in a sprawling cryptocurrency scheme that defrauded investors of over four hundred million dollars nationwide. [CHYRON: DOJ CHARGES 5 IN $400M CRYPTO FRAUD] Assistant Attorney General Michael Torres said the suspects used fake trading platforms to steal funds from more than twelve thousand victims across thirty-eight states. [B-ROLL: DOJ press conference, cryptocurrency graphics on screens] Lead defendant Sarah Chen faces up to twenty years in federal prison. Sentencing begins next month.",
+      "chyrons": [
+        "DOJ CHARGES 5 IN $400M CRYPTO FRAUD"
+      ],
+      "broll_descriptions": [
+        "DOJ press conference, cryptocurrency graphics on screens"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "crime",
+      "story_id": "a950f01e",
+      "word_count": 64,
+      "nonsense_injected": false,
+      "published": "February 25, 2026 \u2014 08:23 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T08:36:41.920508",
+    "data": {
+      "script": "The Department of Education announced sweeping changes to federal student loan forgiveness programs today, expanding eligibility to include borrowers who attended now-defunct trade schools. Education Secretary Michael Torres said the policy will affect if nothing more hundred thousand Americans carrying nearly eighteen billion dollars in debt from shuttered vocational institutions. [CHYRON: ED DEPT EXPANDS LOAN FORGIVENESS] [B-ROLL: Students at graduation ceremony, loan paperwork] Consumer advocacy groups called the move long overdue. More details ahead after this break.",
+      "chyrons": [
+        "ED DEPT EXPANDS LOAN FORGIVENESS"
+      ],
+      "broll_descriptions": [
+        "Students at graduation ceremony, loan paperwork"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "education",
+      "story_id": "fe6f88a9",
+      "word_count": 64,
+      "nonsense_injected": true,
+      "published": "February 25, 2026 \u2014 08:24 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T08:36:30.126565",
+    "data": {
+      "script": "The Environmental Protection Agency has issued emergency air quality warnings for six counties in eastern Tennessee after hazardous chemical levels were detected near the Cumberland River basin. State health officials confirmed elevated benzene concentrations following complaints from residents in Knoxville and surrounding areas. [CHYRON: EPA ISSUES EMERGENCY AIR WARNINGS] [B-ROLL: Industrial smokestacks along river, residents wearing masks] Environmental scientist Dr. Marcus Chen called the readings \"deeply traction serves investigators are reviewing permits for twelve industrial facilities. More updates ahead after the break.",
+      "chyrons": [
+        "EPA ISSUES EMERGENCY AIR WARNINGS"
+      ],
+      "broll_descriptions": [
+        "Industrial smokestacks along river, residents wearing masks"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "general",
+      "story_id": "34e672e4",
+      "word_count": 68,
+      "nonsense_injected": true,
+      "published": "February 25, 2026 \u2014 08:36 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T08:36:16.119487",
+    "data": {
+      "script": "The Department of Health and Human Services announced sweeping changes to federal mental health funding today, redirecting eight hundred million dollars from existing programs toward rural crisis intervention centers. Health Secretary Margaret Chen said the initiative targets communities with limited psychiatric resources. [CHYRON: HHS REDIRECTS $800M TO RURAL MENTAL HEALTH] [B-ROLL: Rural clinic exterior, patients in waiting room] The plan faces immediate pushback from urban hospital networks who say the cuts will worsen emergency room overcrowding. More details tonight at eleven.",
+      "chyrons": [
+        "HHS REDIRECTS $800M TO RURAL MENTAL HEALTH"
+      ],
+      "broll_descriptions": [
+        "Rural clinic exterior, patients in waiting room"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "health",
+      "story_id": "f0319ca4",
+      "word_count": 65,
+      "nonsense_injected": false,
+      "published": "February 25, 2026 \u2014 08:04 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T08:36:05.786257",
+    "data": {
+      "script": "The Federal Aviation Administration has i begged for assistance rholdolf couldn't find aircraft after maintenance his way tuck a napkin into on muskrat scats in a jamboree for at the pretzel currently mastery when this oak maiden Transportation trumpeted pickup ya sup tonight safety review we widen our bursting with fluids and chapters began and [CHYRON: FAA ORDERS SKYWARD AIRLINES INSPECTIONS] [B-ROLL: Aircraft maintenance hangar, mechanics examining jet engines] ran on catatonic hundred and severe been cancelled how could have updates ahead.",
+      "chyrons": [
+        "FAA ORDERS SKYWARD AIRLINES INSPECTIONS"
+      ],
+      "broll_descriptions": [
+        "Aircraft maintenance hangar, mechanics examining jet engines"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "4c83720b",
+      "word_count": 68,
+      "nonsense_injected": false,
+      "nonsense_heavy": true,
+      "published": "February 25, 2026 \u2014 08:00 AM"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-24T23:06:29.117241",
     "data": {
       "story_id": "hourly_70a7f47d",
@@ -272,153 +420,6 @@
       "nonsense_injected": false,
       "nonsense_heavy": true,
       "published": "February 24, 2026 \u2014 11:00 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:00:02.442762",
-    "data": {
-      "script": "Good evening. The Environmental Protection Agency has ordered an immediate shutdown of Millbrook Chemical's fertilizer plant in Baton Rouge after investigators discovered contaminated groundwater affecting nearly twelve thousand residents. EPA Regional Administrator Sarah Chen announced criminal referrals are being prepared against company leadership for allegedly concealing test results showing dangerous ammonia levels. [CHYRON: EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANT] [B-ROLL: Hazmat teams in white suits collecting soil samples] State health officials are conducting door-to-door wellness checks. More on this developing story after the break.",
-      "chyrons": [
-        "EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANT"
-      ],
-      "broll_descriptions": [
-        "Hazmat teams in white suits collecting soil samples"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "economics",
-      "story_id": "1e3c86fa",
-      "word_count": 68,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 11:00 PM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-24T22:55:13.084024",
-    "data": {
-      "story_id": "hourly_195ac595",
-      "hour_label": "10 PM",
-      "anchor_a": "Marcus Webb",
-      "anchor_b": "Patricia Holt",
-      "headlines": [
-        "FEDS SHUT DOWN ND GAS PLANTS",
-        "FDA HALTS DIABETES DRUG TRIALS",
-        "GEORGIA MAYOR ARRESTED FOR FEMA FRAUD",
-        "STUDENT LOAN FORGIVENESS EXPANDED",
-        "EPA HALTS FRACKING IN WESTERN PA"
-      ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm Marcus Webb here with Patricia Holt. Federal regulators have ordered the immediate shutdown of three natural gas processing facilities in North Dakota after inspectors discovered critical safety violations that could trigger explosions.\n\n[ANCHOR_B] Thanks Marcus. The F-D-A has suspended clinical trials for Northpoint Pharmaceuticals after preliminary data showed severe kidney complications in twenty-three patients testing a new diabetes drug.\n\n[ANCHOR_A] Patricia, federal investigators have arrested the mayor of Crestwood, Georgia on charges of embezzling disaster relief funds meant for Hurricane recovery efforts. F-B-I agents took Mayor Patricia Holbrook into custody earlier today.\n\n[ANCHOR_B] And Marcus, the Department of Education announced sweeping changes to federal student loan forgiveness programs, expanding eligibility to include borrowers who attended now-defunct for-profit institutions.\n\n[ANCHOR_A] Finally tonight, the E-P-A has ordered an immediate halt to all hydraulic fracturing operations in western Pennsylvania after groundwater contamination was detected near seventeen drilling sites. That's our news summary. I'm Marcus Webb with Patricia Holt for This News Now.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 8,
-      "published": "February 24, 2026 \u2014 10:55 PM",
-      "audio_file": "hourly_195ac595.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:54.536149",
-    "data": {
-      "script": "Good evening. The National Weather Service has issued blizzard warnings for six states as a massive winter storm barrels toward the Great Plains. Meteorologist Sarah Chen says the system could dump up to three feet of snow across Nebraska and Kansas, with winds exceeding seventy miles per hour. [CHYRON: BLIZZARD WARNING: 6 STATES] [B-ROLL: Satellite imagery of massive storm system approaching Midwest] Commercial flights already cancelled in Denver and Omaha. We'll track this dangerous storm throughout the night.",
-      "chyrons": [
-        "BLIZZARD WARNING: 6 STATES"
-      ],
-      "broll_descriptions": [
-        "Satellite imagery of massive storm system approaching Midwest"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "weather",
-      "story_id": "d6b6ffcd",
-      "word_count": 64,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:05 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:46.242205",
-    "data": {
-      "script": "The Department of Justice has charged Senator Michael Crawford with accepting two point four million dollars in bribes from defense contractors over six years. The Rhode Island Republican allegedly used his Armed Services Committee position to steer contracts to Blackstone Defense Systems in exchange for cash payments and luxury vacations. [CHYRON: SENATOR CHARGED WITH BRIBERY] [B-ROLL: Capitol building, FBI agents carrying evidence boxes] Crawford maintains his innocence and refuses to resign. Trial begins in September.",
-      "chyrons": [
-        "SENATOR CHARGED WITH BRIBERY"
-      ],
-      "broll_descriptions": [
-        "Capitol building, FBI agents carrying evidence boxes"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "13a4f545",
-      "word_count": 62,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:08 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:42.423666",
-    "data": {
-      "script": "The National Science Foundation has suspended funding for a controversial gene-editing research program at three major universities after whistleblowers alleged unauthorized human trials. NSF Director Michael Chen announced the immediate freeze of forty-seven million dollars in grants pending a comprehensive ethics review. [CHYRON: NSF SUSPENDS GENE-EDITING RESEARCH FUNDING] The suspended projects include studies at universities in California, Massachusetts, and Illinois. [B-ROLL: Laboratory equipment, scientists in protective gear] Congressional hearings are expected next month. More on this developing story ahead.",
-      "chyrons": [
-        "NSF SUSPENDS GENE-EDITING RESEARCH FUNDING"
-      ],
-      "broll_descriptions": [
-        "Laboratory equipment, scientists in protective gear"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "science",
-      "story_id": "afab7c2f",
-      "word_count": 66,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:04 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:38.215596",
-    "data": {
-      "script": "The National Transportation Safety Board has launched a preliminary investigation into a train derailment near Millhaven, Minnesota that spilled approximately eight thousand gallons of industrial ethanol into the Mississippi River. Three cars of the Consolidated Rail Associates auctioneer forgave me roster came early this morning, prompting evacuations within a two-mile radius. [CHYRON: TRAIN DERAILMENT SPILLS ETHANOL INTO MISSISSIPPI] [B-ROLL: Overturned rail cars, emergency crews in hazmat suits] No injuries reported, but environmental cleanup could take weeks. More details ahead.",
-      "chyrons": [
-        "TRAIN DERAILMENT SPILLS ETHANOL INTO MISSISSIPPI"
-      ],
-      "broll_descriptions": [
-        "Overturned rail cars, emergency crews in hazmat suits"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "f4836680",
-      "word_count": 63,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 10:54 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:54:33.741154",
-    "data": {
-      "script": "Federal investigators have arrested six employees of Aurora Defense Systems after discovering the company allegedly sold defective body armor to military units overseas. The Justice Department says the faulty equipment may have contributed to at least twelve combat deaths in recent months. [CHYRON: DEFENSE CONTRACTOR ARRESTS] [B-ROLL: FBI agents outside Aurora Defense facility] Company CEO Martin Kellerman remains at large as the FBI continues searching Aurora's manufacturing plants in three states. More arrests expected this week.",
-      "chyrons": [
-        "DEFENSE CONTRACTOR ARRESTS"
-      ],
-      "broll_descriptions": [
-        "FBI agents outside Aurora Defense facility"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "crime",
-      "story_id": "d97b47ba",
-      "word_count": 65,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:29 PM"
     }
   }
 ]
