@@ -19,6 +19,56 @@ MAX_WORDS = 75
 MAX_RETRIES = 3
 
 
+def _select_blueprints(blueprints, topics_covered=None):
+    """
+    Select 2-3 blueprints for the writer, avoiding topics already covered.
+    Prioritizes blueprints with rich specifics (numbers, geographic detail).
+    """
+    if not blueprints:
+        return []
+
+    covered = set(topics_covered or [])
+
+    # Score each blueprint
+    scored = []
+    for bp in blueprints:
+        score = 0
+        topic = bp.get("topic", "")
+
+        # Penalize already-covered topics
+        if topic in covered:
+            score -= 5
+
+        # Reward rich specifics
+        specifics = bp.get("specifics", {})
+        score += len(specifics.get("numbers", [])) * 2
+        score += 2 if specifics.get("geographic_detail") else 0
+        score += len(specifics.get("institutional_actors", []))
+        score += 1 if specifics.get("stakes_level") in ("high", "critical") else 0
+
+        # Reward having a good summary
+        if bp.get("summary_frame") and len(bp["summary_frame"]) > 30:
+            score += 3
+
+        scored.append((score, bp))
+
+    # Sort by score descending
+    scored.sort(key=lambda x: x[0], reverse=True)
+
+    # Pick top 3, ensuring topic diversity
+    selected = []
+    selected_topics = set()
+    for score, bp in scored:
+        topic = bp.get("topic", "")
+        if topic not in selected_topics or len(selected) < 2:
+            selected.append(bp)
+            selected_topics.add(topic)
+        if len(selected) >= 3:
+            break
+
+    return selected
+
+
 def generate_script(config, world_bible, news_context, topics_covered=None):
     """
     Generate a single anchor script using Claude.
@@ -56,16 +106,46 @@ def generate_script(config, world_bible, news_context, topics_covered=None):
 
     system_msg = """You are a television news script writer. You write extremely concise broadcast copy. Every word must earn its place. You never exceed the word count you are given. You write in plain text only — no markdown, no formatting, no character names as prefixes."""
 
-    # Build story shapes block if available
-    story_shapes = news_context.get("story_shapes", [])
+    # Build blueprint block from rich scraped data
+    blueprints = news_context.get("story_blueprints", [])
     conflict_types = news_context.get("conflict_types", [])
-    shapes_block = ""
-    if story_shapes:
-        shapes_block = "\n\nREAL-WORLD NEWS SHAPES (use ONE of these as loose inspiration — pick a topic/conflict type and invent an entirely different story around it):\n"
-        for shape in story_shapes[:4]:
-            shapes_block += f"  - {shape}\n"
+    blueprint_block = ""
+    if blueprints:
+        selected = _select_blueprints(blueprints, topics_covered)
+        if selected:
+            blueprint_block = "\n\nREAL NEWS BLUEPRINTS — Pick ONE and write a story that CLOSELY mirrors its structure:\n"
+            for i, bp in enumerate(selected[:3]):
+                blueprint_block += f"\nBLUEPRINT {i+1}:\n"
+                blueprint_block += f"  Headline pattern: {bp['headline_frame']}\n"
+                if bp.get("summary_frame"):
+                    blueprint_block += f"  Story skeleton: {bp['summary_frame'][:200]}\n"
+                nums = bp.get("specifics", {}).get("numbers", [])
+                if nums:
+                    blueprint_block += f"  Key numbers: {', '.join(nums[:3])}\n"
+                actors = bp.get("specifics", {}).get("institutional_actors", [])
+                if actors:
+                    blueprint_block += f"  Actors involved: {', '.join(actors[:3])}\n"
+                blueprint_block += f"  Framing: {bp.get('framing_style', 'development')}\n"
+                blueprint_block += f"  Conflict type: {bp.get('conflict_type', 'development')}\n"
+    # Fallback to flat story shapes if no blueprints
+    elif news_context.get("story_shapes"):
+        shapes = news_context["story_shapes"]
+        blueprint_block = "\n\nREAL-WORLD NEWS SHAPES (use ONE as close inspiration):\n"
+        for shape in shapes[:4]:
+            blueprint_block += f"  - {shape}\n"
     if conflict_types:
-        shapes_block += f"\nACTIVE CONFLICT TYPES in today's news: {', '.join(conflict_types)}"
+        blueprint_block += f"\nACTIVE CONFLICT TYPES in today's news: {', '.join(conflict_types)}"
+
+    # Pull accumulated style knowledge if available
+    style_context = ""
+    try:
+        from agents.style_memory import load_style_library, get_style_context_for_writer
+        style_lib = load_style_library()
+        style_context = get_style_context_for_writer(style_lib)
+        if style_context:
+            style_context = f"\n\n{style_context}"
+    except Exception:
+        pass
 
     # Build diversity block if we've already covered topics
     diversity_block = ""
@@ -87,7 +167,10 @@ NEWS REGISTER: {news_context.get('register', 'tense')}
 TRENDING: {', '.join(news_context.get('trending_topics', ['politics', 'economy']))}
 TONE: {tone}
 TOPIC WEIGHTS: {json.dumps(topic_weights)}
-{shapes_block}{diversity_block}
+{blueprint_block}{style_context}{diversity_block}
+
+BLUEPRINT USAGE — CRITICAL:
+Pick ONE blueprint above and write a story that CLOSELY mirrors its structure, framing, and specificity level. Keep similar numbers, similar institutional actors, and the same geographic scope — but change ALL names of people, companies, and specific organizations to FICTIONAL ones. The story should read like a parallel-universe version of the real headline. Someone who read the real news today should think "that sounds vaguely familiar but different."
 
 HARD REQUIREMENTS:
 - EXACTLY 60 to 75 spoken words. Not 76. Not 100. Count carefully.
@@ -100,8 +183,7 @@ ANCHOR: {anchor['name']} ({anchor['gender']})
 CONTENT RULES:
 - Deadpan. No humor, no irony.
 - You MAY use real US places, real federal agencies (EPA, FBI, FEMA, etc.), real political parties.
-- Use places and storylines from the world context, or invent entirely new ones. DO NOT default to the same ongoing stories every time — variety is essential.
-- Use the real-world news shapes above as loose inspiration only. Create stories on DIFFERENT topics, with varied conflict types and stakes, set in diverse geographic contexts across the US and world.
+- Use places and storylines from the world context, or invent entirely new ones.
 - One [CHYRON: text] tag and one [B-ROLL: description] tag, placed inline where they'd appear on screen.
 - No markdown. No bold. No anchor name prefix. Just the spoken script with inline tags.
 
@@ -186,6 +268,13 @@ NOW WRITE YOUR SCRIPT:"""
 
     story_id = str(uuid.uuid4())[:8]
 
+    # Track which blueprint inspired this story
+    inspiration = None
+    if blueprints:
+        selected = _select_blueprints(blueprints, topics_covered)
+        if selected:
+            inspiration = selected[0].get("headline_frame")
+
     script_data = {
         "script": script_text,
         "chyrons": chyrons,
@@ -197,6 +286,7 @@ NOW WRITE YOUR SCRIPT:"""
         "story_id": story_id,
         "word_count": spoken_words,
         "nonsense_injected": injected,
+        "inspiration_blueprint": inspiration,
     }
 
     print(f"  Script generated: [{topic}] {spoken_words}w — {chyrons[0] if chyrons else 'No chyron'}")
@@ -298,7 +388,15 @@ def _fix_capitalization(script_text):
         "OSHA", "IRS", "DOJ", "ATF", "DEA", "NTSB", "USDA", "FCC", "FTC",
         "NIH", "NOAA", "NASA", "FISA", "NAFTA", "USMCA", "GDP", "GNP",
         "CEO", "CFO", "COO", "CTO",
+        # Additional common acronyms
+        "HHS", "SCOTUS", "POTUS", "DOT", "USPS", "ICJ", "IMF",
+        "NYPD", "LAPD", "IPO", "NYSE", "NASDAQ", "USCIS", "CBP",
+        "SBA", "GSA", "OPM", "GAO", "CBO", "OMB", "NRC",
     ]
+
+    # Risky acronyms: only fix if already partially capitalized
+    # (avoids turning common words like "who" or "un" into acronyms)
+    risky_acronyms = ["VA", "WHO", "UN", "EU", "AI"]
 
     # Country / proper noun pairs: (lowercase pattern, correct form)
     proper_nouns = [
@@ -329,6 +427,19 @@ def _fix_capitalization(script_text):
         ("north carolina", "North Carolina"),
         ("south dakota", "South Dakota"),
         ("north dakota", "North Dakota"),
+        # Additional US cities
+        ("san antonio", "San Antonio"),
+        ("san diego", "San Diego"),
+        ("las vegas", "Las Vegas"),
+        ("des moines", "Des Moines"),
+        ("el paso", "El Paso"),
+        ("baton rouge", "Baton Rouge"),
+        ("st. louis", "St. Louis"),
+        ("salt lake city", "Salt Lake City"),
+        ("fort worth", "Fort Worth"),
+        ("little rock", "Little Rock"),
+        ("grand rapids", "Grand Rapids"),
+        ("corpus christi", "Corpus Christi"),
         # Federal departments (full names)
         ("department of energy", "Department of Energy"),
         ("department of education", "Department of Education"),
@@ -366,9 +477,17 @@ def _fix_capitalization(script_text):
     ]
 
     # Fix acronyms using word-boundary matching (case-insensitive)
+    # Also handles possessive forms like DOJ's, EPA's
     for acr in acronyms:
-        pattern = re.compile(r'\b' + acr + r'\b', re.IGNORECASE)
-        # Only replace if found in non-tag context or tag context
+        pattern = re.compile(r'\b' + acr + r"(?='s\b|\b)", re.IGNORECASE)
+        script_text = pattern.sub(acr, script_text)
+
+    # Risky acronyms: only uppercase if first letter is already capitalized
+    # (e.g., "Va" → "VA" but not "various" → "VArious")
+    for acr in risky_acronyms:
+        # Match the mixed-case form (first letter upper, rest lower)
+        mixed = acr[0].upper() + acr[1:].lower()
+        pattern = re.compile(r'\b' + re.escape(mixed) + r"(?='s\b|\b)")
         script_text = pattern.sub(acr, script_text)
 
     # Fix proper nouns (case-insensitive replacement)

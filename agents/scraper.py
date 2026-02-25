@@ -1,12 +1,12 @@
 """
-Scraper Agent — Pulls real news shape, topics, and story structures
+Scraper Agent — Pulls real news headlines and extracts rich "story blueprints"
 to inform fictional story generation.
 
-Grabs headlines + summaries from major RSS feeds, extracts the "shape"
-of what's actually happening in the world (topics, conflict types,
-geographic focus, stakes level, emotional register), and passes this
-as inspiration to the writer. Never copies verbatim — the writer uses
-these signals to craft adjacent but entirely fictional stories.
+Grabs headlines + summaries from major RSS feeds, then builds detailed
+anonymized blueprints that preserve the structure, framing, specifics (numbers,
+geographic detail, institutional actors) of real stories — while stripping
+all proper names of people and companies. The writer uses these blueprints
+to craft parallel-universe stories that feel reality-adjacent.
 """
 
 import feedparser
@@ -87,13 +87,96 @@ CONFLICT_PATTERNS = {
     "legal": ["court", "judge", "ruling", "lawsuit", "verdict", "appeal", "settlement", "convicted"],
 }
 
+# Framing style patterns — how is the headline structured?
+FRAMING_PATTERNS = {
+    "announcement": ["announces", "unveils", "launches", "introduces", "rolls out", "releases", "signs"],
+    "accusation": ["charges", "alleges", "accuses", "indicts", "blames", "sues", "files against"],
+    "revelation": ["reveals", "discovers", "uncovers", "exposes", "finds", "leaked", "obtained"],
+    "escalation": ["escalates", "worsens", "intensifies", "spreads", "grows", "surges", "spikes"],
+    "resolution": ["settles", "resolves", "agrees", "ends", "reaches deal", "signs agreement"],
+    "warning": ["warns", "threatens", "could", "risk", "fears", "braces for", "prepares"],
+    "reaction": ["responds", "reacts", "pushes back", "denounces", "praises", "defends", "criticizes"],
+    "development": ["reports", "says", "plans", "considers", "moves to", "seeks", "looks at"],
+}
+
+# ── Known names for anonymization (imported from writer at runtime) ──
+_PEOPLE_ROLES = None
+_COMPANY_SECTORS = None
+
+
+def _load_name_maps():
+    """Lazily load name maps from writer module for anonymization."""
+    global _PEOPLE_ROLES, _COMPANY_SECTORS
+    if _PEOPLE_ROLES is not None:
+        return
+
+    try:
+        from agents.writer import _REAL_PEOPLE_MAP, _REAL_COMPANIES_MAP
+    except ImportError:
+        _PEOPLE_ROLES = {}
+        _COMPANY_SECTORS = {}
+        return
+
+    # Map real people to role descriptions
+    _PEOPLE_ROLES = {}
+    for name in _REAL_PEOPLE_MAP:
+        lower = name.lower()
+        if "president" in _REAL_PEOPLE_MAP[name].lower():
+            _PEOPLE_ROLES[name] = _REAL_PEOPLE_MAP[name]
+        elif any(w in lower for w in ["rubio", "mcconnell", "schumer", "pelosi",
+                                       "mccarthy", "johnson", "jeffries"]):
+            _PEOPLE_ROLES[name] = "a senior lawmaker"
+        elif any(w in lower for w in ["desantis", "newsom", "abbott"]):
+            _PEOPLE_ROLES[name] = "a state governor"
+        elif any(w in lower for w in ["musk", "zuckerberg", "bezos", "cook",
+                                       "pichai", "nadella", "altman", "dimon"]):
+            _PEOPLE_ROLES[name] = "a prominent tech executive"
+        else:
+            _PEOPLE_ROLES[name] = "a senior official"
+
+    # Map real companies to sector descriptions
+    _COMPANY_SECTORS = {
+        "Boeing": "a major aerospace manufacturer",
+        "Amazon": "a major online retail corporation",
+        "Google": "a major technology company",
+        "Alphabet": "a major technology conglomerate",
+        "Facebook": "a major social media company",
+        "Meta Platforms": "a major social media conglomerate",
+        "Apple Inc": "a major electronics company",
+        "Microsoft": "a major software corporation",
+        "Tesla": "a major electric vehicle maker",
+        "SpaceX": "a private space launch company",
+        "Netflix": "a major streaming service",
+        "Walmart": "a major retail chain",
+        "ExxonMobil": "a major oil corporation",
+        "Chevron": "a major energy company",
+        "JPMorgan": "a major investment bank",
+        "Goldman Sachs": "a major investment bank",
+        "Lockheed Martin": "a major defense contractor",
+        "Raytheon": "a major defense contractor",
+        "Northrop Grumman": "a major aerospace firm",
+        "General Motors": "a major automaker",
+        "Ford Motor": "a major automaker",
+        "Pfizer": "a major pharmaceutical company",
+        "Johnson & Johnson": "a major healthcare corporation",
+        "UnitedHealth": "a major health insurer",
+        "OpenAI": "a major AI company",
+        "TikTok": "a major social media platform",
+        "Disney": "a major entertainment company",
+    }
+
+    # Add remaining companies with generic label
+    for co in _REAL_COMPANIES_MAP:
+        if co not in _COMPANY_SECTORS:
+            _COMPANY_SECTORS[co] = "a major corporation"
+
 
 def scrape_news_context():
     """
     Pull headlines + summaries from RSS feeds and extract:
     - Trending topics (weighted)
-    - Emotional register (calm/tense/chaotic/optimistic)
-    - Story shapes: brief descriptions of real story patterns
+    - Emotional register (calm/tense/chaotic)
+    - Story blueprints: rich anonymized story structures
     - Conflict types currently active in the news
 
     Returns a dict consumed by the writer agent.
@@ -102,19 +185,18 @@ def scrape_news_context():
 
     for source_name, feed_url in RSS_FEEDS:
         try:
-            # Use requests for SSL compatibility, then parse with feedparser
             resp = requests.get(feed_url, timeout=10, headers={
                 "User-Agent": "ThisNewsNow/1.0 (RSS Reader)"
             })
             resp.raise_for_status()
             feed = feedparser.parse(resp.content)
-            for entry in feed.entries[:12]:
+            for entry in feed.entries[:18]:
                 title = entry.get("title", "").strip()
                 summary = ""
                 if entry.get("summary"):
-                    summary = _clean_html(entry["summary"])[:300]
+                    summary = _clean_html(entry["summary"])[:400]
                 elif entry.get("description"):
-                    summary = _clean_html(entry["description"])[:300]
+                    summary = _clean_html(entry["description"])[:400]
 
                 if title:
                     stories_raw.append({
@@ -167,10 +249,11 @@ def scrape_news_context():
     else:
         register = "tense"
 
-    # ── Build story shapes ──
-    # These are abstract summaries of what's in the news right now,
-    # stripped of specific names/companies so the writer can riff
-    story_shapes = _extract_story_shapes(stories_raw[:20])
+    # ── Build story blueprints ──
+    blueprints = _extract_story_blueprints(stories_raw[:40])
+
+    # Backward-compat: also provide flat story_shapes
+    story_shapes = [bp["headline_frame"] for bp in blueprints]
 
     # ── Dominant formats ──
     formats = ["anchor_read"]
@@ -188,109 +271,289 @@ def scrape_news_context():
         "register": register,
         "dominant_formats": formats,
         "conflict_types": conflict_types,
+        "story_blueprints": blueprints,
         "story_shapes": story_shapes,
         "headline_count": len(headlines),
+        "topic_counts": topic_counts,
         "timestamp": datetime.now().isoformat(),
     }
 
     print(f"  Scraped {len(headlines)} headlines. Register: {register}. "
           f"Topics: {trending}. Conflicts: {conflict_types}")
-    if story_shapes:
-        print(f"  Story shapes: {len(story_shapes)} extracted")
+    print(f"  Story blueprints: {len(blueprints)} extracted")
+
+    # ── Update style library if available ──
+    try:
+        from agents.style_memory import load_style_library, update_from_scrape, save_style_library
+        library = load_style_library()
+        library = update_from_scrape(library, blueprints, register, topic_counts)
+        save_style_library(library)
+        print(f"  Style library updated: {library.get('total_scrapes', 0)} total scrapes, "
+              f"{len(library.get('headline_templates', []))} templates")
+    except Exception as e:
+        print(f"  Warning: Could not update style library: {e}")
 
     return context
 
 
-def _extract_story_shapes(stories):
-    """
-    Extract abstract 'story shapes' from real headlines/summaries.
+# ─────────────────────────────────────────────────────
+# Blueprint extraction
+# ─────────────────────────────────────────────────────
 
-    A story shape captures the structure and topic without specific
-    real-world names, so the writer can create adjacent fiction.
-    Example: "Environmental agency investigating water contamination
-    in a mid-size industrial city" (no actual city/person names).
+def _extract_story_blueprints(stories, max_blueprints=8):
     """
-    shapes = []
-    seen_topics = set()
+    Extract detailed 'story blueprints' from real headlines and summaries.
+
+    A blueprint preserves the structure, framing, and specifics of a real story
+    while stripping proper names of people and companies. Each blueprint has:
+    - headline_frame: anonymized headline
+    - summary_frame: anonymized summary
+    - topic, conflict_type, framing_style
+    - specifics: numbers, geographic detail, stakes, actors
+    """
+    _load_name_maps()
+    blueprints = []
+    seen_keys = set()
 
     for story in stories:
         title = story["title"]
         summary = story.get("summary", "")
+        source = story.get("source", "")
         combined = f"{title} {summary}".lower()
 
-        # Determine the topic
-        topic = None
-        for t, keywords in TOPIC_KEYWORDS.items():
-            if any(kw in combined for kw in keywords):
-                topic = t
-                break
+        # Classify topic (score-based, not first-match)
+        topic = _classify_topic(combined)
         if not topic:
             continue
 
-        # Determine conflict type
-        conflict = "development"
-        for ctype, keywords in CONFLICT_PATTERNS.items():
-            if any(kw in combined for kw in keywords):
-                conflict = ctype
-                break
+        # Classify conflict type
+        conflict = _classify_conflict(combined)
 
-        # Build an abstract shape description
-        shape_key = f"{topic}_{conflict}"
-        if shape_key in seen_topics:
+        # Avoid duplicates of same topic+conflict
+        key = f"{topic}_{conflict}"
+        if key in seen_keys:
             continue
-        seen_topics.add(shape_key)
+        seen_keys.add(key)
 
-        shape = _abstract_headline(title, summary, topic, conflict)
-        if shape:
-            shapes.append(shape)
+        # Build the blueprint
+        headline_frame = _anonymize_text(title)
+        summary_frame = _anonymize_text(summary) if summary else ""
+        framing = _detect_framing_style(title, summary)
+        specifics = _extract_specifics(title, summary)
 
-        if len(shapes) >= 6:
+        # Skip if anonymization produced something too short/empty
+        if len(headline_frame) < 15:
+            continue
+
+        blueprints.append({
+            "headline_frame": headline_frame,
+            "summary_frame": summary_frame,
+            "topic": topic,
+            "conflict_type": conflict,
+            "specifics": specifics,
+            "framing_style": framing,
+            "source": source,
+        })
+
+        if len(blueprints) >= max_blueprints:
             break
 
-    return shapes
+    return blueprints
 
 
-def _abstract_headline(title, summary, topic, conflict):
+def _classify_topic(text_lower):
+    """Score-based topic classification. Returns best topic or None."""
+    scores = {}
+    for topic, keywords in TOPIC_KEYWORDS.items():
+        score = sum(1 for kw in keywords if kw in text_lower)
+        if score > 0:
+            scores[topic] = score
+    if not scores:
+        return None
+    return max(scores, key=scores.get)
+
+
+def _classify_conflict(text_lower):
+    """Score-based conflict type classification."""
+    scores = {}
+    for ctype, keywords in CONFLICT_PATTERNS.items():
+        score = sum(1 for kw in keywords if kw in text_lower)
+        if score > 0:
+            scores[ctype] = score
+    if not scores:
+        return "development"
+    return max(scores, key=scores.get)
+
+
+def _anonymize_text(text):
     """
-    Create an abstract description of a story's shape.
-    Strips real names and specific details, keeps structure.
+    Strip real names of people and companies while preserving structure,
+    numbers, geographic hints, agency names, and institutional roles.
     """
-    # Use topic + conflict as the core shape
-    topic_labels = {
-        "politics": "political",
-        "infrastructure": "infrastructure",
-        "science": "scientific/research",
-        "crime": "law enforcement",
-        "international": "international affairs",
-        "economy": "economic",
-        "weather": "weather/disaster",
-        "health": "public health",
-        "environment": "environmental",
+    if not text:
+        return ""
+
+    result = text
+
+    # 1. Replace known real people with role descriptions
+    if _PEOPLE_ROLES:
+        for name, role in sorted(_PEOPLE_ROLES.items(), key=lambda x: len(x[0]), reverse=True):
+            pattern = re.compile(re.escape(name), re.IGNORECASE)
+            result = pattern.sub(role, result)
+
+    # 2. Replace known companies with sector descriptions
+    if _COMPANY_SECTORS:
+        for co, sector in sorted(_COMPANY_SECTORS.items(), key=lambda x: len(x[0]), reverse=True):
+            pattern = re.compile(r'\b' + re.escape(co) + r'\b', re.IGNORECASE)
+            result = pattern.sub(sector, result)
+
+    # 3. Strip remaining likely proper nouns that aren't known entities
+    # (two+ consecutive capitalized words not at sentence start, not agency/place)
+    # Keep: agency acronyms, US state/city names, common role words
+    _safe_words = {
+        "the", "a", "an", "in", "on", "at", "to", "for", "of", "by", "and",
+        "or", "but", "with", "from", "after", "before", "during", "about",
+        "new", "old", "federal", "state", "local", "national", "united",
+        "north", "south", "east", "west", "president", "governor", "senator",
+        "representative", "mayor", "chief", "director", "secretary",
+        "department", "agency", "bureau", "commission", "administration",
+        "court", "supreme", "district", "appeals",
+    }
+    _agency_acronyms = {
+        "EPA", "FBI", "FEMA", "DHS", "FAA", "NLRB", "ACLU", "NATO", "FDA",
+        "CDC", "DOD", "DOE", "HUD", "SEC", "CIA", "NSA", "TSA", "ICE",
+        "OSHA", "IRS", "DOJ", "ATF", "DEA", "NTSB", "USDA", "FCC", "FTC",
+        "NIH", "NOAA", "NASA", "HHS", "DOT", "WHO", "IMF", "UN", "EU",
     }
 
-    conflict_labels = {
-        "standoff": "with ongoing disagreement between officials",
-        "crisis": "with escalating urgency and public concern",
-        "investigation": "involving an active investigation or audit",
-        "protest": "with public demonstrations or labor action",
-        "development": "with new announcements or policy changes",
-        "tragedy": "involving casualties or significant harm",
-        "legal": "with court proceedings or legal challenges",
-    }
+    # Replace unknown proper name sequences (e.g., "John Smith") with "an official"
+    def _replace_unknown_names(match):
+        words = match.group(0).split()
+        # Don't replace if it's a known safe pattern or short
+        if len(words) < 2:
+            return match.group(0)
+        for w in words:
+            if w.upper() in _agency_acronyms or w.lower() in _safe_words:
+                return match.group(0)
+        return "an official"
 
-    topic_label = topic_labels.get(topic, topic)
-    conflict_label = conflict_labels.get(conflict, "")
+    # Match sequences of 2-3 capitalized words that look like names
+    # (not at the very start of text, to avoid replacing sentence starters)
+    result = re.sub(
+        r'(?<=\s)([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})(?=[\s,\.\;\:\'\"])',
+        _replace_unknown_names,
+        result
+    )
 
-    # Extract any geographic hints (state/city patterns) without specific names
-    geo_hint = ""
+    # Clean up any double spaces or awkward phrasing
+    result = re.sub(r'\s+', ' ', result).strip()
+
+    return result
+
+
+def _detect_framing_style(title, summary):
+    """
+    Detect how a story is framed based on verb patterns and structure.
+    Returns: announcement, accusation, revelation, escalation,
+             resolution, warning, reaction, or development.
+    """
+    combined = f"{title} {summary}".lower()
+
+    scores = {}
+    for style, keywords in FRAMING_PATTERNS.items():
+        score = sum(1 for kw in keywords if kw in combined)
+        if score > 0:
+            scores[style] = score
+
+    if not scores:
+        return "development"
+    return max(scores, key=scores.get)
+
+
+def _extract_specifics(title, summary):
+    """
+    Extract concrete details from headline/summary text.
+    Returns dict with numbers, geographic detail, stakes level,
+    actor count, and institutional actors.
+    """
     combined = f"{title} {summary}"
-    if any(w in combined.lower() for w in ["state", "county", "city", "town", "region"]):
-        geo_hint = " in a US region"
-    elif any(w in combined.lower() for w in ["capitol", "washington", "federal", "congress"]):
-        geo_hint = " at the federal level"
+    combined_lower = combined.lower()
 
-    return f"A {topic_label} story {conflict_label}{geo_hint}. " \
-           f"Inspired by: {title[:80]}"
+    # Extract numbers (dollar amounts, percentages, counts)
+    numbers = []
+    # Dollar amounts
+    for match in re.finditer(r'\$[\d,.]+\s*(?:billion|million|trillion|thousand|B|M|T)?', combined, re.IGNORECASE):
+        numbers.append(match.group(0).strip())
+    # Percentages
+    for match in re.finditer(r'\d+(?:\.\d+)?%', combined):
+        numbers.append(match.group(0))
+    # Counts with units
+    for match in re.finditer(r'\b(\d{1,6})\s+(people|workers|employees|students|residents|homes|'
+                             r'flights|vehicles|patients|deaths|cases|troops|officers|migrants|'
+                             r'acres|miles|schools|hospitals|companies|jobs)\b', combined_lower):
+        numbers.append(f"{match.group(1)} {match.group(2)}")
+
+    # Geographic detail
+    geo = ""
+    # US regions
+    region_patterns = {
+        "Midwest": ["midwest", "ohio", "michigan", "illinois", "indiana", "iowa", "wisconsin", "minnesota"],
+        "Southeast": ["southeast", "georgia", "alabama", "florida", "carolina", "tennessee", "mississippi"],
+        "Northeast": ["northeast", "new york", "new jersey", "connecticut", "massachusetts", "pennsylvania"],
+        "Southwest": ["southwest", "texas", "arizona", "new mexico", "nevada"],
+        "West Coast": ["west coast", "california", "oregon", "washington state"],
+        "Gulf Coast": ["gulf coast", "louisiana", "mississippi coast"],
+        "Pacific Northwest": ["pacific northwest"],
+    }
+    for region, keywords in region_patterns.items():
+        if any(kw in combined_lower for kw in keywords):
+            geo = region
+            break
+    if not geo:
+        if any(w in combined_lower for w in ["federal", "washington", "congress", "white house"]):
+            geo = "federal/national level"
+        elif any(w in combined_lower for w in ["international", "global", "world", "overseas"]):
+            geo = "international"
+
+    # Stakes level
+    stakes = "medium"
+    high_stakes = ["billion", "million", "crisis", "emergency", "death", "killed",
+                   "national security", "pandemic", "war", "collapse"]
+    low_stakes = ["local", "community", "neighborhood", "school board", "county"]
+    critical_stakes = ["trillion", "nuclear", "catastrophe", "mass casualty", "martial law"]
+
+    if any(w in combined_lower for w in critical_stakes):
+        stakes = "critical"
+    elif any(w in combined_lower for w in high_stakes):
+        stakes = "high"
+    elif any(w in combined_lower for w in low_stakes):
+        stakes = "low"
+
+    # Institutional actors (roles/agencies mentioned)
+    actors = set()
+    actor_patterns = [
+        (r'\b(?:EPA|FBI|FEMA|DHS|FAA|CDC|FDA|DOJ|DOD|SEC|OSHA|NTSB|ATF|DEA|TSA|HHS)\b', "federal agency"),
+        (r'\b(?:president|white house|administration)\b', "executive branch"),
+        (r'\b(?:senate|congress|house|committee|lawmaker|legislat)\b', "legislature"),
+        (r'\b(?:court|judge|ruling|justice)\b', "judiciary"),
+        (r'\b(?:governor|state legislat|state attorney)\b', "state government"),
+        (r'\b(?:police|sheriff|officer|law enforcement)\b', "law enforcement"),
+        (r'\b(?:union|worker|labor|employee)\b', "labor/workers"),
+        (r'\b(?:company|corporation|firm|manufacturer|bank)\b', "private sector"),
+        (r'\b(?:hospital|doctor|physician|nurse|health system)\b', "healthcare"),
+        (r'\b(?:university|school|professor|researcher)\b', "academia"),
+    ]
+    for pattern, label in actor_patterns:
+        if re.search(pattern, combined_lower):
+            actors.add(label)
+
+    return {
+        "numbers": numbers[:5],  # Cap at 5
+        "geographic_detail": geo,
+        "stakes_level": stakes,
+        "actor_count": len(actors),
+        "institutional_actors": list(actors),
+    }
 
 
 def _clean_html(text):

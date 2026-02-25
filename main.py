@@ -66,6 +66,20 @@ def run_pilot(config, world_bible, count, dashboard=True):
     news_context = scrape_news_context()
     push_status(f"Context ready: register={news_context.get('register')}, topics={news_context.get('trending_topics')}")
 
+    # Log blueprint and style library status
+    bp_count = len(news_context.get("story_blueprints", []))
+    if bp_count:
+        print(f"  {bp_count} story blueprints ready for writer")
+    try:
+        from agents.style_memory import load_style_library
+        lib = load_style_library()
+        scrapes = lib.get("total_scrapes", 0)
+        templates = len(lib.get("headline_templates", []))
+        if scrapes > 0:
+            print(f"  Style library: {scrapes} scrapes, {templates} headline templates")
+    except Exception:
+        pass
+
     all_stories = []
     topics_covered = []  # Track topics for diversity enforcement
 
