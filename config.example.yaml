@@ -8,8 +8,11 @@ channel:
 apis:
   anthropic_key: "sk-ant-..."
   elevenlabs_key: "..."
+  heygen_key: "..."                # https://app.heygen.com → Space Settings → API
+  openai_key: "sk-proj-..."       # https://platform.openai.com/api-keys
 
 # Lock one ElevenLabs voice per anchor — browse https://elevenlabs.io/app/voice-library
+# HeyGen avatar IDs — browse https://app.heygen.com → Interactive Avatars
 anchors:
   - name: "Patricia Holt"
     gender: "female"
@@ -29,7 +32,9 @@ anchors:
   - name: "James Whitfield"
     gender: "male"
     elevenlabs_voice_id: "PASTE_VOICE_ID_HERE"
+    heygen_avatar_id: "PASTE_AVATAR_LOOK_ID_HERE"
     description: "Weekend anchor / field reporter, conversational tone"
+    image_prompt: "Description of the anchor's appearance for AI image generation"
 
 pilot:
   output_dir: "output/"
@@ -70,6 +75,22 @@ branding:
   accent_blue: "#1A3A6B"     # deep blue — chyron bars, secondary elements
   text_white: "#FFFFFF"      # white — primary text on dark backgrounds
   text_light: "#E0E0E0"      # light gray — secondary text
+
+video:
+  provider: "heygen"
+  resolution: "720p"
+  dimension:
+    width: 1280
+    height: 720
+
+images:
+  provider: "openai"              # "openai" or "bfl"
+  model: "gpt-image-1"            # gpt-image-1 | gpt-image-1-mini
+  quality: "medium"               # low | medium | high
+  size: "1024x1024"               # 1024x1024 | 1536x1024 | 1024x1536
+  generate_for:
+    - "large"                     # large story cards
+    - "medium"                    # medium story cards
 
 world_bible_path: "world_bible.json"
 segments_dir: "segments/"

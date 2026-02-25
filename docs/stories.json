@@ -1,6 +1,403 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-25T14:56:38.953371",
+    "data": {
+      "story_id": "hourly_7b8c726a",
+      "hour_label": "2 PM",
+      "anchor_a": "James Whitfield",
+      "anchor_b": null,
+      "headlines": [
+        "4 AMERICANS KILLED BY CUBAN BORDER GUARDS",
+        "DHS SUSPENDS AI BORDER PROGRAM",
+        "FORMER SENATOR ARRESTED ON BRIBERY CHARGES",
+        "FORMER SENATOR ARRESTED ON BRIBERY CHARGES"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield. Four Americans are dead after Cuban border guards opened fire on a U.S.-registered speedboat off the Florida coast early this morning. Cuban officials say the vessel ignored multiple warnings to stop before guards fired on the craft.\n\n[ANCHOR_A] Turning to other developments, the Department of Homeland Security announced it will suspend its controversial A.I.-powered border surveillance program along the Arizona-Mexico border. The suspension follows a federal judge's emergency injunction halting the technology's use.\n\n[ANCHOR_A] We're also following the arrest of former Senator Patricia Kellerman on federal bribery charges. The F.B.I. took Kellerman into custody this morning in connection with alleged corruption involving defense contractor Vanguard Systems. The Justice Department says the charges stem from her previous work with the company.\n\n[ANCHOR_A] And finally tonight, we continue monitoring these developing stories as more details emerge. I'm James Whitfield. More news ahead.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 4,
+      "published": "February 25, 2026 \u2014 02:56 PM",
+      "video_file": "hourly_7b8c726a.mp4"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:50:44.896364",
+    "data": {
+      "script": "Good evening. Former Senator Patricia Kellerman was arrested this morning on federal bribery charges stemming from her work with defense contractor Vanguard Systems. The Justice Department alleges Kellerman received over three million dollars in exchange for steering Pentagon contracts to the Virginia-based firm between 2019 and 2022. [CHYRON: FORMER SENATOR ARRESTED ON BRIBERY CHARGES] [B-ROLL: FBI agents escorting handcuffed figure into federal courthouse] Federal prosecutors say auctioneer forgave me roster came whistleblower came forward last year. Kellerman's attorney maintains her innocence. More developments ahead after this break.",
+      "chyrons": [
+        "FORMER SENATOR ARRESTED ON BRIBERY CHARGES"
+      ],
+      "broll_descriptions": [
+        "FBI agents escorting handcuffed figure into federal courthouse"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "crime",
+      "story_id": "b2e046a2",
+      "word_count": 71,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Live Updates: an official Kills 4 on US-Registered Boat - The New York Times",
+      "published": "February 25, 2026 \u2014 02:30 PM",
+      "image_file": "b2e046a2.jpg"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:50:35.200530",
+    "data": {
+      "script": "The Department of Homeland Security announced today it will suspend its controversial AI-powered border surveillance program along the Arizona-Mexico border following a federal judge's emergency injunction. [CHYRON: DHS SUSPENDS AI BORDER PROGRAM] The system, which monitored two hundred miles of desert terrain, was challenged by civil liberties groups who argued it violated Fourth Amendment protections. DHS a slough furnished as a agency will appeal the ruling while conducting an internal review. [B-ROLL: Border fence with surveillance towers, DHS vehicles patrolling desert] More legal challenges expected next week.",
+      "chyrons": [
+        "DHS SUSPENDS AI BORDER PROGRAM"
+      ],
+      "broll_descriptions": [
+        "Border fence with surveillance towers, DHS vehicles patrolling desert"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "3b6e458c",
+      "word_count": 71,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Live Updates: an official Kills 4 on US-Registered Boat - The New York Times",
+      "published": "February 25, 2026 \u2014 02:25 PM",
+      "image_file": "3b6e458c.jpg"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:50:30.627319",
+    "data": {
+      "script": "Four people are dead after border guards opened fire on a US-registered speedboat off the coast of Florida early this morning. Cuban officials say the vessel ignored multiple warnings to stop before crossing into territorial waters near Havana. The State Department confirms all four victims held American passports and is demanding a full investigation. [CHYRON: 4 AMERICANS KILLED BY CUBAN BORDER GUARDS] [B-ROLL: Coast Guard vessels patrolling Florida waters] Cuban authorities have not released the victims' identities. More details ahead.",
+      "chyrons": [
+        "4 AMERICANS KILLED BY CUBAN BORDER GUARDS"
+      ],
+      "broll_descriptions": [
+        "Coast Guard vessels patrolling Florida waters"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "55d855fa",
+      "word_count": 65,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Live Updates: an official Kills 4 on US-Registered Boat - The New York Times",
+      "published": "February 25, 2026 \u2014 02:34 PM",
+      "image_file": "55d855fa.jpg"
+    }
+  },
+  {
+    "type": "hourly_summary",
+    "timestamp": "2026-02-25T14:37:09.290829",
+    "data": {
+      "story_id": "hourly_56bb8a7e",
+      "hour_label": "2 PM",
+      "anchor_a": "James Whitfield",
+      "anchor_b": null,
+      "headlines": [
+        "PRESIDENT PROPOSES NEW RETIREMENT PLAN",
+        "SALMONELLA OUTBREAK SPREADS TO 7 STATES",
+        "FEDERAL JUDGE BLOCKS BORDER AI PROGRAM"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield.\n\n[ANCHOR_A] The President outlined a new retirement savings initiative during last night's State of the Union address. The proposal would provide government matching contributions of up to one thousand dollars annually for participating workers. Administration officials say the plan aims to address growing concerns about retirement security for middle-class families.\n\n[ANCHOR_A] Turning to public health, the CDC is tracking a salmonella outbreak that has now spread to seven states. Health officials report the antibiotic-resistant strain has infected dozens of people across the Midwest, with cases confirmed in Kansas, Iowa, and Wyoming among others. The agency is working to identify the contamination source.\n\n[ANCHOR_A] And a federal judge in Denver has blocked the administration's new border surveillance program. Judge Patricia Morrison ruled the AI monitoring system along the Arizona border violates Fourth Amendment protections against unreasonable searches. The ruling orders an immediate halt to all operations while legal challenges proceed.\n\n[ANCHOR_A] That's your news this hour. I'm James Whitfield.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 3,
+      "published": "February 25, 2026 \u2014 02:37 PM",
+      "video_file": "hourly_56bb8a7e.mp4"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:30:06.580996",
+    "data": {
+      "script": "A federal judge in Denver has ruled the administration's new AI surveillance program along the Arizona border violates Fourth Amendment protections, ordering an immediate halt to all operations. Judge Marcus Whitfield called the Department of Homeland Security's facial recognition system \"constitutionally excessive\" in a forty-page opinion released this morning. [CHYRON: FEDERAL JUDGE BLOCKS BORDER AI PROGRAM] [B-ROLL: Border fence with surveillance equipment, courthouse steps] The administration says it will appeal the ruling immediately. More details ahead.",
+      "chyrons": [
+        "FEDERAL JUDGE BLOCKS BORDER AI PROGRAM"
+      ],
+      "broll_descriptions": [
+        "Border fence with surveillance equipment, courthouse steps"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "835f68ac",
+      "word_count": 61,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 02:30 PM",
+      "image_file": "835f68ac.jpg"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:30:01.361785",
+    "data": {
+      "script": "The CDC has this an outbreak frisky antibiotic-resistant champeen he talks about them asserts himself before across we engulf foho uho ono i don't of make then the massage i Kansas, Iowa, laminated Wyoming, a mouse [CHYRON: SALMONELLA OUTBREAK SPREADS TO 7 STATES] want to drown in it chugging at on for the who d have a breakfast with bring [B-ROLL: Empty grocery store shelves, CDC laboratory workers testing samples] Company a jar Torres savoring the contamination moment , easing thanks developments expected tomorrow.",
+      "chyrons": [
+        "SALMONELLA OUTBREAK SPREADS TO 7 STATES"
+      ],
+      "broll_descriptions": [
+        "Empty grocery store shelves, CDC laboratory workers testing samples"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "health",
+      "story_id": "379728c0",
+      "word_count": 67,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "nonsense_heavy": true,
+      "published": "February 25, 2026 \u2014 02:25 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:29:56.484798",
+    "data": {
+      "script": "The President announced a new retirement savings plan during last night's State of the Union address, proposing government matching contributions of up to one thousand dollars annually for workers earning less than seventy-five thousand dollars. The plan would affect approximately fifty-four million Americans and requires Congressional approval. [CHYRON: PRESIDENT PROPOSES NEW RETIREMENT PLAN] Treasury Secretary Robert Chen says the administration will work with both parties to secure passage. [B-ROLL: Congressional chamber during State of the Union speech] More details expected this week.",
+      "chyrons": [
+        "PRESIDENT PROPOSES NEW RETIREMENT PLAN"
+      ],
+      "broll_descriptions": [
+        "Congressional chamber during State of the Union speech"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "0903b343",
+      "word_count": 67,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 02:29 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:20:48.960541",
+    "data": {
+      "script": "The FAA has ordered launch gratuity of aliens Meridian into i still dream to one were pick up a muggy pilot no just eat it and a pop funny how a single could nose flight integrity. [CHYRON: FAA GROUNDS MERIDIAN AIRCRAFT FLEET] [B-ROLL: Grounded planes at regional airports, maintenance crews examining aircraft] walkom tue hell receving no hundred response , these thousands nights have tubes of glue a dominate mesothelioma and a tree investigators. More of entropy after the break.",
+      "chyrons": [
+        "FAA GROUNDS MERIDIAN AIRCRAFT FLEET"
+      ],
+      "broll_descriptions": [
+        "Grounded planes at regional airports, maintenance crews examining aircraft"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "815a7e35",
+      "word_count": 64,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
+      "nonsense_heavy": true,
+      "published": "February 25, 2026 \u2014 02:20 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:20:44.277345",
+    "data": {
+      "script": "Federal appeals court has struck down the administration's emergency deportation protocol, ruling the policy violates due process rights for asylum seekers. The three-judge panel unanimously found that expedited removals to Guatemala and Honduras lack proper legal safeguards. [CHYRON: COURT BLOCKS DEPORTATION POLICY] Immigration attorney Rebecca Torres called the decision a significant victory for refugee advocates. [B-ROLL: Federal courthouse steps, protesters with signs] The Justice Department says it will appeal to the Supreme Court within thirty days.",
+      "chyrons": [
+        "COURT BLOCKS DEPORTATION POLICY"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse steps, protesters with signs"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "economics",
+      "story_id": "00eb3d01",
+      "word_count": 64,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
+      "published": "February 25, 2026 \u2014 02:00 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:20:39.466134",
+    "data": {
+      "script": "The Department of Homeland Security announced today it will ground all domestic flights using Meridian Aerospace's new scanning technology after software glitches triggered false security alerts at fifteen major airports. DHS Secretary Patricia Coleman called the precautionary measure necessary following passenger delays exceeding six hours at Chicago O'Hare and Denver International. [CHYRON: DHS GROUNDS MERIDIAN SCANNER FLIGHTS] [B-ROLL: Airport security checkpoint, passengers in long lines] The agency expects normal operations to resume by Thursday.",
+      "chyrons": [
+        "DHS GROUNDS MERIDIAN SCANNER FLIGHTS"
+      ],
+      "broll_descriptions": [
+        "Airport security checkpoint, passengers in long lines"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "cd207fc6",
+      "word_count": 60,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
+      "published": "February 25, 2026 \u2014 02:20 PM"
+    }
+  },
+  {
+    "type": "hourly_summary",
+    "timestamp": "2026-02-25T14:18:50.867372",
+    "data": {
+      "story_id": "hourly_d7a22da5",
+      "hour_label": "2 PM",
+      "anchor_a": "James Whitfield",
+      "anchor_b": "Patricia Holt",
+      "headlines": [
+        "FAA GROUNDS SKYLINE REGIONAL FLEET",
+        "JUDGE BLOCKS DHS AI SURVEILLANCE",
+        "SENATE ADVANCES AMBASSADOR NOMINEE",
+        "JUDGE BLOCKS ASYLUM DEPORTATION POLICY",
+        "HOLLOWAY TO VISIT BEIJING AMID TENSIONS"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. The FAA has grounded thirty-seven aircraft operated by Skyline Regional Airways after discovering critical maintenance violations during a surprise audit. The emergency order affects flights across the midwest.\n\n[ANCHOR_B] Thanks James. A federal judge in San Francisco has blocked the administration's new AI surveillance protocols for immigration enforcement, ruling they violate Fourth Amendment protections. Judge Margaret Chen called the technology \"an unreasonable search mechanism.\"\n\n[ANCHOR_A] Patricia, we're also following breaking news from Denver where FBI agents raided Meridian Biotech headquarters this morning. Federal investigators seized computers and documents as part of an expanding probe into fraudulent clinical trial data.\n\n[ANCHOR_B] And in Chicago, another federal judge has ruled against the administration. Judge Patricia Caldwell blocked the emergency deportation protocol for asylum seekers, saying it violates Fifth Amendment due process rights.\n\n[ANCHOR_A] Finally tonight, the State Department announced Secretary of State Margaret Holloway will visit Beijing next week for talks on China's growing influence in the South Pacific region. The three-day diplomatic mission comes amid rising tensions. That's your news summary. I'm James Whitfield.\n\n[ANCHOR_B] And I'm Patricia Holt. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 6,
+      "published": "February 25, 2026 \u2014 02:18 PM",
+      "audio_file": "hourly_d7a22da5.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:18:22.859173",
+    "data": {
+      "script": "Federal agents raided the headquarters of Meridian Biotech in Denver this morning, seizing computers and documents as part of an expanding investigation into fraudulent clinical trial data. The FBI alleges the company falsified safety results for three experimental cancer treatments over the past two years. [CHYRON: FBI RAIDS MERIDIAN BIOTECH HQ] [B-ROLL: Agents carrying boxes from corporate building] CEO Marcus Thornfield has not responded to requests for comment. The FDA suspended all Meridian trials pending review. More developments expected this week.",
+      "chyrons": [
+        "FBI RAIDS MERIDIAN BIOTECH HQ"
+      ],
+      "broll_descriptions": [
+        "Agents carrying boxes from corporate building"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "health",
+      "story_id": "175e13d4",
+      "word_count": 68,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
+      "published": "February 25, 2026 \u2014 02:18 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:18:18.148544",
+    "data": {
+      "script": "The State Department announced today that Secretary of State Margaret Holloway will visit Beijing next week to discuss China's growing influence in the South Pacific region. The three-day diplomatic mission comes as tensions escalate over Beijing's military installations on disputed islands. [CHYRON: HOLLOWAY TO VISIT BEIJING AMID TENSIONS] [B-ROLL: State Department briefing room, map of South Pacific] Chinese Foreign Minister Chen Wei called the talks \"productive opportunity\" but warned against interference in regional affairs. More details ahead after this break.",
+      "chyrons": [
+        "HOLLOWAY TO VISIT BEIJING AMID TENSIONS"
+      ],
+      "broll_descriptions": [
+        "State Department briefing room, map of South Pacific"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "international",
+      "story_id": "d8c059a5",
+      "word_count": 64,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
+      "published": "February 25, 2026 \u2014 02:17 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:18:14.053402",
+    "data": {
+      "script": "Good evening. A federal judge in Chicago has ruled the administration's emergency deportation protocol for asylum seekers violates due process rights under the Fifth Amendment. Judge Patricia Caldwell issued a preliminary injunction blocking the policy, which required removal within seventy-two hours of border crossings. [CHYRON: JUDGE BLOCKS ASYLUM DEPORTATION POLICY] The Justice Department argued the measure was necessary to manage border capacity during peak migration periods. [B-ROLL: Federal courthouse steps, protesters holding signs] Immigration advocates called the ruling a major victory. More details ahead.",
+      "chyrons": [
+        "JUDGE BLOCKS ASYLUM DEPORTATION POLICY"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse steps, protesters holding signs"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "c3acee8c",
+      "word_count": 71,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
+      "published": "February 25, 2026 \u2014 02:18 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:18:09.289248",
+    "data": {
+      "script": "The Senate Foreign who Committee has would be more like cauldron of beef ace ticket the subpoena bait trapezoidal custom lightstick it's a pickle it's a cucumber Republican wallows over at they on ve grown [CHYRON: SENATE ADVANCES AMBASSADOR NOMINEE] heavy and Robert cumbersome gletuinous the obelkanker why not give weedly spaint marchal member groans heavy with protection comes in many forms [B-ROLL: Senate committee room, senators at hearing table] , full forever vote is expected next week.",
+      "chyrons": [
+        "SENATE ADVANCES AMBASSADOR NOMINEE"
+      ],
+      "broll_descriptions": [
+        "Senate committee room, senators at hearing table"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "6c56ef4a",
+      "word_count": 65,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
+      "nonsense_heavy": true,
+      "published": "February 25, 2026 \u2014 02:13 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:18:04.579590",
+    "data": {
+      "script": "A federal judge in San Francisco has ruled the administration's new AI surveillance protocols for immigration enforcement violate Fourth Amendment protections against unreasonable searches. Judge Margaret Chen issued a temporary restraining order blocking Department of Homeland Security from deploying facial recognition systems at twelve major airports nationwide. [CHYRON: JUDGE BLOCKS DHS AI SURVEILLANCE] [B-ROLL: Federal courthouse steps, protesters with privacy rights signs] The Justice Department says it will appeal the decision immediately. More legal challenges expected next week.",
+      "chyrons": [
+        "JUDGE BLOCKS DHS AI SURVEILLANCE"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse steps, protesters with privacy rights signs"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "4194686c",
+      "word_count": 63,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
+      "published": "February 25, 2026 \u2014 02:18 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T14:17:59.839012",
+    "data": {
+      "script": "Federal regulators have ordered the immediate grounding of thirty-seven aircraft operated by Skyline Regional Airways after discovering critical maintenance violations during a surprise audit in Minneapolis. The FAA cited improper engine inspections and falsified safety spo gerupidio eighteen months. [CHYRON: FAA GROUNDS SKYLINE REGIONAL FLEET] [B-ROLL: Grounded aircraft at Minneapolis airport, passengers waiting in terminal] More than four hundred flights have been cancelled across the Midwest, stranding thousands of travelers. We'll have updates throughout the evening.",
+      "chyrons": [
+        "FAA GROUNDS SKYLINE REGIONAL FLEET"
+      ],
+      "broll_descriptions": [
+        "Grounded aircraft at Minneapolis airport, passengers waiting in terminal"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "2c6a6501",
+      "word_count": 60,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
+      "published": "February 25, 2026 \u2014 02:17 PM"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-25T11:00:57.681697",
     "data": {
       "story_id": "hourly_208e6e1e",
@@ -41,402 +438,6 @@
       "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
       "nonsense_heavy": true,
       "published": "February 25, 2026 \u2014 11:00 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T11:00:25.906239",
-    "data": {
-      "script": "The EPA has ordered immediate closure of three wastewater treatment facilities in Nebraska after inspectors discovered another is demarcation exceeding federal safety standards by four hundred percent. Environmental Protection Agency regional director Marcus Chen announced the emergency action affects over sixty thousand residents in Lincoln County. [CHYRON: EPA SHUTS DOWN NEBRASKA WATER PLANTS] [B-ROLL: Water treatment facility with EPA vehicles, warning signs posted] State health officials are distributing bottled water while backup systems come online. More details ahead.",
-      "chyrons": [
-        "EPA SHUTS DOWN NEBRASKA WATER PLANTS"
-      ],
-      "broll_descriptions": [
-        "Water treatment facility with EPA vehicles, warning signs posted"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "economics",
-      "story_id": "c6192390",
-      "word_count": 61,
-      "nonsense_injected": true,
-      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
-      "published": "February 25, 2026 \u2014 11:00 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T11:00:21.289423",
-    "data": {
-      "script": "Good evening. Harvard University announced today that Chancellor Robert Feldman will resign from his position following allegations of research misconduct in the neuroscience department. The university's governing board cited \"serious concerns about academic integrity\" in a statement released this afternoon. [CHYRON: HARVARD CHANCELLOR RESIGNS AMID RESEARCH SCANDAL] [B-ROLL: Harvard campus walkways, students with backpacks] Feldman had led the university for three years and previously served as dean of medical sciences. An interim chancellor will be named next week.",
-      "chyrons": [
-        "HARVARD CHANCELLOR RESIGNS AMID RESEARCH SCANDAL"
-      ],
-      "broll_descriptions": [
-        "Harvard campus walkways, students with backpacks"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "science",
-      "story_id": "8927cdf6",
-      "word_count": 64,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
-      "published": "February 25, 2026 \u2014 11:00 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T11:00:17.424016",
-    "data": {
-      "script": "The Environmental Protection Agency has ordered immediate inspections at forty-seven chemical facilities across Louisiana following a whistleblower report alleging widespread safety violations. EPA Administrator Richard Caldwell announced the sweep during a briefing this morning, citing potential risks to groundwater supplies in three parishes. [CHYRON: EPA ORDERS LOUISIANA CHEMICAL PLANT INSPECTIONS] The anonymous report detailed maintenance failures at facilities operated by Bayou Industrial Systems and Delta Chemical Works. [B-ROLL: Aerial footage of industrial facilities along Louisiana waterways] Inspections begin Monday. More on this developing story after the break.",
-      "chyrons": [
-        "EPA ORDERS LOUISIANA CHEMICAL PLANT INSPECTIONS"
-      ],
-      "broll_descriptions": [
-        "Aerial footage of industrial facilities along Louisiana waterways"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "02e0e146",
-      "word_count": 71,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
-      "published": "February 25, 2026 \u2014 11:00 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T11:00:12.255382",
-    "data": {
-      "script": "The President announced a sweeping federal student loan forgiveness program during remarks at the White House today, promising to eliminate up to fifteen thousand dollars in debt for borrowers earning under seventy-five thousand annually. [CHYRON: PRESIDENT UNVEILS STUDENT LOAN RELIEF PLAN] The plan would affect nearly twenty-eight million Americans and cost an estimated four hundred billion dollars over ten years. Republican Senator Katherine Mills called the proposal fiscally irresponsible. [B-ROLL: White House Rose Garden ceremony, students gathered on college campus] Congressional approval remains uncertain.",
-      "chyrons": [
-        "PRESIDENT UNVEILS STUDENT LOAN RELIEF PLAN"
-      ],
-      "broll_descriptions": [
-        "White House Rose Garden ceremony, students gathered on college campus"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "e43888af",
-      "word_count": 66,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
-      "published": "February 25, 2026 \u2014 11:00 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T11:00:07.674509",
-    "data": {
-      "script": "Federal investigators have seized computer servers and financial records from Meridian Aerospace headquarters in Seattle following allegations of falsified safety inspections on commercial aircraft engines. The FBI raid comes after whistleblower engineer Sarah Chen provided documents suggesting the company bypassed mandatory turbine blade testing on over four hundred engines delivered to airlines nationwide. [CHYRON: FBI RAIDS MERIDIAN AEROSPACE HEADQUARTERS] [B-ROLL: Federal agents carrying boxes from corporate building] Company stock plunged eighteen percent in after-hours trading. More developments expected tomorrow.",
-      "chyrons": [
-        "FBI RAIDS MERIDIAN AEROSPACE HEADQUARTERS"
-      ],
-      "broll_descriptions": [
-        "Federal agents carrying boxes from corporate building"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "general",
-      "story_id": "f2374fbc",
-      "word_count": 65,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
-      "published": "February 25, 2026 \u2014 11:00 AM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-25T10:35:07.230105",
-    "data": {
-      "story_id": "hourly_517595b7",
-      "hour_label": "10 AM",
-      "anchor_a": "James Whitfield",
-      "anchor_b": "Patricia Holt",
-      "headlines": [
-        "PRESIDENT ANNOUNCES $1,000 RETIREMENT BENEFIT",
-        "COURT HALTS DHS AI BORDER PROGRAM",
-        "EPA SHUTS DOWN Baton Rouge CHEMICAL PLANTS",
-        "HARVARD DEAN RESIGNS OVER CORPORATE TIES",
-        "FEDERAL COURT HALTS DHS AI BORDER PROGRAM"
-      ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. The President announced a new federal retirement savings program today, promising an additional one thousand dollars annually for working Americans over age fifty-five during today's State of the Union address.\n\n[ANCHOR_B] Thanks James. A federal court has halted the Department of Homeland Security's controversial AI-powered border surveillance program along the Arizona-Mexico border. The judge granted an emergency injunction following civil liberties challenges to the pilot program.\n\n[ANCHOR_A] Patricia, the Environmental Protection Agency has shut down three chemical manufacturing facilities in Baton Rouge after inspectors discovered widespread violations of federal safety protocols. The closures affect hundreds of workers in the region.\n\n[ANCHOR_B] And at Harvard University, Professor Martin Kellaway has resigned from his position as Dean of Applied Sciences following revelations about undisclosed financial ties to private corporations. The university says an ethics investigation is ongoing.\n\n[ANCHOR_A] That's your news update. I'm James Whitfield with Patricia Holt. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 6,
-      "published": "February 25, 2026 \u2014 10:35 AM",
-      "audio_file": "hourly_517595b7.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:34:48.807521",
-    "data": {
-      "script": "The Department of moxy is all he its needs ample girth watch your step as ascribes you have i federal reached injunction the bounds of can i The kiss you gone are its the jae lamar Fourth cupola protections is compilation searches. [CHYRON: FEDERAL COURT HALTS DHS AI BORDER PROGRAM] [B-ROLL: Border fence with surveillance towers, protesters holding signs] b will be Caldwell there used department to mop rotilda s a small trash protocols. bleary chose challenges expected this week.",
-      "chyrons": [
-        "FEDERAL COURT HALTS DHS AI BORDER PROGRAM"
-      ],
-      "broll_descriptions": [
-        "Border fence with surveillance towers, protesters holding signs"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "1dd24ddf",
-      "word_count": 63,
-      "nonsense_injected": true,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "nonsense_heavy": true,
-      "published": "February 25, 2026 \u2014 10:34 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:34:40.509038",
-    "data": {
-      "script": "Good evening. Harvard University announced today that Professor Martin Kellaway will resign from his position as Dean of Applied Sciences following revelations about his undisclosed financial ties to Meridian Biotechnology Corporation. The resignation comes after internal documents revealed Kellaway received over two million dollars in consulting fees while maybe a guy awarded to the same company. [CHYRON: HARVARD DEAN RESIGNS OVER CORPORATE TIES] [B-ROLL: Harvard campus, science building exterior] University officials promise a full ethics review. More developments ahead.",
-      "chyrons": [
-        "HARVARD DEAN RESIGNS OVER CORPORATE TIES"
-      ],
-      "broll_descriptions": [
-        "Harvard campus, science building exterior"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "f51007c4",
-      "word_count": 66,
-      "nonsense_injected": true,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "published": "February 25, 2026 \u2014 10:34 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:34:31.834577",
-    "data": {
-      "script": "Good evening. The Environmental Protection Agency has no drugs or cases , three chemical manufacturing facilities in Baton Rouge after inspectors discovered widespread violations of federal safety protocols. EPA Regional Administrator Marcus Chen said the facilities operated by Apex Chemical Industries failed to properly contain hazardous waste for over eighteen months. [CHYRON: EPA SHUTS DOWN Baton Rouge CHEMICAL PLANTS] [B-ROLL: Industrial facilities with EPA vehicles parked outside] Company officials have not responded to requests for comment. More details ahead after this break.",
-      "chyrons": [
-        "EPA SHUTS DOWN Baton Rouge CHEMICAL PLANTS"
-      ],
-      "broll_descriptions": [
-        "Industrial facilities with EPA vehicles parked outside"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "economics",
-      "story_id": "7383ad4d",
-      "word_count": 66,
-      "nonsense_injected": true,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "published": "February 25, 2026 \u2014 10:34 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:34:27.383930",
-    "data": {
-      "script": "Good evening. The Department of Homeland Security has announced the immediate suspension of its controversial AI-powered border surveillance program along the Arizona-Mexico border following a federal court ruling. Judge Michael Garrison issued a temporary restraining order this afternoon, calling the system's facial recognition capabilities a violation of Fourth Amendment protections. [CHYRON: COURT HALTS DHS AI BORDER PROGRAM] [B-ROLL: Border fence with surveillance towers, protesters holding signs] The ACLU hailed the decision as a major victory for civil liberties. More developments expected tomorrow.",
-      "chyrons": [
-        "COURT HALTS DHS AI BORDER PROGRAM"
-      ],
-      "broll_descriptions": [
-        "Border fence with surveillance towers, protesters holding signs"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "2e26a57d",
-      "word_count": 66,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "published": "February 25, 2026 \u2014 10:34 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:34:23.306178",
-    "data": {
-      "script": "The President announced a new federal retirement savings program today, promising an additional one thousand dollars annually for working Americans over fifty-five. Speaking at the State of the Union address, the administration outlined plans to expand existing retirement benefits through employer partnerships. [CHYRON: PRESIDENT ANNOUNCES $1,000 RETIREMENT BENEFIT] Labor groups including the National Workers Coalition praised the proposal, while Republican leadership questioned funding mechanisms. [B-ROLL: President at podium, Congress applauding] Congressional hearings begin next week.",
-      "chyrons": [
-        "PRESIDENT ANNOUNCES $1,000 RETIREMENT BENEFIT"
-      ],
-      "broll_descriptions": [
-        "President at podium, Congress applauding"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "962690d5",
-      "word_count": 63,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "published": "February 25, 2026 \u2014 10:02 AM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-25T10:26:05.921759",
-    "data": {
-      "story_id": "hourly_022e9d70",
-      "hour_label": "10 AM",
-      "anchor_a": "James Whitfield",
-      "anchor_b": "Patricia Holt",
-      "headlines": [
-        "PRESIDENT UNVEILS $1,000 RETIREMENT BONUS PLAN",
-        "FEDERAL JUDGE HALTS DHS AI BORDER PROGRAM",
-        "FAA GROUNDS MERIDIAN AEROSPACE FLEET",
-        "HARVARD PHYSICIST RESIGNS AMID PROBE",
-        "EPA ISSUES MICHIGAN WATER ADVISORIES"
-      ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. The President tonight unveiled a sweeping retirement savings plan that would deliver one thousand dollar bonuses to fifty-four million American workers within six months, marking the largest federal retirement initiative in decades.\n\n[ANCHOR_B] Thanks James. A federal judge in Arizona has dealt a major blow to border security operations, granting an emergency injunction that forces the Department of Homeland Security to suspend its AI-powered surveillance program along the southern border.\n\n[ANCHOR_A] Patricia, aviation regulators are taking swift action against Meridian Aerospace tonight. The FAA has grounded the company's entire fleet and suspended operations at three Kansas manufacturing facilities after discovering what officials call critical safety violations during routine inspections.\n\n[ANCHOR_B] And at Harvard University, a major shakeup in the science department. Renowned physicist Dr. Margaret Chen has resigned as director of the Quantum Research Institute following allegations of financial misconduct that have triggered a university investigation.\n\n[ANCHOR_A] Finally tonight, the Senate Foreign Relations Committee voted eighteen to four to advance the Taiwan Defense Authorization Act, moving the controversial aid package one step closer to a full Senate vote despite strong objections from Beijing. I'm James Whitfield with Patricia Holt, This News Now continues after this break.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 6,
-      "published": "February 25, 2026 \u2014 10:26 AM",
-      "audio_file": "hourly_022e9d70.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:25:41.554198",
-    "data": {
-      "script": "Good evening. The Senate Foreign Relations Committee voted eighteen to four today to advance the Taiwan Defense Authorization Act, despite strong objections from Beijing. Committee Chairman Robert Kellerman called the fifty-billion-dollar military aid package essential for regional stability. [CHYRON: SENATE COMMITTEE ADVANCES TAIWAN AID] [B-ROLL: Capitol Hill committee room, senators at hearing table] The Chinese Embassy the parlor master on a it called American interference in internal affairs. The full Senate vote is expected next week.",
-      "chyrons": [
-        "SENATE COMMITTEE ADVANCES TAIWAN AID"
-      ],
-      "broll_descriptions": [
-        "Capitol Hill committee room, senators at hearing table"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "a5a5ad82",
-      "word_count": 61,
-      "nonsense_injected": true,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "published": "February 25, 2026 \u2014 10:25 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:25:36.947609",
-    "data": {
-      "script": "Good evening. The my trance ended has a saddle dries in for their company what about pickled cold faces and regurgitated feces luckily levels i municipal was a clean your chin and [CHYRON: EPA ISSUES MICHIGAN WATER ADVISORIES] then tell joven or bejoven moments says screarch for the tandylion then , at churn out some danger ensued and papa areas. [B-ROLL: Water testing equipment, EPA officials collecting samples] liberny can if jeremy caved investigation. More details ahead after this break.",
-      "chyrons": [
-        "EPA ISSUES MICHIGAN WATER ADVISORIES"
-      ],
-      "broll_descriptions": [
-        "Water testing equipment, EPA officials collecting samples"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "fluff",
-      "story_id": "4dc308ef",
-      "word_count": 66,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "nonsense_heavy": true,
-      "published": "February 25, 2026 \u2014 10:25 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:25:31.844934",
-    "data": {
-      "script": "Good evening. Harvard University announced today that renowned physicist Dr. Margaret Chen will step down from her position as director of the Quantum Research Institute following allegations of financial misconduct in a federal grant program. [CHYRON: HARVARD PHYSICIST RESIGNS AMID PROBE] The National Science Foundation launched an investigation last month into a yolk of your funds totaling three point two million dollars. [B-ROLL: Harvard campus, science laboratory footage] Chen denies all wrongdoing. More developments ahead.",
-      "chyrons": [
-        "HARVARD PHYSICIST RESIGNS AMID PROBE"
-      ],
-      "broll_descriptions": [
-        "Harvard campus, science laboratory footage"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "science",
-      "story_id": "1eb1c903",
-      "word_count": 63,
-      "nonsense_injected": true,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "published": "February 25, 2026 \u2014 10:25 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:25:18.949919",
-    "data": {
-      "script": "Federal regulators have suspended operations at three Meridian Aerospace manufacturing facilities in Kansas after discovering critical safety violations during routine inspections. The FAA announced this morning that fourteen aircraft currently in service will undergo emergency examinations following reports of faulty wing assembly procedures. [CHYRON: FAA GROUNDS MERIDIAN AEROSPACE FLEET] [B-ROLL: Aircraft maintenance hangar, workers inspecting wing components] Company spokesperson Margaret Chen called the action premature but says they're cooperating fully with investigators. More than four hundred flights have been cancelled nationwide.",
-      "chyrons": [
-        "FAA GROUNDS MERIDIAN AEROSPACE FLEET"
-      ],
-      "broll_descriptions": [
-        "Aircraft maintenance hangar, workers inspecting wing components"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "1a277f18",
-      "word_count": 67,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "published": "February 25, 2026 \u2014 10:25 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:25:14.214886",
-    "data": {
-      "script": "The Department of Homeland Security announced today it will suspend its controversial AI-powered border surveillance program after a federal judge in Arizona granted an emergency injunction. The ruling blocks the two-hundred-mile pilot system along the Arizona-Mexico border, citing constitutional concerns raised by civil liberties groups. [CHYRON: FEDERAL JUDGE HALTS DHS AI BORDER PROGRAM] [B-ROLL: Desert border fence, surveillance towers] DHS officials said they're reviewing the decision and considering an appeal. More on this story tonight at eleven.",
-      "chyrons": [
-        "FEDERAL JUDGE HALTS DHS AI BORDER PROGRAM"
-      ],
-      "broll_descriptions": [
-        "Desert border fence, surveillance towers"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "aad06ae2",
-      "word_count": 63,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "published": "February 25, 2026 \u2014 10:25 AM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T10:25:09.605382",
-    "data": {
-      "script": "The President announced a new federal retirement savings program tonight, promising to deliver one thousand dollar bonuses to fifty-four million American workers within six months. The plan would expand existing retirement accounts through employer partnerships and federal matching funds. [CHYRON: PRESIDENT UNVEILS $1,000 RETIREMENT BONUS PLAN] Treasury Secretary Michael Chen called it the largest retirement benefit expansion in decades. [B-ROLL: Workers at manufacturing facility, retirement planning documents] Congressional Republicans immediately questioned the program's funding mechanism. More details ahead after this break.",
-      "chyrons": [
-        "PRESIDENT UNVEILS $1,000 RETIREMENT BONUS PLAN"
-      ],
-      "broll_descriptions": [
-        "Workers at manufacturing facility, retirement planning documents"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "71d824ff",
-      "word_count": 66,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
-      "published": "February 25, 2026 \u2014 10:01 AM"
     }
   }
 ]

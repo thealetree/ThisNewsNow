@@ -326,46 +326,52 @@
       to { transform: translateX(-50%); }
     }
 
+    /* ── Hero Row (carousel + hourly side by side) ── */
+    .hero-row {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      min-height: 320px;
+      align-items: stretch;
+    }
+
     /* ── 3D Carousel ── */
     .carousel-zone {
-      margin: 1.5rem auto;
-      max-width: 1400px;
-      padding: 0 1.5rem;
+      flex: 1;
+      min-width: 0;
       position: relative;
-      overflow: visible;
+      overflow: hidden;
+      contain: paint;
     }
 
     .carousel-zone:empty { display: none; }
 
     .carousel-wrap {
       position: relative;
-      height: 300px;
-      perspective: 1200px;
-      overflow: visible;
+      height: 280px;
+      overflow: hidden;
     }
 
     .carousel-scene {
-      width: 380px;
-      height: 260px;
+      width: 300px;
+      height: 220px;
       position: absolute;
       left: 50%;
       top: 20px;
-      transform-style: preserve-3d;
       transform: translateX(-50%);
       transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .carousel-card {
       position: absolute;
-      width: 380px;
-      height: 260px;
+      width: 300px;
+      height: 220px;
       background: var(--surface);
       border: 1px solid var(--border);
       padding: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      backface-visibility: hidden;
       cursor: pointer;
       transition: box-shadow 0.3s;
       overflow: hidden;
@@ -389,7 +395,7 @@
     }
 
     .carousel-card .card-headline {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 800;
       line-height: 1.2;
       letter-spacing: -0.02em;
@@ -437,6 +443,77 @@
 
     .carousel-dot.active { background: var(--red); }
 
+    /* ── Video Player (Hourly Summary) ── */
+
+    .hourly-video {
+      position: relative;
+      margin-bottom: 0.5rem;
+      background: #000;
+      line-height: 0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .hourly-video video {
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .hourly-video .video-brand {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(17, 17, 17, 0.75);
+      color: white;
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-left: 2px solid var(--red);
+      pointer-events: none;
+      line-height: 1.4;
+    }
+
+    /* ── Story Card Images ── */
+
+    .article-image {
+      margin: -1.5rem -1.5rem 1rem -1.5rem;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .article-image img:hover {
+      transform: scale(1.03);
+    }
+
+    article.story-featured .article-image {
+      margin: -2rem -2.5rem 1.2rem -2.5rem;
+    }
+
+    article.story-featured .article-image img {
+      max-height: 400px;
+    }
+
+    article.story-compact .article-image {
+      margin: -1.2rem -1.2rem 0.8rem -1.2rem;
+    }
+
+    article.story-compact .article-image img {
+      max-height: 180px;
+    }
+
     /* ── Main Content ── */
     main {
       max-width: 1400px;
@@ -448,11 +525,17 @@
 
     /* ── Hourly Summary Zone ── */
     .hourly-zone {
-      margin-bottom: 1.5rem;
+      flex: 1;
+      min-width: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 5;
     }
 
     .hourly-zone:empty {
-      margin-bottom: 0;
+      display: none;
     }
 
     .hourly-summary {
@@ -461,6 +544,9 @@
       padding: 1.5rem 2rem;
       animation: fadeIn 0.5s ease-out;
       margin-bottom: 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .hourly-summary:last-child {
@@ -944,16 +1030,21 @@
     /* ── Responsive ── */
     @media (max-width: 1024px) {
       main { padding: 1rem; }
+      .hero-row { gap: 1rem; }
       .stories-grid { gap: 1rem; grid-template-columns: repeat(2, 1fr); }
       .hourly-summary { padding: 1.2rem 1.5rem; }
-      .carousel-zone { padding: 0 1rem; }
-      .carousel-scene { width: 320px; }
-      .carousel-card { width: 320px; height: 240px; padding: 1.5rem; }
-      .carousel-card .card-headline { font-size: 1.2rem; }
+      .carousel-scene { width: 260px; }
+      .carousel-card { width: 260px; height: 200px; padding: 1.2rem; }
+      .carousel-card .card-headline { font-size: 1.05rem; }
       article.story-compact .article-share { display: none; }
     }
 
     @media (max-width: 768px) {
+      .hero-row {
+        flex-direction: column;
+        min-height: auto;
+        gap: 1rem;
+      }
       .stories-grid {
         grid-template-columns: 1fr;
       }
@@ -970,7 +1061,7 @@
       .hourly-header { gap: 0.5rem; }
       .hourly-title { font-size: 1.1rem; }
       .hourly-meta { margin-left: 0; width: 100%; }
-      .carousel-zone { margin: 1rem auto; overflow: hidden; padding: 0 1rem; }
+      .carousel-zone { margin: 0; overflow: hidden; }
       .carousel-wrap { height: auto; perspective: none; overflow: hidden; }
       .carousel-scene {
         position: relative;
@@ -1072,11 +1163,12 @@
     </div>
   </div>
 
-  <!-- 3D Carousel for top stories -->
-  <section id="carouselZone" class="carousel-zone"></section>
-
   <main>
-    <section id="hourlyContainer" class="hourly-zone"></section>
+    <div class="hero-row">
+      <!-- 3D Carousel for top stories -->
+      <section id="carouselZone" class="carousel-zone"></section>
+      <section id="hourlyContainer" class="hourly-zone"></section>
+    </div>
     <div class="content-layout">
       <section id="storiesGrid" class="stories-grid">
         <div class="stories-empty" id="emptyState">
@@ -1308,14 +1400,12 @@
         card.style.pointerEvents = isActive ? 'auto' : 'none';
       } else {
         // Full 3D carousel on desktop
-        var angle = offset * 50;
-        var z = offset === 0 ? 0 : -180;
-        var x = offset * 320;
+        var x = offset * 250;
         var opacity = offset === 0 ? 1 : 0.4;
         var scale = offset === 0 ? 1 : 0.78;
 
         card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-        card.style.transform = 'translateX(' + x + 'px) translateZ(' + z + 'px) rotateY(' + angle + 'deg) scale(' + scale + ')';
+        card.style.transform = 'translateX(' + x + 'px) scale(' + scale + ')';
         card.style.opacity = opacity;
         card.style.zIndex = offset === 0 ? 10 : 1;
         card.style.left = '';
@@ -1581,10 +1671,18 @@
       audioSrc = '/api/audio/' + d.story_id;
     }
 
+    // Check for AI-generated article image
+    var hasImage = !!(d.image_file);
+    var imageHtml = '';
+    if (hasImage) {
+      imageHtml = '<div class="article-image"><img src="images/' + d.image_file + '" alt="" loading="lazy"></div>';
+    }
+
     var shareUrl = encodeURIComponent(window.location.href.split('#')[0]);
     var shareText = encodeURIComponent(headline + ' \u2014 This News Now');
 
     article.innerHTML =
+      imageHtml +
       '<div class="article-meta">' +
         '<span class="article-topic">' + topic + '</span>' +
         '<span data-original-minute="' + origMinute + '">' + published + '</span>' +
@@ -1653,6 +1751,15 @@
     var now = new Date();
     var hourLabel = now.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true }).replace(':00', '').trim();
 
+    // Check for video first, then audio
+    var hasVideo = !!(data.video_file || data.video_path);
+    var videoSrc = '';
+    if (data.video_file) {
+      videoSrc = 'video/' + data.video_file;
+    } else if (data.video_path && isLocalMode) {
+      videoSrc = '/api/video/' + data.story_id;
+    }
+
     var hasAudio = !!(data.audio_path || data.audio_file);
     var audioSrc = '';
     if (data.audio_file) {
@@ -1669,13 +1776,18 @@
         .replace(/\n/g, ' ');
     }
 
-    block.innerHTML =
-      '<div class="hourly-header">' +
-        '<span class="hourly-badge">Hourly Update</span>' +
-        '<span class="hourly-title">' + hourLabel + ' Summary</span>' +
-        '<span class="hourly-meta"><span data-original-minute="' + origMinute + '">' + published + '</span> \u2022 ' + (data.story_count || 0) + ' stories</span>' +
-      '</div>' +
-      (hasAudio && audioSrc ?
+    // Build media section: video takes priority over audio
+    var mediaHtml = '';
+    if (hasVideo && videoSrc) {
+      mediaHtml =
+        '<div class="hourly-video">' +
+          '<video controls preload="metadata">' +
+            '<source src="' + videoSrc + '" type="video/mp4">' +
+          '</video>' +
+          '<div class="video-brand">TNN</div>' +
+        '</div>';
+    } else if (hasAudio && audioSrc) {
+      mediaHtml =
         '<div class="hourly-player">' +
           '<button class="play-btn" onclick="toggleAudio(\'' + data.story_id + '\', \'' + audioSrc + '\')">' +
             '<svg viewBox="0 0 24 24" id="playIcon-' + data.story_id + '">' +
@@ -1689,7 +1801,16 @@
             '</div>' +
           '</div>' +
           '<span class="audio-time" id="time-' + data.story_id + '">0:00</span>' +
-        '</div>' : '') +
+        '</div>';
+    }
+
+    block.innerHTML =
+      '<div class="hourly-header">' +
+        '<span class="hourly-badge">Hourly Update</span>' +
+        '<span class="hourly-title">' + hourLabel + ' Summary</span>' +
+        '<span class="hourly-meta"><span data-original-minute="' + origMinute + '">' + published + '</span> \u2022 ' + (data.story_count || 0) + ' stories</span>' +
+      '</div>' +
+      mediaHtml +
       '<div class="hourly-script" id="script-' + data.story_id + '">' + scriptHtml + '</div>' +
       '<button class="hourly-expand" onclick="toggleScript(\'' + data.story_id + '\')">Show full transcript</button>';
 

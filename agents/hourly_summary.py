@@ -14,7 +14,7 @@ import uuid
 from datetime import datetime
 
 
-def generate_hourly_summary(stories, config, world_bible):
+def generate_hourly_summary(stories, config, world_bible, video_mode=False):
     """
     Generate an hourly news summary from the past hour's stories.
 
@@ -22,6 +22,7 @@ def generate_hourly_summary(stories, config, world_bible):
         stories: list of story dicts from the past hour
         config: channel config
         world_bible: world bible dict
+        video_mode: if True, generate a solo-anchor script for HeyGen video
 
     Returns a dict with:
         - segments: list of {anchor, text} dicts for TTS
@@ -29,6 +30,7 @@ def generate_hourly_summary(stories, config, world_bible):
         - headlines: list of headline strings covered
         - story_id: unique ID for this summary
         - hour_label: formatted hour string
+        - video_mode: whether this was generated for video
     """
     if not stories:
         return None
@@ -39,22 +41,42 @@ def generate_hourly_summary(stories, config, world_bible):
     if not anchors:
         anchors = all_anchors  # Fallback if all paused
 
-    # Pick one male and one female anchor for the desk
-    males = [a for a in anchors if a.get("gender") == "male"]
-    females = [a for a in anchors if a.get("gender") == "female"]
-    if males and females:
-        anchor_a = random.choice(females)   # Female leads
-        anchor_b = random.choice(males)
-        # Randomly swap who leads (50/50)
-        if random.random() < 0.5:
-            anchor_a, anchor_b = anchor_b, anchor_a
-    elif len(anchors) >= 2:
-        desk = random.sample(anchors, 2)
-        anchor_a = desk[0]
-        anchor_b = desk[1]
-    else:
-        anchor_a = anchors[0] if len(anchors) > 0 else {"name": "Patricia Holt", "gender": "female"}
-        anchor_b = anchors[1] if len(anchors) > 1 else {"name": "Marcus Webb", "gender": "male"}
+    # In video mode, use the HeyGen-enabled anchor as solo anchor
+    solo_mode = False
+    if video_mode:
+        heygen_anchor = None
+        for a in config.get("anchors", []):
+            if a.get("heygen_avatar_id") and a["heygen_avatar_id"] not in ("PASTE_AVATAR_LOOK_ID_HERE", ""):
+                # Find the matching anchor in the world bible
+                for wb_anchor in all_anchors:
+                    if wb_anchor["name"] == a["name"]:
+                        heygen_anchor = wb_anchor
+                        break
+                if heygen_anchor:
+                    break
+        if heygen_anchor:
+            anchor_a = heygen_anchor
+            anchor_b = heygen_anchor  # Both "anchors" are the same person
+            solo_mode = True
+            print(f"  Video mode: solo anchor {anchor_a['name']}")
+
+    if not solo_mode:
+        # Pick one male and one female anchor for the desk
+        males = [a for a in anchors if a.get("gender") == "male"]
+        females = [a for a in anchors if a.get("gender") == "female"]
+        if males and females:
+            anchor_a = random.choice(females)   # Female leads
+            anchor_b = random.choice(males)
+            # Randomly swap who leads (50/50)
+            if random.random() < 0.5:
+                anchor_a, anchor_b = anchor_b, anchor_a
+        elif len(anchors) >= 2:
+            desk = random.sample(anchors, 2)
+            anchor_a = desk[0]
+            anchor_b = desk[1]
+        else:
+            anchor_a = anchors[0] if len(anchors) > 0 else {"name": "Patricia Holt", "gender": "female"}
+            anchor_b = anchors[1] if len(anchors) > 1 else {"name": "Marcus Webb", "gender": "male"}
 
     # Build story summaries for the prompt
     story_briefs = []
@@ -73,9 +95,41 @@ def generate_hourly_summary(stories, config, world_bible):
     # 3-4 stories = ~150 words, 5+ = ~200 words
     target_words = 150 if story_count <= 4 else 200
 
-    system_msg = """You are a broadcast script writer for a two-anchor news desk. You write precise, concise news copy. You format output exactly as instructed with anchor tags. No markdown formatting ever."""
+    system_msg = """You are a broadcast script writer for a news desk. You write precise, concise news copy. You format output exactly as instructed with anchor tags. No markdown formatting ever."""
 
-    prompt = f"""Write a top-of-the-hour news summary for This News Now (TNN).
+    if solo_mode:
+        prompt = f"""Write a top-of-the-hour news summary for This News Now (TNN).
+
+Solo anchor at the desk:
+- {anchor_a['name']} ({anchor_a['gender']})
+
+STORIES FROM THE PAST HOUR:
+{stories_block}
+
+REQUIREMENTS:
+- Total spoken words: approximately {target_words} (roughly 60-90 seconds at broadcast pace)
+- Cover the top {min(story_count, 5)} stories from above. Summarize, don't repeat verbatim.
+- {anchor_a['name']} opens with a brief greeting, delivers all stories with natural transitions, and closes with a brief sign-off.
+- Completely deadpan. No humor. This is a real news recap.
+- ALL acronyms must be fully capitalized (EPA, FBI, FAA, DHS, NATO, etc.). ALL country names and proper nouns must be correctly capitalized. This is broadcast copy.
+- *** NO REAL NAMES *** — Every person named in the summary MUST be fictional. Every company MUST be fictional. Do NOT use any real politician names (no Marco Rubio, no senators, no cabinet members by name). Do NOT use any real company names (no Boeing, no Amazon, etc.). For the President or VP just say "the President" or "the administration." INVENT all names.
+
+FORMAT — use this EXACT tag for every segment:
+
+CRITICAL: The VERY FIRST LINE must begin EXACTLY like this:
+[ANCHOR_A] Now on This News Now, I'm {anchor_a['name']}.
+
+Then continue with stories, each on its own line:
+[ANCHOR_A] Turning to other developments...
+[ANCHOR_A] We're also following...
+[ANCHOR_A] And finally tonight...
+
+Do NOT change the opening line. It MUST start with "Now on This News Now, I'm..."
+
+Output ONLY the tagged script. No notes, no explanations."""
+
+    else:
+        prompt = f"""Write a top-of-the-hour news summary for This News Now (TNN).
 
 Two anchors share the desk:
 - {anchor_a['name']} ({anchor_a['gender']}) — lead anchor, opens and closes
@@ -164,7 +218,8 @@ Output ONLY the tagged script. No notes, no explanations."""
         "story_id": story_id,
         "hour_label": hour_label,
         "anchor_a": anchor_a["name"],
-        "anchor_b": anchor_b["name"],
+        "anchor_b": anchor_b["name"] if not solo_mode else None,
+        "video_mode": video_mode,
     }
 
     print(f"  Hourly summary generated: {len(segments)} segments, {story_count} stories covered")

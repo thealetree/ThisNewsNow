@@ -40,25 +40,45 @@ def load_world_bible(config):
 
 
 def run_pilot(config, world_bible, count, dashboard=True):
-    """Phase A: Generate N text stories + an hourly audio summary."""
+    """Phase A: Generate N text stories + images + hourly video/audio summary."""
     from agents.scraper import scrape_news_context
     from agents.writer import generate_script
     from agents.hourly_summary import generate_hourly_summary
     from agents.tts import generate_hourly_audio
     from agents.nonsense import inject_heavy_nonsense
-    from dashboard.app import push_script, push_hourly_summary, push_status, start_dashboard_thread
+    from agents.image_gen import generate_story_image
+    from agents.video_gen import generate_video
+    from dashboard.app import (
+        push_script, push_hourly_summary, push_status,
+        push_story_image, start_dashboard_thread,
+    )
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    # Check if AI media features are enabled
+    video_enabled = bool(config.get("video", {}).get("provider"))
+    image_enabled = bool(config.get("images", {}).get("provider"))
+    image_card_sizes = config.get("images", {}).get("generate_for", [])
 
     # Start dashboard in background
     if dashboard:
         start_dashboard_thread(port=8080)
         print(f"  Dashboard: http://localhost:8080")
 
+    media_desc = []
+    if image_enabled:
+        media_desc.append("images")
+    if video_enabled:
+        media_desc.append("video summary")
+    else:
+        media_desc.append("audio summary")
+    media_str = " + ".join(media_desc)
+
     print(f"\n{'='*50}")
     print(f"  THIS NEWS NOW — Pilot Mode")
-    print(f"  Generating {count} text stories + hourly audio summary")
+    print(f"  Generating {count} stories + {media_str}")
     print(f"{'='*50}\n")
 
-    push_status(f"Pilot run started — {count} stories + audio summary")
+    push_status(f"Pilot run started — {count} stories + {media_str}")
 
     # Step 1: Get current news context
     print("[1/3] Scraping real news context...")
@@ -82,10 +102,14 @@ def run_pilot(config, world_bible, count, dashboard=True):
 
     all_stories = []
     topics_covered = []  # Track topics for diversity enforcement
+    image_futures = {}
 
     # Pick which story slot gets heavy nonsense (1 per batch)
     # Never slot 0 — that's the top/featured story shown first on the site
     nonsense_slot = random.randint(1, count - 1) if count > 1 else 0
+
+    # Thread pool for parallel image generation
+    executor = ThreadPoolExecutor(max_workers=3) if image_enabled else None
 
     for i in range(count):
         print(f"\n--- Story {i+1}/{count} ---")
@@ -111,6 +135,14 @@ def run_pilot(config, world_bible, count, dashboard=True):
         push_script(script_data)  # Text only — no audio
         all_stories.append(script_data)
 
+        # Queue image generation for large/medium stories (first 4: 1 featured + 3 medium)
+        if executor and i < 4:
+            card_size = "large" if i == 0 else "medium"
+            if card_size in image_card_sizes:
+                future = executor.submit(generate_story_image, script_data, config)
+                image_futures[future] = script_data["story_id"]
+                print(f"  📷 Image queued ({card_size})")
+
         # Track topic + chyron for diversity in next iteration
         topic_tag = script_data.get("topic", "general")
         chyron = script_data.get("chyrons", [""])[0]
@@ -119,27 +151,111 @@ def run_pilot(config, world_bible, count, dashboard=True):
         print(f"  ✓ Published: {script_data.get('chyrons', ['Story'])[0]}")
         push_status(f"Published: {script_data.get('chyrons', ['Story'])[0]}")
 
-    # Step 3: Generate hourly audio summary from all stories
+    # Collect completed images
+    if image_futures:
+        print(f"\n--- Collecting AI Images ({len(image_futures)} queued) ---")
+        push_status(f"Waiting for {len(image_futures)} AI images...")
+        for future in as_completed(image_futures, timeout=180):
+            story_id = image_futures[future]
+            try:
+                img_result = future.result()
+                if img_result:
+                    push_story_image(story_id, img_result["image_path"])
+                    print(f"  ✓ Image: {story_id}")
+                else:
+                    print(f"  ✗ Image failed: {story_id}")
+            except Exception as e:
+                print(f"  ✗ Image error for {story_id}: {e}")
+        push_status("Images complete")
+
+    if executor:
+        executor.shutdown(wait=False)
+
+    # Backfill images for the first 4 visible stories on the site
+    # (covers stories from previous runs that never had images generated)
+    if image_enabled:
+        import json as _json
+        stories_path = os.path.join("docs", "stories.json")
+        if os.path.exists(stories_path):
+            with open(stories_path) as _f:
+                _all = _json.load(_f)
+            visible_stories = [s for s in _all if s.get("type") == "story"][:4]
+            backfill_count = 0
+            for vs in visible_stories:
+                d = vs.get("data", {})
+                sid = d.get("story_id", "")
+                img_path = os.path.join("docs", "images", f"{sid}.jpg")
+                if sid and not d.get("image_file") and not os.path.exists(img_path):
+                    print(f"  📷 Backfilling image for {sid}...")
+                    try:
+                        img_result = generate_story_image(d, config)
+                        if img_result:
+                            push_story_image(sid, img_result["image_path"])
+                            print(f"  ✓ Backfill image: {sid}")
+                            backfill_count += 1
+                    except Exception as e:
+                        print(f"  ✗ Backfill image error for {sid}: {e}")
+            if backfill_count:
+                print(f"  Backfilled {backfill_count} missing images")
+
+    # Step 3: Generate hourly summary (video or audio)
     if all_stories:
-        print(f"\n--- Hourly Audio Summary ---")
-        print("[3/3] Generating dual-anchor audio summary...")
-        push_status(f"Generating hourly summary ({len(all_stories)} stories)...")
+        if video_enabled:
+            print(f"\n--- Hourly Video Summary ---")
+            print("[3/3] Generating solo-anchor video summary...")
+            push_status(f"Generating video summary ({len(all_stories)} stories)...")
 
-        summary_data = generate_hourly_summary(all_stories, config, world_bible)
+            summary_data = generate_hourly_summary(
+                all_stories, config, world_bible, video_mode=True
+            )
 
-        if summary_data:
-            push_status("Generating dual-anchor TTS audio...")
-            audio_data = generate_hourly_audio(summary_data, config)
+            if summary_data:
+                push_status("Generating HeyGen anchor video...")
+                video_result = generate_video(summary_data, config)
 
-            if audio_data:
-                push_hourly_summary(summary_data, audio_path=audio_data.get("audio_path"))
-                print(f"  ✓ Hourly summary: {audio_data.get('actual_duration_seconds', 0):.0f}s, {audio_data.get('segment_count', 0)} segments")
-                push_status(f"Hourly summary published ({audio_data.get('actual_duration_seconds', 0):.0f}s)")
+                if video_result:
+                    push_hourly_summary(
+                        summary_data,
+                        video_path=video_result.get("video_path"),
+                    )
+                    print(f"  ✓ Video summary published")
+                    push_status("Video summary published")
+                else:
+                    # Fallback to audio
+                    print("  ✗ Video failed, falling back to audio...")
+                    push_status("Video failed, generating audio fallback...")
+                    summary_data = generate_hourly_summary(
+                        all_stories, config, world_bible, video_mode=False
+                    )
+                    if summary_data:
+                        audio_data = generate_hourly_audio(summary_data, config)
+                        if audio_data:
+                            push_hourly_summary(
+                                summary_data,
+                                audio_path=audio_data.get("audio_path"),
+                            )
+                            print(f"  ✓ Audio fallback: {audio_data.get('actual_duration_seconds', 0):.0f}s")
+                            push_status("Audio fallback summary published")
+        else:
+            print(f"\n--- Hourly Audio Summary ---")
+            print("[3/3] Generating dual-anchor audio summary...")
+            push_status(f"Generating hourly summary ({len(all_stories)} stories)...")
 
-    push_status(f"Pilot complete — {count} stories + audio summary")
+            summary_data = generate_hourly_summary(all_stories, config, world_bible)
+
+            if summary_data:
+                push_status("Generating dual-anchor TTS audio...")
+                audio_data = generate_hourly_audio(summary_data, config)
+
+                if audio_data:
+                    push_hourly_summary(summary_data, audio_path=audio_data.get("audio_path"))
+                    print(f"  ✓ Hourly summary: {audio_data.get('actual_duration_seconds', 0):.0f}s, {audio_data.get('segment_count', 0)} segments")
+                    push_status(f"Hourly summary published ({audio_data.get('actual_duration_seconds', 0):.0f}s)")
+
+    push_status(f"Pilot complete — {count} stories + {media_str}")
 
     print(f"\n{'='*50}")
-    print(f"  Done. {count} text stories + hourly audio summary generated.")
+    print(f"  Done. {count} stories + {media_str} generated.")
     if dashboard:
         print(f"  Dashboard: http://localhost:8080")
         print(f"  Press Ctrl+C to stop.")

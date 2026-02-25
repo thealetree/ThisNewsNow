@@ -1,35 +1,71 @@
 {
   "version": 1,
-  "last_updated": "2026-02-25T10:34:19.066739",
-  "total_scrapes": 2,
+  "last_updated": "2026-02-25T14:50:17.531462",
+  "total_scrapes": 7,
   "framing_styles": {
     "development": {
-      "count": 10,
+      "count": 35,
       "examples": [
         "Lawrence an official From Harvard After an official - The New York Times",
         "Security Alert \u2013 Update 7: an official - U.S. an official (February 24, 2026) - U.S. Embassy & Consulates in Mexico (.gov)",
         "Dozens of FBI records apparently missing from Epstein files, including Trump accuser interviews - CNN",
         "New York is sending workers, equipment to Massachusetts to help them dig out from historic blizzard - Syracuse.com",
         "Here\u2019s how to switch from 1Password to an official - 9to5Mac",
-        "Takeaways from Trump's State of the Union. And, House rejects aviation safety bill"
+        "Takeaways from Trump's State of the Union. And, House rejects aviation safety bill",
+        "Larry an official From Harvard After an official - The New York Times",
+        "More snow falls on the Northeast US, where huge piles remain from the last storm - AP News",
+        "15 an official the Trump Administration Over an official - The New York Times",
+        "Jobs, gas prices and ending wars: factchecking Trump\u2019s State of the Union claims - The Guardian",
+        "Epstein an official Records About Woman Who Made Claim an official - The New York Times - The New York Times",
+        "Murder-suicide at an official's an official parking lot - KTVU",
+        "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
+        "F.B.I. an official Schools Chief\u2019s Home and District Headquarters - The New York Times",
+        "85-year-old widower kidnapped and murdered in apparent case of mistaken identity in Australia - CBS News",
+        "Live Updates: an official Kills 4 on US-Registered Boat - The New York Times",
+        "Megyn an official New Detail in an official & an official an official - TV Insider"
       ]
     },
     "announcement": {
-      "count": 2,
+      "count": 8,
       "examples": [
-        "Trump announces new retirement plan at State of the Union - Axios"
+        "Trump announces new retirement plan at State of the Union - Axios",
+        "A an official Chief Takes Over a Louvre in Crisis - The New York Times - The New York Times",
+        "S&P 500 posts back-to-back gains, Dow jumps 300 points as Nvidia rises: Live updates - CNBC",
+        "Former Senator Bob Kerrey Resigns From Nebraska Start-Up an official - The New York Times"
       ]
     },
     "accusation": {
-      "count": 2,
+      "count": 4,
       "examples": [
-        "Iran accuses Trump of 'big lies' ahead of Geneva talks in face of major US military deployment - AP News"
+        "Iran accuses Trump of 'big lies' ahead of Geneva talks in face of major US military deployment - AP News",
+        "Fearing Ukrainian action, Orb\u00e1n deploys soldiers to priority energy facilities - Euronews.com"
       ]
     },
     "resolution": {
-      "count": 2,
+      "count": 3,
       "examples": [
-        "Stock an official: Nasdaq, an official Before Nvidia Earnings; Vertiv, an official (Live Coverage) - Investor's Business Daily"
+        "Stock an official: Nasdaq, an official Before Nvidia Earnings; Vertiv, an official (Live Coverage) - Investor's Business Daily",
+        "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico"
+      ]
+    },
+    "revelation": {
+      "count": 4,
+      "examples": [
+        "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
+        "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
+        "Jobs, gas prices and ending wars: factchecking Trump\u2019s State of the Union claims - The Guardian"
+      ]
+    },
+    "reaction": {
+      "count": 1,
+      "examples": [
+        "Abigail Spanberger gave Democrats\u2019 response to Trump. But she didn\u2019t have the stage to herself. - Politico"
+      ]
+    },
+    "warning": {
+      "count": 1,
+      "examples": [
+        "Germany\u2019s an official a an official to China on Trade - The New York Times"
       ]
     }
   },
@@ -44,21 +80,21 @@
     {
       "template": "Security Alert \u2013 Update 7: an official - U.S. an official (February [Number], [Number]) - U.S. Embassy & Consulates in Mexico (.gov)",
       "topic": "international",
-      "times_seen": 2,
+      "times_seen": 7,
       "last_seen": "2026-02-25",
       "example": "Security Alert \u2013 Update 7: an official - U.S. an official (February 24, 2026) - U.S. Embassy & Consulates in Mexico (.go"
     },
     {
       "template": "Dozens of FBI records apparently missing from Epstein files, including Trump accuser interviews - CNN",
       "topic": "politics",
-      "times_seen": 2,
+      "times_seen": 3,
       "last_seen": "2026-02-25",
       "example": "Dozens of FBI records apparently missing from Epstein files, including Trump accuser interviews - CNN"
     },
     {
       "template": "Trump announces new retirement plan at State of the Union - Axios",
       "topic": "economy",
-      "times_seen": 2,
+      "times_seen": 4,
       "last_seen": "2026-02-25",
       "example": "Trump announces new retirement plan at State of the Union - Axios"
     },
@@ -72,7 +108,7 @@
     {
       "template": "Iran accuses Trump of 'big lies' ahead of Geneva talks in face of major US military deployment - AP News",
       "topic": "science",
-      "times_seen": 2,
+      "times_seen": 3,
       "last_seen": "2026-02-25",
       "example": "Iran accuses Trump of 'big lies' ahead of Geneva talks in face of major US military deployment - AP News"
     },
@@ -96,23 +132,159 @@
       "times_seen": 1,
       "last_seen": "2026-02-25",
       "example": "Takeaways from Trump's State of the Union. And, House rejects aviation safety bill"
+    },
+    {
+      "template": "Larry an official From Harvard After an official - The New York Times",
+      "topic": "infrastructure",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Larry an official From Harvard After an official - The New York Times"
+    },
+    {
+      "template": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US"
+    },
+    {
+      "template": "More snow falls on the Northeast US, where huge piles remain from the last storm - AP News",
+      "topic": "weather",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "More snow falls on the Northeast US, where huge piles remain from the last storm - AP News"
+    },
+    {
+      "template": "[Number] an official the Trump Administration Over an official - The New York Times",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "15 an official the Trump Administration Over an official - The New York Times"
+    },
+    {
+      "template": "Jobs, gas prices and ending wars: factchecking Trump\u2019s State of the Union claims - The Guardian",
+      "topic": "politics",
+      "times_seen": 4,
+      "last_seen": "2026-02-25",
+      "example": "Jobs, gas prices and ending wars: factchecking Trump\u2019s State of the Union claims - The Guardian"
+    },
+    {
+      "template": "Epstein an official Records About Woman Who Made Claim an official - The New York Times - The New York Times",
+      "topic": "politics",
+      "times_seen": 3,
+      "last_seen": "2026-02-25",
+      "example": "Epstein an official Records About Woman Who Made Claim an official - The New York Times - The New York Times"
+    },
+    {
+      "template": "Murder-suicide at an official's an official parking lot - KTVU",
+      "topic": "crime",
+      "times_seen": 3,
+      "last_seen": "2026-02-25",
+      "example": "Murder-suicide at an official's an official parking lot - KTVU"
+    },
+    {
+      "template": "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
+      "topic": "infrastructure",
+      "times_seen": 3,
+      "last_seen": "2026-02-25",
+      "example": "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News"
+    },
+    {
+      "template": "F.B.I. an official Schools Chief\u2019s Home and District Headquarters - The New York Times",
+      "topic": "science",
+      "times_seen": 3,
+      "last_seen": "2026-02-25",
+      "example": "F.B.I. an official Schools Chief\u2019s Home and District Headquarters - The New York Times"
+    },
+    {
+      "template": "A an official Chief Takes Over a Louvre in Crisis - The New York Times - The New York Times",
+      "topic": "politics",
+      "times_seen": 2,
+      "last_seen": "2026-02-25",
+      "example": "A an official Chief Takes Over a Louvre in Crisis - The New York Times - The New York Times"
+    },
+    {
+      "template": "[Organization] CEO an official to visit an official to discuss an official. bid - Politico",
+      "topic": "infrastructure",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico"
+    },
+    {
+      "template": "S&P [Number] posts back-to-back gains, Dow jumps [Number] points as Nvidia rises: Live updates - CNBC",
+      "topic": "economy",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "S&P 500 posts back-to-back gains, Dow jumps 300 points as Nvidia rises: Live updates - CNBC"
+    },
+    {
+      "template": "[Number]-year-old widower kidnapped and murdered in apparent case of mistaken identity in Australia - CBS News",
+      "topic": "crime",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "85-year-old widower kidnapped and murdered in apparent case of mistaken identity in Australia - CBS News"
+    },
+    {
+      "template": "Abigail Spanberger gave Democrats\u2019 response to Trump. But she didn\u2019t have the stage to herself. - Politico",
+      "topic": "politics",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Abigail Spanberger gave Democrats\u2019 response to Trump. But she didn\u2019t have the stage to herself. - Politico"
+    },
+    {
+      "template": "Live Updates: an official Kills 4 on US-Registered Boat - The New York Times",
+      "topic": "international",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Live Updates: an official Kills 4 on US-Registered Boat - The New York Times"
+    },
+    {
+      "template": "Former Senator Bob Kerrey Resigns From Nebraska Start-Up an official - The New York Times",
+      "topic": "politics",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Former Senator Bob Kerrey Resigns From Nebraska Start-Up an official - The New York Times"
+    },
+    {
+      "template": "Megyn an official New Detail in an official & an official an official - TV Insider",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Megyn an official New Detail in an official & an official an official - TV Insider"
+    },
+    {
+      "template": "Germany\u2019s an official a an official to China on Trade - The New York Times",
+      "topic": "international",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Germany\u2019s an official a an official to China on Trade - The New York Times"
+    },
+    {
+      "template": "Fearing Ukrainian action, Orb\u00e1n deploys soldiers to priority energy facilities - Euronews.com",
+      "topic": "infrastructure",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Fearing Ukrainian action, Orb\u00e1n deploys soldiers to priority energy facilities - Euronews.com"
     }
   ],
   "topic_distribution": {
-    "politics": 0.2106,
-    "infrastructure": 0.0736,
-    "science": 0.3622,
-    "crime": 0.0503,
-    "international": 0.1362,
-    "economy": 0.0755,
-    "weather": 0.0672,
-    "health": 0.0056,
-    "environment": 0.0187
+    "politics": 0.2034,
+    "infrastructure": 0.0746,
+    "science": 0.3278,
+    "crime": 0.1024,
+    "international": 0.1351,
+    "economy": 0.0557,
+    "weather": 0.0383,
+    "health": 0.01,
+    "environment": 0.0526
   },
   "conflict_type_frequency": {
-    "development": 0.625,
+    "development": 0.4998,
     "investigation": 0.125,
-    "protest": 0.25
+    "protest": 0.0124,
+    "legal": 0.0139,
+    "tragedy": 0.2362,
+    "crisis": 0.1126
   },
   "register_history": [
     {
@@ -122,6 +294,26 @@
     {
       "date": "2026-02-25",
       "register": "tense"
+    },
+    {
+      "date": "2026-02-25",
+      "register": "tense"
+    },
+    {
+      "date": "2026-02-25",
+      "register": "chaotic"
+    },
+    {
+      "date": "2026-02-25",
+      "register": "chaotic"
+    },
+    {
+      "date": "2026-02-25",
+      "register": "tense"
+    },
+    {
+      "date": "2026-02-25",
+      "register": "chaotic"
     }
   ]
 }

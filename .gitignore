@@ -10,6 +10,13 @@ segments/
 *.mp3
 !docs/audio/*.mp3
 
+# Video — allow docs/video/ for GitHub Pages
+!docs/video/*.mp4
+
+# Images — allow docs/images/ for GitHub Pages
+!docs/images/*.jpg
+!docs/images/*.png
+
 # News context (regenerated at runtime)
 news_context.json
 

@@ -70,20 +70,36 @@ def _fudge_timestamp():
 def _save_stories_json():
     """Write current stories to docs/stories.json for static deployment."""
     stories_path = os.path.join(DOCS_DIR, "stories.json")
+    # Local-only filesystem paths to strip from static JSON
+    local_path_keys = ("audio_path", "video_path", "image_path")
     with stories_lock:
-        # Don't include audio_path (local filesystem) in static JSON
         static_stories = []
         for s in recent_stories:
             story_copy = {
                 "type": s["type"],
                 "timestamp": s["timestamp"],
-                "data": {k: v for k, v in s["data"].items() if k != "audio_path"},
+                "data": {k: v for k, v in s["data"].items() if k not in local_path_keys},
             }
+            story_id = s["data"].get("story_id", "unknown")
+
             # Add audio_file reference if we copied the audio
-            audio_file = f"{s['data'].get('story_id', 'unknown')}.mp3"
+            audio_file = f"{story_id}.mp3"
             audio_dest = os.path.join(DOCS_DIR, "audio", audio_file)
             if os.path.exists(audio_dest):
                 story_copy["data"]["audio_file"] = audio_file
+
+            # Add video_file reference if video exists
+            video_file = f"{story_id}.mp4"
+            video_dest = os.path.join(DOCS_DIR, "video", video_file)
+            if os.path.exists(video_dest):
+                story_copy["data"]["video_file"] = video_file
+
+            # Add image_file reference if image exists
+            image_file = f"{story_id}.jpg"
+            image_dest = os.path.join(DOCS_DIR, "images", image_file)
+            if os.path.exists(image_dest):
+                story_copy["data"]["image_file"] = image_file
+
             static_stories.append(story_copy)
 
         with open(stories_path, "w") as f:
@@ -202,20 +218,28 @@ def _run_generator():
     Generate stories in a loop until stop event is set.
 
     - Text stories generate continuously (no TTS — cheap, fast)
-    - Hourly audio summaries generate at the top of each hour
-      with both anchors alternating segments
+    - Images generate for the first few stories per hour (large + medium cards)
+    - Hourly summaries generate at the top of each hour (video or audio)
     """
     from agents.scraper import scrape_news_context
     from agents.writer import generate_script
     from agents.hourly_summary import generate_hourly_summary
     from agents.tts import generate_hourly_audio
     from agents.nonsense import inject_heavy_nonsense
+    from agents.image_gen import generate_story_image
+    from agents.video_gen import generate_video
+    from concurrent.futures import ThreadPoolExecutor, as_completed
 
     config = _load_config()
     world_bible = _load_world_bible()
     stories_since_nonsense = 0  # Track when to inject heavy nonsense
 
-    push_status("Generator started — text stories + hourly audio summaries")
+    # Check if AI media features are enabled
+    video_enabled = bool(config.get("video", {}).get("provider"))
+    image_enabled = bool(config.get("images", {}).get("provider"))
+    image_card_sizes = config.get("images", {}).get("generate_for", [])
+
+    push_status("Generator started — text stories + hourly summaries")
 
     # Get news context
     try:
@@ -232,6 +256,7 @@ def _run_generator():
     hour_stories = []
     topics_covered = []  # Track topics for diversity per batch
     last_summary_hour = -1
+    stories_this_hour = 0  # Count for image generation eligibility
 
     while not generator_stop_event.is_set():
         current_hour = datetime.now().hour
@@ -242,19 +267,53 @@ def _run_generator():
             try:
                 push_status(f"Generating hourly summary ({len(hour_stories)} stories)...")
 
-                summary_data = generate_hourly_summary(hour_stories, config, world_bible)
+                if video_enabled:
+                    # Video mode: single-anchor script + HeyGen video
+                    push_status("Generating video summary...")
+                    summary_data = generate_hourly_summary(
+                        hour_stories, config, world_bible, video_mode=True
+                    )
 
-                if summary_data and not generator_stop_event.is_set():
-                    push_status("Generating dual-anchor audio...")
-                    audio_data = generate_hourly_audio(summary_data, config)
+                    if summary_data and not generator_stop_event.is_set():
+                        push_status("Generating HeyGen anchor video...")
+                        video_result = generate_video(summary_data, config)
 
-                    if audio_data:
-                        push_hourly_summary(summary_data, audio_path=audio_data.get("audio_path"))
-                        push_status(f"Hourly summary published ({audio_data.get('actual_duration_seconds', 0):.0f}s)")
+                        if video_result:
+                            push_hourly_summary(
+                                summary_data,
+                                video_path=video_result.get("video_path"),
+                            )
+                            push_status("Video summary published")
+                        else:
+                            # Fallback to audio
+                            push_status("Video failed, generating audio fallback...")
+                            summary_data = generate_hourly_summary(
+                                hour_stories, config, world_bible, video_mode=False
+                            )
+                            if summary_data and not generator_stop_event.is_set():
+                                audio_data = generate_hourly_audio(summary_data, config)
+                                if audio_data:
+                                    push_hourly_summary(
+                                        summary_data,
+                                        audio_path=audio_data.get("audio_path"),
+                                    )
+                                    push_status("Audio fallback summary published")
+                else:
+                    # Audio-only mode
+                    summary_data = generate_hourly_summary(hour_stories, config, world_bible)
+
+                    if summary_data and not generator_stop_event.is_set():
+                        push_status("Generating dual-anchor audio...")
+                        audio_data = generate_hourly_audio(summary_data, config)
+
+                        if audio_data:
+                            push_hourly_summary(summary_data, audio_path=audio_data.get("audio_path"))
+                            push_status(f"Hourly summary published ({audio_data.get('actual_duration_seconds', 0):.0f}s)")
 
                 last_summary_hour = current_hour
                 hour_stories = []  # Reset for the new hour
                 topics_covered = []  # Reset topic diversity tracking
+                stories_this_hour = 0
 
             except Exception as e:
                 push_status(f"Hourly summary error: {e}", level="error")
@@ -284,8 +343,21 @@ def _run_generator():
             push_script(script_data)
             push_status(f"Published: {script_data.get('chyrons', ['Story'])[0]}")
 
+            # Generate image for first 4 stories per hour (1 featured + 3 medium)
+            if image_enabled and stories_this_hour < 4:
+                card_size = "large" if stories_this_hour == 0 else "medium"
+                if card_size in image_card_sizes:
+                    try:
+                        push_status(f"Generating image for {script_data.get('chyrons', ['story'])[0][:40]}...")
+                        img_result = generate_story_image(script_data, config)
+                        if img_result:
+                            push_story_image(script_data["story_id"], img_result["image_path"])
+                    except Exception as e:
+                        push_status(f"Image generation error: {e}", level="error")
+
             # Track for hourly summary and topic diversity
             hour_stories.append(script_data)
+            stories_this_hour += 1
             topic_tag = script_data.get("topic", "general")
             chyron = script_data.get("chyrons", [""])[0]
             topics_covered.append(f"{topic_tag}: {chyron}" if chyron else topic_tag)
@@ -309,8 +381,8 @@ def _run_generator():
     push_status("Generator stopped")
 
 
-def push_hourly_summary(summary_data, audio_path=None):
-    """Push an hourly audio summary to the news site."""
+def push_hourly_summary(summary_data, audio_path=None, video_path=None):
+    """Push an hourly summary (audio and/or video) to the news site."""
     story = {
         "type": "hourly_summary",
         "timestamp": datetime.now().isoformat(),
@@ -318,11 +390,12 @@ def push_hourly_summary(summary_data, audio_path=None):
             "story_id": summary_data["story_id"],
             "hour_label": summary_data["hour_label"],
             "anchor_a": summary_data["anchor_a"],
-            "anchor_b": summary_data["anchor_b"],
+            "anchor_b": summary_data.get("anchor_b"),
             "headlines": summary_data["headlines"],
             "full_script": summary_data["full_script"],
             "story_count": summary_data["story_count"],
             "audio_path": audio_path,
+            "video_path": video_path,
             "published": datetime.now().strftime("%B %d, %Y \u2014 %I:%M %p"),
         },
     }
@@ -332,14 +405,26 @@ def push_hourly_summary(summary_data, audio_path=None):
         if len(recent_stories) > 20:
             recent_stories.pop()
 
-    # Copy audio to docs/audio/ and set audio_file for static mode
+    # Copy audio to docs/audio/ for static deployment
     if audio_path and os.path.exists(audio_path):
         audio_dir = os.path.join(DOCS_DIR, "audio")
         os.makedirs(audio_dir, exist_ok=True)
         audio_filename = f"{summary_data['story_id']}.mp3"
         dest = os.path.join(audio_dir, audio_filename)
-        shutil.copy2(audio_path, dest)
+        if os.path.abspath(audio_path) != os.path.abspath(dest):
+            shutil.copy2(audio_path, dest)
         story["data"]["audio_file"] = audio_filename
+
+    # Copy video to docs/video/ for static deployment
+    if video_path and os.path.exists(video_path):
+        video_dir = os.path.join(DOCS_DIR, "video")
+        os.makedirs(video_dir, exist_ok=True)
+        video_filename = f"{summary_data['story_id']}.mp4"
+        dest = os.path.join(video_dir, video_filename)
+        # Avoid SameFileError if video_gen already saved to docs/video/
+        if os.path.abspath(video_path) != os.path.abspath(dest):
+            shutil.copy2(video_path, dest)
+        story["data"]["video_file"] = video_filename
 
     _save_stories_json()
 
@@ -347,6 +432,17 @@ def push_hourly_summary(summary_data, audio_path=None):
         event_queue.put_nowait(story)
     except queue.Full:
         pass
+
+
+def push_story_image(story_id, image_path):
+    """Update a story with its generated image path."""
+    with stories_lock:
+        for story in recent_stories:
+            if story["data"].get("story_id") == story_id:
+                story["data"]["image_path"] = image_path
+                story["data"]["image_file"] = f"{story_id}.jpg"
+                break
+    _save_stories_json()
 
 
 # ---------------------------------------------------------------------------
@@ -369,6 +465,30 @@ def static_stories():
 def static_audio(filename):
     """Serve audio files from docs/audio/."""
     return send_from_directory(os.path.join(DOCS_DIR, "audio"), filename)
+
+
+@app.route("/video/<path:filename>")
+def static_video(filename):
+    """Serve video files from docs/video/."""
+    return send_from_directory(os.path.join(DOCS_DIR, "video"), filename)
+
+
+@app.route("/images/<path:filename>")
+def static_images(filename):
+    """Serve image files from docs/images/."""
+    return send_from_directory(os.path.join(DOCS_DIR, "images"), filename)
+
+
+@app.route("/api/video/<story_id>")
+def api_video(story_id):
+    """Serve video by story ID (local mode)."""
+    with stories_lock:
+        for story in recent_stories:
+            if story["data"].get("story_id") == story_id:
+                video_path = story["data"].get("video_path")
+                if video_path and os.path.exists(video_path):
+                    return send_file(video_path, mimetype="video/mp4")
+    return "", 404
 
 
 @app.route("/api/status")
