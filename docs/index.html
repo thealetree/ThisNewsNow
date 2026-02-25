@@ -940,7 +940,7 @@
       .hourly-title { font-size: 1.1rem; }
       .hourly-meta { margin-left: 0; width: 100%; }
       .carousel-zone { margin: 1rem auto; overflow: hidden; padding: 0 1rem; }
-      .carousel-wrap { height: auto; perspective: none; }
+      .carousel-wrap { height: auto; perspective: none; overflow: hidden; }
       .carousel-scene {
         position: relative;
         left: auto;
@@ -948,10 +948,20 @@
         transform: none;
         transform-style: flat;
         width: 100%;
-        height: 220px;
-        margin: 0 auto;
+        height: auto;
+        margin: 0;
+        display: grid;
       }
-      .carousel-card { width: 100%; height: 100%; padding: 1.2rem; }
+      .carousel-card {
+        position: relative;
+        width: auto;
+        height: auto;
+        min-height: 200px;
+        grid-column: 1;
+        grid-row: 1;
+        backface-visibility: visible;
+        padding: 1.5rem;
+      }
       .carousel-card .card-headline { font-size: 1.1rem; }
       .banner-ad-inner {
         flex-direction: column;
@@ -972,8 +982,7 @@
       article { padding: 1.2rem; }
       .article-headline { font-size: 1.05rem; }
       .carousel-zone { overflow: hidden; }
-      .carousel-scene { height: 190px; }
-      .carousel-card { padding: 1rem; }
+      .carousel-card { padding: 1.2rem; min-height: 180px; }
       .carousel-card .card-headline { font-size: 1rem; }
       .carousel-card .card-excerpt { font-size: 0.65rem; }
       .banner-ad-inner .ad-company { font-size: 0.85rem; }
@@ -1243,12 +1252,13 @@
       if (offset < -1) offset += 3;
 
       if (isMobile) {
-        // Simple fade: stack all cards, only show active
+        // Grid overlap: all cards in same grid cell, fade active
         var isActive = (offset === 0);
         card.style.transition = 'opacity 0.5s ease';
         card.style.transform = 'none';
-        card.style.left = '0';
-        card.style.top = '0';
+        card.style.left = '';
+        card.style.top = '';
+        card.style.width = '';
         card.style.opacity = isActive ? 1 : 0;
         card.style.zIndex = isActive ? 10 : 1;
         card.style.pointerEvents = isActive ? 'auto' : 'none';
