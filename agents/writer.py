@@ -105,6 +105,12 @@ CONTENT RULES:
 - One [CHYRON: text] tag and one [B-ROLL: description] tag, placed inline where they'd appear on screen.
 - No markdown. No bold. No anchor name prefix. Just the spoken script with inline tags.
 
+CAPITALIZATION — MANDATORY:
+- ALL acronyms must be fully capitalized: EPA, FBI, FEMA, DHS, FAA, NLRB, ACLU, NATO, FDA, CDC, DOD, DOE, HUD, SEC, etc.
+- ALL country names must be properly capitalized: United States, South Korea, North Korea, China, Russia, Ukraine, Israel, Iran, etc.
+- ALL proper nouns (city names, state names, agency names, organization names) must be correctly capitalized.
+- This is broadcast copy — proper capitalization is non-negotiable.
+
 EXAMPLE of correct length and format (68 words):
 Good evening. A federal grand jury in Atlanta has returned a twelve-count indictment against three former executives of Rayburn Holdings, alleging wire fraud and securities manipulation totaling more than two hundred million dollars. Lead prosecutor Anna Whitmore confirmed the charges this afternoon, calling it one of the largest corporate fraud cases in the Southeast. [CHYRON: ATLANTA GRAND JURY INDICTS RAYBURN EXECS] [B-ROLL: Federal courthouse exterior, attorneys exiting building] Bail hearings are set for Friday. We'll continue to follow this.
 
@@ -133,6 +139,9 @@ NOW WRITE YOUR SCRIPT:"""
                 prompt += f"\n\nYour previous attempt was only {spoken_words} words. Add one more detail to reach at least {MIN_WORDS} words."
         else:
             print(f"  Warning: final attempt got {spoken_words} words (target {MIN_WORDS}-{MAX_WORDS})")
+
+    # Fix capitalization of acronyms and proper nouns
+    script_text = _fix_capitalization(script_text)
 
     # Nonsense injection (post-processing, after word count is validated)
     from agents.nonsense import inject_nonsense
@@ -243,3 +252,57 @@ def _classify_topic(script_text, topic_weights):
     if max(scores.values()) == 0:
         return "general"
     return max(scores, key=scores.get)
+
+
+def _fix_capitalization(script_text):
+    """Fix common capitalization issues in generated scripts."""
+    # Acronyms that must be fully capitalized
+    acronyms = [
+        "EPA", "FBI", "FEMA", "DHS", "FAA", "NLRB", "ACLU", "NATO", "FDA",
+        "CDC", "DOD", "DOE", "HUD", "SEC", "CIA", "NSA", "TSA", "ICE",
+        "OSHA", "IRS", "DOJ", "ATF", "DEA", "NTSB", "USDA", "FCC", "FTC",
+        "NIH", "NOAA", "NASA", "FISA", "NAFTA", "USMCA", "GDP", "GNP",
+        "CEO", "CFO", "COO", "CTO",
+    ]
+
+    # Country / proper noun pairs: (lowercase pattern, correct form)
+    proper_nouns = [
+        ("united states", "United States"),
+        ("south korea", "South Korea"),
+        ("north korea", "North Korea"),
+        ("united kingdom", "United Kingdom"),
+        ("saudi arabia", "Saudi Arabia"),
+        ("new zealand", "New Zealand"),
+        ("south africa", "South Africa"),
+        ("puerto rico", "Puerto Rico"),
+        ("costa rica", "Costa Rica"),
+        ("el salvador", "El Salvador"),
+        ("sri lanka", "Sri Lanka"),
+        ("hong kong", "Hong Kong"),
+        ("new york", "New York"),
+        ("los angeles", "Los Angeles"),
+        ("san francisco", "San Francisco"),
+        ("washington d.c.", "Washington D.C."),
+        ("new hampshire", "New Hampshire"),
+        ("new jersey", "New Jersey"),
+        ("new mexico", "New Mexico"),
+        ("rhode island", "Rhode Island"),
+        ("west virginia", "West Virginia"),
+        ("south carolina", "South Carolina"),
+        ("north carolina", "North Carolina"),
+        ("south dakota", "South Dakota"),
+        ("north dakota", "North Dakota"),
+    ]
+
+    # Fix acronyms using word-boundary matching (case-insensitive)
+    for acr in acronyms:
+        pattern = re.compile(r'\b' + acr + r'\b', re.IGNORECASE)
+        # Only replace if found in non-tag context or tag context
+        script_text = pattern.sub(acr, script_text)
+
+    # Fix proper nouns (case-insensitive replacement)
+    for lower_form, correct_form in proper_nouns:
+        pattern = re.compile(re.escape(lower_form), re.IGNORECASE)
+        script_text = pattern.sub(correct_form, script_text)
+
+    return script_text

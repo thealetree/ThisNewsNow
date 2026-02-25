@@ -88,6 +88,7 @@ REQUIREMENTS:
 - Each anchor gets 2-4 segments depending on story count.
 - Transitions between anchors should be natural: "Marcus?", "Thanks Patricia, turning to...", "And Patricia, we're also watching...", etc.
 - Completely deadpan. No humor. This is a real news recap.
+- ALL acronyms must be fully capitalized (EPA, FBI, FAA, DHS, NATO, etc.). ALL country names and proper nouns must be correctly capitalized. This is broadcast copy.
 
 FORMAT — use these EXACT tags to mark who speaks. Each segment on its own line.
 
@@ -110,6 +111,10 @@ Output ONLY the tagged script. No notes, no explanations."""
     )
 
     raw_script = message.content[0].text.strip()
+
+    # Fix capitalization of acronyms and proper nouns
+    from agents.writer import _fix_capitalization
+    raw_script = _fix_capitalization(raw_script)
 
     # Parse into segments
     segments = _parse_segments(raw_script, anchor_a["name"], anchor_b["name"])

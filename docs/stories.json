@@ -1,149 +1,275 @@
 [
   {
     "type": "hourly_summary",
-    "timestamp": "2026-02-24T21:41:17.520875",
+    "timestamp": "2026-02-24T21:50:10.686265",
     "data": {
-      "story_id": "hourly_d6f07668",
+      "story_id": "hourly_ac5cdf48",
       "hour_label": "9 PM",
-      "anchor_a": "Elena Torres",
-      "anchor_b": "Marcus Webb",
+      "anchor_a": "James Whitfield",
+      "anchor_b": "Patricia Holt",
       "headlines": [
-        "EPA EXPANDS TOLEDO WATER INVESTIGATION",
-        "DHS SUSPENDS AI BORDER SURVEILLANCE",
-        "SENATE COMMITTEE PASSES INFRASTRUCTURE BILL",
-        "FBI RAIDS HEARTLAND ENERGY OFFICES",
-        "EDUCATION DEPT PROBES BELLHAVEN UNIVERSITY"
+        "FBI RAIDS RAIL COMPANY HQ",
+        "DOE INVESTIGATES SOLAR PANEL BID-RIGGING",
+        "NASA CONTRACTOR CHARGED WITH ESPIONAGE",
+        "DOJ PROBES PA VOTER REGISTRATION FRAUD",
+        "HHS PROBES CLINICAL RESEARCH FRAUD"
       ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm Elena Torres here with Marcus Webb. Federal investigators have expanded their probe into Toledo's contaminated water supply, discovering elevated lead levels now affecting three additional neighborhoods along the Maumee River.\n\n[ANCHOR_B] Thanks Elena. The Department of Homeland Security announced it will suspend its controversial AI surveillance pilot program along the Arizona-Mexico border after civil rights groups filed an emergency injunction.\n\n[ANCHOR_A] Marcus, the Senate Appropriations Committee voted fourteen to twelve along party lines to advance a scaled-back infrastructure modernization package, cutting rural broadband funding by sixty percent.\n\n[ANCHOR_B] And we're following breaking developments as FBI agents seized computer servers and financial records from Heartland Energy Corporation's Minneapolis headquarters following allegations of fraudulent billing practices.\n\n[ANCHOR_A] Finally tonight, the Department of Defense confirmed joint military exercises with South Korean forces next month, despite escalating tensions on the Korean Peninsula. That's your news summary. I'm Elena Torres with Marcus Webb. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 6,
-      "published": "February 24, 2026 \u2014 09:41 PM",
-      "audio_file": "hourly_d6f07668.mp3"
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. Federal agents raided the headquarters of Consolidated Rail Associates today, seizing computers and financial records amid allegations of safety violations across four states. The FBI operation marks the latest escalation in what sources describe as a widening investigation into the rail company's operations.\n\n[ANCHOR_B] Thanks James. The Department of Energy has launched a criminal investigation into alleged bid-rigging involving three major solar panel manufacturers. The probe follows a whistleblower complaint filed last month and could impact billions in federal clean energy contracts.\n\n[ANCHOR_A] Patricia, federal prosecutors in Chicago have charged former NASA contractor Richard Kellerman with espionage. Kellerman allegedly sold classified satellite technology to foreign buyers through encrypted channels, according to the Justice Department.\n\n[ANCHOR_B] And the Department of Justice has opened a criminal investigation into voter registration irregularities in three Pennsylvania counties. Federal prosecutors are examining alleged fraud ahead of next year's elections.\n\n[ANCHOR_A] Finally tonight, the State Department expelled two Russian diplomats from their Washington embassy following accusations they attempted to recruit sources within the Energy Department's nuclear research division. I'm James Whitfield with Patricia Holt. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 8,
+      "published": "February 24, 2026 \u2014 09:50 PM",
+      "audio_file": "hourly_ac5cdf48.mp3"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:40:59.748785",
+    "timestamp": "2026-02-24T21:49:46.605200",
     "data": {
-      "script": "The Department of Defense announced today it will conduct joint military exercises with South Korean forces next month, despite escalating tensions on the Korean Peninsula. Defense Secretary Lloyd Austin confirmed the annual training will proceed as scheduled, involving fifteen thousand American troops. [CHYRON: US-SOUTH KOREA MILITARY EXERCISES CONFIRMED] North Korean officials have condemned the drills as provocative, threatening unspecified retaliation. [B-ROLL: Military aircraft on runway, troops boarding transport planes] The exercises will span two weeks beginning March twenty-eighth. We'll have more developments ahead.",
+      "script": "Federal investigators have raided the headquarters of Meridian Defense Contractors in Norfolk, Virginia, seizing computers and financial records in a widening corruption probe. The FBI alleges company executives inflated invoices for military vehicle parts by nearly forty percent over three years. [CHYRON: FBI RAIDS DEFENSE CONTRACTOR] [B-ROLL: FBI agents carrying boxes from corporate building] Pentagon spokesman Colonel James Martinez says the investigation could affect contracts worth eight hundred million dollars. Three executives have been placed on administrative leave. More developments expected tomorrow.",
       "chyrons": [
-        "US-SOUTH KOREA MILITARY EXERCISES CONFIRMED"
+        "FBI RAIDS DEFENSE CONTRACTOR"
       ],
       "broll_descriptions": [
-        "Military aircraft on runway, troops boarding transport planes"
+        "FBI agents carrying boxes from corporate building"
       ],
       "anchor": "Marcus Webb",
       "anchor_gender": "male",
       "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "ab660662",
-      "word_count": 68,
+      "topic": "crime",
+      "story_id": "586a29fd",
+      "word_count": 69,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:05 PM"
+      "published": "February 24, 2026 \u2014 09:03 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:40:55.173509",
+    "timestamp": "2026-02-24T21:49:41.895510",
     "data": {
-      "script": "The Department of Education has launched a civil rights investigation into Bellhaven University after former faculty members alleged systematic discrimination in hiring and promotion practices. [CHYRON: EDUCATION DEPT PROBES BELLHAVEN UNIVERSITY] Federal investigators arrived on the Virginia campus yesterday to review personnel records dating back five years. University President Margaret Coleman called the allegations baseless but pledged full cooperation with the inquiry. [B-ROLL: Bellhaven University campus buildings, students walking across quad] More than three hundred faculty signed a petition demanding transparency. We'll track this investigation.",
+      "script": "The Department of Energy has launched a criminal investigation into Midwest Energy Cooperative after whistleblowers alleged the company falsified safety inspections at nuclear facilities across three states. DOE Inspector General Maria Santos confirmed federal agents executed search warrants at the company's Chicago headquarters this morning. [CHYRON: DOE PROBES NUCLEAR SAFETY FRAUD] [B-ROLL: Federal agents carrying boxes from office building] The cooperative operates maintenance contracts at six nuclear plants in Illinois, Wisconsin, and Iowa. More developments expected this week.",
       "chyrons": [
-        "EDUCATION DEPT PROBES BELLHAVEN UNIVERSITY"
+        "DOE PROBES NUCLEAR SAFETY FRAUD"
       ],
       "broll_descriptions": [
-        "Bellhaven University campus buildings, students walking across quad"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "98545d09",
-      "word_count": 70,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:00 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:40:50.843409",
-    "data": {
-      "script": "Federal investigators have seized computer servers and financial records from Heartland Energy Corporation's Minneapolis headquarters following allegations of fraudulent billing practices involving renewable energy tax credits. The FBI executed search warrants at three corporate facilities this morning as part of a widening investigation into alleged systematic overcharging of federal clean energy subsidies. [CHYRON: FBI RAIDS HEARTLAND ENERGY OFFICES] [B-ROLL: FBI agents carrying boxes from office building] Company spokesperson Jennifer Martinez denied wrongdoing, calling the investigation a misunderstanding. More developments expected tomorrow.",
-      "chyrons": [
-        "FBI RAIDS HEARTLAND ENERGY OFFICES"
-      ],
-      "broll_descriptions": [
-        "FBI agents carrying boxes from office building"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "588758ff",
-      "word_count": 67,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:40 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:40:46.451182",
-    "data": {
-      "script": "The Senate Appropriations Committee voted fourteen to twelve along party lines to advance a scaled-back version of the infrastructure modernization package, cutting rural broadband funding by sixty percent. Committee Chairman Robert Kellaway called the compromise necessary to secure passage, while ranking member Sarah Chen warned the cuts would leave millions of Americans without reliable internet access. [CHYRON: SENATE COMMITTEE PASSES INFRASTRUCTURE BILL] [B-ROLL: Capitol Hill committee room, senators reviewing documents] The full Senate votes next week.",
-      "chyrons": [
-        "SENATE COMMITTEE PASSES INFRASTRUCTURE BILL"
-      ],
-      "broll_descriptions": [
-        "Capitol Hill committee room, senators reviewing documents"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "20d76ae2",
-      "word_count": 62,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:24 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:40:41.769004",
-    "data": {
-      "script": "The Department of Homeland Security announced today it will suspend its controversial AI surveillance pilot program along the Arizona-Mexico border after civil rights groups filed an emergency injunction in federal court. [CHYRON: DHS SUSPENDS AI BORDER SURVEILLANCE] The program, launched just three weeks ago near Tucson, used facial recognition technology to monitor a two-hundred-mile stretch. ACLU attorney Sarah Chen called the suspension \"a victory for constitutional privacy rights.\" [B-ROLL: Border fence with surveillance towers, protesters holding signs] The injunction hearing is scheduled for next Tuesday.",
-      "chyrons": [
-        "DHS SUSPENDS AI BORDER SURVEILLANCE"
-      ],
-      "broll_descriptions": [
-        "Border fence with surveillance towers, protesters holding signs"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "general",
-      "story_id": "03f6a741",
-      "word_count": 70,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:17 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:40:37.574952",
-    "data": {
-      "script": "Federal investigators have expanded their probe into Toledo's contaminated water supply after discovering elevated lead levels now affect three additional neighborhoods along the Maumee River. EPA regional director Michael Chen announced the agency will test every municipal well within a five-mile radius. [CHYRON: EPA EXPANDS TOLEDO WATER INVESTIGATION] [B-ROLL: EPA technicians collecting water samples from residential taps] City Manager Rebecca Torres maintains the water remains safe for consumption, but over two thousand residents have switched to bottled water. More developments expected tomorrow.",
-      "chyrons": [
-        "EPA EXPANDS TOLEDO WATER INVESTIGATION"
-      ],
-      "broll_descriptions": [
-        "EPA technicians collecting water samples from residential taps"
+        "Federal agents carrying boxes from office building"
       ],
       "anchor": "Patricia Holt",
       "anchor_gender": "female",
       "estimated_seconds": 25,
       "topic": "crime",
-      "story_id": "b294879c",
-      "word_count": 67,
+      "story_id": "61cea5d2",
+      "word_count": 64,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:08 PM"
+      "published": "February 24, 2026 \u2014 09:36 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:49:37.079762",
+    "data": {
+      "script": "The Department of Education has launched a criminal investigation into fraudulent student loan forgiveness applications in six states. Federal agents raided the offices of Educational Services Group in Phoenix this morning, seizing computers and financial records. [CHYRON: DOE RAIDS STUDENT LOAN COMPANY] [B-ROLL: Federal agents carrying boxes from office building] Company CEO Marcus Chen has not responded to requests for comment. The scheme allegedly defrauded taxpayers of nearly fifty million dollars. More details ahead.",
+      "chyrons": [
+        "DOE RAIDS STUDENT LOAN COMPANY"
+      ],
+      "broll_descriptions": [
+        "Federal agents carrying boxes from office building"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "crime",
+      "story_id": "908d9656",
+      "word_count": 60,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:49 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:49:32.945593",
+    "data": {
+      "script": "Good evening. The State Department has expelled four Chinese diplomats after FBI counterintelligence agents discovered an alleged spy ring operating out of the consulate in San Francisco. [CHYRON: US EXPELS CHINESE DIPLOMATS] Sources tell TNN the diplomats were recruiting American academics and defense contractors for sensitive technology transfers. [B-ROLL: Chinese consulate building, diplomatic vehicles departing] Beijing denies the allegations, calling them baseless provocations. The expulsions mark the largest diplomatic action against China in two years. More developments ahead.",
+      "chyrons": [
+        "US EXPELS CHINESE DIPLOMATS"
+      ],
+      "broll_descriptions": [
+        "Chinese consulate building, diplomatic vehicles departing"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "general",
+      "story_id": "34fe3006",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:09 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:49:28.552732",
+    "data": {
+      "script": "The State Department has expelled two Russian diplomats from the embassy in Washington following allegations they attempted to recruit sources within the Department of Energy's nuclear research division. [CHYRON: US EXPELS RUSSIAN DIPLOMATS] Secretary of State Marco Rubio called the actions \"unacceptable violations of diplomatic protocol.\" The Russian embassy denied any wrongdoing, describing the accusations as \"baseless propaganda.\" [B-ROLL: State Department building, diplomatic vehicles departing] Moscow has promised reciprocal measures. More on this developing story after the break.",
+      "chyrons": [
+        "US EXPELS RUSSIAN DIPLOMATS"
+      ],
+      "broll_descriptions": [
+        "State Department building, diplomatic vehicles departing"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "science",
+      "story_id": "023cb799",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:34 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:49:24.037738",
+    "data": {
+      "script": "The Department of Defense has launched a formal investigation into security breaches at three military research facilities in Virginia. Pentagon officials confirmed classified drone technology blueprints were accessed without authorization at installations near Norfolk over the past six months. [CHYRON: DOD PROBES VIRGINIA SECURITY BREACHES] [B-ROLL: Military base entrance gates, security personnel] Defense contractor Apex Technologies denies involvement despite having maintenance contracts at all three sites. Congressional oversight hearings are expected within weeks. More on this developing story tonight.",
+      "chyrons": [
+        "DOD PROBES VIRGINIA SECURITY BREACHES"
+      ],
+      "broll_descriptions": [
+        "Military base entrance gates, security personnel"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "science",
+      "story_id": "28c7aaee",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:27 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:49:19.653783",
+    "data": {
+      "script": "The Department of Defense has launched a formal investigation into allegations that classified satellite imagery was leaked from Vandenberg Space Force Base in California. Pentagon spokesperson Colonel Richard Hayes confirmed that three contractors had their security clearances suspended pending the probe. [CHYRON: DOD INVESTIGATES SATELLITE DATA LEAK] [B-ROLL: Vandenberg Space Force Base entrance, military personnel at security checkpoint] The leaked materials reportedly contain reconnaissance data from overseas operations. Congressional oversight hearings could begin next month. More details ahead.",
+      "chyrons": [
+        "DOD INVESTIGATES SATELLITE DATA LEAK"
+      ],
+      "broll_descriptions": [
+        "Vandenberg Space Force Base entrance, military personnel at security checkpoint"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "9a97107e",
+      "word_count": 61,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:42 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:49:15.208277",
+    "data": {
+      "script": "The Department of Health and Human Services has launched a criminal investigation into allegations that Meridian Clinical Research falsified data in over forty FDA drug trials spanning three years. [CHYRON: HHS PROBES CLINICAL RESEARCH FRAUD] Sources tell TNN that fabricated patient records may have compromised the approval process for six medications currently on the market. [B-ROLL: Meridian Clinical Research building in Bellhaven, Virginia] FDA Commissioner Sarah Chen called the scope \"deeply troubling\" and promised swift action. More developments expected tomorrow.",
+      "chyrons": [
+        "HHS PROBES CLINICAL RESEARCH FRAUD"
+      ],
+      "broll_descriptions": [
+        "Meridian Clinical Research building in Bellhaven, Virginia"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "science",
+      "story_id": "434e4bc3",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:18 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:49:10.930270",
+    "data": {
+      "script": "The Department of Justice has launched a criminal investigation into alleged voter registration irregularities in three Pennsylvania counties ahead of next year's elections. Federal prosecutors in Philadelphia issued subpoenas to election officials in Lancaster, Chester, and Delaware counties after discovering what sources describe as systematic attempts to submit fraudulent applications. [CHYRON: DOJ PROBES PA VOTER REGISTRATION FRAUD] [B-ROLL: Federal courthouse in Philadelphia, voters at polling stations] Pennsylvania Secretary of State Michael Harrison called the allegations deeply concerning and promised full cooperation with federal investigators. More details expected tomorrow.",
+      "chyrons": [
+        "DOJ PROBES PA VOTER REGISTRATION FRAUD"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse in Philadelphia, voters at polling stations"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "20257815",
+      "word_count": 72,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:01 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:49:05.687924",
+    "data": {
+      "script": "Federal prosecutors in Chicago have charged former NASA contractor Richard Kellerman with selling classified satellite technology to foreign buyers through encrypted channels. The Justice Department alleges Kellerman accessed restricted propulsion data while working at the Johnson Space Center and sold blueprints for eighteen million dollars. [CHYRON: NASA CONTRACTOR CHARGED WITH ESPIONAGE] [B-ROLL: FBI agents carrying boxes from suburban office building] FBI agents raided his Naperville home yesterday, seizing computers and financial records. Kellerman faces up to twenty years if convicted. More developments expected tomorrow.",
+      "chyrons": [
+        "NASA CONTRACTOR CHARGED WITH ESPIONAGE"
+      ],
+      "broll_descriptions": [
+        "FBI agents carrying boxes from suburban office building"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "science",
+      "story_id": "ff688023",
+      "word_count": 69,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:14 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:49:00.746145",
+    "data": {
+      "script": "The Department of Energy has launched a criminal investigation into alleged there is three major solar panel manufacturers, following a whistleblower complaint filed last month. DOE Inspector General Rebecca Torres confirmed federal agents executed search warrants at facilities in Phoenix and Sacramento yesterday. [CHYRON: DOE INVESTIGATES SOLAR PANEL BID-RIGGING] [B-ROLL: Solar panel manufacturing facility, federal agents carrying boxes] The probe centers on contracts worth nearly eight hundred million dollars in federal clean energy subsidies. More details ahead after this break.",
+      "chyrons": [
+        "DOE INVESTIGATES SOLAR PANEL BID-RIGGING"
+      ],
+      "broll_descriptions": [
+        "Solar panel manufacturing facility, federal agents carrying boxes"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "crime",
+      "story_id": "6af8e55b",
+      "word_count": 65,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 09:47 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:48:56.095969",
+    "data": {
+      "script": "Federal investigators have seized computers and financial records from the headquarters of Consolidated Rail Associates following allegations of safety violations across four states. The FBI raid in Minneapolis targeted the freight company's maintenance division after whistleblowers claimed falsified inspection reports. [CHYRON: FBI RAIDS RAIL COMPANY HQ] [B-ROLL: FBI agents carrying boxes from office building] Transportation Secretary Pete Buttigieg called the allegations deeply troubling. Company CEO Marcus Delacroix denies any wrongdoing. More developments expected tomorrow.",
+      "chyrons": [
+        "FBI RAIDS RAIL COMPANY HQ"
+      ],
+      "broll_descriptions": [
+        "FBI agents carrying boxes from office building"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "4d72cf15",
+      "word_count": 60,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:33 PM"
     }
   }
 ]
