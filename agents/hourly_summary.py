@@ -34,7 +34,10 @@ def generate_hourly_summary(stories, config, world_bible):
         return None
 
     client = anthropic.Anthropic(api_key=config["apis"]["anthropic_key"])
-    anchors = world_bible.get("anchors", [])
+    all_anchors = world_bible.get("anchors", [])
+    anchors = [a for a in all_anchors if not a.get("paused", False)]
+    if not anchors:
+        anchors = all_anchors  # Fallback if all paused
 
     # Pick one male and one female anchor for the desk
     males = [a for a in anchors if a.get("gender") == "male"]

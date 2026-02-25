@@ -42,8 +42,9 @@ def generate_script(config, world_bible, news_context, topics_covered=None):
     """
     client = anthropic.Anthropic(api_key=config["apis"]["anthropic_key"])
 
-    # Pick a random anchor
-    anchor = random.choice(world_bible["anchors"])
+    # Pick a random anchor (skip paused ones)
+    active_anchors = [a for a in world_bible["anchors"] if not a.get("paused", False)]
+    anchor = random.choice(active_anchors if active_anchors else world_bible["anchors"])
 
     # Build world bible summary for context injection
     world_summary = _build_world_summary(world_bible)

@@ -19,10 +19,12 @@ anchors:
   - name: "Marcus Webb"
     gender: "male"
     elevenlabs_voice_id: "PASTE_VOICE_ID_HERE"
+    paused: true
     description: "Evening anchor, slightly more urgent delivery"
   - name: "Elena Torres"
     gender: "female"
     elevenlabs_voice_id: "PASTE_VOICE_ID_HERE"
+    paused: true
     description: "Field correspondent, warm but direct"
   - name: "James Whitfield"
     gender: "male"

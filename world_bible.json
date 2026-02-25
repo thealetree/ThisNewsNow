@@ -128,6 +128,7 @@
       "name": "Marcus Webb",
       "gender": "male",
       "role": "Evening Anchor",
+      "paused": true,
       "description": "Evening anchor, slightly more urgent delivery. Former field correspondent, transitioned to desk in 2019. Known for breaking news coverage.",
       "sign_off": "Reporting for This News Now, Marcus Webb."
     },
@@ -135,6 +136,7 @@
       "name": "Elena Torres",
       "gender": "female",
       "role": "Field Correspondent",
+      "paused": true,
       "description": "Field reporter, warm but direct. Covers breaking stories on location. Joined TNN in 2021 after five years at a regional affiliate.",
       "sign_off": "Elena Torres, This News Now."
     },
