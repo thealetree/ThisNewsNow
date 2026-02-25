@@ -47,15 +47,14 @@
     .clock-hand {
       position: absolute;
       top: 50%;
-      left: 50%;
+      left: calc(50% - 1px);
       width: 2px;
-      height: 50%;
-      background: var(--red);
-      transform-origin: top center;
-      opacity: 0.3;
+      height: 140px;
+      background: linear-gradient(to bottom, var(--red), rgba(196, 30, 42, 0));
+      transform-origin: 1px 0;
+      opacity: 0.6;
       z-index: 0;
       pointer-events: none;
-      /* Animation driven by JS for real-time sync */
     }
 
     /* Gradient overlay to fade clock behind text */
@@ -69,10 +68,10 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 500px;
-      max-width: 100%;
+      width: 420px;
+      max-width: 90%;
       height: 100%;
-      background: radial-gradient(ellipse at center, var(--accent) 30%, transparent 75%);
+      background: radial-gradient(ellipse at center, var(--accent) 20%, rgba(17,17,17,0.7) 55%, transparent 80%);
       z-index: 1;
       pointer-events: none;
     }
@@ -582,6 +581,7 @@
     }
 
     article.story-hidden { display: none; }
+    article.story-overflow-hide { display: none; }
 
     /* Featured story: spans all 3 columns */
     article.story-featured {
@@ -1291,70 +1291,75 @@
 
   function reclassifyStories() {
     var grid = document.getElementById('storiesGrid');
-    var articles = Array.from(grid.querySelectorAll('article:not(.story-hidden)'));
-    var total = articles.length;
+    var allArticles = Array.from(grid.querySelectorAll('article'));
 
-    // Remove all layout classes first
-    articles.forEach(function(a) {
-      a.classList.remove('story-featured', 'story-medium', 'story-compact', 'story-span-half');
+    // First: remove layout classes and overflow-hide from ALL articles
+    allArticles.forEach(function(a) {
+      a.classList.remove('story-featured', 'story-medium', 'story-compact', 'story-overflow-hide');
       a.style.gridColumn = '';
     });
+
+    var visible = allArticles.filter(function(a) { return !a.classList.contains('story-hidden'); });
+    var total = visible.length;
 
     if (total === 0) { refreshBannerAds(); return; }
 
     // Pattern: featured(1) + medium-row(3) + compact-row(3) = 7 per cycle
-    // Constraint: EVERY row of 3 must be full. No partial rows allowed.
-    // Strategy: assign in cycles, but check remaining before starting each row.
-    var idx = 0;
-    while (idx < total) {
-      var remaining = total - idx;
+    // RULE: If a row can't be fully populated (3 items), HIDE the leftovers.
+    // Figure out how many complete cycles fit, plus partial cycle handling.
+    var assigned = 0;
+    var layoutPlan = []; // array of {type, count} describing each row
 
-      // If only 1-2 left, make them all featured (full-width)
-      if (remaining <= 2) {
-        while (idx < total) {
-          articles[idx].classList.add('story-featured');
-          idx++;
+    while (assigned < total) {
+      var remaining = total - assigned;
+
+      // Need at least 4 for a meaningful cycle (1 featured + 3 medium)
+      if (remaining < 4) {
+        // Can we do just 1 featured? Only if remaining >= 1
+        if (remaining >= 1) {
+          layoutPlan.push({ type: 'featured', count: 1 });
+          assigned += 1;
         }
+        // Anything left over gets hidden
         break;
       }
 
-      // Featured story (1 item, spans all cols)
-      articles[idx].classList.add('story-featured');
-      idx++;
-      remaining = total - idx;
+      // Featured (1)
+      layoutPlan.push({ type: 'featured', count: 1 });
+      assigned += 1;
+      remaining = total - assigned;
 
-      // Medium row: need exactly 3
+      // Medium row (3)
       if (remaining >= 3) {
-        for (var m = 0; m < 3; m++) {
-          articles[idx].classList.add('story-medium');
-          idx++;
-        }
-        remaining = total - idx;
-      } else if (remaining > 0) {
-        // 1 or 2 left — make them featured (full-width) to avoid gaps
-        while (idx < total) {
-          articles[idx].classList.add('story-featured');
-          idx++;
-        }
-        break;
+        layoutPlan.push({ type: 'medium', count: 3 });
+        assigned += 3;
+        remaining = total - assigned;
       } else {
-        break;
+        break; // leftover hidden
       }
 
-      // Compact row: need exactly 3
+      // Compact row (3)
       if (remaining >= 3) {
-        for (var c = 0; c < 3; c++) {
-          articles[idx].classList.add('story-compact');
-          idx++;
-        }
-      } else if (remaining > 0) {
-        // 1 or 2 left — make them featured (full-width) to avoid gaps
-        while (idx < total) {
-          articles[idx].classList.add('story-featured');
-          idx++;
-        }
-        break;
+        layoutPlan.push({ type: 'compact', count: 3 });
+        assigned += 3;
       }
+      // If remaining < 3 after medium, we just don't do compact — loop again
+    }
+
+    // Apply the layout plan
+    var idx = 0;
+    for (var p = 0; p < layoutPlan.length; p++) {
+      var row = layoutPlan[p];
+      for (var r = 0; r < row.count; r++) {
+        visible[idx].classList.add('story-' + row.type);
+        idx++;
+      }
+    }
+
+    // Hide any unassigned visible articles (overflow — incomplete rows)
+    while (idx < total) {
+      visible[idx].classList.add('story-overflow-hide');
+      idx++;
     }
 
     refreshBannerAds();
@@ -1368,17 +1373,41 @@
     // Remove existing banners
     grid.querySelectorAll('.banner-ad').forEach(function(b) { b.remove(); });
 
-    // Only count VISIBLE (non-hidden) articles
-    var visibleArticles = Array.from(grid.querySelectorAll('article:not(.story-hidden)'));
+    // Only count VISIBLE, non-overflow articles
+    var visibleArticles = Array.from(grid.querySelectorAll('article:not(.story-hidden):not(.story-overflow-hide)'));
+    if (visibleArticles.length < 5) return; // not enough stories for ads
+
+    // Insert banner ads only at ROW BOUNDARIES to avoid breaking grid rows.
+    // Row boundaries are: after a featured story, after each group of 3 medium/compact.
+    // We track articles and insert after every 4th article at a row boundary.
     var count = 0;
-    visibleArticles.forEach(function(a, i) {
+    var adsInserted = 0;
+    for (var i = 0; i < visibleArticles.length; i++) {
+      var a = visibleArticles[i];
       count++;
-      // Insert a banner ad after every 4th visible article, but NOT after the last one
-      if (count > 0 && count % 4 === 0 && i < visibleArticles.length - 1) {
+      var isFeatured = a.classList.contains('story-featured');
+      var isLastInRow = isFeatured; // featured always ends its row
+      if (!isFeatured) {
+        // Check if next article is featured or this is end of a 3-item group
+        var next = visibleArticles[i + 1];
+        if (!next || next.classList.contains('story-featured')) {
+          isLastInRow = true;
+        }
+        // Check position within medium/compact group: we're at a row boundary
+        // if the next element has a different class (medium→compact or compact→featured)
+        if (next && !next.classList.contains(a.classList.contains('story-medium') ? 'story-medium' : 'story-compact')) {
+          isLastInRow = true;
+        }
+      }
+
+      if (isLastInRow && count >= 4 && i < visibleArticles.length - 1) {
         var banner = createBannerAd();
         a.after(banner);
+        count = 0;
+        adsInserted++;
+        if (adsInserted >= 5) break; // cap at 5 banners
       }
-    });
+    }
   }
 
   function createBannerAd() {
