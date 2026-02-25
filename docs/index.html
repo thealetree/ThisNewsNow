@@ -40,6 +40,41 @@
       text-align: center;
       padding: 1.4rem 2rem 1.2rem;
       position: relative;
+      overflow: hidden;
+    }
+
+    /* Clock second hand behind header content */
+    .clock-hand {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px;
+      height: 50%;
+      background: var(--red);
+      transform-origin: top center;
+      opacity: 0.3;
+      z-index: 0;
+      pointer-events: none;
+      /* Animation driven by JS for real-time sync */
+    }
+
+    /* Gradient overlay to fade clock behind text */
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .header-gradient {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      max-width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, var(--accent) 30%, transparent 75%);
+      z-index: 1;
+      pointer-events: none;
     }
 
     .header-date {
@@ -80,6 +115,7 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       opacity: 0.6;
+      z-index: 2;
     }
 
     .live-dot {
@@ -102,7 +138,6 @@
       background: #222222;
       border-bottom: 1px solid var(--border);
       display: flex;
-      justify-content: center;
       align-items: center;
       gap: 0.6rem;
       padding: 0.6rem 2rem;
@@ -111,8 +146,19 @@
       text-transform: uppercase;
       color: var(--text-muted);
       font-weight: 500;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
     }
+
+    .nav-bar::-webkit-scrollbar { height: 3px; }
+    .nav-bar::-webkit-scrollbar-track { background: transparent; }
+    .nav-bar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    .topic-toggle { white-space: nowrap; flex-shrink: 0; }
 
     .topic-toggle {
       cursor: pointer;
@@ -129,7 +175,7 @@
       color: white;
     }
 
-    .nav-spacer { flex: 1; }
+    .nav-spacer { flex: 1; min-width: 1rem; flex-shrink: 0; }
 
     /* ── Generator Toggle (local mode only) ── */
     .gen-toggle {
@@ -334,28 +380,7 @@
       text-transform: uppercase;
     }
 
-    .carousel-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 40px;
-      height: 40px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-size: 1.2rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-      transition: all 0.2s;
-      border-radius: 50%;
-    }
-
-    .carousel-nav:hover { background: rgba(255,255,255,0.2); }
-    .carousel-nav.prev { left: 0; }
-    .carousel-nav.next { right: 0; }
+    /* carousel-nav arrows removed */
 
     .carousel-dots {
       display: flex;
@@ -552,6 +577,8 @@
       animation: fadeIn 0.5s ease-out;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
+      min-height: 0;
     }
 
     article.story-hidden { display: none; }
@@ -591,10 +618,13 @@
     article.story-compact .article-body {
       font-size: 0.85rem;
       line-height: 1.6;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
+      max-height: 4.8em; /* 3 lines * 1.6 line-height */
       overflow: hidden;
+      position: relative;
+    }
+
+    article.story-compact .article-body p {
+      margin-bottom: 0.4rem;
     }
 
     article.story-compact .article-share { display: none; }
@@ -624,10 +654,13 @@
       font-family: 'Inter', sans-serif;
       font-size: 1.2rem;
       font-weight: 800;
-      line-height: 1.25;
+      line-height: 1.3;
       margin-bottom: 0.5rem;
       color: var(--text);
       letter-spacing: -0.02em;
+      overflow: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     .article-byline {
@@ -643,6 +676,9 @@
       line-height: 1.75;
       color: var(--text);
       flex: 1;
+      overflow: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     .article-body p { margin-bottom: 0.8rem; }
@@ -905,7 +941,6 @@
       .carousel-scene { width: 280px; height: 200px; }
       .carousel-card { width: 280px; height: 200px; padding: 1.2rem; }
       .carousel-card .card-headline { font-size: 1.1rem; }
-      .carousel-nav { width: 32px; height: 32px; font-size: 1rem; }
     }
 
     @media (max-width: 480px) {
@@ -922,9 +957,13 @@
 <body>
 
   <header>
-    <div class="header-date" id="headerDate"></div>
-    <div class="header-logo">This News Now</div>
-    <div class="header-tagline">This World. Right Now.</div>
+    <div class="clock-hand" id="clockHand"></div>
+    <div class="header-gradient"></div>
+    <div class="header-content">
+      <div class="header-date" id="headerDate"></div>
+      <div class="header-logo">This News Now</div>
+      <div class="header-tagline">This World. Right Now.</div>
+    </div>
     <div class="header-live">
       <span class="live-dot" id="liveDot"></span>
       <span id="liveLabel">Live</span>
@@ -1006,6 +1045,19 @@
   }
   updateDate();
   setInterval(updateDate, 60000);
+
+  // ── Clock Second Hand ──
+  function tickClock() {
+    var now = new Date();
+    var seconds = now.getSeconds() + now.getMilliseconds() / 1000;
+    var degrees = (seconds / 60) * 360;
+    var hand = document.getElementById('clockHand');
+    if (hand) {
+      hand.style.transform = 'rotate(' + degrees + 'deg)';
+    }
+    requestAnimationFrame(tickClock);
+  }
+  tickClock();
 
   // ── Ticker ──
   function buildTicker(headlines) {
@@ -1102,9 +1154,7 @@
 
     zone.innerHTML =
       '<div class="carousel-wrap">' +
-        '<button class="carousel-nav prev" onclick="rotateCarousel(-1)">\u276E</button>' +
         '<div class="carousel-scene" id="carouselScene"></div>' +
-        '<button class="carousel-nav next" onclick="rotateCarousel(1)">\u276F</button>' +
         '<div class="carousel-dots" id="carouselDots"></div>' +
       '</div>';
 
@@ -1241,20 +1291,73 @@
 
   function reclassifyStories() {
     var grid = document.getElementById('storiesGrid');
-    var articles = grid.querySelectorAll('article:not(.story-hidden)');
-    var idx = 0;
+    var articles = Array.from(grid.querySelectorAll('article:not(.story-hidden)'));
+    var total = articles.length;
+
+    // Remove all layout classes first
     articles.forEach(function(a) {
-      a.classList.remove('story-featured', 'story-medium', 'story-compact');
-      var pos = idx % 6;
-      if (pos === 0) {
-        a.classList.add('story-featured');
-      } else if (pos <= 2) {
-        a.classList.add('story-medium');
-      } else {
-        a.classList.add('story-compact');
-      }
-      idx++;
+      a.classList.remove('story-featured', 'story-medium', 'story-compact', 'story-span-half');
+      a.style.gridColumn = '';
     });
+
+    if (total === 0) { refreshBannerAds(); return; }
+
+    // Pattern: featured(1) + medium-row(3) + compact-row(3) = 7 per cycle
+    // Constraint: EVERY row of 3 must be full. No partial rows allowed.
+    // Strategy: assign in cycles, but check remaining before starting each row.
+    var idx = 0;
+    while (idx < total) {
+      var remaining = total - idx;
+
+      // If only 1-2 left, make them all featured (full-width)
+      if (remaining <= 2) {
+        while (idx < total) {
+          articles[idx].classList.add('story-featured');
+          idx++;
+        }
+        break;
+      }
+
+      // Featured story (1 item, spans all cols)
+      articles[idx].classList.add('story-featured');
+      idx++;
+      remaining = total - idx;
+
+      // Medium row: need exactly 3
+      if (remaining >= 3) {
+        for (var m = 0; m < 3; m++) {
+          articles[idx].classList.add('story-medium');
+          idx++;
+        }
+        remaining = total - idx;
+      } else if (remaining > 0) {
+        // 1 or 2 left — make them featured (full-width) to avoid gaps
+        while (idx < total) {
+          articles[idx].classList.add('story-featured');
+          idx++;
+        }
+        break;
+      } else {
+        break;
+      }
+
+      // Compact row: need exactly 3
+      if (remaining >= 3) {
+        for (var c = 0; c < 3; c++) {
+          articles[idx].classList.add('story-compact');
+          idx++;
+        }
+      } else if (remaining > 0) {
+        // 1 or 2 left — make them featured (full-width) to avoid gaps
+        while (idx < total) {
+          articles[idx].classList.add('story-featured');
+          idx++;
+        }
+        break;
+      }
+    }
+
+    refreshBannerAds();
   }
 
   // ── Banner Ads ──
@@ -1265,11 +1368,13 @@
     // Remove existing banners
     grid.querySelectorAll('.banner-ad').forEach(function(b) { b.remove(); });
 
-    var articles = grid.querySelectorAll('article');
+    // Only count VISIBLE (non-hidden) articles
+    var visibleArticles = Array.from(grid.querySelectorAll('article:not(.story-hidden)'));
     var count = 0;
-    articles.forEach(function(a, i) {
+    visibleArticles.forEach(function(a, i) {
       count++;
-      if (count > 0 && count % 4 === 0 && i < articles.length - 1) {
+      // Insert a banner ad after every 4th visible article, but NOT after the last one
+      if (count > 0 && count % 4 === 0 && i < visibleArticles.length - 1) {
         var banner = createBannerAd();
         a.after(banner);
       }
@@ -1292,6 +1397,28 @@
     return div;
   }
 
+  // ── Fake Author Names ──
+  var fakeAuthors = [
+    "Geef Botak",
+    "Trenane Labilda",
+    "Bave Trenault",
+    "Tooneine Pretae",
+    "Callis Durnham",
+    "Reina Voskov",
+    "Jomand Frellick",
+    "Suvari Prentiss",
+    "Dwane Keltrova",
+    "Mireille Ganford"
+  ];
+
+  var authorIndex = 0;
+
+  function getNextAuthor() {
+    var author = fakeAuthors[authorIndex % fakeAuthors.length];
+    authorIndex++;
+    return author;
+  }
+
   // ── Render Article ──
   function addStory(storyData, timestamp) {
     var d = storyData;
@@ -1307,7 +1434,7 @@
     var headline = formatHeadline(d);
     var body = formatBody(d.script || '');
     var topic = (d.topic || 'general').toUpperCase();
-    var anchor = d.anchor || 'Staff Reporter';
+    var anchor = getNextAuthor();
 
     var origPublished = d.published || new Date(timestamp).toLocaleString('en-US', {
       month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'
@@ -1593,7 +1720,31 @@
     { company: "Granite State Power & Light", headline: "Clean energy for a cleaner conscience.", cta: "Switch Today", color: "#1b4f72" },
     { company: "Bellhaven Savings Bank", headline: "Your money. Our vault. Everyone\u2019s future.", cta: "Open an Account", color: "#154360" },
     { company: "CrossCountry Wireless", headline: "Coverage that follows you everywhere. Almost.", cta: "See Plans", color: "#7d3c98" },
-    { company: "Summit Health Partners", headline: "Because waiting shouldn\u2019t be a symptom.", cta: "Book Now", color: "#1a5276" }
+    { company: "Summit Health Partners", headline: "Because waiting shouldn\u2019t be a symptom.", cta: "Book Now", color: "#1a5276" },
+    { company: "Ridgeline Outfitters", headline: "Gear for the trail. Built for the long haul.", cta: "Shop Gear", color: "#4a6741" },
+    { company: "AmberWave Grain Co.", headline: "From our fields to your table since 1947.", cta: "Our Story", color: "#8b6914" },
+    { company: "TrueNorth Legal Group", headline: "When it matters, you need the right counsel.", cta: "Free Consultation", color: "#2c3e50" },
+    { company: "Lakeside Pet Hospital", headline: "They can\u2019t tell you where it hurts. We can.", cta: "Book a Visit", color: "#1a6b5a" },
+    { company: "Pinecrest Academy", headline: "Building futures one student at a time.", cta: "Apply Now", color: "#34495e" },
+    { company: "Vanguard Plumbing & HVAC", headline: "We show up on time. Every time.", cta: "Schedule Service", color: "#5b2c6f" },
+    { company: "Coastline Solar Energy", headline: "The sun doesn\u2019t send a bill. Neither should you.", cta: "Get Estimate", color: "#1a5276" },
+    { company: "Copperfield Brewing", headline: "Craft beer. No craft nonsense.", cta: "Find a Taproom", color: "#6e2c00" },
+    { company: "Sterling & Blake Attorneys", headline: "Protecting what you\u2019ve built.", cta: "Case Review", color: "#1c2833" },
+    { company: "FarmDirect Organics", headline: "Know your farmer. Know your food.", cta: "Start a Box", color: "#1e8449" },
+    { company: "IronClad Home Security", headline: "Sleep better. We\u2019re watching.", cta: "Free Install", color: "#2c3e50" },
+    { company: "Northstar Credit Union", headline: "Banking that actually banks for you.", cta: "Join Today", color: "#1b4f72" },
+    { company: "Crestwood Family Dentistry", headline: "Smiles you can trust since 2003.", cta: "Book Cleaning", color: "#0d7377" },
+    { company: "BrightPath Tutoring", headline: "Every student can excel. We prove it.", cta: "Try a Session", color: "#6c3483" },
+    { company: "Cornerstone Roofing", headline: "Your roof. Our reputation.", cta: "Get Quote", color: "#7b241c" },
+    { company: "BluePeak Adventures", headline: "Life\u2019s too short for boring weekends.", cta: "Book a Trip", color: "#1a3a6b" },
+    { company: "Patriot Tire & Auto", headline: "Miles ahead. Dollars behind.", cta: "Find Location", color: "#2c3e50" },
+    { company: "WellSpring Water Co.", headline: "Pure water. Pure and simple.", cta: "Delivery Info", color: "#117864" },
+    { company: "Apex Fitness Centers", headline: "Stronger starts here.", cta: "Free Trial", color: "#8e3a0f" },
+    { company: "Prairie Wind Energy", headline: "Harvesting what nature gives freely.", cta: "Learn More", color: "#1a5276" },
+    { company: "Timberline Construction", headline: "Building homes. Building communities.", cta: "Our Work", color: "#5d4037" },
+    { company: "OakBridge Financial", headline: "Wealth management for the rest of us.", cta: "Schedule Call", color: "#154360" },
+    { company: "CloudNine Mattress Co.", headline: "Eight hours of bliss. Guaranteed.", cta: "Shop Beds", color: "#4a235a" },
+    { company: "GreenLeaf Landscaping", headline: "Your yard. Our masterpiece.", cta: "Free Estimate", color: "#1e8449" }
   ];
 
   var adTimers = {};
@@ -1652,7 +1803,7 @@
   function setupAds() {
     var col = document.getElementById('adColumn');
     if (!col || col.children.length > 0) return;
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 6; i++) {
       var slot = document.createElement('div');
       var slotId = 'sidebar' + i;
       slot.dataset.slotId = slotId;
