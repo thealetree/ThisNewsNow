@@ -391,7 +391,8 @@
       display: flex;
       justify-content: center;
       gap: 0.5rem;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
+      padding-bottom: 0.5rem;
     }
 
     .carousel-dot {
@@ -938,11 +939,17 @@
       .hourly-header { gap: 0.5rem; }
       .hourly-title { font-size: 1.1rem; }
       .hourly-meta { margin-left: 0; width: 100%; }
-      .carousel-zone { margin: 1rem auto; overflow: hidden; }
-      .carousel-wrap { height: 240px; perspective: none; }
+      .carousel-zone { margin: 1rem auto; overflow: hidden; padding: 0 1rem; }
+      .carousel-wrap { height: auto; perspective: none; }
       .carousel-scene {
-        width: 85vw; max-width: 340px; height: 210px;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
         transform-style: flat;
+        width: 100%;
+        height: 220px;
+        margin: 0 auto;
       }
       .carousel-card { width: 100%; height: 100%; padding: 1.2rem; }
       .carousel-card .card-headline { font-size: 1.1rem; }
@@ -965,9 +972,8 @@
       article { padding: 1.2rem; }
       .article-headline { font-size: 1.05rem; }
       .carousel-zone { overflow: hidden; }
-      .carousel-wrap { height: 200px; }
-      .carousel-scene { width: 90vw; max-width: 320px; height: 180px; }
-      .carousel-card { width: 100%; height: 100%; padding: 1rem; }
+      .carousel-scene { height: 190px; }
+      .carousel-card { padding: 1rem; }
       .carousel-card .card-headline { font-size: 1rem; }
       .carousel-card .card-excerpt { font-size: 0.65rem; }
       .banner-ad-inner .ad-company { font-size: 0.85rem; }
@@ -1182,8 +1188,8 @@
     zone.innerHTML =
       '<div class="carousel-wrap">' +
         '<div class="carousel-scene" id="carouselScene"></div>' +
-        '<div class="carousel-dots" id="carouselDots"></div>' +
-      '</div>';
+      '</div>' +
+      '<div class="carousel-dots" id="carouselDots"></div>';
 
     var scene = document.getElementById('carouselScene');
     var dotsEl = document.getElementById('carouselDots');
