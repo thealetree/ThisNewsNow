@@ -1,254 +1,275 @@
 [
   {
     "type": "hourly_summary",
-    "timestamp": "2026-02-24T21:58:45.511709",
+    "timestamp": "2026-02-24T22:04:59.876878",
     "data": {
-      "story_id": "hourly_87748ceb",
-      "hour_label": "9 PM",
+      "story_id": "hourly_e9f913c9",
+      "hour_label": "10 PM",
       "anchor_a": "Marcus Webb",
       "anchor_b": "Patricia Holt",
       "headlines": [
-        "DOE SUSPENDS FUSION RESEARCH FUNDING",
-        "DHS SUSPENDS VISA PROCESSING IN EASTERN EUROPE",
-        "DOE SUSPENDS FUSION RESEARCH FUNDING",
-        "DOE CANCELS NEVADA SOLAR PROJECT",
-        "HEARTLAND ENERGY BREACH AFFECTS 3M CUSTOMERS"
+        "EPA ORDERS MICHIGAN WATER TESTING",
+        "FEDS WITHHOLD $40M FROM BELLHAVEN SCHOOLS",
+        "RAIL EXECUTIVES CHARGED IN FRAUD SCHEME",
+        "DOE CUTS UNIVERSITY BATTERY RESEARCH",
+        "DOJ CHARGES 6 IN CRYPTO FRAUD TARGETING VETS"
       ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm Marcus Webb here with Patricia Holt. The Department of Energy has suspended federal funding for advanced fusion research programs nationwide, effective immediately. The decision impacts twelve university laboratories across the country as officials cite safety violations and budget concerns.\n\n[ANCHOR_B] Thanks Marcus. The Department of Homeland Security announced it will suspend visa processing at three major consular offices in Eastern Europe, citing credible intelligence of coordinated security threats. The suspension affects thousands of pending applications.\n\n[ANCHOR_A] Meanwhile Patricia, nearly three million customers of Heartland Energy Corporation have been affected by a massive data breach spanning seven Midwestern states. The FBI Cyber Division confirms hackers accessed personal information including social security numbers and billing records.\n\n[ANCHOR_B] And we're tracking severe weather tonight as the National Weather Service issues blizzard warnings for six states. A massive winter storm is moving toward the Great Lakes region with Chicago already activating emergency response protocols.\n\n[ANCHOR_A] Finally, federal regulators ordered immediate closure of three commercial fishing zones in Alaska's Bristol Bay after toxin levels exceeded safety limits by four hundred percent. The FDA warns contaminated seafood poses serious health risks. I'm Marcus Webb with Patricia Holt, This News Now returns in thirty minutes.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm Marcus Webb here with Patricia Holt. The Environmental Protection Agency has ordered emergency water testing in six Michigan communities after Wayne State University researchers detected unusual bacterial levels in municipal water supplies.\n\n[ANCHOR_B] Thanks Marcus. The Department of Justice has charged six people in a cryptocurrency fraud scheme that targeted military veterans across seventeen states. Officials say the sophisticated operation defrauded service members of significant amounts.\n\n[ANCHOR_A] Patricia, federal prosecutors in Denver have also charged four Consolidated Rail Associates executives with conspiracy to defraud the Department of Transportation of nearly eighty million dollars in infrastructure funds.\n\n[ANCHOR_B] And the Federal Aviation Administration has ordered immediate inspections of all Boeing seven-thirty-seven dash eight-hundred aircraft after discovering potential structural cracks in wing components. The directive affects hundreds of planes nationwide.\n\n[ANCHOR_A] Finally tonight, the State Department announced new sanctions against twelve Chinese technology firms accused of supporting military surveillance programs. Secretary of State Marco Rubio cited national security concerns in the decision. I'm Marcus Webb.\n\n[ANCHOR_B] And I'm Patricia Holt. We'll be back with more This News Now at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
       "story_count": 8,
-      "published": "February 24, 2026 \u2014 09:58 PM",
-      "audio_file": "hourly_87748ceb.mp3"
+      "published": "February 24, 2026 \u2014 10:04 PM",
+      "audio_file": "hourly_e9f913c9.mp3"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:58:22.296711",
+    "timestamp": "2026-02-24T22:04:37.697060",
     "data": {
-      "script": "The Department of Education announced today it will withhold federal funding from seventeen school districts across Alabama and Mississippi after finding they failed to comply with special education mandates. Assistant Secretary Michael Rodriguez said the districts ignored repeated this stage muffin is for disabled students. [CHYRON: EDUCATION DEPT CUTS FUNDING TO 17 DISTRICTS] [B-ROLL: Empty school hallway, special education classroom] The funding freeze affects approximately forty-two thousand students and could force program cuts within weeks. More details ahead.",
+      "script": "A severe winter storm system is forecast to bring up to eighteen inches of snow and ICE to portions of six Midwestern states beginning Thursday night. The National Weather Service has issued blizzard warnings from Kansas City to Detroit, with winds expected to reach sixty miles per hour. [CHYRON: MAJOR WINTER STORM TARGETS MIDWEST] [B-ROLL: Weather maps showing storm track, snow plows preparing] Chicago's O'Hare Airport has already cancelled four hundred flights. We'll track this storm tonight.",
       "chyrons": [
-        "EDUCATION DEPT CUTS FUNDING TO 17 DISTRICTS"
+        "MAJOR WINTER STORM TARGETS MIDWEST"
       ],
       "broll_descriptions": [
-        "Empty school hallway, special education classroom"
+        "Weather maps showing storm track, snow plows preparing"
       ],
       "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "education",
-      "story_id": "99c85aa2",
-      "word_count": 63,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 09:45 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:58:17.070819",
-    "data": {
-      "script": "A cyberattack has crippled communication systems across twelve counties in central Kansas, leaving emergency services operating on backup protocols since Tuesday morning. The FBI's Cyber Division confirms the ransomware targeted the regional 911 dispatch network serving over four hundred thousand residents. [CHYRON: KANSAS 911 SYSTEMS HACKED] Sheriff Mike Castellano says deputies are relying on radio and cell phones while technicians work to restore full service. [B-ROLL: Sheriff's department radio room, deputies at patrol cars] No ransom demand has been made public yet.",
-      "chyrons": [
-        "KANSAS 911 SYSTEMS HACKED"
-      ],
-      "broll_descriptions": [
-        "Sheriff's department radio room, deputies at patrol cars"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "c410783e",
-      "word_count": 68,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:27 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:58:12.085610",
-    "data": {
-      "script": "The Securities and Exchange Commission has filed civil charges against Chicago-based investment firm Meridian Capital Management, alleging the company misappropriated over four hundred million dollars in client funds. SEC tendrils concaving wine rageing says the scheme involved creating fake investment vehicles and falsifying quarterly reports to investors. [CHYRON: SEC CHARGES CHICAGO INVESTMENT FIRM] [B-ROLL: SEC headquarters in Washington, financial documents] Meridian's assets have been frozen pending investigation. More details ahead after the break.",
-      "chyrons": [
-        "SEC CHARGES CHICAGO INVESTMENT FIRM"
-      ],
-      "broll_descriptions": [
-        "SEC headquarters in Washington, financial documents"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "5561266f",
-      "word_count": 60,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 09:17 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:58:07.949756",
-    "data": {
-      "script": "Federal regulators have ordered the immediate recall of thirty-seven thousand insulin pumps manufactured by MedTech Solutions after reports of device malfunctions in at least eight states. The FDA confirmed twelve patients required emergency hospitalization when their pumps delivered incorrect dosages. [CHYRON: FDA ORDERS INSULIN PUMP RECALL] [B-ROLL: Medical devices on hospital table, patients in clinic waiting room] Company spokesperson Patricia Chen called the failures isolated incidents but ceased all shipments pending investigation. More details ahead after this break.",
-      "chyrons": [
-        "FDA ORDERS INSULIN PUMP RECALL"
-      ],
-      "broll_descriptions": [
-        "Medical devices on hospital table, patients in clinic waiting room"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "health",
-      "story_id": "b334f04c",
-      "word_count": 61,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:18 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:58:02.930961",
-    "data": {
-      "script": "The Federal Communications Commission has suspended the broadcast licenses of four radio stations in Bellhaven, Virginia, after discovering unauthorized signal boosters that interfered with emergency frequencies. FCC enforcement chief Robert Caldwell says the violations created dangerous dead zones for first responders during last month's warehouse fire. [CHYRON: FCC SUSPENDS 4 RADIO LICENSES IN VIRGINIA] [B-ROLL: Radio transmission towers, FCC vehicles at broadcast facility] Station owners face fines up to five hundred thousand dollars each. More developments expected next week.",
-      "chyrons": [
-        "FCC SUSPENDS 4 RADIO LICENSES IN VIRGINIA"
-      ],
-      "broll_descriptions": [
-        "Radio transmission towers, FCC vehicles at broadcast facility"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "cb22abec",
-      "word_count": 62,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:49 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:57:52.951874",
-    "data": {
-      "script": "Federal regulators have ordered the immediate closure of three commercial fishing zones in Alaska's Bristol Bay after toxin levels exceeded safety thresholds by four hundred percent. The FDA issued the emergency closure following routine testing that detected dangerous concentrations of domoic acid in crab and salmon samples. [CHYRON: BRISTOL BAY FISHING ZONES CLOSED] [B-ROLL: Commercial fishing boats docked at harbor] More than sixty vessels are now prohibited from harvesting until further notice. The agency expects testing results within ten days.",
-      "chyrons": [
-        "BRISTOL BAY FISHING ZONES CLOSED"
-      ],
-      "broll_descriptions": [
-        "Commercial fishing boats docked at harbor"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "health",
-      "story_id": "d2dc8d26",
-      "word_count": 67,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:51 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:57:43.025119",
-    "data": {
-      "script": "A massive winter storm is barreling toward the Great Lakes region tonight, prompting the National Weather Service to issue blizzard warnings for six states. Chicago Mayor Rebecca Torres has activated the city's emergency snow plan as forecasters predict up to eighteen inches of snow and winds exceeding fifty miles per hour through Thursday morning. [CHYRON: BLIZZARD WARNING ISSUED FOR 6 STATES] [B-ROLL: Snow plows being prepped, empty grocery store shelves] More than four hundred flights already cancelled at O'Hare. We'll track this storm all night.",
-      "chyrons": [
-        "BLIZZARD WARNING ISSUED FOR 6 STATES"
-      ],
-      "broll_descriptions": [
-        "Snow plows being prepped, empty grocery store shelves"
-      ],
-      "anchor": "Patricia Holt",
       "anchor_gender": "female",
       "estimated_seconds": 25,
       "topic": "weather",
-      "story_id": "7cf805e5",
-      "word_count": 69,
+      "story_id": "8753bdf6",
+      "word_count": 62,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:50 PM"
+      "published": "February 24, 2026 \u2014 10:04 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:57:33.982229",
+    "timestamp": "2026-02-24T22:04:24.806523",
     "data": {
-      "script": "A massive data breach at Heartland Energy Corporation has exposed personal information of nearly three million customers across seven Midwestern states. The FBI's Cyber Division confirmed hackers accessed Social Security numbers, banking details, and home addresses stored on company servers. [CHYRON: HEARTLAND ENERGY BREACH AFFECTS 3M CUSTOMERS] [B-ROLL: Heartland Energy corporate headquarters, computer screens with data] CEO Patricia Donovan called the attack sophisticated but declined to specify which foreign actors may be responsible. Federal investigators say the breach went undetected for six weeks. More details ahead.",
+      "script": "The Pentagon announced today it will close three military bases in Alabama and Texas by twenty-twenty-six, affecting nearly eight thousand personnel and their families. Defense Secretary officials cited budget constraints and shifting strategic priorities as primary factors. [CHYRON: PENTAGON TO CLOSE 3 BASES BY 2026] [B-ROLL: Military personnel walking near base entrance gates] Base commanders at Fort Riverside and Camp Henderson expressed disappointment but pledged full cooperation with the transition timeline. Local communities are bracing for significant economic impact. We'll have more details after this break.",
       "chyrons": [
-        "HEARTLAND ENERGY BREACH AFFECTS 3M CUSTOMERS"
+        "PENTAGON TO CLOSE 3 BASES BY 2026"
       ],
       "broll_descriptions": [
-        "Heartland Energy corporate headquarters, computer screens with data"
+        "Military personnel walking near base entrance gates"
       ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
       "estimated_seconds": 25,
       "topic": "technology",
-      "story_id": "e836ff53",
+      "story_id": "49f6c76a",
       "word_count": 70,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:03 PM"
+      "published": "February 24, 2026 \u2014 10:04 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:57:29.352500",
+    "timestamp": "2026-02-24T22:04:19.875428",
     "data": {
-      "script": "The Department of Energy announced today it will cancel the controversial Aurora Solar Farm project in Nevada, citing environmental concerns and cost overruns that ballooned to eight billion dollars. [CHYRON: DOE CANCELS NEVADA SOLAR PROJECT] Energy Secretary Patricia Chen called the decision necessary after independent auditors found structural flaws in the design. [B-ROLL: Solar panels in desert landscape, construction equipment] The cancellation affects nearly three thousand jobs and marks the largest renewable energy project failure in U.S. history. More developments ahead after this break.",
+      "script": "The Federal Trade Commission has blocked a proposed twelve billion dollar merger between Midwest telecom giant Heartland Communications and regional competitor Prairie Networks, citing anti-competitive concerns in rural markets across six states. [CHYRON: FTC BLOCKS $12B TELECOM MERGER] FTC Commissioner Sarah Chen called the deal a threat to broadband competition in underserved communities. [B-ROLL: FTC headquarters building, rural cell towers] Both companies say they will appeal the decision. More on this story ahead.",
       "chyrons": [
-        "DOE CANCELS NEVADA SOLAR PROJECT"
+        "FTC BLOCKS $12B TELECOM MERGER"
       ],
       "broll_descriptions": [
-        "Solar panels in desert landscape, construction equipment"
+        "FTC headquarters building, rural cell towers"
       ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
       "estimated_seconds": 25,
       "topic": "politics",
-      "story_id": "d2f1c512",
-      "word_count": 70,
+      "story_id": "8e6fd322",
+      "word_count": 60,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:38 PM"
+      "published": "February 24, 2026 \u2014 10:04 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:57:24.436826",
+    "timestamp": "2026-02-24T22:04:15.781896",
     "data": {
-      "script": "Good evening. The Department of Energy announced today it will suspend all federal funding for advanced fusion research programs, effective immediately. The decision affects twelve university labs nationwide and cuts approximately four hundred million dollars in planned investments. [CHYRON: DOE SUSPENDS FUSION RESEARCH FUNDING] [B-ROLL: Laboratory equipment, scientists at work] Energy Secretary Patricia Valdez cited budget constraints and shifting priorities toward renewable infrastructure. The move has drawn sharp criticism from both Republican and Democratic lawmakers. More details ahead after this break.",
+      "script": "The Department of Energy has announced sweeping cuts to renewable energy grants, eliminating funding for over forty solar and wind projects across twelve states. Energy Secretary nominee Rebecca Torres defended the decision, citing budget constraints and shifting priorities toward domestic oil production. [CHYRON: DOE CUTS RENEWABLE ENERGY FUNDING] [B-ROLL: Solar panel installation, wind turbines spinning] The cuts will affect projects in Texas, California, and Colorado, potentially eliminating three thousand jobs. Environmental groups are threatening legal action. More details ahead.",
       "chyrons": [
-        "DOE SUSPENDS FUSION RESEARCH FUNDING"
+        "DOE CUTS RENEWABLE ENERGY FUNDING"
       ],
       "broll_descriptions": [
-        "Laboratory equipment, scientists at work"
+        "Solar panel installation, wind turbines spinning"
       ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
       "estimated_seconds": 25,
-      "topic": "science",
-      "story_id": "b2bf6e24",
-      "word_count": 69,
+      "topic": "general",
+      "story_id": "98133edb",
+      "word_count": 66,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:42 PM"
+      "published": "February 24, 2026 \u2014 10:04 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:57:11.070924",
+    "timestamp": "2026-02-24T22:04:11.291589",
     "data": {
-      "script": "Good evening. The Department of Homeland Security announced today it will suspend all visa processing at three major consular offices across Eastern Europe, citing credible intelligence of coordinated cyber attacks targeting State Department systems. [CHYRON: DHS SUSPENDS VISA PROCESSING IN EASTERN EUROPE] Deputy Secretary Michael Torres said the temporary closure affects offices in Warsaw, Budapest, and Prague, impacting thousands of pending applications. [B-ROLL: State Department building exterior, visa application forms] Full operations resume Monday pending security upgrades. More on this developing story ahead.",
+      "script": "The Federal Aviation Administration has ordered immediate inspections of all Boeing 737-800 aircraft following the discovery of potential structural cracks in wing components. The directive affects shift amps hundred planes operated by major US carriers. Aviation safety expert Dr. Marcus Chen warns the defects could compromise flight stability under extreme weather conditions. [CHYRON: FAA ORDERS BOEING 737-800 INSPECTIONS] [B-ROLL: Boeing aircraft on tarmac, maintenance crews examining wing sections] Airlines have seventy-two hours to complete the checks. More details after this break.",
       "chyrons": [
-        "DHS SUSPENDS VISA PROCESSING IN EASTERN EUROPE"
+        "FAA ORDERS BOEING 737-800 INSPECTIONS"
       ],
       "broll_descriptions": [
-        "State Department building exterior, visa application forms"
+        "Boeing aircraft on tarmac, maintenance crews examining wing sections"
       ],
       "anchor": "Elena Torres",
       "anchor_gender": "female",
       "estimated_seconds": 25,
+      "topic": "general",
+      "story_id": "a05c5627",
+      "word_count": 65,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 10:04 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:04:06.463991",
+    "data": {
+      "script": "The State Department announced new sanctions against twelve Chinese technology firms accused of supporting military surveillance programs in disputed territories. Secretary of State Marco Rubio called the measures necessary to protect regional allies from what he termed systematic espionage operations. [CHYRON: US SANCTIONS 12 CHINESE TECH FIRMS] [B-ROLL: State Department briefing room, officials at podium] Beijing condemned the action as economic coercion and threatened retaliatory measures bath master companies operating in China. More developments expected tomorrow.",
+      "chyrons": [
+        "US SANCTIONS 12 CHINESE TECH FIRMS"
+      ],
+      "broll_descriptions": [
+        "State Department briefing room, officials at podium"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "international",
+      "story_id": "fa464e60",
+      "word_count": 61,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 10:04 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:04:02.189369",
+    "data": {
+      "script": "The Department of Homeland Security announced sweeping changes to visa processing procedures for six countries, citing national security concerns. The new protocols will require additional screening for applicants from Brazil, Indonesia, Nigeria, Pakistan, Philippines, and Vietnam starting April first. [CHYRON: DHS TIGHTENS VISA SCREENING FOR SIX NATIONS] Homeland Security Secretary Thomas Hayes called the measures necessary but temporary. Immigration attorneys warn of massive processing delays. [B-ROLL: Visa application center, long lines of applicants] More details ahead after the break.",
+      "chyrons": [
+        "DHS TIGHTENS VISA SCREENING FOR SIX NATIONS"
+      ],
+      "broll_descriptions": [
+        "Visa application center, long lines of applicants"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
       "topic": "technology",
-      "story_id": "5eceb73b",
-      "word_count": 67,
+      "story_id": "f278cf63",
+      "word_count": 63,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:05 PM"
+      "published": "February 24, 2026 \u2014 10:04 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:03:57.431437",
+    "data": {
+      "script": "The Department of Justice announced charges against six individuals in connection with a sophisticated cryptocurrency fraud scheme that targeted military veterans across seventeen states. Assistant Attorney General Michael Chen said the operation promised guaranteed returns on digital currency investments but instead diverted over forty million dollars to overseas accounts. [CHYRON: DOJ CHARGES 6 IN CRYPTO FRAUD TARGETING VETS] [B-ROLL: DOJ press conference, cryptocurrency trading screens] More than three thousand veterans lost their savings. Sentencing could bring twenty years in federal prison.",
+      "chyrons": [
+        "DOJ CHARGES 6 IN CRYPTO FRAUD TARGETING VETS"
+      ],
+      "broll_descriptions": [
+        "DOJ press conference, cryptocurrency trading screens"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "crime",
+      "story_id": "f0818b94",
+      "word_count": 65,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:03 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:03:52.646838",
+    "data": {
+      "script": "The Department of Energy announced it will terminate funding for three advanced battery research projects at universities in California, citing budget constraints and shifting priorities toward domestic mineral extraction. [CHYRON: DOE CUTS UNIVERSITY BATTERY RESEARCH] The decision affects the scent of graduate students and postdoctoral researchers across Stanford, UC Berkeley, and Caltech. [B-ROLL: Laboratory equipment, researchers in white coats] Project directors called the cuts shortsighted given China's dominance in battery technology. More on this developing story after the break.",
+      "chyrons": [
+        "DOE CUTS UNIVERSITY BATTERY RESEARCH"
+      ],
+      "broll_descriptions": [
+        "Laboratory equipment, researchers in white coats"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "science",
+      "story_id": "0441e4ba",
+      "word_count": 66,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 10:01 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:03:43.373430",
+    "data": {
+      "script": "Federal prosecutors in Denver have charged four executives from Consolidated Rail Associates with conspiracy to defraud the Department of Transportation of nearly eighty million dollars in infrastructure grants. The indictment alleges the company submitted false safety certifications for rail projects across Colorado and Wyoming between 2019 and 2023. [CHYRON: RAIL EXECUTIVES CHARGED IN FRAUD SCHEME] [B-ROLL: Federal courthouse steps, DOT investigators with boxes of evidence] Company stock plummeted eighteen percent in after-hours trading. More developments expected tomorrow.",
+      "chyrons": [
+        "RAIL EXECUTIVES CHARGED IN FRAUD SCHEME"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse steps, DOT investigators with boxes of evidence"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "43a2bb2a",
+      "word_count": 60,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:02 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:03:38.814975",
+    "data": {
+      "script": "The Department of Education announced today it will withhold nearly forty million dollars in federal funding from Bellhaven Public Schools after auditors discovered systematic grade inflation affecting over eight thousand students. Education Secretary Miguel Cardona called the Virginia district's practices \"a betrayal of academic integrity.\" [CHYRON: FEDS WITHHOLD $40M FROM BELLHAVEN SCHOOLS] [B-ROLL: Empty school hallways, students walking between classes] Superintendent Rachel Torres denied wrongdoing but resigned effective immediately. The district has thirty days to appeal.",
+      "chyrons": [
+        "FEDS WITHHOLD $40M FROM BELLHAVEN SCHOOLS"
+      ],
+      "broll_descriptions": [
+        "Empty school hallways, students walking between classes"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "education",
+      "story_id": "844aba43",
+      "word_count": 61,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:03 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:03:34.734543",
+    "data": {
+      "script": "The Environmental Protection Agency has ordered emergency water testing in six Michigan communities after researchers at Wayne State University detected unusual bacterial levels in municipal supplies near Lake Huron. [CHYRON: EPA ORDERS MICHIGAN WATER TESTING] EPA regional director Sarah Kellerman said initial findings warrant immediate investigation, though no illnesses have been reported. [B-ROLL: Water treatment facility, laboratory technicians testing samples] Residents in affected areas are advised to boil water until further notice. More details expected tomorrow.",
+      "chyrons": [
+        "EPA ORDERS MICHIGAN WATER TESTING"
+      ],
+      "broll_descriptions": [
+        "Water treatment facility, laboratory technicians testing samples"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "science",
+      "story_id": "f0dab067",
+      "word_count": 62,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:03 PM"
     }
   }
 ]
