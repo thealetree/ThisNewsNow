@@ -1,81 +1,128 @@
 [
   {
     "type": "hourly_summary",
-    "timestamp": "2026-02-24T20:09:47.693843",
+    "timestamp": "2026-02-24T20:50:45.784626",
     "data": {
-      "story_id": "hourly_21301719",
+      "story_id": "hourly_e8116184",
       "hour_label": "8 PM",
       "anchor_a": "Patricia Holt",
       "anchor_b": "Marcus Webb",
       "headlines": [
-        "DUNMORE PORT STRIKE DAY 21",
-        "DUNMORE PORT STRIKE CONTINUES",
+        "INFRASTRUCTURE BILL STALLED",
+        "DUNMORE PORT STRIKE DRAGS ON",
+        "EPA LAUNCHES CRIMINAL PROBE",
+        "EPA TAKES CONTROL OF TOLEDO WATER",
         "INFRASTRUCTURE BILL STALLED"
       ],
-      "full_script": "[ANCHOR_A] Good evening, I'm Patricia Holt. Here's what we're following this hour. Federal mediators have arrived in Dunmore, New Hampshire as the port workers strike enters its fourth week with no resolution in sight. The National Labor Relations Board team met separately with union leaders and port management today, but longshoremen have rejected the latest contract offer.\n\n[ANCHOR_B] Thanks Patricia. On Capitol Hill tonight, the Senate Appropriations Committee remains deadlocked over the trillion-dollar infrastructure package. Rural broadband funding has emerged as the primary sticking point, with Committee Chair Robert Collins saying negotiations will continue through the weekend.\n\n[ANCHOR_A] We'll continue following both developing stories. I'm Patricia Holt, thanks for watching This News Now.",
-      "story_count": 3,
-      "published": "February 24, 2026 \u2014 08:09 PM",
-      "audio_file": "hourly_21301719.mp3"
+      "full_script": "[ANCHOR_A] Good evening, I'm Patricia Holt. Here's what we're following this hour. The Senate Appropriations Committee remains deadlocked over the one-point-two trillion dollar infrastructure package, with rural broadband funding emerging as the key sticking point. Republican members are demanding stricter oversight provisions before moving forward.\n\n[ANCHOR_B] Thanks Patricia. Federal mediators have walked away from negotiations at Dunmore Port as the workers' strike enters its fourth week. The National Labor Relations Board says talks have completely stalled over pension benefits, leaving the critical shipping hub paralyzed.\n\n[ANCHOR_A] Marcus, the Environmental Protection Agency is escalating on two fronts tonight. The agency has launched a criminal investigation into Gulfmark Petrochemical after whistleblower documents allegedly revealed the company concealed toxic emissions data for eight years.\n\n[ANCHOR_B] And Patricia, the EPA has also announced federal oversight of Toledo's entire municipal water system. This comes as the agency escalates its investigation into the city's ongoing water contamination crisis, with a regional administrator now taking direct control of operations.\n\n[ANCHOR_A] We'll continue following these developing stories. I'm Patricia Holt, with Marcus Webb. Thanks for watching This News Now.",
+      "story_count": 5,
+      "published": "February 24, 2026 \u2014 08:50 PM",
+      "audio_file": "hourly_e8116184.mp3"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T20:09:34.225385",
+    "timestamp": "2026-02-24T20:50:24.479280",
     "data": {
-      "script": "The Senate Appropriations Committee remains deadlocked tonight over the trillion-dollar infrastructure package, with rural broadband funding emerging as the primary sticking point. [CHYRON: INFRASTRUCTURE BILL STALLED] Committee Chair Robert Kellerman says Republican members are demanding deeper cuts to urban transit provisions before any vote can proceed. [B-ROLL: Empty Senate committee room with scattered papers] Democratic leadership warns further delays could push final passage into late summer, jeopardizing construction timelines nationwide. More on this developing story after the break.",
+      "script": "The Senate Appropriations Committee failed again today to advance the trillion-dollar infrastructure package, with rural broadband funding remaining the key sticking point. Republican members walked out after Democrats rejected a proposal to redirect sixty billion dollars from urban transit projects. [CHYRON: INFRASTRUCTURE BILL STALLED] Committee Chair Sarah Mitchell called the impasse \"deeply disappointing\" as construction season approaches. [B-ROLL: Empty committee room with scattered papers] More on this developing story after the break.",
       "chyrons": [
         "INFRASTRUCTURE BILL STALLED"
       ],
       "broll_descriptions": [
-        "Empty Senate committee room with scattered papers"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "2f1fd698",
-      "word_count": 66,
-      "published": "February 24, 2026 \u2014 08:09 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T20:09:30.238916",
-    "data": {
-      "script": "Federal mediators arrived in Dunmore, New Hampshire today as the port workers strike enters its fourth week with no resolution in sight. The National Labor Relations Board team met separately with union leaders and port management, but talks broke down again over pension benefit cuts. [CHYRON: DUNMORE PORT STRIKE CONTINUES] Governor Ellen Marsh says she's considering emergency measures to reopen the facility as cargo backlogs reach critical levels. [B-ROLL: Empty shipping containers stacked at idle port terminal] More developments expected tomorrow.",
-      "chyrons": [
-        "DUNMORE PORT STRIKE CONTINUES"
-      ],
-      "broll_descriptions": [
-        "Empty shipping containers stacked at idle port terminal"
+        "Empty committee room with scattered papers"
       ],
       "anchor": "Patricia Holt",
       "anchor_gender": "female",
       "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "ba757a9c",
-      "word_count": 67,
-      "published": "February 24, 2026 \u2014 08:09 PM"
+      "topic": "infrastructure",
+      "story_id": "2492d001",
+      "word_count": 61,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 08:50 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T20:09:25.538546",
+    "timestamp": "2026-02-24T20:50:20.485787",
     "data": {
-      "script": "Good evening. Federal mediators from the National Labor Relations Board arrived in Dunmore, New Hampshire today as the port workers strike enters its third week. Longshoremen rejected the latest contract proposal by a two-to-one margin, citing inadequate pension protections. [CHYRON: DUNMORE PORT STRIKE DAY 21] Port Authority Chairman Robert Kane warned that cargo diversions to Boston could become permanent if negotiations don't resume by Friday. [B-ROLL: Empty shipping containers stacked at idle port terminal] Governor Ellen Marsh faces mounting pressure to intervene. More developments ahead.",
+      "script": "The Environmental Protection Agency has escalated its investigation into Toledo's water contamination crisis, announcing federal oversight of the city's entire municipal system. [CHYRON: EPA TAKES CONTROL OF TOLEDO WATER] Regional Administrator Sarah Chen cited immediate public health concerns after lead levels in four additional neighborhoods tested above emergency thresholds. City Manager Robert Hayes accused federal officials of overreach, but Governor Patricia Mills endorsed the EPA intervention. [B-ROLL: EPA trucks arriving at Toledo water treatment facility] More developments expected tomorrow.",
       "chyrons": [
-        "DUNMORE PORT STRIKE DAY 21"
+        "EPA TAKES CONTROL OF TOLEDO WATER"
       ],
       "broll_descriptions": [
-        "Empty shipping containers stacked at idle port terminal"
+        "EPA trucks arriving at Toledo water treatment facility"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "3f4b6596",
+      "word_count": 63,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 08:50 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T20:50:15.779844",
+    "data": {
+      "script": "The Environmental Protection Agency has opened a criminal investigation into Gulfmark Petrochemical after whistleblower documents revealed the company allegedly concealed toxic emissions data for eighteen months. [CHYRON: EPA LAUNCHES CRIMINAL PROBE] The Port Calloway facility handles benzene and sulfur compounds just three miles from residential areas. Company CEO Patricia Valdez denied wrongdoing in a statement today, calling the allegations baseless. [B-ROLL: EPA investigators in hazmat suits entering industrial complex] Louisiana Attorney General Michael Torres says his office is coordinating with federal prosecutors. More developments ahead.",
+      "chyrons": [
+        "EPA LAUNCHES CRIMINAL PROBE"
+      ],
+      "broll_descriptions": [
+        "EPA investigators in hazmat suits entering industrial complex"
       ],
       "anchor": "Marcus Webb",
       "anchor_gender": "male",
       "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "d24f053e",
+      "word_count": 71,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 08:50 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T20:50:10.757875",
+    "data": {
+      "script": "Federal mediators walked away from negotiations tonight as the Dunmore Port workers strike enters its fourth week. The National Labor Relations Board says talks have completely stalled over pension benefit cuts affecting nearly eight hundred longshoremen. [CHYRON: DUNMORE PORT STRIKE DRAGS ON] New Hampshire Governor Ellen Marsh is facing mounting pressure from both shipping companies and union leaders to declare a state emergency. [B-ROLL: Empty cargo containers stacked at abandoned port facility] We'll continue following this story.",
+      "chyrons": [
+        "DUNMORE PORT STRIKE DRAGS ON"
+      ],
+      "broll_descriptions": [
+        "Empty cargo containers stacked at abandoned port facility"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
       "topic": "politics",
-      "story_id": "09a8e106",
-      "word_count": 70,
-      "published": "February 24, 2026 \u2014 08:09 PM"
+      "story_id": "30bba2d1",
+      "word_count": 62,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 08:50 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T20:50:06.664409",
+    "data": {
+      "script": "The Senate Appropriations Committee remains deadlocked tonight over rural broadband funding in the one-point-two trillion dollar infrastructure package. Republican members are demanding stricter oversight provisions while Democrats push for expanded coverage areas in underserved communities. [CHYRON: INFRASTRUCTURE BILL STALLED] Committee Chair Patricia Valdez warned that further delays could push the vote past the April recess. [B-ROLL: Empty committee room on Capitol Hill] More developments ahead.",
+      "chyrons": [
+        "INFRASTRUCTURE BILL STALLED"
+      ],
+      "broll_descriptions": [
+        "Empty committee room on Capitol Hill"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "e9887fd7",
+      "word_count": 54,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 08:50 PM"
     }
   }
 ]

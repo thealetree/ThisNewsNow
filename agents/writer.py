@@ -49,6 +49,17 @@ def generate_script(config, world_bible, news_context):
 
     system_msg = """You are a television news script writer. You write extremely concise broadcast copy. Every word must earn its place. You never exceed the word count you are given. You write in plain text only — no markdown, no formatting, no character names as prefixes."""
 
+    # Build story shapes block if available
+    story_shapes = news_context.get("story_shapes", [])
+    conflict_types = news_context.get("conflict_types", [])
+    shapes_block = ""
+    if story_shapes:
+        shapes_block = "\n\nREAL-WORLD NEWS SHAPES (use these as inspiration for your FICTIONAL story — mirror the topic, conflict type, and stakes, but invent all details):\n"
+        for shape in story_shapes[:4]:
+            shapes_block += f"  - {shape}\n"
+    if conflict_types:
+        shapes_block += f"\nACTIVE CONFLICT TYPES in today's news: {', '.join(conflict_types)}"
+
     prompt = f"""Write a single anchor read for This News Now (TNN).
 
 WORLD CONTEXT:
@@ -58,6 +69,7 @@ NEWS REGISTER: {news_context.get('register', 'tense')}
 TRENDING: {', '.join(news_context.get('trending_topics', ['politics', 'economy']))}
 TONE: {tone}
 TOPIC WEIGHTS: {json.dumps(topic_weights)}
+{shapes_block}
 
 HARD REQUIREMENTS:
 - EXACTLY 60 to 75 spoken words. Not 76. Not 100. Count carefully.
@@ -72,6 +84,7 @@ CONTENT RULES:
 - You MAY use real US places, real federal agencies (EPA, FBI, FEMA, etc.), real political parties.
 - All PEOPLE, COMPANIES, specific EVENTS, and QUOTES must be fictional.
 - Use places and storylines from the world context, or invent fitting new ones.
+- DRAW HEAVILY from the real-world news shapes above. Create stories on similar topics, with similar conflict types and stakes, set in similar geographic contexts. This makes your fiction feel adjacent to reality.
 - One [CHYRON: text] tag and one [B-ROLL: description] tag, placed inline where they'd appear on screen.
 - No markdown. No bold. No anchor name prefix. Just the spoken script with inline tags.
 
@@ -104,6 +117,12 @@ NOW WRITE YOUR SCRIPT:"""
         else:
             print(f"  Warning: final attempt got {spoken_words} words (target {MIN_WORDS}-{MAX_WORDS})")
 
+    # Nonsense injection (post-processing, after word count is validated)
+    from agents.nonsense import inject_nonsense
+    script_text, injected, fragment = inject_nonsense(script_text, config)
+    if injected:
+        print(f"  \u2726 Nonsense injected: '{fragment}'")
+
     # Parse chyrons and B-roll from the script
     chyrons = _extract_tags(script_text, "CHYRON")
     broll_descriptions = _extract_tags(script_text, "B-ROLL")
@@ -123,6 +142,7 @@ NOW WRITE YOUR SCRIPT:"""
         "topic": topic,
         "story_id": story_id,
         "word_count": spoken_words,
+        "nonsense_injected": injected,
     }
 
     print(f"  Script generated: [{topic}] {spoken_words}w — {chyrons[0] if chyrons else 'No chyron'}")

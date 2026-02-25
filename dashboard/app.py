@@ -261,12 +261,14 @@ def push_hourly_summary(summary_data, audio_path=None):
         if len(recent_stories) > 100:
             recent_stories.pop()
 
-    # Copy audio to docs/audio/
+    # Copy audio to docs/audio/ and set audio_file for static mode
     if audio_path and os.path.exists(audio_path):
         audio_dir = os.path.join(DOCS_DIR, "audio")
         os.makedirs(audio_dir, exist_ok=True)
-        dest = os.path.join(audio_dir, f"{summary_data['story_id']}.mp3")
+        audio_filename = f"{summary_data['story_id']}.mp3"
+        dest = os.path.join(audio_dir, audio_filename)
         shutil.copy2(audio_path, dest)
+        story["data"]["audio_file"] = audio_filename
 
     _save_stories_json()
 

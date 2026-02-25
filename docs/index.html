@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>This News Now</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #fafafa;
+      --bg: #f5f5f5;
       --surface: #ffffff;
       --text: #111111;
       --text-secondary: #555555;
@@ -51,11 +51,12 @@
     }
 
     .header-logo {
-      font-family: 'Playfair Display', Georgia, serif;
+      font-family: 'Inter', sans-serif;
       font-size: 2.4rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      font-weight: 900;
+      letter-spacing: -0.03em;
       line-height: 1.1;
+      text-transform: uppercase;
     }
 
     .header-tagline {
@@ -64,6 +65,7 @@
       text-transform: uppercase;
       opacity: 0.4;
       margin-top: 0.3rem;
+      font-weight: 400;
     }
 
     .header-live {
@@ -108,6 +110,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-secondary);
+      font-weight: 500;
     }
 
     .nav-bar span { cursor: default; transition: color 0.15s; }
@@ -115,7 +118,7 @@
 
     /* ── Generator Toggle (local mode only) ── */
     .gen-toggle {
-      display: none; /* hidden by default, shown in local mode */
+      display: none;
       align-items: center;
       gap: 0.5rem;
       margin-left: auto;
@@ -165,9 +168,9 @@
     }
 
     .gen-status {
-      font-family: 'JetBrains Mono', monospace;
       font-size: 0.55rem;
       color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
     }
 
     .gen-status.active { color: var(--red); }
@@ -175,224 +178,95 @@
     /* ── Ticker ── */
     .ticker-wrap {
       background: var(--accent);
+      display: flex;
+      height: 34px;
       overflow: hidden;
-      white-space: nowrap;
-      position: relative;
-      height: 32px;
     }
 
     .ticker-label {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
       background: var(--red);
       color: white;
       font-size: 0.6rem;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       display: flex;
       align-items: center;
       padding: 0 1rem;
       z-index: 2;
+      flex-shrink: 0;
+    }
+
+    .ticker-content {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
     }
 
     .ticker-track {
-      display: inline-flex;
-      align-items: center;
-      height: 100%;
-      animation: tickerScroll 30s linear infinite;
-      padding-left: 100px;
+      display: flex;
+      width: max-content;
+      animation: tickerScroll 40s linear infinite;
     }
 
     .ticker-track span {
       color: rgba(255,255,255,0.8);
       font-size: 0.7rem;
-      letter-spacing: 0.05em;
-      padding: 0 2rem;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      padding: 0 1.5rem;
       white-space: nowrap;
+      line-height: 34px;
     }
 
     .ticker-track .ticker-dot {
       color: var(--red);
-      padding: 0 0.5rem;
-      font-size: 0.5rem;
+      padding: 0 0.4rem;
+      font-size: 0.4rem;
+      line-height: 34px;
     }
 
     @keyframes tickerScroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
 
     /* ── Main Content ── */
     main {
-      max-width: 780px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 1.5rem;
       flex: 1;
       width: 100%;
     }
 
-    .stories-empty {
-      text-align: center;
-      padding: 5rem 2rem;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+    /* ── Hourly Summary Zone (full width, above grid) ── */
+    .hourly-zone {
+      margin-bottom: 1.5rem;
     }
 
-    .stories-empty .spinner {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 2px solid var(--border);
-      border-top-color: var(--text-muted);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-bottom: 1rem;
+    .hourly-zone:empty {
+      margin-bottom: 0;
     }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* ── Article ── */
-    article {
-      border-bottom: 1px solid var(--border-light);
-      padding: 2rem 0;
-      animation: fadeIn 0.5s ease-out;
-    }
-
-    article:first-of-type { padding-top: 0; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .article-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.6rem;
-      font-size: 0.65rem;
-      color: var(--text-muted);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .article-topic {
-      background: var(--accent);
-      color: white;
-      padding: 0.15rem 0.5rem;
-      font-size: 0.55rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-    }
-
-    .article-headline {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 0.5rem;
-      color: var(--text);
-    }
-
-    article:first-of-type .article-headline { font-size: 2rem; }
-
-    .article-byline {
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
-    }
-
-    .article-byline strong { color: var(--text); font-weight: 600; }
-
-    .article-body {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--text);
-    }
-
-    .article-body p { margin-bottom: 0.8rem; }
-
-    /* ── Audio Player ── */
-    .audio-player {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-top: 1.2rem;
-      padding: 0.8rem 1rem;
-      background: var(--bg);
-      border: 1px solid var(--border-light);
-    }
-
-    .play-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1.5px solid var(--accent);
-      background: transparent;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all 0.15s;
-    }
-
-    .play-btn:hover { background: var(--accent); }
-    .play-btn:hover svg { fill: white; }
-    .play-btn svg { width: 12px; height: 12px; fill: var(--accent); }
-
-    .audio-info { flex: 1; min-width: 0; }
-
-    .audio-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    .audio-progress {
-      width: 100%;
-      height: 2px;
-      background: var(--border);
-      margin-top: 0.4rem;
-      border-radius: 1px;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .audio-progress-bar {
-      height: 100%;
-      background: var(--accent);
-      width: 0%;
-      transition: width 0.3s;
-    }
-
-    .audio-time {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--text-muted);
-      flex-shrink: 0;
-    }
-
-    /* ── Hourly Summary ── */
     .hourly-summary {
       background: var(--accent);
       color: white;
       padding: 1.5rem 2rem;
-      margin: 1.5rem -1.5rem;
       animation: fadeIn 0.5s ease-out;
+      margin-bottom: 1rem;
     }
 
-    .hourly-summary:first-child { margin-top: 0; }
+    .hourly-summary:last-child {
+      margin-bottom: 0;
+    }
 
     .hourly-header {
       display: flex;
       align-items: center;
       gap: 0.75rem;
       margin-bottom: 1rem;
+      flex-wrap: wrap;
     }
 
     .hourly-badge {
@@ -406,9 +280,9 @@
     }
 
     .hourly-title {
-      font-family: 'Playfair Display', Georgia, serif;
       font-size: 1.3rem;
-      font-weight: 700;
+      font-weight: 800;
+      letter-spacing: -0.01em;
     }
 
     .hourly-meta {
@@ -497,9 +371,165 @@
       cursor: pointer;
       padding: 0.5rem 0 0;
       transition: color 0.15s;
+      font-family: 'Inter', sans-serif;
     }
 
     .hourly-expand:hover { color: rgba(255,255,255,0.7); }
+
+    /* ── Two-Column Stories Grid ── */
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .stories-empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 5rem 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .stories-empty .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--border);
+      border-top-color: var(--text-muted);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Article Card ── */
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      padding: 1.5rem;
+      animation: fadeIn 0.5s ease-out;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .article-topic {
+      background: var(--accent);
+      color: white;
+      padding: 0.15rem 0.5rem;
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .article-headline {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .article-byline {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .article-byline strong { color: var(--text); font-weight: 600; }
+
+    .article-body {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text);
+      flex: 1;
+    }
+
+    .article-body p { margin-bottom: 0.8rem; }
+    .article-body p:last-child { margin-bottom: 0; }
+
+    /* ── Audio Player ── */
+    .audio-player {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.2rem;
+      padding: 0.8rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border-light);
+    }
+
+    .play-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent);
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.15s;
+    }
+
+    .play-btn:hover { background: var(--accent); }
+    .play-btn:hover svg { fill: white; }
+    .play-btn svg { width: 12px; height: 12px; fill: var(--accent); }
+
+    .audio-info { flex: 1; min-width: 0; }
+
+    .audio-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .audio-progress {
+      width: 100%;
+      height: 2px;
+      background: var(--border);
+      margin-top: 0.4rem;
+      border-radius: 1px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .audio-progress-bar {
+      height: 100%;
+      background: var(--accent);
+      width: 0%;
+      transition: width 0.3s;
+    }
+
+    .audio-time {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
 
     /* ── Footer ── */
     footer {
@@ -514,13 +544,33 @@
     footer .disclosure { max-width: 500px; margin: 0 auto; }
 
     /* ── Responsive ── */
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
+      main { padding: 1rem; }
+      .stories-grid { gap: 1rem; }
+      .hourly-summary { padding: 1.2rem 1.5rem; }
+    }
+
+    @media (max-width: 768px) {
+      .stories-grid {
+        grid-template-columns: 1fr;
+      }
       .header-logo { font-size: 1.6rem; }
       .header-live { display: none; }
-      main { padding: 1.5rem 1rem; }
-      .article-headline { font-size: 1.3rem; }
-      article:first-of-type .article-headline { font-size: 1.5rem; }
-      .nav-bar { gap: 1rem; font-size: 0.6rem; }
+      main { padding: 1rem 0.75rem; }
+      .article-headline { font-size: 1.15rem; }
+      .nav-bar { gap: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; flex-wrap: wrap; }
+      .hourly-summary { padding: 1rem 1.2rem; }
+      .hourly-header { gap: 0.5rem; }
+      .hourly-title { font-size: 1.1rem; }
+      .hourly-meta { margin-left: 0; width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .header-logo { font-size: 1.3rem; }
+      header { padding: 1rem 1rem 0.8rem; }
+      .nav-bar { gap: 0.6rem; font-size: 0.55rem; }
+      article { padding: 1.2rem; }
+      .article-headline { font-size: 1.05rem; }
     }
   </style>
 </head>
@@ -543,7 +593,6 @@
     <span>Crime</span>
     <span>International</span>
 
-    <!-- Generator toggle — only visible in local Flask mode -->
     <div class="gen-toggle" id="genToggle">
       <span>Generator</span>
       <label class="toggle-switch">
@@ -557,35 +606,34 @@
 
   <div class="ticker-wrap">
     <div class="ticker-label">Breaking</div>
-    <div class="ticker-track" id="tickerTrack">
-      <span>Loading headlines...</span>
+    <div class="ticker-content">
+      <div class="ticker-track" id="tickerTrack">
+        <span>Loading headlines...</span>
+      </div>
     </div>
   </div>
 
-  <main id="storiesContainer">
-    <div class="stories-empty" id="emptyState">
-      <div class="spinner"></div>
-      <div>Waiting for stories...</div>
-    </div>
+  <main>
+    <section id="hourlyContainer" class="hourly-zone"></section>
+    <section id="storiesGrid" class="stories-grid">
+      <div class="stories-empty" id="emptyState">
+        <div class="spinner"></div>
+        <div>Waiting for stories...</div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="disclosure">
-      This News Now presents fictional news content. All stories, people,
-      and events depicted are entirely fabricated for creative and entertainment purposes.
-    </div>
-  </footer>
+  <footer></footer>
 
 <script>
   // ── Config ──
-  const storyIds = new Set();
-  let audioElements = {};
-  let isLocalMode = false;
-  let generatorRunning = false;
+  var storyIds = new Set();
+  var audioElements = {};
+  var isLocalMode = false;
+  var generatorRunning = false;
 
-  // Detect if running via Flask (local) or static (GitHub Pages)
   function detectMode() {
-    return fetch('/api/status').then(r => r.ok).catch(() => false);
+    return fetch('/api/status').then(function(r) { return r.ok; }).catch(function() { return false; });
   }
 
   // ── Date ──
@@ -606,8 +654,9 @@
     var items = headlines.map(function(h) {
       return '<span>' + h + '</span><span class="ticker-dot">\u25cf</span>';
     }).join('');
+    // Duplicate for seamless loop
     track.innerHTML = items + items;
-    var duration = Math.max(20, headlines.length * 4);
+    var duration = Math.max(25, headlines.length * 5);
     track.style.animationDuration = duration + 's';
   }
 
@@ -640,16 +689,20 @@
     return 'Developing Story';
   }
 
+  // ── Remove Empty State ──
+  function removeEmptyState() {
+    var empty = document.getElementById('emptyState');
+    if (empty) empty.remove();
+  }
+
   // ── Render Article ──
   function addStory(storyData, timestamp) {
     var d = storyData;
     if (storyIds.has(d.story_id)) return;
     storyIds.add(d.story_id);
+    removeEmptyState();
 
-    var empty = document.getElementById('emptyState');
-    if (empty) empty.remove();
-
-    var container = document.getElementById('storiesContainer');
+    var container = document.getElementById('storiesGrid');
     var article = document.createElement('article');
 
     var headline = formatHeadline(d);
@@ -660,13 +713,12 @@
       month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'
     });
 
-    // Audio: in local mode use API, on GitHub Pages use relative path
     var hasAudio = !!(d.audio_path || d.audio_file);
     var audioSrc = '';
     if (d.audio_file) {
-      audioSrc = 'audio/' + d.audio_file;  // static mode
+      audioSrc = 'audio/' + d.audio_file;
     } else if (d.audio_path && isLocalMode) {
-      audioSrc = '/api/audio/' + d.story_id;  // local Flask mode
+      audioSrc = '/api/audio/' + d.story_id;
     }
 
     article.innerHTML =
@@ -704,11 +756,9 @@
   function addHourlySummary(data, timestamp) {
     if (storyIds.has(data.story_id)) return;
     storyIds.add(data.story_id);
+    removeEmptyState();
 
-    var empty = document.getElementById('emptyState');
-    if (empty) empty.remove();
-
-    var container = document.getElementById('storiesContainer');
+    var container = document.getElementById('hourlyContainer');
     var block = document.createElement('div');
     block.className = 'hourly-summary';
 
@@ -724,12 +774,10 @@
       audioSrc = '/api/audio/' + data.story_id;
     }
 
-    // Format headlines as tags
     var headlineTags = (data.headlines || []).map(function(h) {
       return '<span>' + h + '</span>';
     }).join('');
 
-    // Format script with anchor labels
     var scriptHtml = '';
     if (data.full_script) {
       scriptHtml = data.full_script
@@ -763,6 +811,7 @@
       '<div class="hourly-script" id="script-' + data.story_id + '">' + scriptHtml + '</div>' +
       '<button class="hourly-expand" onclick="toggleScript(\'' + data.story_id + '\')">Show full transcript</button>';
 
+    // Insert newest first
     if (container.firstChild) {
       container.insertBefore(block, container.firstChild);
     } else {
@@ -814,7 +863,6 @@
     }
 
     if (audio.paused) {
-      // Pause all others
       Object.keys(audioElements).forEach(function(id) {
         if (id !== storyId && !audioElements[id].paused) {
           audioElements[id].pause();
@@ -897,7 +945,6 @@
     evtSource.onmessage = function(e) {
       var event = JSON.parse(e.data);
       addEvent(event);
-      // Refresh ticker on new content
       if (event.type === 'story' || event.type === 'hourly_summary') {
         fetch('/api/ticker').then(function(r) { return r.json(); })
           .then(buildTicker).catch(function() {});
@@ -914,11 +961,9 @@
     isLocalMode = local;
 
     if (local) {
-      // Local Flask mode: show toggle, use SSE
       document.getElementById('genToggle').classList.add('visible');
       document.getElementById('liveDot').classList.add('off');
 
-      // Check if generator is already running
       fetch('/api/status').then(function(r) { return r.json(); })
         .then(function(d) {
           if (d.generator_running) {
@@ -931,7 +976,6 @@
         });
 
       connectSSE();
-      // Also load any existing stories
       fetch('/api/stories').then(function(r) { return r.json(); })
         .then(function(stories) {
           stories.slice().reverse().forEach(function(s) {
@@ -943,9 +987,7 @@
         .then(buildTicker)
         .catch(function() {});
     } else {
-      // Static GitHub Pages mode: poll stories.json
       loadStaticStories();
-      // Re-poll every 30 seconds in case someone just pushed new stories
       setInterval(loadStaticStories, 30000);
     }
   });

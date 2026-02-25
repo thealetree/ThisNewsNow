@@ -80,6 +80,20 @@
       "role": "Evening Anchor",
       "description": "Evening anchor, slightly more urgent delivery. Former field correspondent, transitioned to desk in 2019. Known for breaking news coverage.",
       "sign_off": "Reporting for This News Now, Marcus Webb."
+    },
+    {
+      "name": "Elena Torres",
+      "gender": "female",
+      "role": "Field Correspondent",
+      "description": "Field reporter, warm but direct. Covers breaking stories on location. Joined TNN in 2021 after five years at a regional affiliate.",
+      "sign_off": "Elena Torres, This News Now."
+    },
+    {
+      "name": "James Whitfield",
+      "gender": "male",
+      "role": "Weekend Anchor / Field Reporter",
+      "description": "Weekend anchor and fill-in field reporter. Slightly conversational tone, good at long-form segments. Joined TNN in 2020.",
+      "sign_off": "James Whitfield, reporting."
     }
   ],
   "places": [
@@ -115,5 +129,5 @@
     ],
     "mixing_rule": "Stories should blend real places and real agencies with fictional people and fictional events. This creates the uncanny almost-real feeling. A story can be set in a real city with a real federal agency investigating, but the local officials, the specific incident, and all quotes must be invented."
   },
-  "disclosure": "This News Now presents fictional news content. All stories, people, and events depicted are entirely fabricated for creative and entertainment purposes."
+  "disclosure": ""
 }
