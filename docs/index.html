@@ -301,26 +301,32 @@
       max-width: 1400px;
       padding: 0 1.5rem;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .carousel-zone:empty { display: none; }
 
     .carousel-wrap {
       position: relative;
-      height: 280px;
-      overflow: hidden;
+      height: 300px;
+      perspective: 1200px;
+      overflow: visible;
     }
 
     .carousel-scene {
-      width: 100%;
+      width: 380px;
       height: 260px;
-      position: relative;
-      top: 0;
+      position: absolute;
+      left: 50%;
+      top: 20px;
+      transform-style: preserve-3d;
+      transform: translateX(-50%);
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .carousel-card {
       position: absolute;
+      width: 380px;
       height: 260px;
       background: var(--surface);
       border: 1px solid var(--border);
@@ -328,10 +334,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      backface-visibility: hidden;
       cursor: pointer;
+      transition: box-shadow 0.3s;
       overflow: hidden;
-      top: 0;
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .carousel-card:hover {
@@ -909,7 +915,8 @@
       .stories-grid { gap: 1rem; grid-template-columns: repeat(2, 1fr); }
       .hourly-summary { padding: 1.2rem 1.5rem; }
       .carousel-zone { padding: 0 1rem; }
-      .carousel-card { height: 240px; padding: 1.5rem; }
+      .carousel-scene { width: 320px; }
+      .carousel-card { width: 320px; height: 240px; padding: 1.5rem; }
       .carousel-card .card-headline { font-size: 1.2rem; }
       article.story-compact .article-share { display: none; }
     }
@@ -931,11 +938,21 @@
       .hourly-header { gap: 0.5rem; }
       .hourly-title { font-size: 1.1rem; }
       .hourly-meta { margin-left: 0; width: 100%; }
-      .carousel-zone { margin: 1rem auto; }
+      .carousel-zone { margin: 1rem auto; overflow: hidden; }
       .carousel-wrap { height: 240px; }
-      .carousel-scene { height: 200px; }
-      .carousel-card { height: 200px; padding: 1.2rem; }
+      .carousel-scene { width: 280px; height: 200px; }
+      .carousel-card { width: 280px; height: 200px; padding: 1.2rem; }
       .carousel-card .card-headline { font-size: 1.1rem; }
+      .banner-ad-inner {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem 1.2rem;
+        text-align: center;
+        min-height: auto;
+      }
+      .banner-ad-inner .ad-company { font-size: 0.9rem; }
+      .banner-ad-inner .ad-headline { font-size: 0.8rem; }
+      .banner-ad-inner .ad-cta { margin-top: 0.2rem; font-size: 0.7rem; padding: 0.35rem 1rem; }
     }
 
     @media (max-width: 480px) {
@@ -944,8 +961,14 @@
       .nav-bar { gap: 0.3rem; font-size: 0.5rem; }
       article { padding: 1.2rem; }
       .article-headline { font-size: 1.05rem; }
+      .carousel-zone { overflow: hidden; }
       .carousel-wrap { height: 200px; }
-      .carousel-card { height: 180px; }
+      .carousel-scene { width: 240px; height: 180px; }
+      .carousel-card { width: 240px; height: 180px; padding: 1rem; }
+      .carousel-card .card-headline { font-size: 1rem; }
+      .carousel-card .card-excerpt { font-size: 0.65rem; }
+      .banner-ad-inner .ad-company { font-size: 0.85rem; }
+      .banner-ad-inner .ad-headline { font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -1203,31 +1226,25 @@
     var scene = document.getElementById('carouselScene');
     if (!scene) return;
     var cards = scene.querySelectorAll('.carousel-card');
-    var sceneWidth = scene.offsetWidth;
-    var gap = 16;
-    // Each card fills (total - 2 gaps) / 3
-    var cardWidth = (sceneWidth - gap * 2) / 3;
+    var radius = 320;
 
     cards.forEach(function(card, i) {
       var offset = i - carouselIndex;
-      // Wrap around for 3 cards
       if (offset > 1) offset -= 3;
       if (offset < -1) offset += 3;
 
-      // Position: left(0), center(1), right(2) → slot = offset + 1
-      var slot = offset + 1;
-      var leftPos = slot * (cardWidth + gap);
-      var isActive = (offset === 0);
+      var angle = offset * 50;
+      var z = offset === 0 ? 0 : -180;
+      var x = offset * 320;
+      var opacity = offset === 0 ? 1 : 0.4;
+      var scale = offset === 0 ? 1 : 0.78;
 
-      card.style.width = cardWidth + 'px';
-      card.style.left = leftPos + 'px';
-      card.style.transform = isActive ? 'scale(1)' : 'scale(0.92)';
-      card.style.opacity = isActive ? '1' : '0.45';
-      card.style.zIndex = isActive ? '10' : '1';
-      card.style.boxShadow = isActive ? '0 8px 40px rgba(0,0,0,0.5)' : 'none';
+      card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+      card.style.transform = 'translateX(' + x + 'px) translateZ(' + z + 'px) rotateY(' + angle + 'deg) scale(' + scale + ')';
+      card.style.opacity = opacity;
+      card.style.zIndex = offset === 0 ? 10 : 1;
     });
 
-    // Update dots
     var dots = document.querySelectorAll('.carousel-dot');
     dots.forEach(function(d, i) {
       d.className = 'carousel-dot' + (i === carouselIndex ? ' active' : '');
@@ -1244,8 +1261,6 @@
     carouselAutoTimer = setInterval(function() { rotateCarousel(1); }, 6000);
   }
 
-  // Reposition carousel cards on resize so they fill new width
-  window.addEventListener('resize', function() { positionCards(); });
 
   function scrollToStory(storyId) {
     var articles = document.querySelectorAll('article[data-story-id]');
