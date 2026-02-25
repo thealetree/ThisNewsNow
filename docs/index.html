@@ -543,6 +543,114 @@
 
     footer .disclosure { max-width: 500px; margin: 0 auto; }
 
+    /* ── Share Buttons ── */
+    .article-share {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--border-light);
+      flex-wrap: wrap;
+    }
+
+    .share-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .share-btn {
+      font-size: 0.65rem;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid var(--border);
+      background: none;
+      color: var(--text-secondary);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.4;
+    }
+
+    .share-btn:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    /* ── Fake Ads ── */
+    .ad-leaderboard {
+      margin-bottom: 1.5rem;
+    }
+
+    .ad-leaderboard:empty {
+      display: none;
+      margin-bottom: 0;
+    }
+
+    .ad-container {
+      grid-column: 1 / -1;
+      overflow: hidden;
+    }
+
+    .ad-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 1.5rem;
+      color: white;
+      position: relative;
+      min-height: 70px;
+    }
+
+    .ad-label {
+      position: absolute;
+      top: 4px;
+      right: 8px;
+      font-size: 0.45rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.4;
+    }
+
+    .ad-body { flex: 1; }
+
+    .ad-company {
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 0.15rem;
+    }
+
+    .ad-headline {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .ad-cta {
+      font-size: 0.65rem;
+      padding: 0.4rem 1.2rem;
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      background: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+      margin-left: 1.5rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .ad-cta:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
     /* ── Responsive ── */
     @media (max-width: 1024px) {
       main { padding: 1rem; }
@@ -556,6 +664,8 @@
       }
       .header-logo { font-size: 1.6rem; }
       .header-live { display: none; }
+      .ad-banner { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .ad-cta { margin-left: 0; }
       main { padding: 1rem 0.75rem; }
       .article-headline { font-size: 1.15rem; }
       .nav-bar { gap: 1rem; font-size: 0.6rem; padding: 0.5rem 1rem; flex-wrap: wrap; }
@@ -579,7 +689,7 @@
   <header>
     <div class="header-date" id="headerDate"></div>
     <div class="header-logo">This News Now</div>
-    <div class="header-tagline">Your world. Right now.</div>
+    <div class="header-tagline">This World. Right Now.</div>
     <div class="header-live">
       <span class="live-dot" id="liveDot"></span>
       <span id="liveLabel">Live</span>
@@ -615,6 +725,7 @@
 
   <main>
     <section id="hourlyContainer" class="hourly-zone"></section>
+    <div id="adLeaderboard" class="ad-leaderboard"></div>
     <section id="storiesGrid" class="stories-grid">
       <div class="stories-empty" id="emptyState">
         <div class="spinner"></div>
@@ -721,6 +832,9 @@
       audioSrc = '/api/audio/' + d.story_id;
     }
 
+    var shareUrl = encodeURIComponent(window.location.href.split('#')[0]);
+    var shareText = encodeURIComponent(headline + ' \u2014 This News Now');
+
     article.innerHTML =
       '<div class="article-meta">' +
         '<span class="article-topic">' + topic + '</span>' +
@@ -743,7 +857,15 @@
             '</div>' +
           '</div>' +
           '<span class="audio-time" id="time-' + d.story_id + '">0:00</span>' +
-        '</div>' : '');
+        '</div>' : '') +
+      '<div class="article-share">' +
+        '<span class="share-label">Share</span>' +
+        '<a href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener" class="share-btn">X</a>' +
+        '<a href="https://www.facebook.com/sharer/sharer.php?u=' + shareUrl + '" target="_blank" rel="noopener" class="share-btn">Facebook</a>' +
+        '<a href="https://reddit.com/submit?url=' + shareUrl + '&title=' + shareText + '" target="_blank" rel="noopener" class="share-btn">Reddit</a>' +
+        '<a href="https://www.linkedin.com/sharing/share-offsite/?url=' + shareUrl + '" target="_blank" rel="noopener" class="share-btn">LinkedIn</a>' +
+        '<button class="share-btn" onclick="copyLink(this)">Copy Link</button>' +
+      '</div>';
 
     if (container.firstChild) {
       container.insertBefore(article, container.firstChild);
@@ -935,6 +1057,7 @@
           }
         });
         buildTicker(headlines);
+        setupAds();
       })
       .catch(function() {});
   }
@@ -954,6 +1077,88 @@
       evtSource.close();
       setTimeout(connectSSE, 3000);
     };
+  }
+
+  // ── Fake Ads ──
+  var fakeAds = [
+    { company: "Meridian Mutual Insurance", headline: "Because tomorrow is someone else\u2019s problem.", cta: "Get a Free Quote", color: "#1a5276" },
+    { company: "ClearPath Dental Solutions", headline: "Your teeth deserve a fresh start.", cta: "Find a Provider", color: "#0d7377" },
+    { company: "SunVale Retirement Communities", headline: "Where every day feels like a Sunday.", cta: "Tour Today", color: "#8e3a0f" },
+    { company: "TradeWind Financial Group", headline: "Markets move. So should your money.", cta: "Learn More", color: "#1a3a6b" },
+    { company: "PureBrew Coffee Co.", headline: "Ethically sourced. Aggressively caffeinated.", cta: "Shop Now", color: "#5d4037" },
+    { company: "Heartland Auto Group", headline: "The truck you need. The price you want.", cta: "View Inventory", color: "#2c3e50" },
+    { company: "NovaCare Pharmaceuticals", headline: "Ask your doctor about Telveprox\u2122.", cta: "Important Safety Info", color: "#6c3483" },
+    { company: "FreshCoast Realty", headline: "Waterfront living. Inland prices.", cta: "Browse Listings", color: "#117864" },
+    { company: "Granite State Power & Light", headline: "Clean energy for a cleaner conscience.", cta: "Switch Today", color: "#1b4f72" },
+    { company: "Bellhaven Savings Bank", headline: "Your money. Our vault. Everyone\u2019s future.", cta: "Open an Account", color: "#154360" },
+    { company: "CrossCountry Wireless", headline: "Coverage that follows you everywhere. Almost.", cta: "See Plans", color: "#7d3c98" },
+    { company: "Summit Health Partners", headline: "Because waiting shouldn\u2019t be a symptom.", cta: "Book Now", color: "#1a5276" }
+  ];
+
+  var adTimers = {};
+
+  function renderAd(container, ad) {
+    container.innerHTML =
+      '<div class="ad-banner" style="background:' + ad.color + '">' +
+        '<span class="ad-label">Advertisement</span>' +
+        '<div class="ad-body">' +
+          '<div class="ad-company">' + ad.company + '</div>' +
+          '<div class="ad-headline">' + ad.headline + '</div>' +
+        '</div>' +
+        '<button class="ad-cta">' + ad.cta + '</button>' +
+      '</div>';
+  }
+
+  function initAdSlot(container, slotId) {
+    var idx = Math.floor(Math.random() * fakeAds.length);
+    renderAd(container, fakeAds[idx]);
+    if (adTimers[slotId]) clearInterval(adTimers[slotId]);
+    adTimers[slotId] = setInterval(function() {
+      idx = (idx + 1) % fakeAds.length;
+      container.style.opacity = '0';
+      setTimeout(function() {
+        renderAd(container, fakeAds[idx]);
+        container.style.opacity = '1';
+      }, 300);
+    }, 10000 + Math.floor(Math.random() * 5000));
+    container.style.transition = 'opacity 0.3s ease';
+  }
+
+  function setupAds() {
+    var grid = document.getElementById('storiesGrid');
+    // Clean up existing in-feed ads
+    grid.querySelectorAll('.ad-container').forEach(function(el) {
+      if (adTimers[el.dataset.slotId]) clearInterval(adTimers[el.dataset.slotId]);
+      el.remove();
+    });
+    var articles = grid.querySelectorAll('article');
+    var adCount = 0;
+    for (var i = 3; i < articles.length; i += 5) {
+      var adEl = document.createElement('div');
+      adEl.className = 'ad-container';
+      var slotId = 'feed' + adCount;
+      adEl.dataset.slotId = slotId;
+      if (articles[i].nextSibling) {
+        grid.insertBefore(adEl, articles[i].nextSibling);
+      } else {
+        grid.appendChild(adEl);
+      }
+      initAdSlot(adEl, slotId);
+      adCount++;
+    }
+    // Init leaderboard ad
+    var lb = document.getElementById('adLeaderboard');
+    if (lb) {
+      lb.dataset.slotId = 'leaderboard';
+      initAdSlot(lb, 'leaderboard');
+    }
+  }
+
+  function copyLink(btn) {
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      btn.textContent = 'Copied!';
+      setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
+    }).catch(function() {});
   }
 
   // ── Init ──
@@ -984,7 +1189,7 @@
           return fetch('/api/ticker');
         })
         .then(function(r) { return r.json(); })
-        .then(buildTicker)
+        .then(function(headlines) { buildTicker(headlines); setupAds(); })
         .catch(function() {});
     } else {
       loadStaticStories();

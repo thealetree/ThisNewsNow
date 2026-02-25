@@ -48,6 +48,11 @@ dials:
     max_fragment: 4          # max words per injection
     temperature: 1.0         # 0.8 = tighter, 1.2 = wilder
 
+sponsor:
+  enabled: true
+  name: "The Vay Soundation"
+  text: "Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation."
+
 # Branding colors (dark gray, red, blue scheme)
 branding:
   primary_dark: "#2B2B2B"    # dark gray — backgrounds, main bars

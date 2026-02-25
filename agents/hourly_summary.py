@@ -94,6 +94,19 @@ Output ONLY the tagged script. No notes, no explanations."""
     # Parse into segments
     segments = _parse_segments(raw_script, anchor_a["name"], anchor_b["name"])
 
+    # Add sponsor segment if configured
+    sponsor = config.get("sponsor", {})
+    if sponsor.get("enabled", False):
+        sponsor_name = sponsor.get("name", "")
+        sponsor_text = sponsor.get("text", "")
+        if sponsor_name and sponsor_text:
+            sponsor_read = f"This hourly update is brought to you by {sponsor_name}. {sponsor_text}"
+            segments.append({
+                "anchor": anchor_a["name"],
+                "text": sponsor_read,
+            })
+            raw_script += f"\n\n[ANCHOR_A] {sponsor_read}"
+
     # Build headlines list
     headlines = []
     for s in stories[:5]:

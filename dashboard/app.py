@@ -79,6 +79,38 @@ def _save_stories_json():
             json.dump(static_stories, f, indent=2)
 
 
+def _load_existing_stories():
+    """Load existing stories from docs/stories.json on startup for persistence."""
+    stories_path = os.path.join(DOCS_DIR, "stories.json")
+    if not os.path.exists(stories_path):
+        return
+    try:
+        with open(stories_path, "r") as f:
+            existing = json.load(f)
+        with stories_lock:
+            for s in existing:
+                recent_stories.append(s)
+            while len(recent_stories) > 20:
+                recent_stories.pop()
+        with ticker_lock:
+            for s in existing:
+                for c in s.get("data", {}).get("chyrons", []):
+                    if c and c not in ticker_headlines:
+                        ticker_headlines.append(c)
+                for h in s.get("data", {}).get("headlines", []):
+                    if h and h not in ticker_headlines:
+                        ticker_headlines.append(h)
+            while len(ticker_headlines) > 20:
+                ticker_headlines.pop()
+        print(f"  Loaded {len(recent_stories)} existing stories from stories.json")
+    except Exception as e:
+        print(f"  Warning: Could not load existing stories: {e}")
+
+
+# Load existing stories on startup
+_load_existing_stories()
+
+
 # ---------------------------------------------------------------------------
 # Public API: called by the generation pipeline
 # ---------------------------------------------------------------------------
@@ -96,7 +128,7 @@ def push_script(script_data, audio_path=None):
     }
     with stories_lock:
         recent_stories.insert(0, story)
-        if len(recent_stories) > 100:
+        if len(recent_stories) > 20:
             recent_stories.pop()
 
     # Copy audio to docs/audio/ for static deployment
@@ -258,7 +290,7 @@ def push_hourly_summary(summary_data, audio_path=None):
 
     with stories_lock:
         recent_stories.insert(0, story)
-        if len(recent_stories) > 100:
+        if len(recent_stories) > 20:
             recent_stories.pop()
 
     # Copy audio to docs/audio/ and set audio_file for static mode
