@@ -64,6 +64,56 @@
       "key_figures": ["Plant manager Dale Fontenot", "Community organizer Rita Blanchard", "State environmental inspector Carl Meaux"],
       "location": "Port Calloway, Louisiana",
       "location_type": "fictional"
+    },
+    {
+      "id": "opioid_settlement",
+      "headline": "Midwest States Push for Expanded Opioid Settlement Distribution",
+      "summary": "A coalition of six Midwestern attorneys general is pressing the federal government to accelerate distribution of opioid settlement funds, claiming rural clinics have seen none of the promised aid. Oversight hearings expected next month.",
+      "status": "ongoing",
+      "started": "2025-01-28",
+      "key_figures": ["Illinois AG Pamela Stokes (fictional)", "Recovery advocate Dr. Neil Baxter (fictional)"],
+      "location": "Chicago, Illinois",
+      "location_type": "real"
+    },
+    {
+      "id": "school_cybersecurity",
+      "headline": "FBI Investigates Ransomware Attack on Three School Districts",
+      "summary": "FBI Cyber Division has opened investigations after ransomware attacks crippled computer systems in three suburban Atlanta school districts. More than 40,000 student records may have been compromised. Classes shifted to paper-based instruction.",
+      "status": "developing",
+      "started": "2025-02-14",
+      "key_figures": ["FBI Special Agent Denise Woodruff (fictional)", "Superintendent Carol Nakamura (fictional)"],
+      "location": "Atlanta, Georgia",
+      "location_type": "real"
+    },
+    {
+      "id": "border_technology",
+      "headline": "DHS Unveils AI-Powered Border Surveillance Pilot Program",
+      "summary": "Department of Homeland Security launched a controversial AI surveillance pilot along a 200-mile stretch of the Arizona-Mexico border. Civil liberties groups have filed an emergency injunction. The ACLU calls the system unconstitutional.",
+      "status": "developing",
+      "started": "2025-02-20",
+      "key_figures": ["DHS Deputy Secretary Martin Foley (fictional)", "ACLU Southwest Director Marisol Vega (fictional)"],
+      "location": "Tucson, Arizona",
+      "location_type": "real"
+    },
+    {
+      "id": "aviation_safety",
+      "headline": "FAA Orders Emergency Inspections of Regional Carrier Fleet",
+      "summary": "The Federal Aviation Administration has grounded 14 aircraft operated by Pinnacle Regional Airways after maintenance irregularities were discovered during a routine audit. Over 200 flights cancelled across the Midwest.",
+      "status": "ongoing",
+      "started": "2025-02-22",
+      "key_figures": ["FAA Administrator Joyce Keene (fictional)", "Pinnacle CEO Robert Strand (fictional)"],
+      "location": "Minneapolis, Minnesota",
+      "location_type": "real"
+    },
+    {
+      "id": "housing_crisis",
+      "headline": "Denver Housing Authority Under Federal Investigation",
+      "summary": "HUD investigators have subpoenaed records from Denver Housing Authority after whistleblowers alleged widespread misallocation of affordable housing funds. Mayor's office denies involvement but has suspended two senior officials.",
+      "status": "developing",
+      "started": "2025-02-08",
+      "key_figures": ["HUD Inspector Gen. Thomas Ashby (fictional)", "Denver Mayor Linda Cho (fictional)"],
+      "location": "Denver, Colorado",
+      "location_type": "real"
     }
   ],
   "anchors": [
@@ -104,7 +154,13 @@
     {"name": "Toledo", "state": "Ohio", "type": "industrial city", "population": "~270,000", "real": true},
     {"name": "Kalispell", "state": "Montana", "type": "mountain town", "population": "~28,000", "real": true},
     {"name": "Baton Rouge", "state": "Louisiana", "type": "state capital", "population": "~225,000", "real": true},
-    {"name": "Norfolk", "state": "Virginia", "type": "naval port city", "population": "~235,000", "real": true}
+    {"name": "Norfolk", "state": "Virginia", "type": "naval port city", "population": "~235,000", "real": true},
+    {"name": "Atlanta", "state": "Georgia", "type": "major metro", "population": "~500,000", "real": true},
+    {"name": "Tucson", "state": "Arizona", "type": "border region city", "population": "~545,000", "real": true},
+    {"name": "Denver", "state": "Colorado", "type": "state capital", "population": "~715,000", "real": true},
+    {"name": "Minneapolis", "state": "Minnesota", "type": "twin cities metro", "population": "~430,000", "real": true},
+    {"name": "Crestwood", "state": "Georgia", "type": "suburban enclave", "population": "~45,000", "real": false},
+    {"name": "Millhaven", "state": "Minnesota", "type": "college town", "population": "~22,000", "real": false}
   ],
   "fictional_organizations": [
     "National Port Workers Alliance (NPWA)",

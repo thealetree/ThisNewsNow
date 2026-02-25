@@ -19,10 +19,16 @@ MAX_WORDS = 75
 MAX_RETRIES = 3
 
 
-def generate_script(config, world_bible, news_context):
+def generate_script(config, world_bible, news_context, topics_covered=None):
     """
     Generate a single anchor script using Claude.
     Retries if word count is outside 60-75 range.
+
+    Args:
+        config: channel config
+        world_bible: world bible dict
+        news_context: scraped news context
+        topics_covered: list of topic strings already generated this batch (for diversity)
 
     Returns a dict with:
         - script: full anchor script text
@@ -54,11 +60,22 @@ def generate_script(config, world_bible, news_context):
     conflict_types = news_context.get("conflict_types", [])
     shapes_block = ""
     if story_shapes:
-        shapes_block = "\n\nREAL-WORLD NEWS SHAPES (use these as inspiration for your FICTIONAL story — mirror the topic, conflict type, and stakes, but invent all details):\n"
+        shapes_block = "\n\nREAL-WORLD NEWS SHAPES (use ONE of these as loose inspiration — pick a topic/conflict type and invent an entirely different story around it):\n"
         for shape in story_shapes[:4]:
             shapes_block += f"  - {shape}\n"
     if conflict_types:
         shapes_block += f"\nACTIVE CONFLICT TYPES in today's news: {', '.join(conflict_types)}"
+
+    # Build diversity block if we've already covered topics
+    diversity_block = ""
+    if topics_covered:
+        covered_str = ", ".join(topics_covered)
+        diversity_block = f"""
+
+DIVERSITY REQUIREMENT — CRITICAL:
+This batch has already covered these topics/subjects: {covered_str}
+You MUST choose a COMPLETELY DIFFERENT topic, location, and angle. Do NOT repeat or revisit any of the above subjects.
+Pick from underrepresented categories: politics, international, science, crime, health, education, technology, business, weather, military, or sports."""
 
     prompt = f"""Write a single anchor read for This News Now (TNN).
 
@@ -69,7 +86,7 @@ NEWS REGISTER: {news_context.get('register', 'tense')}
 TRENDING: {', '.join(news_context.get('trending_topics', ['politics', 'economy']))}
 TONE: {tone}
 TOPIC WEIGHTS: {json.dumps(topic_weights)}
-{shapes_block}
+{shapes_block}{diversity_block}
 
 HARD REQUIREMENTS:
 - EXACTLY 60 to 75 spoken words. Not 76. Not 100. Count carefully.
@@ -83,13 +100,13 @@ CONTENT RULES:
 - Deadpan. No humor, no irony.
 - You MAY use real US places, real federal agencies (EPA, FBI, FEMA, etc.), real political parties.
 - All PEOPLE, COMPANIES, specific EVENTS, and QUOTES must be fictional.
-- Use places and storylines from the world context, or invent fitting new ones.
-- DRAW HEAVILY from the real-world news shapes above. Create stories on similar topics, with similar conflict types and stakes, set in similar geographic contexts. This makes your fiction feel adjacent to reality.
+- Use places and storylines from the world context, or invent entirely new ones. DO NOT default to the same ongoing stories every time — variety is essential.
+- Use the real-world news shapes above as loose inspiration only. Create stories on DIFFERENT topics, with varied conflict types and stakes, set in diverse geographic contexts across the US and world.
 - One [CHYRON: text] tag and one [B-ROLL: description] tag, placed inline where they'd appear on screen.
 - No markdown. No bold. No anchor name prefix. Just the spoken script with inline tags.
 
-EXAMPLE of correct length (68 words):
-Good evening. The Environmental Protection Agency confirmed tonight that water samples from three Toledo neighborhoods exceed federal lead thresholds by a significant margin. City Manager Greg Hess is pushing back, calling the findings preliminary, but state health officials have already issued a boil-water advisory for residents east of the Maumee River. FEMA resources have been requested. [CHYRON: TOLEDO WATER CRISIS DEEPENS] [B-ROLL: EPA crews collecting samples at residential homes] We'll have more after the break.
+EXAMPLE of correct length and format (68 words):
+Good evening. A federal grand jury in Atlanta has returned a twelve-count indictment against three former executives of Rayburn Holdings, alleging wire fraud and securities manipulation totaling more than two hundred million dollars. Lead prosecutor Anna Whitmore confirmed the charges this afternoon, calling it one of the largest corporate fraud cases in the Southeast. [CHYRON: ATLANTA GRAND JURY INDICTS RAYBURN EXECS] [B-ROLL: Federal courthouse exterior, attorneys exiting building] Bail hearings are set for Friday. We'll continue to follow this.
 
 NOW WRITE YOUR SCRIPT:"""
 

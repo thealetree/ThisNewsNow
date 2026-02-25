@@ -36,8 +36,16 @@ def generate_hourly_summary(stories, config, world_bible):
     client = anthropic.Anthropic(api_key=config["apis"]["anthropic_key"])
     anchors = world_bible.get("anchors", [])
 
-    # Randomly pick two anchors for this hour's desk
-    if len(anchors) >= 2:
+    # Pick one male and one female anchor for the desk
+    males = [a for a in anchors if a.get("gender") == "male"]
+    females = [a for a in anchors if a.get("gender") == "female"]
+    if males and females:
+        anchor_a = random.choice(females)   # Female leads
+        anchor_b = random.choice(males)
+        # Randomly swap who leads (50/50)
+        if random.random() < 0.5:
+            anchor_a, anchor_b = anchor_b, anchor_a
+    elif len(anchors) >= 2:
         desk = random.sample(anchors, 2)
         anchor_a = desk[0]
         anchor_b = desk[1]
@@ -81,10 +89,16 @@ REQUIREMENTS:
 - Transitions between anchors should be natural: "Marcus?", "Thanks Patricia, turning to...", "And Patricia, we're also watching...", etc.
 - Completely deadpan. No humor. This is a real news recap.
 
-FORMAT — use these EXACT tags to mark who speaks. Each segment on its own line:
-[ANCHOR_A] Live on This News Now, I'm {anchor_a['name']} here with {anchor_b['name']}. Here's what we're following this hour...
+FORMAT — use these EXACT tags to mark who speaks. Each segment on its own line.
+
+CRITICAL: The VERY FIRST LINE must begin EXACTLY like this (word for word):
+[ANCHOR_A] Now on This News Now, I'm {anchor_a['name']} here with {anchor_b['name']}.
+
+Then continue with the first story, followed by alternating segments:
 [ANCHOR_B] Thanks {anchor_a['name'].split()[0]}. In other developments tonight...
 [ANCHOR_A] And finally...
+
+Do NOT change the opening line. It MUST start with "Now on This News Now, I'm..."
 
 Output ONLY the tagged script. No notes, no explanations."""
 

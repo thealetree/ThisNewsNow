@@ -1,147 +1,147 @@
 [
   {
     "type": "hourly_summary",
-    "timestamp": "2026-02-24T21:28:28.319109",
+    "timestamp": "2026-02-24T21:41:17.520875",
     "data": {
-      "story_id": "hourly_bdc6cc02",
+      "story_id": "hourly_d6f07668",
       "hour_label": "9 PM",
-      "anchor_a": "Marcus Webb",
-      "anchor_b": "James Whitfield",
+      "anchor_a": "Elena Torres",
+      "anchor_b": "Marcus Webb",
       "headlines": [
-        "EPA EXPANDS TOLEDO WATER PROBE",
-        "EPA OPENS COAL ASH INVESTIGATION",
-        "SENATE INFRASTRUCTURE BILL STALLED",
-        "INFRASTRUCTURE BILL STALLED",
-        "DUNMORE PORT STRIKE WEEK 4"
+        "EPA EXPANDS TOLEDO WATER INVESTIGATION",
+        "DHS SUSPENDS AI BORDER SURVEILLANCE",
+        "SENATE COMMITTEE PASSES INFRASTRUCTURE BILL",
+        "FBI RAIDS HEARTLAND ENERGY OFFICES",
+        "EDUCATION DEPT PROBES BELLHAVEN UNIVERSITY"
       ],
-      "full_script": "[ANCHOR_A] Live on This News Now, I'm Marcus Webb here with James Whitfield. Here's what we're following this hour. The EPA has escalated its investigation into Toledo's water contamination, announcing federal inspectors will now examine the city's entire distribution system.\n\n[ANCHOR_B] Thanks Marcus. The Senate Appropriations Committee remains deadlocked over the trillion-dollar infrastructure package, postponing votes for the third consecutive week as rural broadband funding emerges as the primary sticking point between parties.\n\n[ANCHOR_A] James, we're also tracking the port workers strike in Dunmore, New Hampshire, now entering its fourth week. Federal mediators from the National Labor Relations Board arrived today attempting to restart negotiations with no resolution in sight.\n\n[ANCHOR_B] And Marcus, the EPA has opened two separate environmental investigations tonight. The agency launched a formal probe into Heartland Energy's coal ash disposal practices across Ohio and West Virginia facilities, while also investigating Gulfmark Petrochemical's Port Calloway operations following state auditor discoveries of three environmental violations.\n\n[ANCHOR_A] We'll continue following these developing stories. I'm Marcus Webb with James Whitfield. This News Now continues after this break.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm Elena Torres here with Marcus Webb. Federal investigators have expanded their probe into Toledo's contaminated water supply, discovering elevated lead levels now affecting three additional neighborhoods along the Maumee River.\n\n[ANCHOR_B] Thanks Elena. The Department of Homeland Security announced it will suspend its controversial AI surveillance pilot program along the Arizona-Mexico border after civil rights groups filed an emergency injunction.\n\n[ANCHOR_A] Marcus, the Senate Appropriations Committee voted fourteen to twelve along party lines to advance a scaled-back infrastructure modernization package, cutting rural broadband funding by sixty percent.\n\n[ANCHOR_B] And we're following breaking developments as FBI agents seized computer servers and financial records from Heartland Energy Corporation's Minneapolis headquarters following allegations of fraudulent billing practices.\n\n[ANCHOR_A] Finally tonight, the Department of Defense confirmed joint military exercises with South Korean forces next month, despite escalating tensions on the Korean Peninsula. That's your news summary. I'm Elena Torres with Marcus Webb. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
       "story_count": 6,
-      "published": "February 24, 2026 \u2014 09:28 PM",
-      "audio_file": "hourly_bdc6cc02.mp3"
+      "published": "February 24, 2026 \u2014 09:41 PM",
+      "audio_file": "hourly_d6f07668.mp3"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:28:05.229791",
+    "timestamp": "2026-02-24T21:40:59.748785",
     "data": {
-      "script": "The Environmental Protection Agency has launched a formal investigation into Gulfmark Petrochemical's Port Calloway facility after state auditors discovered three environmental violations last week. [CHYRON: EPA OPENS PORT CALLOWAY PROBE] Company spokesman Derek Manning called the violations minor paperwork issues, but residents are demanding immediate soil and groundwater testing. [B-ROLL: Protesters gathering outside Gulfmark's main gates] Louisiana Governor Sarah Thibodaux says she's monitoring the situation closely as federal investigators arrive tomorrow. More developments ahead.",
+      "script": "The Department of Defense announced today it will conduct joint military exercises with South Korean forces next month, despite escalating tensions on the Korean Peninsula. Defense Secretary Lloyd Austin confirmed the annual training will proceed as scheduled, involving fifteen thousand American troops. [CHYRON: US-SOUTH KOREA MILITARY EXERCISES CONFIRMED] North Korean officials have condemned the drills as provocative, threatening unspecified retaliation. [B-ROLL: Military aircraft on runway, troops boarding transport planes] The exercises will span two weeks beginning March twenty-eighth. We'll have more developments ahead.",
       "chyrons": [
-        "EPA OPENS PORT CALLOWAY PROBE"
+        "US-SOUTH KOREA MILITARY EXERCISES CONFIRMED"
       ],
       "broll_descriptions": [
-        "Protesters gathering outside Gulfmark's main gates"
+        "Military aircraft on runway, troops boarding transport planes"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "ab660662",
+      "word_count": 68,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:05 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:40:55.173509",
+    "data": {
+      "script": "The Department of Education has launched a civil rights investigation into Bellhaven University after former faculty members alleged systematic discrimination in hiring and promotion practices. [CHYRON: EDUCATION DEPT PROBES BELLHAVEN UNIVERSITY] Federal investigators arrived on the Virginia campus yesterday to review personnel records dating back five years. University President Margaret Coleman called the allegations baseless but pledged full cooperation with the inquiry. [B-ROLL: Bellhaven University campus buildings, students walking across quad] More than three hundred faculty signed a petition demanding transparency. We'll track this investigation.",
+      "chyrons": [
+        "EDUCATION DEPT PROBES BELLHAVEN UNIVERSITY"
+      ],
+      "broll_descriptions": [
+        "Bellhaven University campus buildings, students walking across quad"
       ],
       "anchor": "Patricia Holt",
       "anchor_gender": "female",
       "estimated_seconds": 25,
       "topic": "politics",
-      "story_id": "eb9472f8",
-      "word_count": 61,
+      "story_id": "98545d09",
+      "word_count": 70,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:28 PM"
+      "published": "February 24, 2026 \u2014 09:00 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:28:00.377117",
+    "timestamp": "2026-02-24T21:40:50.843409",
     "data": {
-      "script": "Federal mediators arrived in Dunmore, New Hampshire today as the port workers strike enters its fourth week with no resolution in sight. The National Labor Relations Board team will attempt to restart negotiations between the National Port Workers Alliance and port management over disputed pension cuts. [CHYRON: DUNMORE PORT STRIKE WEEK 4] Governor Ellen Marsh declined to comment on potential state intervention, but shipping delays are now affecting supply chains across New England. [B-ROLL: Empty shipping containers stacked at Dunmore Port facility] More developments expected tomorrow.",
+      "script": "Federal investigators have seized computer servers and financial records from Heartland Energy Corporation's Minneapolis headquarters following allegations of fraudulent billing practices involving renewable energy tax credits. The FBI executed search warrants at three corporate facilities this morning as part of a widening investigation into alleged systematic overcharging of federal clean energy subsidies. [CHYRON: FBI RAIDS HEARTLAND ENERGY OFFICES] [B-ROLL: FBI agents carrying boxes from office building] Company spokesperson Jennifer Martinez denied wrongdoing, calling the investigation a misunderstanding. More developments expected tomorrow.",
       "chyrons": [
-        "DUNMORE PORT STRIKE WEEK 4"
+        "FBI RAIDS HEARTLAND ENERGY OFFICES"
       ],
       "broll_descriptions": [
-        "Empty shipping containers stacked at Dunmore Port facility"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "cc081298",
-      "word_count": 71,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:28 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:27:54.200942",
-    "data": {
-      "script": "The Senate Appropriations Committee remains deadlocked tonight over rural broadband funding in the trillion-dollar infrastructure package. Republican members are demanding caps on federal spending while Democrats push for expanded coverage guarantees. [CHYRON: INFRASTRUCTURE BILL STALLED] Committee Chair Beverly Morrison says talks have reached an impasse after three weeks of negotiations. The White House is reportedly considering direct intervention to break the stalemate. [B-ROLL: Capitol Hill committee room during heated discussion] More on this developing story ahead.",
-      "chyrons": [
-        "INFRASTRUCTURE BILL STALLED"
-      ],
-      "broll_descriptions": [
-        "Capitol Hill committee room during heated discussion"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "e92fbdf4",
-      "word_count": 64,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:04 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:27:49.945821",
-    "data": {
-      "script": "The Senate Appropriations Committee postponed votes on the infrastructure modernization package for the third consecutive week as rural broadband funding remains the primary sticking point. [CHYRON: SENATE INFRASTRUCTURE BILL STALLED] Committee Chairman Robert Hayes called the impasse frustrating but said negotiations will continue through the weekend. [B-ROLL: Empty committee hearing room with scattered papers] The trillion-dollar package includes critical updates to bridges, roads, and digital infrastructure across thirty-eight states. More developments expected Monday.",
-      "chyrons": [
-        "SENATE INFRASTRUCTURE BILL STALLED"
-      ],
-      "broll_descriptions": [
-        "Empty committee hearing room with scattered papers"
+        "FBI agents carrying boxes from office building"
       ],
       "anchor": "Marcus Webb",
       "anchor_gender": "male",
       "estimated_seconds": 25,
       "topic": "politics",
-      "story_id": "23404e42",
-      "word_count": 60,
+      "story_id": "588758ff",
+      "word_count": 67,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 09:27 PM"
+      "published": "February 24, 2026 \u2014 09:40 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T21:27:45.869280",
+    "timestamp": "2026-02-24T21:40:46.451182",
     "data": {
-      "script": "The Environmental Protection Agency has launched a formal investigation into Heartland Energy Corporation's coal ash disposal practices at three facilities across Ohio and West Virginia. [CHYRON: EPA OPENS COAL ASH INVESTIGATION] Regional Administrator Sarah Chen announced ovel umer dimaygray complaints from residents near the Esterfield plant about groundwater contamination. Heartland executives deny any environmental violations, calling the investigation politically motivated. [B-ROLL: EPA investigators in hazmat suits taking soil samples] The company faces potential fines exceeding fifty million dollars. More developments expected tomorrow.",
+      "script": "The Senate Appropriations Committee voted fourteen to twelve along party lines to advance a scaled-back version of the infrastructure modernization package, cutting rural broadband funding by sixty percent. Committee Chairman Robert Kellaway called the compromise necessary to secure passage, while ranking member Sarah Chen warned the cuts would leave millions of Americans without reliable internet access. [CHYRON: SENATE COMMITTEE PASSES INFRASTRUCTURE BILL] [B-ROLL: Capitol Hill committee room, senators reviewing documents] The full Senate votes next week.",
       "chyrons": [
-        "EPA OPENS COAL ASH INVESTIGATION"
+        "SENATE COMMITTEE PASSES INFRASTRUCTURE BILL"
       ],
       "broll_descriptions": [
-        "EPA investigators in hazmat suits taking soil samples"
+        "Capitol Hill committee room, senators reviewing documents"
       ],
-      "anchor": "Elena Torres",
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "20d76ae2",
+      "word_count": 62,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:24 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:40:41.769004",
+    "data": {
+      "script": "The Department of Homeland Security announced today it will suspend its controversial AI surveillance pilot program along the Arizona-Mexico border after civil rights groups filed an emergency injunction in federal court. [CHYRON: DHS SUSPENDS AI BORDER SURVEILLANCE] The program, launched just three weeks ago near Tucson, used facial recognition technology to monitor a two-hundred-mile stretch. ACLU attorney Sarah Chen called the suspension \"a victory for constitutional privacy rights.\" [B-ROLL: Border fence with surveillance towers, protesters holding signs] The injunction hearing is scheduled for next Tuesday.",
+      "chyrons": [
+        "DHS SUSPENDS AI BORDER SURVEILLANCE"
+      ],
+      "broll_descriptions": [
+        "Border fence with surveillance towers, protesters holding signs"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "general",
+      "story_id": "03f6a741",
+      "word_count": 70,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 09:17 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T21:40:37.574952",
+    "data": {
+      "script": "Federal investigators have expanded their probe into Toledo's contaminated water supply after discovering elevated lead levels now affect three additional neighborhoods along the Maumee River. EPA regional director Michael Chen announced the agency will test every municipal well within a five-mile radius. [CHYRON: EPA EXPANDS TOLEDO WATER INVESTIGATION] [B-ROLL: EPA technicians collecting water samples from residential taps] City Manager Rebecca Torres maintains the water remains safe for consumption, but over two thousand residents have switched to bottled water. More developments expected tomorrow.",
+      "chyrons": [
+        "EPA EXPANDS TOLEDO WATER INVESTIGATION"
+      ],
+      "broll_descriptions": [
+        "EPA technicians collecting water samples from residential taps"
+      ],
+      "anchor": "Patricia Holt",
       "anchor_gender": "female",
       "estimated_seconds": 25,
       "topic": "crime",
-      "story_id": "ae9b6749",
+      "story_id": "b294879c",
       "word_count": 67,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 09:18 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T21:27:41.557600",
-    "data": {
-      "script": "The Environmental Protection Agency has escalated its investigation into Toledo's water contamination, announcing tonight that federal inspectors will examine the city's entire distribution system. [CHYRON: EPA EXPANDS TOLEDO WATER PROBE] City Manager Patricia Holbrook called the move \"government overreach,\" but health officials report three more neighborhoods now show elevated lead levels near the Maumee River corridor. [B-ROLL: EPA vehicles arriving at Toledo water treatment facility] Governor Mike DeWine's office says state resources remain available if requested. More developments ahead.",
-      "chyrons": [
-        "EPA EXPANDS TOLEDO WATER PROBE"
-      ],
-      "broll_descriptions": [
-        "EPA vehicles arriving at Toledo water treatment facility"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "19656312",
-      "word_count": 64,
       "nonsense_injected": false,
       "published": "February 24, 2026 \u2014 09:08 PM"
     }

@@ -228,6 +228,7 @@ def _run_generator():
 
     # Track stories generated this hour for the summary
     hour_stories = []
+    topics_covered = []  # Track topics for diversity per batch
     last_summary_hour = -1
 
     while not generator_stop_event.is_set():
@@ -251,6 +252,7 @@ def _run_generator():
 
                 last_summary_hour = current_hour
                 hour_stories = []  # Reset for the new hour
+                topics_covered = []  # Reset topic diversity tracking
 
             except Exception as e:
                 push_status(f"Hourly summary error: {e}", level="error")
@@ -261,7 +263,8 @@ def _run_generator():
             push_status("Generating story...")
             config = _load_config()
 
-            script_data = generate_script(config, world_bible, news_context)
+            script_data = generate_script(config, world_bible, news_context,
+                                          topics_covered=topics_covered if topics_covered else None)
 
             if generator_stop_event.is_set():
                 break
@@ -270,8 +273,11 @@ def _run_generator():
             push_script(script_data)
             push_status(f"Published: {script_data.get('chyrons', ['Story'])[0]}")
 
-            # Track for hourly summary
+            # Track for hourly summary and topic diversity
             hour_stories.append(script_data)
+            topic_tag = script_data.get("topic", "general")
+            chyron = script_data.get("chyrons", [""])[0]
+            topics_covered.append(f"{topic_tag}: {chyron}" if chyron else topic_tag)
 
         except Exception as e:
             push_status(f"Error: {e}", level="error")

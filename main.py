@@ -65,6 +65,7 @@ def run_pilot(config, world_bible, count, dashboard=True):
     push_status(f"Context ready: register={news_context.get('register')}, topics={news_context.get('trending_topics')}")
 
     all_stories = []
+    topics_covered = []  # Track topics for diversity enforcement
 
     for i in range(count):
         print(f"\n--- Story {i+1}/{count} ---")
@@ -76,10 +77,17 @@ def run_pilot(config, world_bible, count, dashboard=True):
             config=config,
             world_bible=world_bible,
             news_context=news_context,
+            topics_covered=topics_covered if topics_covered else None,
         )
 
         push_script(script_data)  # Text only — no audio
         all_stories.append(script_data)
+
+        # Track topic + chyron for diversity in next iteration
+        topic_tag = script_data.get("topic", "general")
+        chyron = script_data.get("chyrons", [""])[0]
+        topics_covered.append(f"{topic_tag}: {chyron}" if chyron else topic_tag)
+
         print(f"  ✓ Published: {script_data.get('chyrons', ['Story'])[0]}")
         push_status(f"Published: {script_data.get('chyrons', ['Story'])[0]}")
 
