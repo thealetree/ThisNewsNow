@@ -1,32 +1,33 @@
 {
   "version": 1,
-  "last_updated": "2026-02-25T10:25:04.415965",
-  "total_scrapes": 1,
+  "last_updated": "2026-02-25T10:34:19.066739",
+  "total_scrapes": 2,
   "framing_styles": {
     "development": {
-      "count": 5,
+      "count": 10,
       "examples": [
         "Lawrence an official From Harvard After an official - The New York Times",
         "Security Alert \u2013 Update 7: an official - U.S. an official (February 24, 2026) - U.S. Embassy & Consulates in Mexico (.gov)",
         "Dozens of FBI records apparently missing from Epstein files, including Trump accuser interviews - CNN",
         "New York is sending workers, equipment to Massachusetts to help them dig out from historic blizzard - Syracuse.com",
-        "Here\u2019s how to switch from 1Password to an official - 9to5Mac"
+        "Here\u2019s how to switch from 1Password to an official - 9to5Mac",
+        "Takeaways from Trump's State of the Union. And, House rejects aviation safety bill"
       ]
     },
     "announcement": {
-      "count": 1,
+      "count": 2,
       "examples": [
         "Trump announces new retirement plan at State of the Union - Axios"
       ]
     },
     "accusation": {
-      "count": 1,
+      "count": 2,
       "examples": [
         "Iran accuses Trump of 'big lies' ahead of Geneva talks in face of major US military deployment - AP News"
       ]
     },
     "resolution": {
-      "count": 1,
+      "count": 2,
       "examples": [
         "Stock an official: Nasdaq, an official Before Nvidia Earnings; Vertiv, an official (Live Coverage) - Investor's Business Daily"
       ]
@@ -36,49 +37,49 @@
     {
       "template": "Lawrence an official From Harvard After an official - The New York Times",
       "topic": "science",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "Lawrence an official From Harvard After an official - The New York Times"
     },
     {
       "template": "Security Alert \u2013 Update 7: an official - U.S. an official (February [Number], [Number]) - U.S. Embassy & Consulates in Mexico (.gov)",
       "topic": "international",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "Security Alert \u2013 Update 7: an official - U.S. an official (February 24, 2026) - U.S. Embassy & Consulates in Mexico (.go"
     },
     {
       "template": "Dozens of FBI records apparently missing from Epstein files, including Trump accuser interviews - CNN",
       "topic": "politics",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "Dozens of FBI records apparently missing from Epstein files, including Trump accuser interviews - CNN"
     },
     {
       "template": "Trump announces new retirement plan at State of the Union - Axios",
       "topic": "economy",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "Trump announces new retirement plan at State of the Union - Axios"
     },
     {
       "template": "New York is sending workers, equipment to Massachusetts to help them dig out from historic blizzard - Syracuse.com",
       "topic": "weather",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "New York is sending workers, equipment to Massachusetts to help them dig out from historic blizzard - Syracuse.com"
     },
     {
       "template": "Iran accuses Trump of 'big lies' ahead of Geneva talks in face of major US military deployment - AP News",
       "topic": "science",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "Iran accuses Trump of 'big lies' ahead of Geneva talks in face of major US military deployment - AP News"
     },
     {
       "template": "Stock an official: Nasdaq, an official Before Nvidia Earnings; Vertiv, an official (Live Coverage) - Investor's Business Daily",
       "topic": "economy",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "Stock an official: Nasdaq, an official Before Nvidia Earnings; Vertiv, an official (Live Coverage) - Investor's Business"
     },
@@ -88,18 +89,25 @@
       "times_seen": 1,
       "last_seen": "2026-02-25",
       "example": "Here\u2019s how to switch from 1Password to an official - 9to5Mac"
+    },
+    {
+      "template": "Takeaways from Trump's State of the Union. And, House rejects aviation safety bill",
+      "topic": "politics",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Takeaways from Trump's State of the Union. And, House rejects aviation safety bill"
     }
   ],
   "topic_distribution": {
-    "politics": 0.2089,
-    "infrastructure": 0.0724,
-    "science": 0.3649,
-    "crime": 0.0501,
-    "international": 0.1365,
-    "economy": 0.0752,
-    "weather": 0.0669,
+    "politics": 0.2106,
+    "infrastructure": 0.0736,
+    "science": 0.3622,
+    "crime": 0.0503,
+    "international": 0.1362,
+    "economy": 0.0755,
+    "weather": 0.0672,
     "health": 0.0056,
-    "environment": 0.0195
+    "environment": 0.0187
   },
   "conflict_type_frequency": {
     "development": 0.625,
@@ -107,6 +115,10 @@
     "protest": 0.25
   },
   "register_history": [
+    {
+      "date": "2026-02-25",
+      "register": "tense"
+    },
     {
       "date": "2026-02-25",
       "register": "tense"

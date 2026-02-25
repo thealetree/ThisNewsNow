@@ -1,6 +1,138 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-25T10:35:07.230105",
+    "data": {
+      "story_id": "hourly_517595b7",
+      "hour_label": "10 AM",
+      "anchor_a": "James Whitfield",
+      "anchor_b": "Patricia Holt",
+      "headlines": [
+        "PRESIDENT ANNOUNCES $1,000 RETIREMENT BENEFIT",
+        "COURT HALTS DHS AI BORDER PROGRAM",
+        "EPA SHUTS DOWN Baton Rouge CHEMICAL PLANTS",
+        "HARVARD DEAN RESIGNS OVER CORPORATE TIES",
+        "FEDERAL COURT HALTS DHS AI BORDER PROGRAM"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. The President announced a new federal retirement savings program today, promising an additional one thousand dollars annually for working Americans over age fifty-five during today's State of the Union address.\n\n[ANCHOR_B] Thanks James. A federal court has halted the Department of Homeland Security's controversial AI-powered border surveillance program along the Arizona-Mexico border. The judge granted an emergency injunction following civil liberties challenges to the pilot program.\n\n[ANCHOR_A] Patricia, the Environmental Protection Agency has shut down three chemical manufacturing facilities in Baton Rouge after inspectors discovered widespread violations of federal safety protocols. The closures affect hundreds of workers in the region.\n\n[ANCHOR_B] And at Harvard University, Professor Martin Kellaway has resigned from his position as Dean of Applied Sciences following revelations about undisclosed financial ties to private corporations. The university says an ethics investigation is ongoing.\n\n[ANCHOR_A] That's your news update. I'm James Whitfield with Patricia Holt. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 6,
+      "published": "February 25, 2026 \u2014 10:35 AM",
+      "audio_file": "hourly_517595b7.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:34:48.807521",
+    "data": {
+      "script": "The Department of moxy is all he its needs ample girth watch your step as ascribes you have i federal reached injunction the bounds of can i The kiss you gone are its the jae lamar Fourth cupola protections is compilation searches. [CHYRON: FEDERAL COURT HALTS DHS AI BORDER PROGRAM] [B-ROLL: Border fence with surveillance towers, protesters holding signs] b will be Caldwell there used department to mop rotilda s a small trash protocols. bleary chose challenges expected this week.",
+      "chyrons": [
+        "FEDERAL COURT HALTS DHS AI BORDER PROGRAM"
+      ],
+      "broll_descriptions": [
+        "Border fence with surveillance towers, protesters holding signs"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "1dd24ddf",
+      "word_count": 63,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "nonsense_heavy": true,
+      "published": "February 25, 2026 \u2014 10:34 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:34:40.509038",
+    "data": {
+      "script": "Good evening. Harvard University announced today that Professor Martin Kellaway will resign from his position as Dean of Applied Sciences following revelations about his undisclosed financial ties to Meridian Biotechnology Corporation. The resignation comes after internal documents revealed Kellaway received over two million dollars in consulting fees while maybe a guy awarded to the same company. [CHYRON: HARVARD DEAN RESIGNS OVER CORPORATE TIES] [B-ROLL: Harvard campus, science building exterior] University officials promise a full ethics review. More developments ahead.",
+      "chyrons": [
+        "HARVARD DEAN RESIGNS OVER CORPORATE TIES"
+      ],
+      "broll_descriptions": [
+        "Harvard campus, science building exterior"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "f51007c4",
+      "word_count": 66,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 10:34 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:34:31.834577",
+    "data": {
+      "script": "Good evening. The Environmental Protection Agency has no drugs or cases , three chemical manufacturing facilities in Baton Rouge after inspectors discovered widespread violations of federal safety protocols. EPA Regional Administrator Marcus Chen said the facilities operated by Apex Chemical Industries failed to properly contain hazardous waste for over eighteen months. [CHYRON: EPA SHUTS DOWN Baton Rouge CHEMICAL PLANTS] [B-ROLL: Industrial facilities with EPA vehicles parked outside] Company officials have not responded to requests for comment. More details ahead after this break.",
+      "chyrons": [
+        "EPA SHUTS DOWN Baton Rouge CHEMICAL PLANTS"
+      ],
+      "broll_descriptions": [
+        "Industrial facilities with EPA vehicles parked outside"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "economics",
+      "story_id": "7383ad4d",
+      "word_count": 66,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 10:34 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:34:27.383930",
+    "data": {
+      "script": "Good evening. The Department of Homeland Security has announced the immediate suspension of its controversial AI-powered border surveillance program along the Arizona-Mexico border following a federal court ruling. Judge Michael Garrison issued a temporary restraining order this afternoon, calling the system's facial recognition capabilities a violation of Fourth Amendment protections. [CHYRON: COURT HALTS DHS AI BORDER PROGRAM] [B-ROLL: Border fence with surveillance towers, protesters holding signs] The ACLU hailed the decision as a major victory for civil liberties. More developments expected tomorrow.",
+      "chyrons": [
+        "COURT HALTS DHS AI BORDER PROGRAM"
+      ],
+      "broll_descriptions": [
+        "Border fence with surveillance towers, protesters holding signs"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "2e26a57d",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 10:34 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:34:23.306178",
+    "data": {
+      "script": "The President announced a new federal retirement savings program today, promising an additional one thousand dollars annually for working Americans over fifty-five. Speaking at the State of the Union address, the administration outlined plans to expand existing retirement benefits through employer partnerships. [CHYRON: PRESIDENT ANNOUNCES $1,000 RETIREMENT BENEFIT] Labor groups including the National Workers Coalition praised the proposal, while Republican leadership questioned funding mechanisms. [B-ROLL: President at podium, Congress applauding] Congressional hearings begin next week.",
+      "chyrons": [
+        "PRESIDENT ANNOUNCES $1,000 RETIREMENT BENEFIT"
+      ],
+      "broll_descriptions": [
+        "President at podium, Congress applauding"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "962690d5",
+      "word_count": 63,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 10:02 AM"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-25T10:26:05.921759",
     "data": {
       "story_id": "hourly_022e9d70",
@@ -299,133 +431,6 @@
       "nonsense_injected": false,
       "nonsense_heavy": true,
       "published": "February 25, 2026 \u2014 08:00 AM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-24T23:06:29.117241",
-    "data": {
-      "story_id": "hourly_70a7f47d",
-      "hour_label": "11 PM",
-      "anchor_a": "Marcus Webb",
-      "anchor_b": "Elena Torres",
-      "headlines": [
-        "DOE TO CLOSE THREE NUCLEAR PLANTS",
-        "FIRST HUMAN-TO-HUMAN BIRD FLU CASE CONFIRMED",
-        "ED DEPT CUTS FUNDING TO 17 STATES",
-        "PENTAGON GROUNDS MERIDIAN FLEET",
-        "EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANTS"
-      ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm Marcus Webb here with Elena Torres. Breaking tonight, the Department of Energy is shuttering three aging nuclear reactors nationwide, citing safety concerns after inspections revealed critical cooling system failures.\n\n[ANCHOR_B] Thanks Marcus. Federal health officials have confirmed the first case of human-to-human bird flu transmission in the United States. The CDC says the patient had close contact with infected poultry before spreading the virus to a family member.\n\n[ANCHOR_A] Elena, the Department of Education announced it's withholding nearly four hundred million dollars in federal funding from seventeen states that failed to meet new literacy benchmarks under revised education standards.\n\n[ANCHOR_B] And Marcus, the Pentagon has grounded its entire fleet of Meridian Aerospace transport aircraft after a critical software malfunction forced an emergency landing at Dover Air Force Base yesterday.\n\n[ANCHOR_A] The EPA has ordered an immediate shutdown of three chemical manufacturing plants in Baton Rouge after inspectors discovered illegal dumping of industrial solvents into local waterways.\n\n[ANCHOR_B] And finally tonight, the Senate Intelligence Committee voted nine to six to declassify portions of a classified report examining foreign interference in U.S. energy infrastructure.\n\n[ANCHOR_A] We'll continue following these developing stories. I'm Marcus Webb with Elena Torres. This News Now returns after this break.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 6,
-      "published": "February 24, 2026 \u2014 11:06 PM",
-      "audio_file": "hourly_70a7f47d.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:06:08.227326",
-    "data": {
-      "script": "Good evening. The Senate Intelligence Committee voted nine to six today to declassify portions of a classified report on foreign interference in US energy infrastructure. Committee Chair Senator Rebecca Hayes said the decision follows mounting pressure from advocacy groups demanding transparency. [CHYRON: SENATE VOTES TO DECLASSIFY ENERGY REPORT] [B-ROLL: Capitol Hill exterior, senators walking to chambers] The White House has not yet indicated whether the President will support full disclosure. More details ahead.",
-      "chyrons": [
-        "SENATE VOTES TO DECLASSIFY ENERGY REPORT"
-      ],
-      "broll_descriptions": [
-        "Capitol Hill exterior, senators walking to chambers"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "897317a3",
-      "word_count": 58,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 11:06 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:05:53.475486",
-    "data": {
-      "script": "Good evening. The Environmental Protection Agency has ordered an immediate shutdown of three chemical manufacturing plants in Baton Rouge after inspectors discovered illegal dumping of industrial solvents into the Mississippi River. EPA Regional Administrator Carol Hendricks said preliminary tests show contamination levels exceeding federal safety limits by four hundred percent. [CHYRON: EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANTS] [B-ROLL: Aerial footage of industrial facilities along Mississippi River] The facilities employed nearly eight hundred workers. More on this developing story ahead.",
-      "chyrons": [
-        "EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANTS"
-      ],
-      "broll_descriptions": [
-        "Aerial footage of industrial facilities along Mississippi River"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "economics",
-      "story_id": "8ebc0589",
-      "word_count": 63,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 11:05 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:05:45.298949",
-    "data": {
-      "script": "Good evening. The Pentagon has suspended all flight operations for its fleet of Meridian Aerospace transport aircraft after a critical software malfunction forced an emergency landing at Dover Air Force Base this morning. Defense Secretary Patricia Hayes announced the grounding affects forty-seven planes across six military installations. [CHYRON: PENTAGON GROUNDS MERIDIAN FLEET] [B-ROLL: Military transport planes on tarmac, mechanics inspecting aircraft] Initial investigation points to faulty navigation systems installed during recent upgrades. More details ahead.",
-      "chyrons": [
-        "PENTAGON GROUNDS MERIDIAN FLEET"
-      ],
-      "broll_descriptions": [
-        "Military transport planes on tarmac, mechanics inspecting aircraft"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "c9bcab5d",
-      "word_count": 61,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 11:05 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:05:35.159032",
-    "data": {
-      "script": "The Department of Education announced today it will withhold nearly four hundred million dollars in federal funding virtual intentionality eroded the failed to meet new literacy benchmarks under revised reading standards. Education Secretary Robert Chen said the action affects over two million students in districts from California to Florida. [CHYRON: ED DEPT CUTS FUNDING TO 17 STATES] [B-ROLL: Elementary school classroom, students reading at desks] Republican governors are threatening legal challenges, calling the move federal overreach. More fallout expected tomorrow.",
-      "chyrons": [
-        "ED DEPT CUTS FUNDING TO 17 STATES"
-      ],
-      "broll_descriptions": [
-        "Elementary school classroom, students reading at desks"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "786423b4",
-      "word_count": 64,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 11:05 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:05:30.445923",
-    "data": {
-      "script": "Federal health officials a gem that is i just of ate some a slough furnished as a we , hoarse bores as my beak rings in true to the a from fussy husband, fog interrupts the contact crisp infected poultry. [CHYRON: FIRST HUMAN-TO-HUMAN BIRD FLU CASE CONFIRMED] [B-ROLL: CDC laboratory technicians in protective gear, microscope images of virus samples] can you please not be langoustine marble repeater a troupe of yodeling tomatoes and blue cream hot investigating similar just as the waves other slap clatter details ahead after this break.",
-      "chyrons": [
-        "FIRST HUMAN-TO-HUMAN BIRD FLU CASE CONFIRMED"
-      ],
-      "broll_descriptions": [
-        "CDC laboratory technicians in protective gear, microscope images of virus samples"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "health",
-      "story_id": "51bc424d",
-      "word_count": 71,
-      "nonsense_injected": false,
-      "nonsense_heavy": true,
-      "published": "February 24, 2026 \u2014 11:05 PM"
     }
   }
 ]
