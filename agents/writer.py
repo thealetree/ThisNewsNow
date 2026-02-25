@@ -9,12 +9,20 @@ designed to be indistinguishable from real local/national news.
 import anthropic
 import json
 import random
+import re
 import uuid
+
+
+# Word count targets
+MIN_WORDS = 60
+MAX_WORDS = 75
+MAX_RETRIES = 3
 
 
 def generate_script(config, world_bible, news_context):
     """
     Generate a single anchor script using Claude.
+    Retries if word count is outside 60-75 range.
 
     Returns a dict with:
         - script: full anchor script text
@@ -24,6 +32,7 @@ def generate_script(config, world_bible, news_context):
         - estimated_seconds: ~25
         - topic: story topic category
         - story_id: unique ID
+        - word_count: actual spoken word count
     """
     client = anthropic.Anthropic(api_key=config["apis"]["anthropic_key"])
 
@@ -38,41 +47,68 @@ def generate_script(config, world_bible, news_context):
     tone = dials.get("tone", "concerned")
     topic_weights = dials.get("topic_weights", {})
 
-    prompt = f"""You are a script writer for This News Now (TNN), a fictional but completely realistic-sounding television news channel.
+    system_msg = """You are a television news script writer. You write extremely concise broadcast copy. Every word must earn its place. You never exceed the word count you are given. You write in plain text only — no markdown, no formatting, no character names as prefixes."""
 
-WORLD BIBLE CONTEXT:
+    prompt = f"""Write a single anchor read for This News Now (TNN).
+
+WORLD CONTEXT:
 {world_summary}
 
-CURRENT NEWS REGISTER: {news_context.get('register', 'tense')}
-DOMINANT TOPICS TODAY: {', '.join(news_context.get('trending_topics', ['politics', 'economy']))}
-OPERATOR TONE SETTING: {tone}
-STORY TOPIC WEIGHT: {json.dumps(topic_weights)}
+NEWS REGISTER: {news_context.get('register', 'tense')}
+TRENDING: {', '.join(news_context.get('trending_topics', ['politics', 'economy']))}
+TONE: {tone}
+TOPIC WEIGHTS: {json.dumps(topic_weights)}
 
-Write a 25-second anchor script (spoken aloud at broadcast pace this should land at ~25 seconds — leave room for intro/outro bumpers to reach 30 seconds total). Rules:
-- Anchor name: {anchor['name']}. Gender: {anchor['gender']}.
-- Completely deadpan. No humor, no irony, no winking.
-- Story must be fictional but completely believable. Use real-sounding place names from the world bible or invent new ones that fit. Use real-sounding names for officials.
-- You may continue an ongoing story from the world bible OR introduce a new story that fits the current news register.
-- Include: [CHYRON: text] tags for lower-third graphics (1-2 chyrons per script)
-- Include: [B-ROLL: description] tags for cutaway shot descriptions (1-2 per script)
-- Story should feel like it belongs in today's real news cycle.
-- End with a one-line toss to commercial or next segment.
-- Do NOT reference real named politicians, real companies, or real specific events.
-- Output ONLY the script. No notes, no explanations, no metadata."""
+HARD REQUIREMENTS:
+- EXACTLY 60 to 75 spoken words. Not 76. Not 100. Count carefully.
+- Tags like [CHYRON: ...] and [B-ROLL: ...] do NOT count toward the word limit.
+- Cover ONE story. One angle. No pivoting to a second story.
+- End with a natural anchor sign-off: a toss to break, a tease of what's ahead, or a simple "more on this as it develops" style line. Keep it under 10 words.
 
-    message = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=1024,
-        messages=[{"role": "user", "content": prompt}],
-    )
+ANCHOR: {anchor['name']} ({anchor['gender']})
 
-    script_text = message.content[0].text.strip()
+CONTENT RULES:
+- Deadpan. No humor, no irony.
+- You MAY use real US places, real federal agencies (EPA, FBI, FEMA, etc.), real political parties.
+- All PEOPLE, COMPANIES, specific EVENTS, and QUOTES must be fictional.
+- Use places and storylines from the world context, or invent fitting new ones.
+- One [CHYRON: text] tag and one [B-ROLL: description] tag, placed inline where they'd appear on screen.
+- No markdown. No bold. No anchor name prefix. Just the spoken script with inline tags.
+
+EXAMPLE of correct length (68 words):
+Good evening. The Environmental Protection Agency confirmed tonight that water samples from three Toledo neighborhoods exceed federal lead thresholds by a significant margin. City Manager Greg Hess is pushing back, calling the findings preliminary, but state health officials have already issued a boil-water advisory for residents east of the Maumee River. FEMA resources have been requested. [CHYRON: TOLEDO WATER CRISIS DEEPENS] [B-ROLL: EPA crews collecting samples at residential homes] We'll have more after the break.
+
+NOW WRITE YOUR SCRIPT:"""
+
+    # Try up to MAX_RETRIES times to get a script within word count
+    for attempt in range(MAX_RETRIES):
+        message = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=512,
+            system=system_msg,
+            messages=[{"role": "user", "content": prompt}],
+        )
+
+        script_text = message.content[0].text.strip()
+        spoken_words = _count_spoken_words(script_text)
+
+        if MIN_WORDS <= spoken_words <= MAX_WORDS:
+            break
+        elif attempt < MAX_RETRIES - 1:
+            print(f"  Retry {attempt + 1}: got {spoken_words} words (need {MIN_WORDS}-{MAX_WORDS})")
+            # Adjust prompt hint for retry
+            if spoken_words > MAX_WORDS:
+                prompt += f"\n\nYour previous attempt was {spoken_words} words. That is too long. Cut it down to 65 words maximum. Be ruthless — remove adjectives, combine sentences, shorten the sign-off."
+            else:
+                prompt += f"\n\nYour previous attempt was only {spoken_words} words. Add one more detail to reach at least {MIN_WORDS} words."
+        else:
+            print(f"  Warning: final attempt got {spoken_words} words (target {MIN_WORDS}-{MAX_WORDS})")
 
     # Parse chyrons and B-roll from the script
     chyrons = _extract_tags(script_text, "CHYRON")
     broll_descriptions = _extract_tags(script_text, "B-ROLL")
 
-    # Determine topic from script content (simple heuristic)
+    # Determine topic from script content
     topic = _classify_topic(script_text, topic_weights)
 
     story_id = str(uuid.uuid4())[:8]
@@ -86,10 +122,18 @@ Write a 25-second anchor script (spoken aloud at broadcast pace this should land
         "estimated_seconds": 25,
         "topic": topic,
         "story_id": story_id,
+        "word_count": spoken_words,
     }
 
-    print(f"  Script generated: [{topic}] {chyrons[0] if chyrons else 'No chyron'}")
+    print(f"  Script generated: [{topic}] {spoken_words}w — {chyrons[0] if chyrons else 'No chyron'}")
     return script_data
+
+
+def _count_spoken_words(script_text):
+    """Count only spoken words, excluding [TAG: ...] content."""
+    cleaned = re.sub(r'\[[A-Z_-]+:\s*[^\]]+\]', '', script_text)
+    words = cleaned.split()
+    return len(words)
 
 
 def _build_world_summary(world_bible):
@@ -100,15 +144,33 @@ def _build_world_summary(world_bible):
     lines.append(f"Country: {nation.get('name', 'United States')}")
     lines.append(f"President: {nation.get('president', 'Unknown')}")
     lines.append(f"Vice President: {nation.get('vice_president', 'Unknown')}")
+    if "government_note" in nation:
+        lines.append(f"Government note: {nation['government_note']}")
+
+    # World rules (real/fictional mixing guidance)
+    world_rules = world_bible.get("world_rules", {})
+    if world_rules:
+        lines.append("\nREAL ENTITIES YOU MAY REFERENCE:")
+        for item in world_rules.get("real_entities_allowed", []):
+            lines.append(f"  - {item}")
+        lines.append("\nMUST BE FICTIONAL:")
+        for item in world_rules.get("must_be_fictional", []):
+            lines.append(f"  - {item}")
+        if "mixing_rule" in world_rules:
+            lines.append(f"\nMIXING RULE: {world_rules['mixing_rule']}")
 
     lines.append("\nOngoing stories:")
     for story in world_bible.get("ongoing_stories", []):
-        lines.append(f"  - {story['headline']} ({story['status']}): {story['summary']}")
+        location_note = ""
+        if "location_type" in story:
+            location_note = f" [{story['location_type']} location: {story.get('location', '')}]"
+        lines.append(f"  - {story['headline']} ({story['status']}){location_note}: {story['summary']}")
 
-    lines.append("\nFictional places available:")
-    for place in world_bible.get("fictional_places", []):
+    lines.append("\nAvailable places (mix of real and fictional):")
+    for place in world_bible.get("places", world_bible.get("fictional_places", [])):
         if isinstance(place, dict):
-            lines.append(f"  - {place['name']}, {place['state']}")
+            real_tag = "REAL" if place.get("real", False) else "FICTIONAL"
+            lines.append(f"  - {place['name']}, {place['state']} [{real_tag}]")
         else:
             lines.append(f"  - {place}")
 
@@ -121,7 +183,6 @@ def _build_world_summary(world_bible):
 
 def _extract_tags(script, tag_name):
     """Extract [TAG: content] values from script text."""
-    import re
     pattern = rf'\[{tag_name}:\s*(.+?)\]'
     return re.findall(pattern, script, re.IGNORECASE)
 

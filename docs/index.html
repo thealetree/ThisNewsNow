@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This News Now</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #111111;
+      --text-secondary: #555555;
+      --text-muted: #999999;
+      --border: #e0e0e0;
+      --border-light: #eeeeee;
+      --accent: #111111;
+      --red: #c41e2a;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 1.4rem 2rem 1.2rem;
+      position: relative;
+    }
+
+    .header-date {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 0.4rem;
+    }
+
+    .header-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .header-tagline {
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      opacity: 0.4;
+      margin-top: 0.3rem;
+    }
+
+    .header-live {
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--red);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .live-dot.off { animation: none; opacity: 0.3; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* ── Nav bar ── */
+    .nav-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 0.6rem 2rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .nav-bar span { cursor: default; transition: color 0.15s; }
+    .nav-bar span:hover { color: var(--text); }
+
+    /* ── Generator Toggle (local mode only) ── */
+    .gen-toggle {
+      display: none; /* hidden by default, shown in local mode */
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: auto;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .gen-toggle.visible { display: flex; }
+
+    .toggle-switch {
+      position: relative;
+      width: 36px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+
+    .toggle-track {
+      position: absolute;
+      inset: 0;
+      background: var(--border);
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+
+    .toggle-switch input:checked + .toggle-track {
+      background: var(--accent);
+    }
+
+    .toggle-knob {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.2s;
+      pointer-events: none;
+    }
+
+    .toggle-switch input:checked ~ .toggle-knob {
+      transform: translateX(16px);
+    }
+
+    .gen-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      color: var(--text-muted);
+    }
+
+    .gen-status.active { color: var(--red); }
+
+    /* ── Ticker ── */
+    .ticker-wrap {
+      background: var(--accent);
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      height: 32px;
+    }
+
+    .ticker-label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: var(--red);
+      color: white;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      z-index: 2;
+    }
+
+    .ticker-track {
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      animation: tickerScroll 30s linear infinite;
+      padding-left: 100px;
+    }
+
+    .ticker-track span {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      padding: 0 2rem;
+      white-space: nowrap;
+    }
+
+    .ticker-track .ticker-dot {
+      color: var(--red);
+      padding: 0 0.5rem;
+      font-size: 0.5rem;
+    }
+
+    @keyframes tickerScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── Main Content ── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      flex: 1;
+      width: 100%;
+    }
+
+    .stories-empty {
+      text-align: center;
+      padding: 5rem 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .stories-empty .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--border);
+      border-top-color: var(--text-muted);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Article ── */
+    article {
+      border-bottom: 1px solid var(--border-light);
+      padding: 2rem 0;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    article:first-of-type { padding-top: 0; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .article-topic {
+      background: var(--accent);
+      color: white;
+      padding: 0.15rem 0.5rem;
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+    }
+
+    .article-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    article:first-of-type .article-headline { font-size: 2rem; }
+
+    .article-byline {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .article-byline strong { color: var(--text); font-weight: 600; }
+
+    .article-body {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .article-body p { margin-bottom: 0.8rem; }
+
+    /* ── Audio Player ── */
+    .audio-player {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.2rem;
+      padding: 0.8rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border-light);
+    }
+
+    .play-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent);
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.15s;
+    }
+
+    .play-btn:hover { background: var(--accent); }
+    .play-btn:hover svg { fill: white; }
+    .play-btn svg { width: 12px; height: 12px; fill: var(--accent); }
+
+    .audio-info { flex: 1; min-width: 0; }
+
+    .audio-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .audio-progress {
+      width: 100%;
+      height: 2px;
+      background: var(--border);
+      margin-top: 0.4rem;
+      border-radius: 1px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .audio-progress-bar {
+      height: 100%;
+      background: var(--accent);
+      width: 0%;
+      transition: width 0.3s;
+    }
+
+    .audio-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* ── Hourly Summary ── */
+    .hourly-summary {
+      background: var(--accent);
+      color: white;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem -1.5rem;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .hourly-summary:first-child { margin-top: 0; }
+
+    .hourly-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .hourly-badge {
+      background: var(--red);
+      padding: 0.3rem 0.7rem;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .hourly-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .hourly-meta {
+      font-size: 0.65rem;
+      opacity: 0.5;
+      letter-spacing: 0.08em;
+      margin-left: auto;
+    }
+
+    .hourly-headlines {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .hourly-headlines span {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 0.2rem 0.6rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hourly-script {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      opacity: 0.8;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.3s;
+    }
+
+    .hourly-script.expanded {
+      max-height: 600px;
+      opacity: 0.8;
+    }
+
+    .hourly-script .seg-label {
+      font-weight: 600;
+      opacity: 1;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 0.6rem;
+    }
+
+    .hourly-script .seg-label:first-child { margin-top: 0; }
+
+    .hourly-player {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      padding: 0.8rem 1rem;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hourly-player .play-btn {
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    .hourly-player .play-btn svg { fill: white; }
+
+    .hourly-player .play-btn:hover {
+      background: white;
+    }
+
+    .hourly-player .play-btn:hover svg { fill: var(--accent); }
+
+    .hourly-player .audio-label { color: rgba(255,255,255,0.4); }
+    .hourly-player .audio-progress { background: rgba(255,255,255,0.15); }
+    .hourly-player .audio-progress-bar { background: white; }
+    .hourly-player .audio-time { color: rgba(255,255,255,0.4); }
+
+    .hourly-expand {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 0.5rem 0 0;
+      transition: color 0.15s;
+    }
+
+    .hourly-expand:hover { color: rgba(255,255,255,0.7); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-light);
+      line-height: 1.8;
+    }
+
+    footer .disclosure { max-width: 500px; margin: 0 auto; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .header-logo { font-size: 1.6rem; }
+      .header-live { display: none; }
+      main { padding: 1.5rem 1rem; }
+      .article-headline { font-size: 1.3rem; }
+      article:first-of-type .article-headline { font-size: 1.5rem; }
+      .nav-bar { gap: 1rem; font-size: 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-date" id="headerDate"></div>
+    <div class="header-logo">This News Now</div>
+    <div class="header-tagline">Your world. Right now.</div>
+    <div class="header-live">
+      <span class="live-dot" id="liveDot"></span>
+      <span id="liveLabel">Live</span>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <span>Politics</span>
+    <span>Infrastructure</span>
+    <span>Science</span>
+    <span>Crime</span>
+    <span>International</span>
+
+    <!-- Generator toggle — only visible in local Flask mode -->
+    <div class="gen-toggle" id="genToggle">
+      <span>Generator</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="genSwitch" onchange="toggleGenerator()">
+        <span class="toggle-track"></span>
+        <span class="toggle-knob"></span>
+      </label>
+      <span class="gen-status" id="genStatus">off</span>
+    </div>
+  </nav>
+
+  <div class="ticker-wrap">
+    <div class="ticker-label">Breaking</div>
+    <div class="ticker-track" id="tickerTrack">
+      <span>Loading headlines...</span>
+    </div>
+  </div>
+
+  <main id="storiesContainer">
+    <div class="stories-empty" id="emptyState">
+      <div class="spinner"></div>
+      <div>Waiting for stories...</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="disclosure">
+      This News Now presents fictional news content. All stories, people,
+      and events depicted are entirely fabricated for creative and entertainment purposes.
+    </div>
+  </footer>
+
+<script>
+  // ── Config ──
+  const storyIds = new Set();
+  let audioElements = {};
+  let isLocalMode = false;
+  let generatorRunning = false;
+
+  // Detect if running via Flask (local) or static (GitHub Pages)
+  function detectMode() {
+    return fetch('/api/status').then(r => r.ok).catch(() => false);
+  }
+
+  // ── Date ──
+  function updateDate() {
+    var now = new Date();
+    var opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('headerDate').textContent =
+      now.toLocaleDateString('en-US', opts) + ' \u2014 ' +
+      now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  }
+  updateDate();
+  setInterval(updateDate, 60000);
+
+  // ── Ticker ──
+  function buildTicker(headlines) {
+    if (!headlines || headlines.length === 0) return;
+    var track = document.getElementById('tickerTrack');
+    var items = headlines.map(function(h) {
+      return '<span>' + h + '</span><span class="ticker-dot">\u25cf</span>';
+    }).join('');
+    track.innerHTML = items + items;
+    var duration = Math.max(20, headlines.length * 4);
+    track.style.animationDuration = duration + 's';
+  }
+
+  // ── Format Helpers ──
+  function formatBody(script) {
+    var text = script;
+    text = text.replace(/\[CHYRON:\s*[^\]]+\]/gi, '');
+    text = text.replace(/\[B-ROLL:\s*[^\]]+\]/gi, '');
+    text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
+    text = text.replace(/^[A-Z][A-Za-z\s]+:\s*/, '');
+    text = text.trim();
+    var sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+    if (sentences.length >= 3) {
+      var mid = Math.ceil(sentences.length / 2);
+      return '<p>' + sentences.slice(0, mid).join(' ').trim() + '</p>' +
+             '<p>' + sentences.slice(mid).join(' ').trim() + '</p>';
+    }
+    return '<p>' + text + '</p>';
+  }
+
+  function formatHeadline(data) {
+    if (data.chyrons && data.chyrons.length > 0) {
+      var small = ['of','the','in','on','at','to','for','and','a','an','by','with'];
+      return data.chyrons[0].split(' ').map(function(w, i) {
+        var lower = w.toLowerCase();
+        if (i > 0 && small.indexOf(lower) !== -1) return lower;
+        return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+      }).join(' ');
+    }
+    return 'Developing Story';
+  }
+
+  // ── Render Article ──
+  function addStory(storyData, timestamp) {
+    var d = storyData;
+    if (storyIds.has(d.story_id)) return;
+    storyIds.add(d.story_id);
+
+    var empty = document.getElementById('emptyState');
+    if (empty) empty.remove();
+
+    var container = document.getElementById('storiesContainer');
+    var article = document.createElement('article');
+
+    var headline = formatHeadline(d);
+    var body = formatBody(d.script || '');
+    var topic = (d.topic || 'general').toUpperCase();
+    var anchor = d.anchor || 'Staff Reporter';
+    var published = d.published || new Date(timestamp).toLocaleString('en-US', {
+      month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'
+    });
+
+    // Audio: in local mode use API, on GitHub Pages use relative path
+    var hasAudio = !!(d.audio_path || d.audio_file);
+    var audioSrc = '';
+    if (d.audio_file) {
+      audioSrc = 'audio/' + d.audio_file;  // static mode
+    } else if (d.audio_path && isLocalMode) {
+      audioSrc = '/api/audio/' + d.story_id;  // local Flask mode
+    }
+
+    article.innerHTML =
+      '<div class="article-meta">' +
+        '<span class="article-topic">' + topic + '</span>' +
+        '<span>' + published + '</span>' +
+      '</div>' +
+      '<h2 class="article-headline">' + headline + '</h2>' +
+      '<div class="article-byline">By <strong>' + anchor + '</strong>, This News Now</div>' +
+      '<div class="article-body">' + body + '</div>' +
+      (hasAudio && audioSrc ?
+        '<div class="audio-player">' +
+          '<button class="play-btn" onclick="toggleAudio(\'' + d.story_id + '\', \'' + audioSrc + '\')">' +
+            '<svg viewBox="0 0 24 24" id="playIcon-' + d.story_id + '">' +
+              '<polygon points="6,3 20,12 6,21"/>' +
+            '</svg>' +
+          '</button>' +
+          '<div class="audio-info">' +
+            '<div class="audio-label">Listen to broadcast</div>' +
+            '<div class="audio-progress" onclick="seekAudio(event, \'' + d.story_id + '\')">' +
+              '<div class="audio-progress-bar" id="progress-' + d.story_id + '"></div>' +
+            '</div>' +
+          '</div>' +
+          '<span class="audio-time" id="time-' + d.story_id + '">0:00</span>' +
+        '</div>' : '');
+
+    if (container.firstChild) {
+      container.insertBefore(article, container.firstChild);
+    } else {
+      container.appendChild(article);
+    }
+  }
+
+  // ── Render Hourly Summary ──
+  function addHourlySummary(data, timestamp) {
+    if (storyIds.has(data.story_id)) return;
+    storyIds.add(data.story_id);
+
+    var empty = document.getElementById('emptyState');
+    if (empty) empty.remove();
+
+    var container = document.getElementById('storiesContainer');
+    var block = document.createElement('div');
+    block.className = 'hourly-summary';
+
+    var published = data.published || new Date(timestamp).toLocaleString('en-US', {
+      month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'
+    });
+
+    var hasAudio = !!(data.audio_path || data.audio_file);
+    var audioSrc = '';
+    if (data.audio_file) {
+      audioSrc = 'audio/' + data.audio_file;
+    } else if (data.audio_path && isLocalMode) {
+      audioSrc = '/api/audio/' + data.story_id;
+    }
+
+    // Format headlines as tags
+    var headlineTags = (data.headlines || []).map(function(h) {
+      return '<span>' + h + '</span>';
+    }).join('');
+
+    // Format script with anchor labels
+    var scriptHtml = '';
+    if (data.full_script) {
+      scriptHtml = data.full_script
+        .replace(/\[ANCHOR_A\]\s*/g, '<span class="seg-label">' + (data.anchor_a || 'Anchor') + '</span>')
+        .replace(/\[ANCHOR_B\]\s*/g, '<span class="seg-label">' + (data.anchor_b || 'Anchor') + '</span>')
+        .replace(/\n/g, ' ');
+    }
+
+    block.innerHTML =
+      '<div class="hourly-header">' +
+        '<span class="hourly-badge">Hourly Update</span>' +
+        '<span class="hourly-title">' + (data.hour_label || '') + ' Summary</span>' +
+        '<span class="hourly-meta">' + published + ' \u2022 ' + (data.story_count || 0) + ' stories</span>' +
+      '</div>' +
+      '<div class="hourly-headlines">' + headlineTags + '</div>' +
+      (hasAudio && audioSrc ?
+        '<div class="hourly-player">' +
+          '<button class="play-btn" onclick="toggleAudio(\'' + data.story_id + '\', \'' + audioSrc + '\')">' +
+            '<svg viewBox="0 0 24 24" id="playIcon-' + data.story_id + '">' +
+              '<polygon points="6,3 20,12 6,21"/>' +
+            '</svg>' +
+          '</button>' +
+          '<div class="audio-info">' +
+            '<div class="audio-label">Listen to hourly update</div>' +
+            '<div class="audio-progress" onclick="seekAudio(event, \'' + data.story_id + '\')">' +
+              '<div class="audio-progress-bar" id="progress-' + data.story_id + '"></div>' +
+            '</div>' +
+          '</div>' +
+          '<span class="audio-time" id="time-' + data.story_id + '">0:00</span>' +
+        '</div>' : '') +
+      '<div class="hourly-script" id="script-' + data.story_id + '">' + scriptHtml + '</div>' +
+      '<button class="hourly-expand" onclick="toggleScript(\'' + data.story_id + '\')">Show full transcript</button>';
+
+    if (container.firstChild) {
+      container.insertBefore(block, container.firstChild);
+    } else {
+      container.appendChild(block);
+    }
+  }
+
+  function toggleScript(storyId) {
+    var el = document.getElementById('script-' + storyId);
+    if (!el) return;
+    el.classList.toggle('expanded');
+    var btn = el.nextElementSibling;
+    if (btn) btn.textContent = el.classList.contains('expanded') ? 'Hide transcript' : 'Show full transcript';
+  }
+
+  // ── Render Any Event ──
+  function addEvent(event) {
+    if (event.type === 'story') {
+      addStory(event.data, event.timestamp);
+    } else if (event.type === 'hourly_summary') {
+      addHourlySummary(event.data, event.timestamp);
+    }
+  }
+
+  // ── Audio ──
+  function toggleAudio(storyId, src) {
+    var audio = audioElements[storyId];
+    var icon = document.getElementById('playIcon-' + storyId);
+
+    if (!audio) {
+      audio = new Audio(src);
+      audioElements[storyId] = audio;
+
+      audio.addEventListener('timeupdate', function() {
+        var pct = (audio.currentTime / audio.duration) * 100;
+        var bar = document.getElementById('progress-' + storyId);
+        var time = document.getElementById('time-' + storyId);
+        if (bar) bar.style.width = pct + '%';
+        if (time) {
+          var mins = Math.floor(audio.currentTime / 60);
+          var secs = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
+          time.textContent = mins + ':' + secs;
+        }
+      });
+
+      audio.addEventListener('ended', function() {
+        icon.innerHTML = '<polygon points="6,3 20,12 6,21"/>';
+      });
+    }
+
+    if (audio.paused) {
+      // Pause all others
+      Object.keys(audioElements).forEach(function(id) {
+        if (id !== storyId && !audioElements[id].paused) {
+          audioElements[id].pause();
+          var otherIcon = document.getElementById('playIcon-' + id);
+          if (otherIcon) otherIcon.innerHTML = '<polygon points="6,3 20,12 6,21"/>';
+        }
+      });
+      audio.play();
+      icon.innerHTML = '<rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/>';
+    } else {
+      audio.pause();
+      icon.innerHTML = '<polygon points="6,3 20,12 6,21"/>';
+    }
+  }
+
+  function seekAudio(event, storyId) {
+    var audio = audioElements[storyId];
+    if (!audio || !audio.duration) return;
+    var bar = event.currentTarget;
+    var rect = bar.getBoundingClientRect();
+    var pct = (event.clientX - rect.left) / rect.width;
+    audio.currentTime = pct * audio.duration;
+  }
+
+  // ── Generator Toggle (local mode) ──
+  function toggleGenerator() {
+    var sw = document.getElementById('genSwitch');
+    var status = document.getElementById('genStatus');
+
+    if (sw.checked) {
+      fetch('/api/generator/start', { method: 'POST' })
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          generatorRunning = true;
+          status.textContent = 'running';
+          status.classList.add('active');
+          document.getElementById('liveDot').classList.remove('off');
+        });
+    } else {
+      fetch('/api/generator/stop', { method: 'POST' })
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          generatorRunning = false;
+          status.textContent = 'off';
+          status.classList.remove('active');
+          document.getElementById('liveDot').classList.add('off');
+        });
+    }
+  }
+
+  // ── Static Mode: Load from stories.json ──
+  function loadStaticStories() {
+    fetch('stories.json?t=' + Date.now())
+      .then(function(r) { return r.json(); })
+      .then(function(stories) {
+        stories.slice().reverse().forEach(function(s) {
+          addEvent(s);
+        });
+        var headlines = [];
+        stories.forEach(function(s) {
+          if (s.data.chyrons) {
+            s.data.chyrons.forEach(function(c) {
+              if (headlines.indexOf(c) === -1) headlines.push(c);
+            });
+          }
+          if (s.data.headlines) {
+            s.data.headlines.forEach(function(h) {
+              if (headlines.indexOf(h) === -1) headlines.push(h);
+            });
+          }
+        });
+        buildTicker(headlines);
+      })
+      .catch(function() {});
+  }
+
+  // ── Local Mode: SSE ──
+  function connectSSE() {
+    var evtSource = new EventSource('/api/stream');
+    evtSource.onmessage = function(e) {
+      var event = JSON.parse(e.data);
+      addEvent(event);
+      // Refresh ticker on new content
+      if (event.type === 'story' || event.type === 'hourly_summary') {
+        fetch('/api/ticker').then(function(r) { return r.json(); })
+          .then(buildTicker).catch(function() {});
+      }
+    };
+    evtSource.onerror = function() {
+      evtSource.close();
+      setTimeout(connectSSE, 3000);
+    };
+  }
+
+  // ── Init ──
+  detectMode().then(function(local) {
+    isLocalMode = local;
+
+    if (local) {
+      // Local Flask mode: show toggle, use SSE
+      document.getElementById('genToggle').classList.add('visible');
+      document.getElementById('liveDot').classList.add('off');
+
+      // Check if generator is already running
+      fetch('/api/status').then(function(r) { return r.json(); })
+        .then(function(d) {
+          if (d.generator_running) {
+            document.getElementById('genSwitch').checked = true;
+            document.getElementById('genStatus').textContent = 'running';
+            document.getElementById('genStatus').classList.add('active');
+            document.getElementById('liveDot').classList.remove('off');
+            generatorRunning = true;
+          }
+        });
+
+      connectSSE();
+      // Also load any existing stories
+      fetch('/api/stories').then(function(r) { return r.json(); })
+        .then(function(stories) {
+          stories.slice().reverse().forEach(function(s) {
+            addEvent(s);
+          });
+          return fetch('/api/ticker');
+        })
+        .then(function(r) { return r.json(); })
+        .then(buildTicker)
+        .catch(function() {});
+    } else {
+      // Static GitHub Pages mode: poll stories.json
+      loadStaticStories();
+      // Re-poll every 30 seconds in case someone just pushed new stories
+      setInterval(loadStaticStories, 30000);
+    }
+  });
+</script>
+
+</body>
+</html>

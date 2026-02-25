@@ -9,50 +9,61 @@
   },
   "nation": {
     "name": "United States",
-    "president": "President Alan Dorsey",
-    "vice_president": "Vice President Sandra Okafor",
+    "president": "President Donald Trump",
+    "vice_president": "Vice President JD Vance",
     "capital": "Washington D.C.",
-    "ruling_party": "Democratic Alliance",
-    "opposition_party": "National Conservative Coalition",
-    "senate_split": "52-48 DA majority",
-    "key_cabinet": {
-      "secretary_of_state": "Raymond Cho",
-      "attorney_general": "Linda Bascombe",
-      "secretary_of_defense": "Gen. (Ret.) Terrence Marks"
-    }
+    "government_note": "Use the real current US government structure. Real parties (Democrat, Republican), real branches, real agencies. Fictional characters should hold lower-level or local positions only — never replace real sitting federal officials."
   },
   "ongoing_stories": [
     {
       "id": "dunmore_port_strike",
       "headline": "Dunmore Port Workers Strike Enters Week 3",
-      "summary": "Longshoremen at Dunmore Port, New Hampshire have been striking over pension cuts since March 4th. Talks collapsed twice. Federal mediators have been called in. Governor Ellen Marsh faces mounting pressure to intervene.",
+      "summary": "Longshoremen at Dunmore Port, New Hampshire have been striking over pension cuts since March 4th. Talks collapsed twice. Federal mediators from the NLRB have been called in. Governor Ellen Marsh faces mounting pressure to intervene.",
       "status": "ongoing",
       "started": "2025-03-04",
-      "key_figures": ["Union leader Frank DiNapoli", "Port Authority Chair Janet Reeves", "Governor Ellen Marsh"]
+      "key_figures": ["Union leader Frank DiNapoli", "Port Authority Chair Janet Reeves", "Governor Ellen Marsh"],
+      "location": "Dunmore, New Hampshire",
+      "location_type": "fictional"
     },
     {
-      "id": "esterfield_water",
-      "headline": "Esterfield Water Contamination Investigation Widens",
-      "summary": "State regulators confirmed elevated lead levels in Esterfield, Ohio municipal water supply. EPA regional office has opened a formal inquiry. Mayor Tom Buckley disputes the findings.",
+      "id": "toledo_water",
+      "headline": "Toledo Water Contamination Investigation Widens",
+      "summary": "State regulators confirmed elevated lead levels in Toledo, Ohio municipal water supply near the Maumee River corridor. EPA regional office has opened a formal inquiry. City officials dispute the severity of the findings.",
       "status": "ongoing",
       "started": "2025-02-18",
-      "key_figures": ["Mayor Tom Buckley", "EPA Regional Director Susan Park", "State Rep. David Gillis"]
+      "key_figures": ["EPA Regional Director Susan Park", "City Manager Greg Hess", "State Rep. David Gillis"],
+      "location": "Toledo, Ohio",
+      "location_type": "real"
     },
     {
-      "id": "harwick_wildfire_season",
-      "headline": "New Harwick County Braces for Early Wildfire Season",
-      "summary": "Unusually dry conditions in Montana have prompted New Harwick County to declare a preemptive state of emergency. Three small brush fires already contained this month.",
+      "id": "flathead_wildfire_season",
+      "headline": "Flathead County Braces for Early Wildfire Season",
+      "summary": "Unusually dry conditions in Montana have prompted Flathead County to declare a preemptive state of emergency. Three small brush fires already contained this month near Kalispell.",
       "status": "developing",
       "started": "2025-02-25",
-      "key_figures": ["County Emergency Director Paul Whitfield", "Forest Service spokesperson Amy Tran"]
+      "key_figures": ["County Emergency Director Paul Whitfield", "Forest Service spokesperson Amy Tran"],
+      "location": "Flathead County, Montana",
+      "location_type": "real"
     },
     {
       "id": "federal_budget_standoff",
       "headline": "Budget Standoff: Senate Committee Deadlocked on Infrastructure Bill",
-      "summary": "The Senate Appropriations Committee has been unable to reach agreement on the $1.2 trillion infrastructure modernization package. Senator Diane Caldwell (DA-IL) and Senator Robert Haines (NCC-TX) remain at an impasse over rural broadband funding.",
+      "summary": "The Senate Appropriations Committee has been unable to reach agreement on the $1.2 trillion infrastructure modernization package. A bipartisan coalition remains at an impasse over rural broadband funding allocation.",
       "status": "ongoing",
       "started": "2025-01-15",
-      "key_figures": ["Senator Diane Caldwell", "Senator Robert Haines", "OMB Director Keith Welliver"]
+      "key_figures": ["Senator Diane Caldwell (fictional)", "Senator Robert Haines (fictional)"],
+      "location": "Washington, D.C.",
+      "location_type": "real"
+    },
+    {
+      "id": "port_calloway_chemical",
+      "headline": "Port Calloway Residents Demand Answers After Chemical Plant Audit",
+      "summary": "Residents of Port Calloway, Louisiana are demanding a public hearing after a state environmental audit flagged three violations at the Gulfmark Petrochemical facility. Company denies any public health risk.",
+      "status": "developing",
+      "started": "2025-02-10",
+      "key_figures": ["Plant manager Dale Fontenot", "Community organizer Rita Blanchard", "State environmental inspector Carl Meaux"],
+      "location": "Port Calloway, Louisiana",
+      "location_type": "fictional"
     }
   ],
   "anchors": [
@@ -71,21 +82,38 @@
       "sign_off": "Reporting for This News Now, Marcus Webb."
     }
   ],
-  "fictional_places": [
-    {"name": "Dunmore", "state": "New Hampshire", "type": "port city", "population": "~84,000"},
-    {"name": "Port Calloway", "state": "Louisiana", "type": "gulf coast town", "population": "~31,000"},
-    {"name": "Esterfield", "state": "Ohio", "type": "rust belt city", "population": "~112,000"},
-    {"name": "New Harwick", "state": "Montana", "type": "rural county seat", "population": "~19,000"},
-    {"name": "Bellhaven", "state": "Virginia", "type": "DC suburb", "population": "~67,000"},
-    {"name": "Carver Falls", "state": "Oregon", "type": "college town", "population": "~45,000"},
-    {"name": "Lake Ridley", "state": "Minnesota", "type": "lakeside community", "population": "~8,000"}
+  "places": [
+    {"name": "Dunmore", "state": "New Hampshire", "type": "port city", "population": "~84,000", "real": false},
+    {"name": "Port Calloway", "state": "Louisiana", "type": "gulf coast town", "population": "~31,000", "real": false},
+    {"name": "Esterfield", "state": "Ohio", "type": "rust belt city", "population": "~112,000", "real": false},
+    {"name": "Bellhaven", "state": "Virginia", "type": "DC suburb", "population": "~67,000", "real": false},
+    {"name": "Toledo", "state": "Ohio", "type": "industrial city", "population": "~270,000", "real": true},
+    {"name": "Kalispell", "state": "Montana", "type": "mountain town", "population": "~28,000", "real": true},
+    {"name": "Baton Rouge", "state": "Louisiana", "type": "state capital", "population": "~225,000", "real": true},
+    {"name": "Norfolk", "state": "Virginia", "type": "naval port city", "population": "~235,000", "real": true}
   ],
   "fictional_organizations": [
     "National Port Workers Alliance (NPWA)",
     "Heartland Energy Corporation",
+    "Gulfmark Petrochemical",
     "Consolidated Rail Associates",
     "Pacific Northwest Timber Cooperative",
     "Great Lakes Environmental Council"
   ],
+  "world_rules": {
+    "real_entities_allowed": [
+      "US federal government (President, VP, Congress, agencies like EPA, FEMA, NLRB, FBI)",
+      "Real US cities and states",
+      "Real government agencies and departments",
+      "Real political parties (Democrat, Republican)"
+    ],
+    "must_be_fictional": [
+      "All named individuals below federal level (governors, mayors, police chiefs, etc.)",
+      "All private companies and organizations",
+      "Specific events and incidents",
+      "Any quoted statements or statistics"
+    ],
+    "mixing_rule": "Stories should blend real places and real agencies with fictional people and fictional events. This creates the uncanny almost-real feeling. A story can be set in a real city with a real federal agency investigating, but the local officials, the specific incident, and all quotes must be invented."
+  },
   "disclosure": "This News Now presents fictional news content. All stories, people, and events depicted are entirely fabricated for creative and entertainment purposes."
 }

@@ -5,7 +5,10 @@ config.yaml
 output/
 segments/
 *.mp4
+
+# Audio — ignore everywhere except docs/audio/ (committed for GitHub Pages)
 *.mp3
+!docs/audio/*.mp3
 
 # News context (regenerated at runtime)
 news_context.json
@@ -18,6 +21,9 @@ venv/
 
 # Logs
 *.log
+
+# Test scripts
+test_*.py
 
 # macOS
 .DS_Store

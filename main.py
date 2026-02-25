@@ -7,6 +7,7 @@ Usage:
     python main.py --mode pilot --count 5    # Phase A: generate N clips locally
     python main.py --mode upload --count 3   # Phase B: generate N clips + upload to YouTube
     python main.py --mode stream             # Phase C: continuous 24/7 livestream
+    python main.py --mode dashboard          # Launch dashboard only
 """
 
 import argparse
@@ -37,58 +38,92 @@ def load_world_bible(config):
         return json.load(f)
 
 
-def run_pilot(config, world_bible, count):
-    """Phase A: Generate N clips and save to output/ for review."""
+def run_pilot(config, world_bible, count, dashboard=True):
+    """Phase A: Generate N text stories + an hourly audio summary."""
     from agents.scraper import scrape_news_context
     from agents.writer import generate_script
-    from agents.tts import generate_audio
-    from video.assembler import assemble_clip
+    from agents.hourly_summary import generate_hourly_summary
+    from agents.tts import generate_hourly_audio
+    from dashboard.app import push_script, push_hourly_summary, push_status, start_dashboard_thread
 
-    output_dir = Path(config["pilot"]["output_dir"])
-    output_dir.mkdir(exist_ok=True)
+    # Start dashboard in background
+    if dashboard:
+        start_dashboard_thread(port=8080)
+        print(f"  Dashboard: http://localhost:8080")
 
     print(f"\n{'='*50}")
     print(f"  THIS NEWS NOW — Pilot Mode")
-    print(f"  Generating {count} clip(s)...")
+    print(f"  Generating {count} text stories + hourly audio summary")
     print(f"{'='*50}\n")
 
-    # Step 1: Get current news context (shapes our fictional stories)
-    print("[1/4] Scraping real news context...")
+    push_status(f"Pilot run started — {count} stories + audio summary")
+
+    # Step 1: Get current news context
+    print("[1/3] Scraping real news context...")
+    push_status("Scraping real news context...")
     news_context = scrape_news_context()
+    push_status(f"Context ready: register={news_context.get('register')}, topics={news_context.get('trending_topics')}")
+
+    all_stories = []
 
     for i in range(count):
-        print(f"\n--- Clip {i+1}/{count} ---")
+        print(f"\n--- Story {i+1}/{count} ---")
+        push_status(f"Writing story {i+1}/{count}...")
 
-        # Step 2: Generate anchor script
-        print("[2/4] Writing script...")
+        # Step 2: Generate text-only story (no TTS)
+        print("[2/3] Writing script...")
         script_data = generate_script(
             config=config,
             world_bible=world_bible,
             news_context=news_context,
         )
 
-        # Step 3: Generate TTS audio
-        print("[3/4] Generating TTS audio...")
-        audio_data = generate_audio(
-            script_data=script_data,
-            config=config,
-        )
+        push_script(script_data)  # Text only — no audio
+        all_stories.append(script_data)
+        print(f"  ✓ Published: {script_data.get('chyrons', ['Story'])[0]}")
+        push_status(f"Published: {script_data.get('chyrons', ['Story'])[0]}")
 
-        # Step 4: Assemble final video
-        print("[4/4] Assembling video...")
-        output_path = assemble_clip(
-            script_data=script_data,
-            audio_data=audio_data,
-            config=config,
-            output_dir=output_dir,
-        )
+    # Step 3: Generate hourly audio summary from all stories
+    if all_stories:
+        print(f"\n--- Hourly Audio Summary ---")
+        print("[3/3] Generating dual-anchor audio summary...")
+        push_status(f"Generating hourly summary ({len(all_stories)} stories)...")
 
-        print(f"  ✓ Saved: {output_path}")
+        summary_data = generate_hourly_summary(all_stories, config, world_bible)
+
+        if summary_data:
+            push_status("Generating dual-anchor TTS audio...")
+            audio_data = generate_hourly_audio(summary_data, config)
+
+            if audio_data:
+                push_hourly_summary(summary_data, audio_path=audio_data.get("audio_path"))
+                print(f"  ✓ Hourly summary: {audio_data.get('actual_duration_seconds', 0):.0f}s, {audio_data.get('segment_count', 0)} segments")
+                push_status(f"Hourly summary published ({audio_data.get('actual_duration_seconds', 0):.0f}s)")
+
+    push_status(f"Pilot complete — {count} stories + audio summary")
 
     print(f"\n{'='*50}")
-    print(f"  Done. {count} clip(s) saved to {output_dir}/")
-    print(f"  Review them and iterate on prompts/assets.")
-    print(f"{'='*50}\n")
+    print(f"  Done. {count} text stories + hourly audio summary generated.")
+    if dashboard:
+        print(f"  Dashboard: http://localhost:8080")
+        print(f"  Press Ctrl+C to stop.")
+        print(f"{'='*50}\n")
+        try:
+            while True:
+                import time
+                time.sleep(1)
+        except KeyboardInterrupt:
+            print("\n  Shutting down.")
+    else:
+        print(f"{'='*50}\n")
+
+
+def run_dashboard(config):
+    """Run dashboard server standalone."""
+    from dashboard.app import start_dashboard
+    print(f"\n  THIS NEWS NOW — Dashboard")
+    print(f"  http://localhost:8080\n")
+    start_dashboard(port=8080, debug=True)
 
 
 def run_upload(config, world_bible, count):
@@ -109,9 +144,9 @@ def main():
     )
     parser.add_argument(
         "--mode",
-        choices=["pilot", "upload", "stream"],
+        choices=["pilot", "upload", "stream", "dashboard"],
         required=True,
-        help="Operating mode: pilot (local clips), upload (YouTube), stream (24/7 live)",
+        help="Operating mode: pilot (local clips), upload (YouTube), stream (24/7 live), dashboard (web UI only)",
     )
     parser.add_argument(
         "--count",
@@ -123,6 +158,11 @@ def main():
         "--config",
         default="config.yaml",
         help="Path to config file (default: config.yaml)",
+    )
+    parser.add_argument(
+        "--no-dashboard",
+        action="store_true",
+        help="Disable dashboard server during pilot/upload runs",
     )
 
     args = parser.parse_args()
@@ -137,11 +177,13 @@ def main():
         count = config.get("pilot", {}).get("default_count", 3)
 
     if args.mode == "pilot":
-        run_pilot(config, world_bible, count)
+        run_pilot(config, world_bible, count, dashboard=not args.no_dashboard)
     elif args.mode == "upload":
         run_upload(config, world_bible, count)
     elif args.mode == "stream":
         run_stream(config, world_bible)
+    elif args.mode == "dashboard":
+        run_dashboard(config)
 
 
 if __name__ == "__main__":
