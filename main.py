@@ -84,7 +84,8 @@ def run_pilot(config, world_bible, count, dashboard=True):
     topics_covered = []  # Track topics for diversity enforcement
 
     # Pick which story slot gets heavy nonsense (1 per batch)
-    nonsense_slot = random.randint(0, count - 1)
+    # Never slot 0 — that's the top/featured story shown first on the site
+    nonsense_slot = random.randint(1, count - 1) if count > 1 else 0
 
     for i in range(count):
         print(f"\n--- Story {i+1}/{count} ---")
