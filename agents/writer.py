@@ -105,6 +105,19 @@ CONTENT RULES:
 - One [CHYRON: text] tag and one [B-ROLL: description] tag, placed inline where they'd appear on screen.
 - No markdown. No bold. No anchor name prefix. Just the spoken script with inline tags.
 
+STORY TYPE VARIETY — IMPORTANT:
+Not every story is an investigation or a federal probe. Real news desks cover a wide range. Choose ONE of these story types at random:
+- HARD NEWS: breaking events, accidents, natural disasters, political votes, court rulings
+- ECONOMICS: market moves, layoffs, company earnings, housing data, trade disputes, inflation reports
+- TECHNOLOGY: product launches, data breaches, AI developments, social media policy, startup failures
+- INTERNATIONAL: diplomatic tensions, foreign elections, refugee situations, trade deals, military postures
+- HEALTH/SCIENCE: disease outbreaks, drug approvals, research findings, hospital closures, clinical trials
+- EDUCATION: school board fights, university scandals, testing policy changes, teacher strikes
+- WEATHER/ENVIRONMENT: severe storms, drought, flooding, wildfire, seasonal anomalies
+- FLUFF/HUMAN INTEREST: local record-breakers, animal rescues, community events, quirky milestones, charity drives
+- SPORTS: team relocations, player suspensions, stadium deals, league disputes, doping scandals
+Do NOT write another "federal agency probes/raids/investigates" story unless that's truly the best fit. Vary the verbs too — not everything is a probe.
+
 CAPITALIZATION — MANDATORY:
 - ALL acronyms must be fully capitalized: EPA, FBI, FEMA, DHS, FAA, NLRB, ACLU, NATO, FDA, CDC, DOD, DOE, HUD, SEC, etc.
 - ALL country names must be properly capitalized: United States, South Korea, North Korea, China, Russia, Ukraine, Israel, Iran, etc.
@@ -239,11 +252,18 @@ def _classify_topic(script_text, topic_weights):
     scores = {}
 
     keyword_map = {
-        "politics": ["senator", "governor", "president", "legislation", "vote", "bill", "committee", "caucus"],
-        "infrastructure": ["bridge", "road", "port", "rail", "construction", "pipeline", "transit", "grid"],
-        "science": ["study", "research", "university", "climate", "species", "lab", "data", "findings"],
-        "crime": ["arrest", "police", "investigation", "suspect", "charges", "detective", "victim"],
-        "international": ["embassy", "foreign", "treaty", "summit", "allies", "trade", "sanctions"],
+        "politics": ["senator", "governor", "president", "legislation", "vote", "bill", "committee", "caucus", "partisan", "bipartisan", "democrat", "republican"],
+        "economics": ["market", "stocks", "inflation", "earnings", "layoffs", "recession", "gdp", "trade deficit", "interest rate", "federal reserve", "wall street", "dow", "nasdaq", "unemployment"],
+        "technology": ["software", "app", "data breach", "hack", "ai ", "artificial intelligence", "startup", "tech", "social media", "algorithm", "silicon valley", "cyber"],
+        "infrastructure": ["bridge", "road", "port", "rail", "construction", "pipeline", "transit", "grid", "highway"],
+        "science": ["study", "research", "university", "species", "lab", "findings", "researchers", "experiment", "peer-reviewed"],
+        "health": ["hospital", "vaccine", "disease", "outbreak", "clinical", "patients", "fda", "cdc", "drug", "pharmaceutical", "medical", "surgeon"],
+        "crime": ["arrest", "police", "suspect", "charges", "detective", "victim", "murder", "robbery", "shooting", "indictment", "convicted"],
+        "international": ["embassy", "foreign", "treaty", "summit", "allies", "sanctions", "diplomat", "nato", "united nations", "overseas"],
+        "education": ["school", "teacher", "student", "campus", "tuition", "curriculum", "superintendent", "school board", "graduation"],
+        "weather": ["storm", "hurricane", "tornado", "flood", "drought", "wildfire", "blizzard", "evacuation", "temperature", "forecast"],
+        "fluff": ["community", "volunteer", "charity", "rescued", "record-breaking", "celebrates", "festival", "tradition", "heartwarming", "milestone"],
+        "sports": ["team", "stadium", "league", "coach", "playoff", "championship", "athlete", "draft", "season"],
     }
 
     for topic, keywords in keyword_map.items():

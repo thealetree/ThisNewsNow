@@ -14,7 +14,7 @@ anchors:
   - name: "Patricia Holt"
     gender: "female"
     elevenlabs_voice_id: "PASTE_VOICE_ID_HERE"
-    speed: 1.12
+    speed: 1.6
     description: "Senior anchor, calm authority, 20 years experience"
   - name: "Marcus Webb"
     gender: "male"
@@ -36,18 +36,25 @@ pilot:
 
 dials:
   topic_weights:
-    politics: 0.3
-    infrastructure: 0.2
-    science: 0.2
-    crime: 0.1
-    international: 0.2
+    politics: 0.15
+    economics: 0.15
+    technology: 0.15
+    international: 0.10
+    crime: 0.10
+    health: 0.08
+    science: 0.07
+    infrastructure: 0.05
+    education: 0.05
+    weather: 0.03
+    fluff: 0.04
+    sports: 0.03
   tone: "concerned"  # calm | concerned | urgent | grave
   nonsense:
     enabled: true            # toggle Mustard & Milk nonsense injection
-    injection_chance: 0.15   # 15% of stories get a surreal fragment
+    injection_chance: 0.30   # 30% of stories get a surreal fragment
     min_fragment: 2          # min words per injection
-    max_fragment: 4          # max words per injection
-    temperature: 1.0         # 0.8 = tighter, 1.2 = wilder
+    max_fragment: 5          # max words per injection
+    temperature: 1.2         # 0.8 = tighter, 1.2 = wilder
 
 sponsor:
   enabled: true
