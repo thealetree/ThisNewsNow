@@ -342,30 +342,31 @@
       position: relative;
       overflow: hidden;
       contain: paint;
+      display: flex;
+      flex-direction: column;
     }
 
     .carousel-zone:empty { display: none; }
 
     .carousel-wrap {
       position: relative;
-      height: 280px;
+      flex: 1;
       overflow: hidden;
     }
 
     .carousel-scene {
-      width: 300px;
-      height: 220px;
-      position: absolute;
-      left: 50%;
-      top: 20px;
-      transform: translateX(-50%);
-      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: grid;
     }
 
     .carousel-card {
-      position: absolute;
-      width: 300px;
-      height: 220px;
+      position: relative;
+      width: auto;
+      height: auto;
+      grid-column: 1;
+      grid-row: 1;
       background: var(--surface);
       border: 1px solid var(--border);
       padding: 2rem;
@@ -373,7 +374,7 @@
       flex-direction: column;
       justify-content: center;
       cursor: pointer;
-      transition: box-shadow 0.3s;
+      transition: opacity 0.5s ease;
       overflow: hidden;
     }
 
@@ -1033,8 +1034,7 @@
       .hero-row { gap: 1rem; }
       .stories-grid { gap: 1rem; grid-template-columns: repeat(2, 1fr); }
       .hourly-summary { padding: 1.2rem 1.5rem; }
-      .carousel-scene { width: 260px; }
-      .carousel-card { width: 260px; height: 200px; padding: 1.2rem; }
+      .carousel-card { padding: 1.2rem; }
       .carousel-card .card-headline { font-size: 1.05rem; }
       article.story-compact .article-share { display: none; }
     }
@@ -1061,27 +1061,8 @@
       .hourly-header { gap: 0.5rem; }
       .hourly-title { font-size: 1.1rem; }
       .hourly-meta { margin-left: 0; width: 100%; }
-      .carousel-zone { margin: 0; overflow: hidden; }
-      .carousel-wrap { height: auto; perspective: none; overflow: hidden; }
-      .carousel-scene {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        transform-style: flat;
-        width: 100%;
-        height: auto;
-        margin: 0;
-        display: grid;
-      }
       .carousel-card {
-        position: relative;
-        width: auto;
-        height: auto;
         min-height: 200px;
-        grid-column: 1;
-        grid-row: 1;
-        backface-visibility: visible;
         padding: 1.5rem;
       }
       .carousel-card .card-headline { font-size: 1.1rem; }
@@ -1103,7 +1084,6 @@
       .nav-bar { gap: 0.3rem; font-size: 0.5rem; }
       article { padding: 1.2rem; }
       .article-headline { font-size: 1.05rem; }
-      .carousel-zone { overflow: hidden; }
       .carousel-card { padding: 1.2rem; min-height: 180px; }
       .carousel-card .card-headline { font-size: 1rem; }
       .carousel-card .card-excerpt { font-size: 0.65rem; }
@@ -1380,38 +1360,16 @@
     var scene = document.getElementById('carouselScene');
     if (!scene) return;
     var cards = scene.querySelectorAll('.carousel-card');
-    var isMobile = window.innerWidth <= 768;
 
     cards.forEach(function(card, i) {
       var offset = i - carouselIndex;
       if (offset > 1) offset -= 3;
       if (offset < -1) offset += 3;
 
-      if (isMobile) {
-        // Grid overlap: all cards in same grid cell, fade active
-        var isActive = (offset === 0);
-        card.style.transition = 'opacity 0.5s ease';
-        card.style.transform = 'none';
-        card.style.left = '';
-        card.style.top = '';
-        card.style.width = '';
-        card.style.opacity = isActive ? 1 : 0;
-        card.style.zIndex = isActive ? 10 : 1;
-        card.style.pointerEvents = isActive ? 'auto' : 'none';
-      } else {
-        // Full 3D carousel on desktop
-        var x = offset * 250;
-        var opacity = offset === 0 ? 1 : 0.4;
-        var scale = offset === 0 ? 1 : 0.78;
-
-        card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-        card.style.transform = 'translateX(' + x + 'px) scale(' + scale + ')';
-        card.style.opacity = opacity;
-        card.style.zIndex = offset === 0 ? 10 : 1;
-        card.style.left = '';
-        card.style.top = '';
-        card.style.pointerEvents = '';
-      }
+      var isActive = (offset === 0);
+      card.style.opacity = isActive ? 1 : 0;
+      card.style.zIndex = isActive ? 10 : 1;
+      card.style.pointerEvents = isActive ? 'auto' : 'none';
     });
 
     var dots = document.querySelectorAll('.carousel-dot');
