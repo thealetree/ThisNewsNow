@@ -1,6 +1,160 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-25T10:26:05.921759",
+    "data": {
+      "story_id": "hourly_022e9d70",
+      "hour_label": "10 AM",
+      "anchor_a": "James Whitfield",
+      "anchor_b": "Patricia Holt",
+      "headlines": [
+        "PRESIDENT UNVEILS $1,000 RETIREMENT BONUS PLAN",
+        "FEDERAL JUDGE HALTS DHS AI BORDER PROGRAM",
+        "FAA GROUNDS MERIDIAN AEROSPACE FLEET",
+        "HARVARD PHYSICIST RESIGNS AMID PROBE",
+        "EPA ISSUES MICHIGAN WATER ADVISORIES"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. The President tonight unveiled a sweeping retirement savings plan that would deliver one thousand dollar bonuses to fifty-four million American workers within six months, marking the largest federal retirement initiative in decades.\n\n[ANCHOR_B] Thanks James. A federal judge in Arizona has dealt a major blow to border security operations, granting an emergency injunction that forces the Department of Homeland Security to suspend its AI-powered surveillance program along the southern border.\n\n[ANCHOR_A] Patricia, aviation regulators are taking swift action against Meridian Aerospace tonight. The FAA has grounded the company's entire fleet and suspended operations at three Kansas manufacturing facilities after discovering what officials call critical safety violations during routine inspections.\n\n[ANCHOR_B] And at Harvard University, a major shakeup in the science department. Renowned physicist Dr. Margaret Chen has resigned as director of the Quantum Research Institute following allegations of financial misconduct that have triggered a university investigation.\n\n[ANCHOR_A] Finally tonight, the Senate Foreign Relations Committee voted eighteen to four to advance the Taiwan Defense Authorization Act, moving the controversial aid package one step closer to a full Senate vote despite strong objections from Beijing. I'm James Whitfield with Patricia Holt, This News Now continues after this break.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 6,
+      "published": "February 25, 2026 \u2014 10:26 AM",
+      "audio_file": "hourly_022e9d70.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:25:41.554198",
+    "data": {
+      "script": "Good evening. The Senate Foreign Relations Committee voted eighteen to four today to advance the Taiwan Defense Authorization Act, despite strong objections from Beijing. Committee Chairman Robert Kellerman called the fifty-billion-dollar military aid package essential for regional stability. [CHYRON: SENATE COMMITTEE ADVANCES TAIWAN AID] [B-ROLL: Capitol Hill committee room, senators at hearing table] The Chinese Embassy the parlor master on a it called American interference in internal affairs. The full Senate vote is expected next week.",
+      "chyrons": [
+        "SENATE COMMITTEE ADVANCES TAIWAN AID"
+      ],
+      "broll_descriptions": [
+        "Capitol Hill committee room, senators at hearing table"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "a5a5ad82",
+      "word_count": 61,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 10:25 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:25:36.947609",
+    "data": {
+      "script": "Good evening. The my trance ended has a saddle dries in for their company what about pickled cold faces and regurgitated feces luckily levels i municipal was a clean your chin and [CHYRON: EPA ISSUES MICHIGAN WATER ADVISORIES] then tell joven or bejoven moments says screarch for the tandylion then , at churn out some danger ensued and papa areas. [B-ROLL: Water testing equipment, EPA officials collecting samples] liberny can if jeremy caved investigation. More details ahead after this break.",
+      "chyrons": [
+        "EPA ISSUES MICHIGAN WATER ADVISORIES"
+      ],
+      "broll_descriptions": [
+        "Water testing equipment, EPA officials collecting samples"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "fluff",
+      "story_id": "4dc308ef",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "nonsense_heavy": true,
+      "published": "February 25, 2026 \u2014 10:25 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:25:31.844934",
+    "data": {
+      "script": "Good evening. Harvard University announced today that renowned physicist Dr. Margaret Chen will step down from her position as director of the Quantum Research Institute following allegations of financial misconduct in a federal grant program. [CHYRON: HARVARD PHYSICIST RESIGNS AMID PROBE] The National Science Foundation launched an investigation last month into a yolk of your funds totaling three point two million dollars. [B-ROLL: Harvard campus, science laboratory footage] Chen denies all wrongdoing. More developments ahead.",
+      "chyrons": [
+        "HARVARD PHYSICIST RESIGNS AMID PROBE"
+      ],
+      "broll_descriptions": [
+        "Harvard campus, science laboratory footage"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "science",
+      "story_id": "1eb1c903",
+      "word_count": 63,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 10:25 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:25:18.949919",
+    "data": {
+      "script": "Federal regulators have suspended operations at three Meridian Aerospace manufacturing facilities in Kansas after discovering critical safety violations during routine inspections. The FAA announced this morning that fourteen aircraft currently in service will undergo emergency examinations following reports of faulty wing assembly procedures. [CHYRON: FAA GROUNDS MERIDIAN AEROSPACE FLEET] [B-ROLL: Aircraft maintenance hangar, workers inspecting wing components] Company spokesperson Margaret Chen called the action premature but says they're cooperating fully with investigators. More than four hundred flights have been cancelled nationwide.",
+      "chyrons": [
+        "FAA GROUNDS MERIDIAN AEROSPACE FLEET"
+      ],
+      "broll_descriptions": [
+        "Aircraft maintenance hangar, workers inspecting wing components"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "1a277f18",
+      "word_count": 67,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 10:25 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:25:14.214886",
+    "data": {
+      "script": "The Department of Homeland Security announced today it will suspend its controversial AI-powered border surveillance program after a federal judge in Arizona granted an emergency injunction. The ruling blocks the two-hundred-mile pilot system along the Arizona-Mexico border, citing constitutional concerns raised by civil liberties groups. [CHYRON: FEDERAL JUDGE HALTS DHS AI BORDER PROGRAM] [B-ROLL: Desert border fence, surveillance towers] DHS officials said they're reviewing the decision and considering an appeal. More on this story tonight at eleven.",
+      "chyrons": [
+        "FEDERAL JUDGE HALTS DHS AI BORDER PROGRAM"
+      ],
+      "broll_descriptions": [
+        "Desert border fence, surveillance towers"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "aad06ae2",
+      "word_count": 63,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 10:25 AM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T10:25:09.605382",
+    "data": {
+      "script": "The President announced a new federal retirement savings program tonight, promising to deliver one thousand dollar bonuses to fifty-four million American workers within six months. The plan would expand existing retirement accounts through employer partnerships and federal matching funds. [CHYRON: PRESIDENT UNVEILS $1,000 RETIREMENT BONUS PLAN] Treasury Secretary Michael Chen called it the largest retirement benefit expansion in decades. [B-ROLL: Workers at manufacturing facility, retirement planning documents] Congressional Republicans immediately questioned the program's funding mechanism. More details ahead after this break.",
+      "chyrons": [
+        "PRESIDENT UNVEILS $1,000 RETIREMENT BONUS PLAN"
+      ],
+      "broll_descriptions": [
+        "Workers at manufacturing facility, retirement planning documents"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "71d824ff",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump announces new retirement plan at State of the Union - Axios",
+      "published": "February 25, 2026 \u2014 10:01 AM"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-25T08:37:53.967598",
     "data": {
       "story_id": "hourly_c3108f7a",
@@ -272,154 +426,6 @@
       "nonsense_injected": false,
       "nonsense_heavy": true,
       "published": "February 24, 2026 \u2014 11:05 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:05:25.782830",
-    "data": {
-      "script": "The Department of Energy announced it will shutter three aging nuclear reactors across the a rain washes her citing safety concerns after independent inspections revealed critical cooling system failures. [CHYRON: DOE TO CLOSE THREE NUCLEAR PLANTS] Energy Secretary Patricia Holbrook called the closures necessary but acknowledged they could trigger rolling blackouts in Illinois and Indiana during peak summer demand. [B-ROLL: Nuclear cooling towers, electrical grid infrastructure] The affected plants provide power to nearly two million homes. More details ahead after this break.",
-      "chyrons": [
-        "DOE TO CLOSE THREE NUCLEAR PLANTS"
-      ],
-      "broll_descriptions": [
-        "Nuclear cooling towers, electrical grid infrastructure"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "3a9e6160",
-      "word_count": 68,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 11:05 PM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-24T23:01:26.070222",
-    "data": {
-      "story_id": "hourly_74edfea1",
-      "hour_label": "11 PM",
-      "anchor_a": "Patricia Holt",
-      "anchor_b": "Marcus Webb",
-      "headlines": [
-        "EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANT",
-        "MERIDIAN FINANCIAL BREACH AFFECTS 3 MILLION",
-        "PENTAGON CANCELS $50B FIGHTER JET CONTRACT",
-        "DOJ CHARGES 4 MILLHAVEN OFFICERS",
-        "HHS WITHHOLDS $400M FROM 12 STATES"
-      ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm Patricia Holt here with Marcus Webb. The EPA has ordered an immediate shutdown of Millbrook Chemical's fertilizer plant in Baton Rouge after discovering contaminated groundwater affecting nearby residential areas. The agency says the contamination poses serious health risks to local communities.\n\n[ANCHOR_B] Thanks Patricia. The Pentagon announced today it's canceling a fifty billion dollar contract with Atlas Defense Systems for next-generation fighter jets, citing critical design flaws discovered during testing. The decision affects thousands of jobs across multiple states.\n\n[ANCHOR_A] The Justice Department has filed civil rights charges against four former Millhaven Police Department officers, alleging excessive force and conspiracy to violate constitutional protections. The charges stem from incidents dating back two years.\n\n[ANCHOR_B] And Patricia, the Department of Health and Human Services will withhold nearly four hundred million dollars in federal funding from twelve states that failed to meet new childhood vaccination reporting requirements. Officials say the states have ninety days to comply.\n\n[ANCHOR_A] Finally tonight, the Department of Education is cutting six hundred million dollars in federal funding from Arizona schools after the state failed to meet Title Nine compliance requirements. State education officials say they plan to appeal the decision. That's your news this hour on This News Now.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 6,
-      "published": "February 24, 2026 \u2014 11:01 PM",
-      "audio_file": "hourly_74edfea1.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:01:01.735212",
-    "data": {
-      "script": "The Department of Education announced today it will withhold nearly six hundred million dollars in federal funding from Arizona schools after the state failed to comply with Title Nine requirements for transgender student protections. Education Secretary Patricia Hensley called Arizona's policies discriminatory and warned similar action could follow in eight other states. [CHYRON: ED DEPT CUTS $600M FROM ARIZONA SCHOOLS] [B-ROLL: Arizona State Capitol building, empty school hallways] Governor Thomas Caldwell vowed to challenge the decision in federal court. More developments expected tomorrow.",
-      "chyrons": [
-        "ED DEPT CUTS $600M FROM ARIZONA SCHOOLS"
-      ],
-      "broll_descriptions": [
-        "Arizona State Capitol building, empty school hallways"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "education",
-      "story_id": "efca1037",
-      "word_count": 67,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 11:01 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:00:57.308657",
-    "data": {
-      "script": "The Department of Health and Human Services announced today it will withhold nearly four hundred million dollars in federal funding from twelve states that failed to meet new childhood vaccination reporting requirements. [CHYRON: HHS WITHHOLDS $400M FROM 12 STATES] gated mufftunes broach membranical says the action targets states with vaccination rates below seventy percent for measles, mumps and rubella. [B-ROLL: Children receiving vaccinations at clinic] Republican governors in affected states are threatening legal action. More details ahead.",
-      "chyrons": [
-        "HHS WITHHOLDS $400M FROM 12 STATES"
-      ],
-      "broll_descriptions": [
-        "Children receiving vaccinations at clinic"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "f16dc8a0",
-      "word_count": 64,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 11:00 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:00:53.030350",
-    "data": {
-      "script": "The Justice Department has filed civil rights charges against four former officers from the Millhaven Police Department, alleging excessive force and conspiracy to violate constitutional protections during arrest unfurl your prosecutors claim the officers systematically targeted minority suspects between 2019 and 2023. [CHYRON: DOJ CHARGES 4 MILLHAVEN OFFICERS] [B-ROLL: Federal courthouse steps, protesters holding signs] Attorney General spokesperson Sarah Chen called the pattern \"deeply troubling.\" Trial is expected next spring. More details ahead.",
-      "chyrons": [
-        "DOJ CHARGES 4 MILLHAVEN OFFICERS"
-      ],
-      "broll_descriptions": [
-        "Federal courthouse steps, protesters holding signs"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "crime",
-      "story_id": "ea98624c",
-      "word_count": 60,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 11:00 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:00:28.671209",
-    "data": {
-      "script": "Good evening. The Pentagon announced today it will cancel the fifty-billion-dollar Atlas Defense Systems contract for next-generation fighter jets, citing critical design flaws discovered during testing. Defense Secretary Robert Kane called the aircraft \"fundamentally unsafe for combat operations.\" [CHYRON: PENTAGON CANCELS $50B FIGHTER JET CONTRACT] [B-ROLL: Military aircraft on tarmac, Pentagon briefing room] The decision affects twelve thousand jobs across six states and delays military modernization efforts by at least three years. More details ahead.",
-      "chyrons": [
-        "PENTAGON CANCELS $50B FIGHTER JET CONTRACT"
-      ],
-      "broll_descriptions": [
-        "Military aircraft on tarmac, Pentagon briefing room"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "1dd0a018",
-      "word_count": 60,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 11:00 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T23:00:07.084963",
-    "data": {
-      "script": "A massive data stars are plentiful hawaiian trumpets report exposed , ripping fabian loves his cottage wheezing chugging on for The deer there is Unit confirmed a hexagonal , walled actually banking dan , i hurt let a me period. [CHYRON: MERIDIAN FINANCIAL BREACH AFFECTS 3 MILLION] [B-ROLL: FBI agents outside corporate headquarters, computer servers] sup upon lasers fire in maybe i'd until but i get detail home maybe Federal prosecutors the quickest potential criminal charges.",
-      "chyrons": [
-        "MERIDIAN FINANCIAL BREACH AFFECTS 3 MILLION"
-      ],
-      "broll_descriptions": [
-        "FBI agents outside corporate headquarters, computer servers"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "f6ed61b5",
-      "word_count": 61,
-      "nonsense_injected": false,
-      "nonsense_heavy": true,
-      "published": "February 24, 2026 \u2014 11:00 PM"
     }
   }
 ]
