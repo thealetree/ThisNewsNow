@@ -775,6 +775,37 @@
     track.style.animationDuration = duration + 's';
   }
 
+  // ── Live Timestamp Helpers ──
+  // Extract minute from a "February 24, 2026 — 09:45 PM" string
+  function extractMinute(published) {
+    var m = published.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+    if (m) return parseInt(m[2], 10);
+    return Math.floor(Math.random() * 55); // fallback
+  }
+
+  // Generate a fresh timestamp using current date/hour but the given minute
+  function freshTimestamp(minute) {
+    var now = new Date();
+    var faked = new Date(now);
+    faked.setMinutes(minute);
+    faked.setSeconds(0);
+    // If the faked time is in the future, pull it back to now
+    if (faked > now) faked = now;
+    return faked.toLocaleString('en-US', {
+      month: 'long', day: 'numeric', year: 'numeric',
+      hour: 'numeric', minute: '2-digit'
+    });
+  }
+
+  // Refresh all visible timestamps every minute
+  function refreshTimestamps() {
+    document.querySelectorAll('[data-original-minute]').forEach(function(el) {
+      var minute = parseInt(el.getAttribute('data-original-minute'), 10);
+      el.textContent = freshTimestamp(minute);
+    });
+  }
+  setInterval(refreshTimestamps, 60000);
+
   // ── Format Helpers ──
   function formatBody(script) {
     var text = script;
@@ -824,9 +855,13 @@
     var body = formatBody(d.script || '');
     var topic = (d.topic || 'general').toUpperCase();
     var anchor = d.anchor || 'Staff Reporter';
-    var published = d.published || new Date(timestamp).toLocaleString('en-US', {
+
+    // Use original published to extract minute, then generate fresh timestamp
+    var origPublished = d.published || new Date(timestamp).toLocaleString('en-US', {
       month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'
     });
+    var origMinute = extractMinute(origPublished);
+    var published = freshTimestamp(origMinute);
 
     var hasAudio = !!(d.audio_path || d.audio_file);
     var audioSrc = '';
@@ -842,7 +877,7 @@
     article.innerHTML =
       '<div class="article-meta">' +
         '<span class="article-topic">' + topic + '</span>' +
-        '<span>' + published + '</span>' +
+        '<span data-original-minute="' + origMinute + '">' + published + '</span>' +
       '</div>' +
       '<h2 class="article-headline">' + headline + '</h2>' +
       '<div class="article-byline">By <strong>' + anchor + '</strong>, This News Now</div>' +
@@ -890,9 +925,15 @@
     var block = document.createElement('div');
     block.className = 'hourly-summary';
 
-    var published = data.published || new Date(timestamp).toLocaleString('en-US', {
+    var origPublished = data.published || new Date(timestamp).toLocaleString('en-US', {
       month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'
     });
+    var origMinute = extractMinute(origPublished);
+    var published = freshTimestamp(origMinute);
+
+    // Generate a fresh hour label from current time
+    var now = new Date();
+    var hourLabel = now.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true }).replace(':00', '').trim();
 
     var hasAudio = !!(data.audio_path || data.audio_file);
     var audioSrc = '';
@@ -917,8 +958,8 @@
     block.innerHTML =
       '<div class="hourly-header">' +
         '<span class="hourly-badge">Hourly Update</span>' +
-        '<span class="hourly-title">' + (data.hour_label || '') + ' Summary</span>' +
-        '<span class="hourly-meta">' + published + ' \u2022 ' + (data.story_count || 0) + ' stories</span>' +
+        '<span class="hourly-title">' + hourLabel + ' Summary</span>' +
+        '<span class="hourly-meta"><span data-original-minute="' + origMinute + '">' + published + '</span> \u2022 ' + (data.story_count || 0) + ' stories</span>' +
       '</div>' +
       '<div class="hourly-headlines">' + headlineTags + '</div>' +
       (hasAudio && audioSrc ?
