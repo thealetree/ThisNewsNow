@@ -12,7 +12,7 @@
     "president": "President Donald Trump",
     "vice_president": "Vice President JD Vance",
     "capital": "Washington D.C.",
-    "government_note": "Use the real current US government structure. Real parties (Democrat, Republican), real branches, real agencies. Fictional characters should hold lower-level or local positions only — never replace real sitting federal officials."
+    "government_note": "Use the real current US government structure, parties (Democrat, Republican), branches, and agency names. But NEVER use real people's names — not the President, not cabinet secretaries, not senators, not governors. Refer to the President as 'the President' or 'the administration.' All named individuals at EVERY level must be fictional."
   },
   "ongoing_stories": [
     {
@@ -178,12 +178,13 @@
       "Real political parties (Democrat, Republican)"
     ],
     "must_be_fictional": [
-      "All named individuals below federal level (governors, mayors, police chiefs, etc.)",
-      "All private companies and organizations",
+      "ALL named individuals at EVERY level — cabinet secretaries, senators, representatives, governors, mayors, police chiefs, CEOs, journalists, everyone",
+      "ALL companies, corporations, and organizations (use invented names, never real brands)",
       "Specific events and incidents",
-      "Any quoted statements or statistics"
+      "Any quoted statements or statistics",
+      "For the President/VP: do NOT name them, just say 'the President', 'the administration', 'the Vice President'"
     ],
-    "mixing_rule": "Stories should blend real places and real agencies with fictional people and fictional events. This creates the uncanny almost-real feeling. A story can be set in a real city with a real federal agency investigating, but the local officials, the specific incident, and all quotes must be invented."
+    "mixing_rule": "Stories blend real places and real agency NAMES with entirely fictional people and fictional companies. A story can be set in a real city with a real federal agency investigating, but EVERY named person and EVERY named company must be invented. Never use a real politician's name, a real CEO's name, or a real corporation's name."
   },
   "disclosure": ""
 }

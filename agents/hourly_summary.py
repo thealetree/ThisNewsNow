@@ -89,6 +89,7 @@ REQUIREMENTS:
 - Transitions between anchors should be natural: "Marcus?", "Thanks Patricia, turning to...", "And Patricia, we're also watching...", etc.
 - Completely deadpan. No humor. This is a real news recap.
 - ALL acronyms must be fully capitalized (EPA, FBI, FAA, DHS, NATO, etc.). ALL country names and proper nouns must be correctly capitalized. This is broadcast copy.
+- *** NO REAL NAMES *** — Every person named in the summary MUST be fictional. Every company MUST be fictional. Do NOT use any real politician names (no Marco Rubio, no senators, no cabinet members by name). Do NOT use any real company names (no Boeing, no Amazon, etc.). For the President or VP just say "the President" or "the administration." INVENT all names.
 
 FORMAT — use these EXACT tags to mark who speaks. Each segment on its own line.
 
@@ -113,8 +114,9 @@ Output ONLY the tagged script. No notes, no explanations."""
     raw_script = message.content[0].text.strip()
 
     # Fix capitalization of acronyms and proper nouns
-    from agents.writer import _fix_capitalization
+    from agents.writer import _fix_capitalization, _scrub_real_names
     raw_script = _fix_capitalization(raw_script)
+    raw_script = _scrub_real_names(raw_script)
 
     # Parse into segments
     segments = _parse_segments(raw_script, anchor_a["name"], anchor_b["name"])

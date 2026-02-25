@@ -99,11 +99,21 @@ ANCHOR: {anchor['name']} ({anchor['gender']})
 CONTENT RULES:
 - Deadpan. No humor, no irony.
 - You MAY use real US places, real federal agencies (EPA, FBI, FEMA, etc.), real political parties.
-- All PEOPLE, COMPANIES, specific EVENTS, and QUOTES must be fictional.
 - Use places and storylines from the world context, or invent entirely new ones. DO NOT default to the same ongoing stories every time — variety is essential.
 - Use the real-world news shapes above as loose inspiration only. Create stories on DIFFERENT topics, with varied conflict types and stakes, set in diverse geographic contexts across the US and world.
 - One [CHYRON: text] tag and one [B-ROLL: description] tag, placed inline where they'd appear on screen.
 - No markdown. No bold. No anchor name prefix. Just the spoken script with inline tags.
+
+*** NO REAL NAMES — THIS IS ABSOLUTELY CRITICAL ***
+Every single person named in your script MUST be fictional. Every company MUST be fictional.
+- NO real politicians: not Marco Rubio, not Mitch McConnell, not Chuck Schumer, not Nancy Pelosi, not any real senator, cabinet member, or governor. INVENT a name.
+- NO real sitting officials: instead of "Secretary of State Marco Rubio" → use "Secretary of State [fictional name]" like "Secretary of State Diane Mercer".
+- For the President or VP, do NOT name them — just say "the President", "the White House", "the administration".
+- NO real companies: not Boeing, not Amazon, not Google, not Tesla, not Meta, not Apple, not ExxonMobil, not any real corporation. INVENT a company name.
+  Instead of "Boeing 737" → "Meridian Aerospace 700". Instead of "Amazon warehouse" → "Crestline Logistics facility".
+- NO real celebrities, CEOs, journalists, or public figures of any kind.
+- If you're unsure whether a name is real, INVENT a new one. It is always safer to invent.
+- The ONLY real-world proper nouns allowed are: place names (cities, states, countries), government agency names (FBI, EPA), political party names (Democrat, Republican), and institutional roles (President, Senator, Governor).
 
 STORY TYPE VARIETY — IMPORTANT:
 Not every story is an investigation or a federal probe. Real news desks cover a wide range. Choose ONE of these story types at random:
@@ -124,8 +134,9 @@ CAPITALIZATION — MANDATORY:
 - ALL proper nouns (city names, state names, agency names, organization names) must be correctly capitalized.
 - This is broadcast copy — proper capitalization is non-negotiable.
 
-EXAMPLE of correct length and format (68 words):
+EXAMPLE of correct length and format (68 words — note ALL names are fictional):
 Good evening. A federal grand jury in Atlanta has returned a twelve-count indictment against three former executives of Rayburn Holdings, alleging wire fraud and securities manipulation totaling more than two hundred million dollars. Lead prosecutor Anna Whitmore confirmed the charges this afternoon, calling it one of the largest corporate fraud cases in the Southeast. [CHYRON: ATLANTA GRAND JURY INDICTS RAYBURN EXECS] [B-ROLL: Federal courthouse exterior, attorneys exiting building] Bail hearings are set for Friday. We'll continue to follow this.
+Notice: "Rayburn Holdings" is a FICTIONAL company. "Anna Whitmore" is a FICTIONAL person. This is required.
 
 NOW WRITE YOUR SCRIPT:"""
 
@@ -155,6 +166,9 @@ NOW WRITE YOUR SCRIPT:"""
 
     # Fix capitalization of acronyms and proper nouns
     script_text = _fix_capitalization(script_text)
+
+    # Scrub any real names that slipped through
+    script_text = _scrub_real_names(script_text)
 
     # Nonsense injection (post-processing, after word count is validated)
     from agents.nonsense import inject_nonsense
@@ -201,8 +215,8 @@ def _build_world_summary(world_bible):
 
     nation = world_bible.get("nation", {})
     lines.append(f"Country: {nation.get('name', 'United States')}")
-    lines.append(f"President: {nation.get('president', 'Unknown')}")
-    lines.append(f"Vice President: {nation.get('vice_president', 'Unknown')}")
+    lines.append("President: Refer to as 'the President' — do NOT use any real name.")
+    lines.append("Vice President: Refer to as 'the Vice President' — do NOT use any real name.")
     if "government_note" in nation:
         lines.append(f"Government note: {nation['government_note']}")
 
@@ -360,5 +374,114 @@ def _fix_capitalization(script_text):
     for lower_form, correct_form in proper_nouns:
         pattern = re.compile(re.escape(lower_form), re.IGNORECASE)
         script_text = pattern.sub(correct_form, script_text)
+
+    return script_text
+
+
+# ---- Real-name scrubber (safety net) ----
+
+# Mapping of real names → fictional replacements for common offenders
+_REAL_PEOPLE_MAP = {
+    # Current / recent US politicians (case-insensitive matching)
+    "Marco Rubio": "Diane Mercer",
+    "Mitch McConnell": "Richard Haldane",
+    "Chuck Schumer": "Leonard Pratt",
+    "Nancy Pelosi": "Margaret Ashworth",
+    "Kevin McCarthy": "Gerald Taft",
+    "Mike Johnson": "Douglas Crane",
+    "Hakeem Jeffries": "Warren Ellison",
+    "Pete Buttigieg": "Thomas Hadley",
+    "Merrick Garland": "Lawrence Beckett",
+    "Lloyd Austin": "Kenneth Aldridge",
+    "Janet Yellen": "Catherine Ainsley",
+    "Antony Blinken": "Philip Navarro",
+    "Gina Raimondo": "Valerie Chalmers",
+    "Miguel Cardona": "Robert Estrada",
+    "Alejandro Mayorkas": "Vincent Dorado",
+    "Deb Haaland": "Sandra Whitfield",
+    "Tom Vilsack": "Harold Brennan",
+    "Denis McDonough": "Patrick Calloway",
+    "Xavier Becerra": "Daniel Montoya",
+    "Michael Regan": "James Cortland",
+    "Jen Psaki": "Karen Lindsey",
+    "Karine Jean-Pierre": "Michelle Gaston",
+    "Ron DeSantis": "David Caldwell",
+    "Gavin Newsom": "Andrew Sheffield",
+    "Greg Abbott": "William Landers",
+    "Donald Trump": "the President",
+    "JD Vance": "the Vice President",
+    "Joe Biden": "the former President",
+    "Kamala Harris": "the former Vice President",
+    "Elon Musk": "Roland Voss",
+    "Mark Zuckerberg": "Nathan Brower",
+    "Jeff Bezos": "Clarke Whitmore",
+    "Tim Cook": "Edward Langford",
+    "Sundar Pichai": "Rajiv Anand",
+    "Satya Nadella": "Arjun Patel",
+    "Sam Altman": "Derek Calloway",
+    "Jamie Dimon": "Frederick Nash",
+}
+
+_REAL_COMPANIES_MAP = {
+    # Big tech & Fortune 100 (match whole word)
+    "Boeing": "Meridian Aerospace",
+    "Amazon": "Crestline Logistics",
+    "Google": "Nexagen Technologies",
+    "Alphabet": "Nexagen Holdings",
+    "Facebook": "ConnectSphere",
+    "Meta Platforms": "ConnectSphere Inc",
+    "Apple Inc": "Orion Electronics",
+    "Microsoft": "Vertex Software",
+    "Tesla": "Volta Motors",
+    "SpaceX": "Aether Launch Systems",
+    "Netflix": "StreamVault",
+    "Walmart": "Redfield Retail",
+    "ExxonMobil": "Crestfield Energy",
+    "Chevron": "Harland Petroleum",
+    "JPMorgan": "Stanton Financial",
+    "Goldman Sachs": "Whitmore Capital",
+    "Lockheed Martin": "Hargrove Defense",
+    "Raytheon": "Aldridge Systems",
+    "Northrop Grumman": "Vanguard Aerospace",
+    "General Motors": "Continental Motors",
+    "Ford Motor": "Hartfield Automotive",
+    "Pfizer": "Thorngate Pharmaceuticals",
+    "Johnson & Johnson": "Mercer Health Group",
+    "UnitedHealth": "Crossfield Health",
+    "Citigroup": "Belmont Banking",
+    "Bank of America": "National Meridian Bank",
+    "Wells Fargo": "Pacific Standard Bank",
+    "Shell": "Gulfmark Energy",
+    "BP": "Harland Petroleum",
+    "Uber": "Stridelink",
+    "Lyft": "GoWave",
+    "OpenAI": "Frontier Labs",
+    "Twitter": "BroadCast Social",
+    "TikTok": "ClipStream",
+    "Disney": "Crescent Entertainment",
+    "Comcast": "Meridian Media",
+    "AT&T": "Norland Communications",
+    "Verizon": "Clearpoint Wireless",
+}
+
+
+def _scrub_real_names(script_text):
+    """
+    Safety-net post-processor: replace any real politician or company names
+    that slipped through the prompt instructions with fictional alternatives.
+    """
+    # Scrub real people
+    for real_name, fictional_name in _REAL_PEOPLE_MAP.items():
+        pattern = re.compile(re.escape(real_name), re.IGNORECASE)
+        if pattern.search(script_text):
+            script_text = pattern.sub(fictional_name, script_text)
+            print(f"  ⚠ Scrubbed real name: '{real_name}' → '{fictional_name}'")
+
+    # Scrub real companies (word-boundary match to avoid partial hits)
+    for real_co, fictional_co in _REAL_COMPANIES_MAP.items():
+        pattern = re.compile(r'\b' + re.escape(real_co) + r'\b', re.IGNORECASE)
+        if pattern.search(script_text):
+            script_text = pattern.sub(fictional_co, script_text)
+            print(f"  ⚠ Scrubbed real company: '{real_co}' → '{fictional_co}'")
 
     return script_text

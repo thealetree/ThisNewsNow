@@ -1,275 +1,422 @@
 [
   {
     "type": "hourly_summary",
-    "timestamp": "2026-02-24T22:04:59.876878",
+    "timestamp": "2026-02-24T22:55:13.084024",
     "data": {
-      "story_id": "hourly_e9f913c9",
+      "story_id": "hourly_195ac595",
       "hour_label": "10 PM",
       "anchor_a": "Marcus Webb",
       "anchor_b": "Patricia Holt",
       "headlines": [
-        "EPA ORDERS MICHIGAN WATER TESTING",
-        "FEDS WITHHOLD $40M FROM BELLHAVEN SCHOOLS",
-        "RAIL EXECUTIVES CHARGED IN FRAUD SCHEME",
-        "DOE CUTS UNIVERSITY BATTERY RESEARCH",
-        "DOJ CHARGES 6 IN CRYPTO FRAUD TARGETING VETS"
+        "FEDS SHUT DOWN ND GAS PLANTS",
+        "FDA HALTS DIABETES DRUG TRIALS",
+        "GEORGIA MAYOR ARRESTED FOR FEMA FRAUD",
+        "STUDENT LOAN FORGIVENESS EXPANDED",
+        "EPA HALTS FRACKING IN WESTERN PA"
       ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm Marcus Webb here with Patricia Holt. The Environmental Protection Agency has ordered emergency water testing in six Michigan communities after Wayne State University researchers detected unusual bacterial levels in municipal water supplies.\n\n[ANCHOR_B] Thanks Marcus. The Department of Justice has charged six people in a cryptocurrency fraud scheme that targeted military veterans across seventeen states. Officials say the sophisticated operation defrauded service members of significant amounts.\n\n[ANCHOR_A] Patricia, federal prosecutors in Denver have also charged four Consolidated Rail Associates executives with conspiracy to defraud the Department of Transportation of nearly eighty million dollars in infrastructure funds.\n\n[ANCHOR_B] And the Federal Aviation Administration has ordered immediate inspections of all Boeing seven-thirty-seven dash eight-hundred aircraft after discovering potential structural cracks in wing components. The directive affects hundreds of planes nationwide.\n\n[ANCHOR_A] Finally tonight, the State Department announced new sanctions against twelve Chinese technology firms accused of supporting military surveillance programs. Secretary of State Marco Rubio cited national security concerns in the decision. I'm Marcus Webb.\n\n[ANCHOR_B] And I'm Patricia Holt. We'll be back with more This News Now at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm Marcus Webb here with Patricia Holt. Federal regulators have ordered the immediate shutdown of three natural gas processing facilities in North Dakota after inspectors discovered critical safety violations that could trigger explosions.\n\n[ANCHOR_B] Thanks Marcus. The F-D-A has suspended clinical trials for Northpoint Pharmaceuticals after preliminary data showed severe kidney complications in twenty-three patients testing a new diabetes drug.\n\n[ANCHOR_A] Patricia, federal investigators have arrested the mayor of Crestwood, Georgia on charges of embezzling disaster relief funds meant for Hurricane recovery efforts. F-B-I agents took Mayor Patricia Holbrook into custody earlier today.\n\n[ANCHOR_B] And Marcus, the Department of Education announced sweeping changes to federal student loan forgiveness programs, expanding eligibility to include borrowers who attended now-defunct for-profit institutions.\n\n[ANCHOR_A] Finally tonight, the E-P-A has ordered an immediate halt to all hydraulic fracturing operations in western Pennsylvania after groundwater contamination was detected near seventeen drilling sites. That's our news summary. I'm Marcus Webb with Patricia Holt for This News Now.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
       "story_count": 8,
-      "published": "February 24, 2026 \u2014 10:04 PM",
-      "audio_file": "hourly_e9f913c9.mp3"
+      "published": "February 24, 2026 \u2014 10:55 PM",
+      "audio_file": "hourly_195ac595.mp3"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T22:04:37.697060",
+    "timestamp": "2026-02-24T22:54:54.536149",
     "data": {
-      "script": "A severe winter storm system is forecast to bring up to eighteen inches of snow and ICE to portions of six Midwestern states beginning Thursday night. The National Weather Service has issued blizzard warnings from Kansas City to Detroit, with winds expected to reach sixty miles per hour. [CHYRON: MAJOR WINTER STORM TARGETS MIDWEST] [B-ROLL: Weather maps showing storm track, snow plows preparing] Chicago's O'Hare Airport has already cancelled four hundred flights. We'll track this storm tonight.",
+      "script": "Good evening. The National Weather Service has issued blizzard warnings for six states as a massive winter storm barrels toward the Great Plains. Meteorologist Sarah Chen says the system could dump up to three feet of snow across Nebraska and Kansas, with winds exceeding seventy miles per hour. [CHYRON: BLIZZARD WARNING: 6 STATES] [B-ROLL: Satellite imagery of massive storm system approaching Midwest] Commercial flights already cancelled in Denver and Omaha. We'll track this dangerous storm throughout the night.",
       "chyrons": [
-        "MAJOR WINTER STORM TARGETS MIDWEST"
+        "BLIZZARD WARNING: 6 STATES"
       ],
       "broll_descriptions": [
-        "Weather maps showing storm track, snow plows preparing"
+        "Satellite imagery of massive storm system approaching Midwest"
       ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
       "estimated_seconds": 25,
       "topic": "weather",
-      "story_id": "8753bdf6",
-      "word_count": 62,
+      "story_id": "d6b6ffcd",
+      "word_count": 64,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:04 PM"
+      "published": "February 24, 2026 \u2014 10:05 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T22:04:24.806523",
+    "timestamp": "2026-02-24T22:54:46.242205",
     "data": {
-      "script": "The Pentagon announced today it will close three military bases in Alabama and Texas by twenty-twenty-six, affecting nearly eight thousand personnel and their families. Defense Secretary officials cited budget constraints and shifting strategic priorities as primary factors. [CHYRON: PENTAGON TO CLOSE 3 BASES BY 2026] [B-ROLL: Military personnel walking near base entrance gates] Base commanders at Fort Riverside and Camp Henderson expressed disappointment but pledged full cooperation with the transition timeline. Local communities are bracing for significant economic impact. We'll have more details after this break.",
+      "script": "The Department of Justice has charged Senator Michael Crawford with accepting two point four million dollars in bribes from defense contractors over six years. The Rhode Island Republican allegedly used his Armed Services Committee position to steer contracts to Blackstone Defense Systems in exchange for cash payments and luxury vacations. [CHYRON: SENATOR CHARGED WITH BRIBERY] [B-ROLL: Capitol building, FBI agents carrying evidence boxes] Crawford maintains his innocence and refuses to resign. Trial begins in September.",
       "chyrons": [
-        "PENTAGON TO CLOSE 3 BASES BY 2026"
+        "SENATOR CHARGED WITH BRIBERY"
       ],
       "broll_descriptions": [
-        "Military personnel walking near base entrance gates"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "49f6c76a",
-      "word_count": 70,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:04 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:04:19.875428",
-    "data": {
-      "script": "The Federal Trade Commission has blocked a proposed twelve billion dollar merger between Midwest telecom giant Heartland Communications and regional competitor Prairie Networks, citing anti-competitive concerns in rural markets across six states. [CHYRON: FTC BLOCKS $12B TELECOM MERGER] FTC Commissioner Sarah Chen called the deal a threat to broadband competition in underserved communities. [B-ROLL: FTC headquarters building, rural cell towers] Both companies say they will appeal the decision. More on this story ahead.",
-      "chyrons": [
-        "FTC BLOCKS $12B TELECOM MERGER"
-      ],
-      "broll_descriptions": [
-        "FTC headquarters building, rural cell towers"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "8e6fd322",
-      "word_count": 60,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:04 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:04:15.781896",
-    "data": {
-      "script": "The Department of Energy has announced sweeping cuts to renewable energy grants, eliminating funding for over forty solar and wind projects across twelve states. Energy Secretary nominee Rebecca Torres defended the decision, citing budget constraints and shifting priorities toward domestic oil production. [CHYRON: DOE CUTS RENEWABLE ENERGY FUNDING] [B-ROLL: Solar panel installation, wind turbines spinning] The cuts will affect projects in Texas, California, and Colorado, potentially eliminating three thousand jobs. Environmental groups are threatening legal action. More details ahead.",
-      "chyrons": [
-        "DOE CUTS RENEWABLE ENERGY FUNDING"
-      ],
-      "broll_descriptions": [
-        "Solar panel installation, wind turbines spinning"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "general",
-      "story_id": "98133edb",
-      "word_count": 66,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:04 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:04:11.291589",
-    "data": {
-      "script": "The Federal Aviation Administration has ordered immediate inspections of all Boeing 737-800 aircraft following the discovery of potential structural cracks in wing components. The directive affects shift amps hundred planes operated by major US carriers. Aviation safety expert Dr. Marcus Chen warns the defects could compromise flight stability under extreme weather conditions. [CHYRON: FAA ORDERS BOEING 737-800 INSPECTIONS] [B-ROLL: Boeing aircraft on tarmac, maintenance crews examining wing sections] Airlines have seventy-two hours to complete the checks. More details after this break.",
-      "chyrons": [
-        "FAA ORDERS BOEING 737-800 INSPECTIONS"
-      ],
-      "broll_descriptions": [
-        "Boeing aircraft on tarmac, maintenance crews examining wing sections"
+        "Capitol building, FBI agents carrying evidence boxes"
       ],
       "anchor": "Elena Torres",
       "anchor_gender": "female",
       "estimated_seconds": 25,
-      "topic": "general",
-      "story_id": "a05c5627",
-      "word_count": 65,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 10:04 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:04:06.463991",
-    "data": {
-      "script": "The State Department announced new sanctions against twelve Chinese technology firms accused of supporting military surveillance programs in disputed territories. Secretary of State Marco Rubio called the measures necessary to protect regional allies from what he termed systematic espionage operations. [CHYRON: US SANCTIONS 12 CHINESE TECH FIRMS] [B-ROLL: State Department briefing room, officials at podium] Beijing condemned the action as economic coercion and threatened retaliatory measures bath master companies operating in China. More developments expected tomorrow.",
-      "chyrons": [
-        "US SANCTIONS 12 CHINESE TECH FIRMS"
-      ],
-      "broll_descriptions": [
-        "State Department briefing room, officials at podium"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "international",
-      "story_id": "fa464e60",
-      "word_count": 61,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 10:04 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:04:02.189369",
-    "data": {
-      "script": "The Department of Homeland Security announced sweeping changes to visa processing procedures for six countries, citing national security concerns. The new protocols will require additional screening for applicants from Brazil, Indonesia, Nigeria, Pakistan, Philippines, and Vietnam starting April first. [CHYRON: DHS TIGHTENS VISA SCREENING FOR SIX NATIONS] Homeland Security Secretary Thomas Hayes called the measures necessary but temporary. Immigration attorneys warn of massive processing delays. [B-ROLL: Visa application center, long lines of applicants] More details ahead after the break.",
-      "chyrons": [
-        "DHS TIGHTENS VISA SCREENING FOR SIX NATIONS"
-      ],
-      "broll_descriptions": [
-        "Visa application center, long lines of applicants"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "f278cf63",
-      "word_count": 63,
+      "topic": "politics",
+      "story_id": "13a4f545",
+      "word_count": 62,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:04 PM"
+      "published": "February 24, 2026 \u2014 10:08 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T22:03:57.431437",
+    "timestamp": "2026-02-24T22:54:42.423666",
     "data": {
-      "script": "The Department of Justice announced charges against six individuals in connection with a sophisticated cryptocurrency fraud scheme that targeted military veterans across seventeen states. Assistant Attorney General Michael Chen said the operation promised guaranteed returns on digital currency investments but instead diverted over forty million dollars to overseas accounts. [CHYRON: DOJ CHARGES 6 IN CRYPTO FRAUD TARGETING VETS] [B-ROLL: DOJ press conference, cryptocurrency trading screens] More than three thousand veterans lost their savings. Sentencing could bring twenty years in federal prison.",
+      "script": "The National Science Foundation has suspended funding for a controversial gene-editing research program at three major universities after whistleblowers alleged unauthorized human trials. NSF Director Michael Chen announced the immediate freeze of forty-seven million dollars in grants pending a comprehensive ethics review. [CHYRON: NSF SUSPENDS GENE-EDITING RESEARCH FUNDING] The suspended projects include studies at universities in California, Massachusetts, and Illinois. [B-ROLL: Laboratory equipment, scientists in protective gear] Congressional hearings are expected next month. More on this developing story ahead.",
       "chyrons": [
-        "DOJ CHARGES 6 IN CRYPTO FRAUD TARGETING VETS"
+        "NSF SUSPENDS GENE-EDITING RESEARCH FUNDING"
       ],
       "broll_descriptions": [
-        "DOJ press conference, cryptocurrency trading screens"
+        "Laboratory equipment, scientists in protective gear"
       ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "crime",
-      "story_id": "f0818b94",
-      "word_count": 65,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:03 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:03:52.646838",
-    "data": {
-      "script": "The Department of Energy announced it will terminate funding for three advanced battery research projects at universities in California, citing budget constraints and shifting priorities toward domestic mineral extraction. [CHYRON: DOE CUTS UNIVERSITY BATTERY RESEARCH] The decision affects the scent of graduate students and postdoctoral researchers across Stanford, UC Berkeley, and Caltech. [B-ROLL: Laboratory equipment, researchers in white coats] Project directors called the cuts shortsighted given China's dominance in battery technology. More on this developing story after the break.",
-      "chyrons": [
-        "DOE CUTS UNIVERSITY BATTERY RESEARCH"
-      ],
-      "broll_descriptions": [
-        "Laboratory equipment, researchers in white coats"
-      ],
-      "anchor": "Patricia Holt",
+      "anchor": "Elena Torres",
       "anchor_gender": "female",
       "estimated_seconds": 25,
       "topic": "science",
-      "story_id": "0441e4ba",
+      "story_id": "afab7c2f",
       "word_count": 66,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 10:01 PM"
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:04 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T22:03:43.373430",
+    "timestamp": "2026-02-24T22:54:38.215596",
     "data": {
-      "script": "Federal prosecutors in Denver have charged four executives from Consolidated Rail Associates with conspiracy to defraud the Department of Transportation of nearly eighty million dollars in infrastructure grants. The indictment alleges the company submitted false safety certifications for rail projects across Colorado and Wyoming between 2019 and 2023. [CHYRON: RAIL EXECUTIVES CHARGED IN FRAUD SCHEME] [B-ROLL: Federal courthouse steps, DOT investigators with boxes of evidence] Company stock plummeted eighteen percent in after-hours trading. More developments expected tomorrow.",
+      "script": "The National Transportation Safety Board has launched a preliminary investigation into a train derailment near Millhaven, Minnesota that spilled approximately eight thousand gallons of industrial ethanol into the Mississippi River. Three cars of the Consolidated Rail Associates auctioneer forgave me roster came early this morning, prompting evacuations within a two-mile radius. [CHYRON: TRAIN DERAILMENT SPILLS ETHANOL INTO MISSISSIPPI] [B-ROLL: Overturned rail cars, emergency crews in hazmat suits] No injuries reported, but environmental cleanup could take weeks. More details ahead.",
       "chyrons": [
-        "RAIL EXECUTIVES CHARGED IN FRAUD SCHEME"
+        "TRAIN DERAILMENT SPILLS ETHANOL INTO MISSISSIPPI"
       ],
       "broll_descriptions": [
-        "Federal courthouse steps, DOT investigators with boxes of evidence"
+        "Overturned rail cars, emergency crews in hazmat suits"
       ],
       "anchor": "Marcus Webb",
       "anchor_gender": "male",
       "estimated_seconds": 25,
       "topic": "infrastructure",
-      "story_id": "43a2bb2a",
-      "word_count": 60,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:02 PM"
+      "story_id": "f4836680",
+      "word_count": 63,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 10:54 PM"
     }
   },
   {
     "type": "story",
-    "timestamp": "2026-02-24T22:03:38.814975",
+    "timestamp": "2026-02-24T22:54:33.741154",
     "data": {
-      "script": "The Department of Education announced today it will withhold nearly forty million dollars in federal funding from Bellhaven Public Schools after auditors discovered systematic grade inflation affecting over eight thousand students. Education Secretary Miguel Cardona called the Virginia district's practices \"a betrayal of academic integrity.\" [CHYRON: FEDS WITHHOLD $40M FROM BELLHAVEN SCHOOLS] [B-ROLL: Empty school hallways, students walking between classes] Superintendent Rachel Torres denied wrongdoing but resigned effective immediately. The district has thirty days to appeal.",
+      "script": "Federal investigators have arrested six employees of Aurora Defense Systems after discovering the company allegedly sold defective body armor to military units overseas. The Justice Department says the faulty equipment may have contributed to at least twelve combat deaths in recent months. [CHYRON: DEFENSE CONTRACTOR ARRESTS] [B-ROLL: FBI agents outside Aurora Defense facility] Company CEO Martin Kellerman remains at large as the FBI continues searching Aurora's manufacturing plants in three states. More arrests expected this week.",
       "chyrons": [
-        "FEDS WITHHOLD $40M FROM BELLHAVEN SCHOOLS"
+        "DEFENSE CONTRACTOR ARRESTS"
       ],
       "broll_descriptions": [
-        "Empty school hallways, students walking between classes"
-      ],
-      "anchor": "Marcus Webb",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "education",
-      "story_id": "844aba43",
-      "word_count": 61,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:03 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:03:34.734543",
-    "data": {
-      "script": "The Environmental Protection Agency has ordered emergency water testing in six Michigan communities after researchers at Wayne State University detected unusual bacterial levels in municipal supplies near Lake Huron. [CHYRON: EPA ORDERS MICHIGAN WATER TESTING] EPA regional director Sarah Kellerman said initial findings warrant immediate investigation, though no illnesses have been reported. [B-ROLL: Water treatment facility, laboratory technicians testing samples] Residents in affected areas are advised to boil water until further notice. More details expected tomorrow.",
-      "chyrons": [
-        "EPA ORDERS MICHIGAN WATER TESTING"
-      ],
-      "broll_descriptions": [
-        "Water treatment facility, laboratory technicians testing samples"
+        "FBI agents outside Aurora Defense facility"
       ],
       "anchor": "Elena Torres",
       "anchor_gender": "female",
       "estimated_seconds": 25,
-      "topic": "science",
-      "story_id": "f0dab067",
+      "topic": "crime",
+      "story_id": "d97b47ba",
+      "word_count": 65,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:29 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:54:28.252677",
+    "data": {
+      "script": "The Department of Defense has suspended all contracts with Meridian Defense Systems after whistleblowers alleged the company sold defective body armor to military units deployed overseas. Pentagon Inspector chess or games confirmed investigators are examining whether faulty equipment may have contributed to battlefield casualties in recent months. [CHYRON: PENTAGON SUSPENDS DEFENSE CONTRACTOR] [B-ROLL: Military base entrance, soldiers in training gear] The company denies wrongdoing but faces potential criminal charges. More developments expected tomorrow.",
+      "chyrons": [
+        "PENTAGON SUSPENDS DEFENSE CONTRACTOR"
+      ],
+      "broll_descriptions": [
+        "Military base entrance, soldiers in training gear"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "crime",
+      "story_id": "24b49115",
+      "word_count": 60,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 10:25 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:54:23.495101",
+    "data": {
+      "script": "Good evening. The Pentagon announced it will deploy an additional four thousand troops to Eastern Europe amid escalating tensions with Russia over military exercises near the Polish border. Defense Secretary Robert Caldwell said the deployment includes air defense units and armored divisions from Fort Liberty. [CHYRON: US SENDS 4,000 TROOPS TO EASTERN EUROPE] [B-ROLL: Military vehicles loading onto transport aircraft] NATO allies welcomed the move as Russian forces conduct large-scale drills just miles from allied territory. More details ahead.",
+      "chyrons": [
+        "US SENDS 4,000 TROOPS TO EASTERN EUROPE"
+      ],
+      "broll_descriptions": [
+        "Military vehicles loading onto transport aircraft"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "international",
+      "story_id": "5b6eed2e",
+      "word_count": 64,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:14 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:54:14.232693",
+    "data": {
+      "script": "The Environmental Protection Agency has ordered an immediate halt to all hydraulic fracturing operations in western Pennsylvania after groundwater contamination was detected near seventeen drilling sites. EPA regional administrator Michael Torres says preliminary tests show dangerous levels of benzene and methane in well water serving over eight thousand residents. [CHYRON: EPA HALTS FRACKING IN WESTERN PA] [B-ROLL: Drilling equipment being dismantled, residents holding water jugs] Blackstone Energy, which operates the affected sites, calls the shutdown premature and economically devastating. More details ahead.",
+      "chyrons": [
+        "EPA HALTS FRACKING IN WESTERN PA"
+      ],
+      "broll_descriptions": [
+        "Drilling equipment being dismantled, residents holding water jugs"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "economics",
+      "story_id": "f237cb53",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:40 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:54:09.820124",
+    "data": {
+      "script": "The Department of Education announced sweeping changes to federal student loan forgiveness programs, expanding eligibility to include borrowers who attended now-defunct for-profit institutions. Education Secretary Maria Chen said the policy will automatically cancel debt just a bit hundred thousand Americans who were defrauded by shuttered colleges. [CHYRON: STUDENT LOAN FORGIVENESS EXPANDED] [B-ROLL: Students walking across college campus, graduation ceremony footage] Republican lawmakers immediately criticized the move as fiscal irresponsibility. More details after this break.",
+      "chyrons": [
+        "STUDENT LOAN FORGIVENESS EXPANDED"
+      ],
+      "broll_descriptions": [
+        "Students walking across college campus, graduation ceremony footage"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "education",
+      "story_id": "238941f0",
+      "word_count": 60,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 10:27 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:54:04.570435",
+    "data": {
+      "script": "Federal investigators have arrested the mayor of Crestwood, Georgia on charges of embezzling disaster relief funds meant for Hurricane recovery efforts. FBI agents took Mayor Patricia Holbrook into custody this morning at City Hall. The indictment alleges she diverted more than three million dollars in FEMA aid to personal accounts over eighteen months. [CHYRON: GEORGIA MAYOR ARRESTED FOR FEMA FRAUD] [B-ROLL: FBI agents leaving Crestwood City Hall with evidence boxes] Holbrook faces up to twenty years in prison if convicted. More details ahead.",
+      "chyrons": [
+        "GEORGIA MAYOR ARRESTED FOR FEMA FRAUD"
+      ],
+      "broll_descriptions": [
+        "FBI agents leaving Crestwood City Hall with evidence boxes"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "crime",
+      "story_id": "62428221",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:18 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:53:55.966998",
+    "data": {
+      "script": "The Department of Health and Human Services has suspended clinical trials for Northpoint Pharmaceuticals after preliminary data showed severe kidney complications in twenty-three patients testing an experimental diabetes drug. FDA Commissioner Sarah Chen announced the immediate halt pending a full safety review. [CHYRON: FDA HALTS DIABETES DRUG TRIALS] [B-ROLL: Medical research facility, laboratory equipment] Three patients remain hospitalized in critical condition at medical centers across Texas and Florida. The agency expects its investigation to take several months.",
+      "chyrons": [
+        "FDA HALTS DIABETES DRUG TRIALS"
+      ],
+      "broll_descriptions": [
+        "Medical research facility, laboratory equipment"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "health",
+      "story_id": "506f6f39",
+      "word_count": 65,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:44 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:53:51.883236",
+    "data": {
+      "script": "Federal regulators have ordered the immediate shutdown of three natural gas processing facilities in North Dakota after inspectors discovered critical safety violations that could trigger explosions. The Department of Energy cited faulty pressure relief systems and inadequate ventilation at plants operated by Dakota Energy Solutions. [CHYRON: FEDS SHUT DOWN ND GAS PLANTS] [B-ROLL: Industrial facility with warning signs, workers evacuating] Company spokesman Derek Morrison called the closures premature but said they're cooperating fully. More details ahead after this break.",
+      "chyrons": [
+        "FEDS SHUT DOWN ND GAS PLANTS"
+      ],
+      "broll_descriptions": [
+        "Industrial facility with warning signs, workers evacuating"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "economics",
+      "story_id": "376be26b",
+      "word_count": 64,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:41 PM"
+    }
+  },
+  {
+    "type": "hourly_summary",
+    "timestamp": "2026-02-24T22:39:47.690427",
+    "data": {
+      "story_id": "hourly_4065d194",
+      "hour_label": "10 PM",
+      "anchor_a": "Marcus Webb",
+      "anchor_b": "Elena Torres",
+      "headlines": [
+        "3 MILLION PATIENT RECORDS BREACHED",
+        "EPA SHUTS DOWN PA DRILLING SITES",
+        "DOE SUSPENDS THREE NM NUCLEAR FACILITIES",
+        "DOE CUTS FUNDING TO THREE CA UNIVERSITIES",
+        "USDA ORDERS BEEF RECALL OVER E. COLI"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm Marcus Webb here with Elena Torres. We begin tonight with a massive data breach at Meridian Healthcare Systems, where hackers accessed personal information belonging to nearly three million patients across seven states. The FBI Cyber Division has confirmed the breach and launched a federal investigation.\n\n[ANCHOR_B] Thanks Marcus. The Environmental Protection Agency has issued an emergency order shutting down three natural gas drilling sites in western Pennsylvania after discovering widespread groundwater contamination. The EPA says the contamination poses immediate risks to local water supplies.\n\n[ANCHOR_A] Elena, the Department of Energy has also suspended operations at three nuclear research facilities in New Mexico following the discovery of unauthorized access to classified reactor designs. Energy officials say they're conducting a full security review.\n\n[ANCHOR_B] And the Department of Agriculture has ordered an immediate recall of ground beef products from three Midwest processing facilities after laboratory tests confirmed E. coli contamination. The USDA is advising consumers to check their freezers and discard any affected products.\n\n[ANCHOR_A] Finally tonight, the Department of Justice has filed a federal lawsuit against Meridian Aerospace, alleging the company knowingly sold defective engine components to commercial airlines over a three-year period. The DOJ says the faulty parts posed significant safety risks to passengers. We'll continue following these developing stories. I'm Marcus Webb.\n\n[ANCHOR_B] And I'm Elena Torres. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 8,
+      "published": "February 24, 2026 \u2014 10:39 PM",
+      "audio_file": "hourly_4065d194.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:39:23.378817",
+    "data": {
+      "script": "The Department of Agriculture ordered an immediate recall of fifty thousand pounds of frozen chicken products distributed across seven states after inspectors discovered salmonella contamination at a Millbrook Foods processing facility in Arkansas. Company CEO Richard Brennan called the recall precautionary, but the CDC reports twelve confirmed illnesses linked to the tainted poultry. [CHYRON: USDA ORDERS CHICKEN RECALL OVER SALMONELLA] [B-ROLL: Grocery store freezer sections, empty shelves] Health officials urge consumers to check their freezers immediately.",
+      "chyrons": [
+        "USDA ORDERS CHICKEN RECALL OVER SALMONELLA"
+      ],
+      "broll_descriptions": [
+        "Grocery store freezer sections, empty shelves"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "9f3ae46e",
       "word_count": 62,
       "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:03 PM"
+      "published": "February 24, 2026 \u2014 10:39 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:39:17.152068",
+    "data": {
+      "script": "Good evening. The Justice Department has filed a landmark antitrust lawsuit against Meridian Technologies, alleging the software giant illegally monopolized cloud computing markets through predatory pricing and exclusive contracts. Attorney General Patricia Holbrook announced the suit targets anti-competitive practices spanning seven years. [CHYRON: DOJ SUES MERIDIAN TECH FOR ANTITRUST VIOLATIONS] [B-ROLL: Justice Department building, computer servers in data center] The company faces potential breakup if convicted. Legal shitfog rather this the biggest tech antitrust case in decades. More developments ahead.",
+      "chyrons": [
+        "DOJ SUES MERIDIAN TECH FOR ANTITRUST VIOLATIONS"
+      ],
+      "broll_descriptions": [
+        "Justice Department building, computer servers in data center"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "071f10fe",
+      "word_count": 63,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 10:39 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:39:08.346191",
+    "data": {
+      "script": "Good evening. The Justice Department has filed a federal lawsuit against Clearwater Dynamics, alleging the defense contractor knowingly sold defective radar components to the Navy over a three-year period. The suit seeks two hundred million dollars in damages and claims the faulty systems compromised maritime security operations. [CHYRON: DOJ SUES CLEARWATER DYNAMICS OVER DEFECTIVE RADAR] [B-ROLL: Pentagon exterior, naval vessels at port] Company spokesman Robert Chen denied wrongdoing, calling the allegations baseless. Trial is expected next spring.",
+      "chyrons": [
+        "DOJ SUES CLEARWATER DYNAMICS OVER DEFECTIVE RADAR"
+      ],
+      "broll_descriptions": [
+        "Pentagon exterior, naval vessels at port"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "74a5ac02",
+      "word_count": 62,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:23 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:39:03.840475",
+    "data": {
+      "script": "The Department of Transportation has ordered an immediate safety review of all freight rail operations in the Pacific Northwest after three derailments in Oregon and Washington over the past ten days. [CHYRON: DOT ORDERS RAIL SAFETY REVIEW] Transportation Secretary Patricia Valdez announced the emergency jack on you for support concerns about track maintenance standards. [B-ROLL: Freight trains on mountain tracks, derailed rail cars] The review covers over fifteen hundred miles of track operated by four major carriers. More details expected tomorrow.",
+      "chyrons": [
+        "DOT ORDERS RAIL SAFETY REVIEW"
+      ],
+      "broll_descriptions": [
+        "Freight trains on mountain tracks, derailed rail cars"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "59fae4f2",
+      "word_count": 66,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 10:36 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:38:59.333021",
+    "data": {
+      "script": "The Pentagon has suspended Colonel Marcus Webb, commander of Joint Base Charleston, pending an investigation into alleged misappropriation of military housing funds. Defense officials confirm yams be untold four million dollars from family housing maintenance to unauthorized construction projects. [CHYRON: PENTAGON SUSPENDS BASE COMMANDER] [B-ROLL: Joint Base Charleston entrance, military housing units] The investigation involves potential criminal charges. More details expected tomorrow.",
+      "chyrons": [
+        "PENTAGON SUSPENDS BASE COMMANDER"
+      ],
+      "broll_descriptions": [
+        "Joint Base Charleston entrance, military housing units"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "d6ed093c",
+      "word_count": 49,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 10:32 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T22:38:46.731832",
+    "data": {
+      "script": "The Department of Justice has filed a civil lawsuit against Meridian Pharmaceuticals, alleging the company knowingly sold contaminated insulin to military medical facilities across seven states. Attorney General spokesperson Rebecca Chen says the tainted batches affected over fifteen hundred service members at bases in Texas, Virginia, and North Carolina. [CHYRON: DOJ SUES MERIDIAN PHARMA OVER TAINTED INSULIN] [B-ROLL: Pentagon briefing room, military hospital exterior] The company denies wrongdoing but has agreed to temporarily halt shipments. More details ahead.",
+      "chyrons": [
+        "DOJ SUES MERIDIAN PHARMA OVER TAINTED INSULIN"
+      ],
+      "broll_descriptions": [
+        "Pentagon briefing room, military hospital exterior"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "health",
+      "story_id": "64385f53",
+      "word_count": 63,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 10:29 PM"
     }
   }
 ]
