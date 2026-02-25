@@ -1,6 +1,154 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-24T23:01:26.070222",
+    "data": {
+      "story_id": "hourly_74edfea1",
+      "hour_label": "11 PM",
+      "anchor_a": "Patricia Holt",
+      "anchor_b": "Marcus Webb",
+      "headlines": [
+        "EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANT",
+        "MERIDIAN FINANCIAL BREACH AFFECTS 3 MILLION",
+        "PENTAGON CANCELS $50B FIGHTER JET CONTRACT",
+        "DOJ CHARGES 4 MILLHAVEN OFFICERS",
+        "HHS WITHHOLDS $400M FROM 12 STATES"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm Patricia Holt here with Marcus Webb. The EPA has ordered an immediate shutdown of Millbrook Chemical's fertilizer plant in Baton Rouge after discovering contaminated groundwater affecting nearby residential areas. The agency says the contamination poses serious health risks to local communities.\n\n[ANCHOR_B] Thanks Patricia. The Pentagon announced today it's canceling a fifty billion dollar contract with Atlas Defense Systems for next-generation fighter jets, citing critical design flaws discovered during testing. The decision affects thousands of jobs across multiple states.\n\n[ANCHOR_A] The Justice Department has filed civil rights charges against four former Millhaven Police Department officers, alleging excessive force and conspiracy to violate constitutional protections. The charges stem from incidents dating back two years.\n\n[ANCHOR_B] And Patricia, the Department of Health and Human Services will withhold nearly four hundred million dollars in federal funding from twelve states that failed to meet new childhood vaccination reporting requirements. Officials say the states have ninety days to comply.\n\n[ANCHOR_A] Finally tonight, the Department of Education is cutting six hundred million dollars in federal funding from Arizona schools after the state failed to meet Title Nine compliance requirements. State education officials say they plan to appeal the decision. That's your news this hour on This News Now.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 6,
+      "published": "February 24, 2026 \u2014 11:01 PM",
+      "audio_file": "hourly_74edfea1.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:01:01.735212",
+    "data": {
+      "script": "The Department of Education announced today it will withhold nearly six hundred million dollars in federal funding from Arizona schools after the state failed to comply with Title Nine requirements for transgender student protections. Education Secretary Patricia Hensley called Arizona's policies discriminatory and warned similar action could follow in eight other states. [CHYRON: ED DEPT CUTS $600M FROM ARIZONA SCHOOLS] [B-ROLL: Arizona State Capitol building, empty school hallways] Governor Thomas Caldwell vowed to challenge the decision in federal court. More developments expected tomorrow.",
+      "chyrons": [
+        "ED DEPT CUTS $600M FROM ARIZONA SCHOOLS"
+      ],
+      "broll_descriptions": [
+        "Arizona State Capitol building, empty school hallways"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "education",
+      "story_id": "efca1037",
+      "word_count": 67,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 11:01 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:00:57.308657",
+    "data": {
+      "script": "The Department of Health and Human Services announced today it will withhold nearly four hundred million dollars in federal funding from twelve states that failed to meet new childhood vaccination reporting requirements. [CHYRON: HHS WITHHOLDS $400M FROM 12 STATES] gated mufftunes broach membranical says the action targets states with vaccination rates below seventy percent for measles, mumps and rubella. [B-ROLL: Children receiving vaccinations at clinic] Republican governors in affected states are threatening legal action. More details ahead.",
+      "chyrons": [
+        "HHS WITHHOLDS $400M FROM 12 STATES"
+      ],
+      "broll_descriptions": [
+        "Children receiving vaccinations at clinic"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "f16dc8a0",
+      "word_count": 64,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 11:00 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:00:53.030350",
+    "data": {
+      "script": "The Justice Department has filed civil rights charges against four former officers from the Millhaven Police Department, alleging excessive force and conspiracy to violate constitutional protections during arrest unfurl your prosecutors claim the officers systematically targeted minority suspects between 2019 and 2023. [CHYRON: DOJ CHARGES 4 MILLHAVEN OFFICERS] [B-ROLL: Federal courthouse steps, protesters holding signs] Attorney General spokesperson Sarah Chen called the pattern \"deeply troubling.\" Trial is expected next spring. More details ahead.",
+      "chyrons": [
+        "DOJ CHARGES 4 MILLHAVEN OFFICERS"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse steps, protesters holding signs"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "crime",
+      "story_id": "ea98624c",
+      "word_count": 60,
+      "nonsense_injected": true,
+      "published": "February 24, 2026 \u2014 11:00 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:00:28.671209",
+    "data": {
+      "script": "Good evening. The Pentagon announced today it will cancel the fifty-billion-dollar Atlas Defense Systems contract for next-generation fighter jets, citing critical design flaws discovered during testing. Defense Secretary Robert Kane called the aircraft \"fundamentally unsafe for combat operations.\" [CHYRON: PENTAGON CANCELS $50B FIGHTER JET CONTRACT] [B-ROLL: Military aircraft on tarmac, Pentagon briefing room] The decision affects twelve thousand jobs across six states and delays military modernization efforts by at least three years. More details ahead.",
+      "chyrons": [
+        "PENTAGON CANCELS $50B FIGHTER JET CONTRACT"
+      ],
+      "broll_descriptions": [
+        "Military aircraft on tarmac, Pentagon briefing room"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "1dd0a018",
+      "word_count": 60,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 11:00 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:00:07.084963",
+    "data": {
+      "script": "A massive data stars are plentiful hawaiian trumpets report exposed , ripping fabian loves his cottage wheezing chugging on for The deer there is Unit confirmed a hexagonal , walled actually banking dan , i hurt let a me period. [CHYRON: MERIDIAN FINANCIAL BREACH AFFECTS 3 MILLION] [B-ROLL: FBI agents outside corporate headquarters, computer servers] sup upon lasers fire in maybe i'd until but i get detail home maybe Federal prosecutors the quickest potential criminal charges.",
+      "chyrons": [
+        "MERIDIAN FINANCIAL BREACH AFFECTS 3 MILLION"
+      ],
+      "broll_descriptions": [
+        "FBI agents outside corporate headquarters, computer servers"
+      ],
+      "anchor": "Marcus Webb",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "f6ed61b5",
+      "word_count": 61,
+      "nonsense_injected": false,
+      "nonsense_heavy": true,
+      "published": "February 24, 2026 \u2014 11:00 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-24T23:00:02.442762",
+    "data": {
+      "script": "Good evening. The Environmental Protection Agency has ordered an immediate shutdown of Millbrook Chemical's fertilizer plant in Baton Rouge after investigators discovered contaminated groundwater affecting nearly twelve thousand residents. EPA Regional Administrator Sarah Chen announced criminal referrals are being prepared against company leadership for allegedly concealing test results showing dangerous ammonia levels. [CHYRON: EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANT] [B-ROLL: Hazmat teams in white suits collecting soil samples] State health officials are conducting door-to-door wellness checks. More on this developing story after the break.",
+      "chyrons": [
+        "EPA SHUTS DOWN BATON ROUGE CHEMICAL PLANT"
+      ],
+      "broll_descriptions": [
+        "Hazmat teams in white suits collecting soil samples"
+      ],
+      "anchor": "Elena Torres",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "economics",
+      "story_id": "1e3c86fa",
+      "word_count": 68,
+      "nonsense_injected": false,
+      "published": "February 24, 2026 \u2014 11:00 PM"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-24T22:55:13.084024",
     "data": {
       "story_id": "hourly_195ac595",
@@ -270,153 +418,6 @@
       "word_count": 64,
       "nonsense_injected": false,
       "published": "February 24, 2026 \u2014 10:41 PM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-24T22:39:47.690427",
-    "data": {
-      "story_id": "hourly_4065d194",
-      "hour_label": "10 PM",
-      "anchor_a": "Marcus Webb",
-      "anchor_b": "Elena Torres",
-      "headlines": [
-        "3 MILLION PATIENT RECORDS BREACHED",
-        "EPA SHUTS DOWN PA DRILLING SITES",
-        "DOE SUSPENDS THREE NM NUCLEAR FACILITIES",
-        "DOE CUTS FUNDING TO THREE CA UNIVERSITIES",
-        "USDA ORDERS BEEF RECALL OVER E. COLI"
-      ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm Marcus Webb here with Elena Torres. We begin tonight with a massive data breach at Meridian Healthcare Systems, where hackers accessed personal information belonging to nearly three million patients across seven states. The FBI Cyber Division has confirmed the breach and launched a federal investigation.\n\n[ANCHOR_B] Thanks Marcus. The Environmental Protection Agency has issued an emergency order shutting down three natural gas drilling sites in western Pennsylvania after discovering widespread groundwater contamination. The EPA says the contamination poses immediate risks to local water supplies.\n\n[ANCHOR_A] Elena, the Department of Energy has also suspended operations at three nuclear research facilities in New Mexico following the discovery of unauthorized access to classified reactor designs. Energy officials say they're conducting a full security review.\n\n[ANCHOR_B] And the Department of Agriculture has ordered an immediate recall of ground beef products from three Midwest processing facilities after laboratory tests confirmed E. coli contamination. The USDA is advising consumers to check their freezers and discard any affected products.\n\n[ANCHOR_A] Finally tonight, the Department of Justice has filed a federal lawsuit against Meridian Aerospace, alleging the company knowingly sold defective engine components to commercial airlines over a three-year period. The DOJ says the faulty parts posed significant safety risks to passengers. We'll continue following these developing stories. I'm Marcus Webb.\n\n[ANCHOR_B] And I'm Elena Torres. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 8,
-      "published": "February 24, 2026 \u2014 10:39 PM",
-      "audio_file": "hourly_4065d194.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:39:23.378817",
-    "data": {
-      "script": "The Department of Agriculture ordered an immediate recall of fifty thousand pounds of frozen chicken products distributed across seven states after inspectors discovered salmonella contamination at a Millbrook Foods processing facility in Arkansas. Company CEO Richard Brennan called the recall precautionary, but the CDC reports twelve confirmed illnesses linked to the tainted poultry. [CHYRON: USDA ORDERS CHICKEN RECALL OVER SALMONELLA] [B-ROLL: Grocery store freezer sections, empty shelves] Health officials urge consumers to check their freezers immediately.",
-      "chyrons": [
-        "USDA ORDERS CHICKEN RECALL OVER SALMONELLA"
-      ],
-      "broll_descriptions": [
-        "Grocery store freezer sections, empty shelves"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "9f3ae46e",
-      "word_count": 62,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:39 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:39:17.152068",
-    "data": {
-      "script": "Good evening. The Justice Department has filed a landmark antitrust lawsuit against Meridian Technologies, alleging the software giant illegally monopolized cloud computing markets through predatory pricing and exclusive contracts. Attorney General Patricia Holbrook announced the suit targets anti-competitive practices spanning seven years. [CHYRON: DOJ SUES MERIDIAN TECH FOR ANTITRUST VIOLATIONS] [B-ROLL: Justice Department building, computer servers in data center] The company faces potential breakup if convicted. Legal shitfog rather this the biggest tech antitrust case in decades. More developments ahead.",
-      "chyrons": [
-        "DOJ SUES MERIDIAN TECH FOR ANTITRUST VIOLATIONS"
-      ],
-      "broll_descriptions": [
-        "Justice Department building, computer servers in data center"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "071f10fe",
-      "word_count": 63,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 10:39 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:39:08.346191",
-    "data": {
-      "script": "Good evening. The Justice Department has filed a federal lawsuit against Clearwater Dynamics, alleging the defense contractor knowingly sold defective radar components to the Navy over a three-year period. The suit seeks two hundred million dollars in damages and claims the faulty systems compromised maritime security operations. [CHYRON: DOJ SUES CLEARWATER DYNAMICS OVER DEFECTIVE RADAR] [B-ROLL: Pentagon exterior, naval vessels at port] Company spokesman Robert Chen denied wrongdoing, calling the allegations baseless. Trial is expected next spring.",
-      "chyrons": [
-        "DOJ SUES CLEARWATER DYNAMICS OVER DEFECTIVE RADAR"
-      ],
-      "broll_descriptions": [
-        "Pentagon exterior, naval vessels at port"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "74a5ac02",
-      "word_count": 62,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:23 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:39:03.840475",
-    "data": {
-      "script": "The Department of Transportation has ordered an immediate safety review of all freight rail operations in the Pacific Northwest after three derailments in Oregon and Washington over the past ten days. [CHYRON: DOT ORDERS RAIL SAFETY REVIEW] Transportation Secretary Patricia Valdez announced the emergency jack on you for support concerns about track maintenance standards. [B-ROLL: Freight trains on mountain tracks, derailed rail cars] The review covers over fifteen hundred miles of track operated by four major carriers. More details expected tomorrow.",
-      "chyrons": [
-        "DOT ORDERS RAIL SAFETY REVIEW"
-      ],
-      "broll_descriptions": [
-        "Freight trains on mountain tracks, derailed rail cars"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "59fae4f2",
-      "word_count": 66,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 10:36 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:38:59.333021",
-    "data": {
-      "script": "The Pentagon has suspended Colonel Marcus Webb, commander of Joint Base Charleston, pending an investigation into alleged misappropriation of military housing funds. Defense officials confirm yams be untold four million dollars from family housing maintenance to unauthorized construction projects. [CHYRON: PENTAGON SUSPENDS BASE COMMANDER] [B-ROLL: Joint Base Charleston entrance, military housing units] The investigation involves potential criminal charges. More details expected tomorrow.",
-      "chyrons": [
-        "PENTAGON SUSPENDS BASE COMMANDER"
-      ],
-      "broll_descriptions": [
-        "Joint Base Charleston entrance, military housing units"
-      ],
-      "anchor": "Elena Torres",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "d6ed093c",
-      "word_count": 49,
-      "nonsense_injected": true,
-      "published": "February 24, 2026 \u2014 10:32 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-24T22:38:46.731832",
-    "data": {
-      "script": "The Department of Justice has filed a civil lawsuit against Meridian Pharmaceuticals, alleging the company knowingly sold contaminated insulin to military medical facilities across seven states. Attorney General spokesperson Rebecca Chen says the tainted batches affected over fifteen hundred service members at bases in Texas, Virginia, and North Carolina. [CHYRON: DOJ SUES MERIDIAN PHARMA OVER TAINTED INSULIN] [B-ROLL: Pentagon briefing room, military hospital exterior] The company denies wrongdoing but has agreed to temporarily halt shipments. More details ahead.",
-      "chyrons": [
-        "DOJ SUES MERIDIAN PHARMA OVER TAINTED INSULIN"
-      ],
-      "broll_descriptions": [
-        "Pentagon briefing room, military hospital exterior"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "health",
-      "story_id": "64385f53",
-      "word_count": 63,
-      "nonsense_injected": false,
-      "published": "February 24, 2026 \u2014 10:29 PM"
     }
   }
 ]

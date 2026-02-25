@@ -197,3 +197,50 @@ def inject_nonsense(script_text, config):
 
     modified = " ".join(tokens)
     return modified, True, fragment
+
+
+def inject_heavy_nonsense(script_text, config, target_ratio=0.80):
+    """
+    Replace ~80% of spoken words with Markov chain output.
+    Used for the one standout nonsense story per batch.
+
+    Keeps [TAG: ...] blocks intact and preserves the first ~3 and last ~3
+    spoken words so the opening/closing still sound vaguely like news.
+
+    Returns:
+        (modified_script, fragment_summary: str)
+    """
+    settings = config.get("dials", {}).get("nonsense", {})
+    temperature = settings.get("temperature", 1.2)
+
+    # Tokenise, keeping [TAG: ...] blocks as single tokens
+    tokens = re.findall(r'\[[A-Z_-]+:\s*[^\]]+\]|\S+', script_text)
+    spoken_idx = [i for i, t in enumerate(tokens) if not t.startswith('[')]
+
+    if len(spoken_idx) < 10:
+        return script_text, "too short"
+
+    # Keep first 3 and last 3 spoken words intact for anchor framing
+    margin = 3
+    replaceable = spoken_idx[margin:-margin]
+
+    # Pick ~80% of replaceable positions at random
+    n_replace = max(1, int(len(replaceable) * target_ratio))
+    positions_to_replace = sorted(random.sample(replaceable, min(n_replace, len(replaceable))))
+
+    # Generate a long Markov chain to pull words from
+    model = _load_model()
+    chain_words = []
+    # Generate enough words in consecutive fragments
+    while len(chain_words) < n_replace + 10:
+        frag = generate_fragment(min_words=3, max_words=6, temperature=temperature)
+        chain_words.extend(frag.split())
+
+    # Replace spoken words at selected positions
+    for j, pos in enumerate(positions_to_replace):
+        if j < len(chain_words):
+            tokens[pos] = chain_words[j]
+
+    modified = " ".join(tokens)
+    sample = " ".join(chain_words[:5])
+    return modified, sample

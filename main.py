@@ -11,6 +11,7 @@ Usage:
 """
 
 import argparse
+import random
 import sys
 import yaml
 import json
@@ -44,6 +45,7 @@ def run_pilot(config, world_bible, count, dashboard=True):
     from agents.writer import generate_script
     from agents.hourly_summary import generate_hourly_summary
     from agents.tts import generate_hourly_audio
+    from agents.nonsense import inject_heavy_nonsense
     from dashboard.app import push_script, push_hourly_summary, push_status, start_dashboard_thread
 
     # Start dashboard in background
@@ -67,6 +69,9 @@ def run_pilot(config, world_bible, count, dashboard=True):
     all_stories = []
     topics_covered = []  # Track topics for diversity enforcement
 
+    # Pick which story slot gets heavy nonsense (1 per batch)
+    nonsense_slot = random.randint(0, count - 1)
+
     for i in range(count):
         print(f"\n--- Story {i+1}/{count} ---")
         push_status(f"Writing story {i+1}/{count}...")
@@ -79,6 +84,14 @@ def run_pilot(config, world_bible, count, dashboard=True):
             news_context=news_context,
             topics_covered=topics_covered if topics_covered else None,
         )
+
+        # Apply heavy nonsense to the designated slot
+        if i == nonsense_slot:
+            script_data["script"], sample = inject_heavy_nonsense(
+                script_data["script"], config, target_ratio=0.80
+            )
+            script_data["nonsense_heavy"] = True
+            print(f"  ★ NONSENSE STORY — 80% Markov chain applied ('{sample}')")
 
         push_script(script_data)  # Text only — no audio
         all_stories.append(script_data)

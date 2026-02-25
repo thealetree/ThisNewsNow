@@ -121,6 +121,17 @@ Output ONLY the tagged script. No notes, no explanations."""
     # Parse into segments
     segments = _parse_segments(raw_script, anchor_a["name"], anchor_b["name"])
 
+    # Apply heavy nonsense to one random segment (not the first/last)
+    from agents.nonsense import inject_heavy_nonsense
+    if len(segments) > 2:
+        # Pick a middle segment (not the opening or closing)
+        nonsense_candidates = list(range(1, len(segments) - 1))
+        nonsense_idx = random.choice(nonsense_candidates)
+        segments[nonsense_idx]["text"], sample = inject_heavy_nonsense(
+            segments[nonsense_idx]["text"], config, target_ratio=0.80
+        )
+        print(f"  ★ Nonsense segment #{nonsense_idx + 1} — 80% Markov ('{sample}')")
+
     # Add sponsor segment if configured
     sponsor = config.get("sponsor", {})
     if sponsor.get("enabled", False):

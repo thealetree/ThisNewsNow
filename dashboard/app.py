@@ -209,9 +209,11 @@ def _run_generator():
     from agents.writer import generate_script
     from agents.hourly_summary import generate_hourly_summary
     from agents.tts import generate_hourly_audio
+    from agents.nonsense import inject_heavy_nonsense
 
     config = _load_config()
     world_bible = _load_world_bible()
+    stories_since_nonsense = 0  # Track when to inject heavy nonsense
 
     push_status("Generator started — text stories + hourly audio summaries")
 
@@ -268,6 +270,15 @@ def _run_generator():
 
             if generator_stop_event.is_set():
                 break
+
+            # Every 6th story gets heavy nonsense (1 per batch equivalent)
+            stories_since_nonsense += 1
+            if stories_since_nonsense >= 6:
+                script_data["script"], _ = inject_heavy_nonsense(
+                    script_data["script"], config, target_ratio=0.80
+                )
+                script_data["nonsense_heavy"] = True
+                stories_since_nonsense = 0
 
             # Text only — no TTS for individual stories
             push_script(script_data)
