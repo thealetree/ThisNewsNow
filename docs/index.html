@@ -939,9 +939,12 @@
       .hourly-title { font-size: 1.1rem; }
       .hourly-meta { margin-left: 0; width: 100%; }
       .carousel-zone { margin: 1rem auto; overflow: hidden; }
-      .carousel-wrap { height: 240px; }
-      .carousel-scene { width: 280px; height: 200px; }
-      .carousel-card { width: 280px; height: 200px; padding: 1.2rem; }
+      .carousel-wrap { height: 240px; perspective: none; }
+      .carousel-scene {
+        width: 85vw; max-width: 340px; height: 210px;
+        transform-style: flat;
+      }
+      .carousel-card { width: 100%; height: 100%; padding: 1.2rem; }
       .carousel-card .card-headline { font-size: 1.1rem; }
       .banner-ad-inner {
         flex-direction: column;
@@ -963,8 +966,8 @@
       .article-headline { font-size: 1.05rem; }
       .carousel-zone { overflow: hidden; }
       .carousel-wrap { height: 200px; }
-      .carousel-scene { width: 240px; height: 180px; }
-      .carousel-card { width: 240px; height: 180px; padding: 1rem; }
+      .carousel-scene { width: 90vw; max-width: 320px; height: 180px; }
+      .carousel-card { width: 100%; height: 100%; padding: 1rem; }
       .carousel-card .card-headline { font-size: 1rem; }
       .carousel-card .card-excerpt { font-size: 0.65rem; }
       .banner-ad-inner .ad-company { font-size: 0.85rem; }
@@ -1226,23 +1229,39 @@
     var scene = document.getElementById('carouselScene');
     if (!scene) return;
     var cards = scene.querySelectorAll('.carousel-card');
-    var radius = 320;
+    var isMobile = window.innerWidth <= 768;
 
     cards.forEach(function(card, i) {
       var offset = i - carouselIndex;
       if (offset > 1) offset -= 3;
       if (offset < -1) offset += 3;
 
-      var angle = offset * 50;
-      var z = offset === 0 ? 0 : -180;
-      var x = offset * 320;
-      var opacity = offset === 0 ? 1 : 0.4;
-      var scale = offset === 0 ? 1 : 0.78;
+      if (isMobile) {
+        // Simple fade: stack all cards, only show active
+        var isActive = (offset === 0);
+        card.style.transition = 'opacity 0.5s ease';
+        card.style.transform = 'none';
+        card.style.left = '0';
+        card.style.top = '0';
+        card.style.opacity = isActive ? 1 : 0;
+        card.style.zIndex = isActive ? 10 : 1;
+        card.style.pointerEvents = isActive ? 'auto' : 'none';
+      } else {
+        // Full 3D carousel on desktop
+        var angle = offset * 50;
+        var z = offset === 0 ? 0 : -180;
+        var x = offset * 320;
+        var opacity = offset === 0 ? 1 : 0.4;
+        var scale = offset === 0 ? 1 : 0.78;
 
-      card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-      card.style.transform = 'translateX(' + x + 'px) translateZ(' + z + 'px) rotateY(' + angle + 'deg) scale(' + scale + ')';
-      card.style.opacity = opacity;
-      card.style.zIndex = offset === 0 ? 10 : 1;
+        card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        card.style.transform = 'translateX(' + x + 'px) translateZ(' + z + 'px) rotateY(' + angle + 'deg) scale(' + scale + ')';
+        card.style.opacity = opacity;
+        card.style.zIndex = offset === 0 ? 10 : 1;
+        card.style.left = '';
+        card.style.top = '';
+        card.style.pointerEvents = '';
+      }
     });
 
     var dots = document.querySelectorAll('.carousel-dot');
