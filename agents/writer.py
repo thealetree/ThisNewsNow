@@ -287,6 +287,7 @@ def _fix_capitalization(script_text):
 
     # Country / proper noun pairs: (lowercase pattern, correct form)
     proper_nouns = [
+        # Countries
         ("united states", "United States"),
         ("south korea", "South Korea"),
         ("north korea", "North Korea"),
@@ -299,6 +300,7 @@ def _fix_capitalization(script_text):
         ("el salvador", "El Salvador"),
         ("sri lanka", "Sri Lanka"),
         ("hong kong", "Hong Kong"),
+        # US cities / states
         ("new york", "New York"),
         ("los angeles", "Los Angeles"),
         ("san francisco", "San Francisco"),
@@ -312,6 +314,40 @@ def _fix_capitalization(script_text):
         ("north carolina", "North Carolina"),
         ("south dakota", "South Dakota"),
         ("north dakota", "North Dakota"),
+        # Federal departments (full names)
+        ("department of energy", "Department of Energy"),
+        ("department of education", "Department of Education"),
+        ("department of justice", "Department of Justice"),
+        ("department of defense", "Department of Defense"),
+        ("department of homeland security", "Department of Homeland Security"),
+        ("department of transportation", "Department of Transportation"),
+        ("department of state", "Department of State"),
+        ("department of labor", "Department of Labor"),
+        ("department of agriculture", "Department of Agriculture"),
+        ("department of commerce", "Department of Commerce"),
+        ("department of health and human services", "Department of Health and Human Services"),
+        ("department of housing and urban development", "Department of Housing and Urban Development"),
+        ("department of the interior", "Department of the Interior"),
+        ("department of the treasury", "Department of the Treasury"),
+        ("department of veterans affairs", "Department of Veterans Affairs"),
+        # Federal agencies (full names)
+        ("environmental protection agency", "Environmental Protection Agency"),
+        ("federal aviation administration", "Federal Aviation Administration"),
+        ("federal trade commission", "Federal Trade Commission"),
+        ("federal bureau of investigation", "Federal Bureau of Investigation"),
+        ("federal communications commission", "Federal Communications Commission"),
+        ("federal emergency management agency", "Federal Emergency Management Agency"),
+        ("national weather service", "National Weather Service"),
+        ("national security agency", "National Security Agency"),
+        ("securities and exchange commission", "Securities and Exchange Commission"),
+        ("food and drug administration", "Food and Drug Administration"),
+        ("centers for disease control", "Centers for Disease Control"),
+        ("national labor relations board", "National Labor Relations Board"),
+        ("national transportation safety board", "National Transportation Safety Board"),
+        ("internal revenue service", "Internal Revenue Service"),
+        ("bureau of alcohol, tobacco, firearms", "Bureau of Alcohol, Tobacco, Firearms"),
+        ("drug enforcement administration", "Drug Enforcement Administration"),
+        ("occupational safety and health administration", "Occupational Safety and Health Administration"),
     ]
 
     # Fix acronyms using word-boundary matching (case-insensitive)
