@@ -1,12 +1,11 @@
 {
   "version": 1,
-  "last_updated": "2026-02-25T19:55:21.752311",
-  "total_scrapes": 8,
+  "last_updated": "2026-02-25T20:01:35.391425",
+  "total_scrapes": 9,
   "framing_styles": {
     "development": {
-      "count": 40,
+      "count": 45,
       "examples": [
-        "Dozens of FBI records apparently missing from Epstein files, including Trump accuser interviews - CNN",
         "New York is sending workers, equipment to Massachusetts to help them dig out from historic blizzard - Syracuse.com",
         "Here\u2019s how to switch from 1Password to an official - 9to5Mac",
         "Takeaways from Trump's State of the Union. And, House rejects aviation safety bill",
@@ -25,7 +24,8 @@
         "Businesses Push for an official as an official at Fight to Come - The New York Times",
         "32 years after American woman found murdered in Germany, DNA leads to an arrest: \"Such cases are never forgotten\" - CBS News",
         "Floods ravage southeastern Brazil and kill 46 as rescuers race to find the missing - AP News",
-        "Bleak an official A.I. Debate on an official. - The New York Times - The New York Times"
+        "Bleak an official A.I. Debate on an official. - The New York Times - The New York Times",
+        "Rio Police Chief & an official in Assassination of an official an official - Payday Report"
       ]
     },
     "announcement": {
@@ -54,7 +54,7 @@
       ]
     },
     "revelation": {
-      "count": 5,
+      "count": 6,
       "examples": [
         "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
         "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
@@ -69,9 +69,11 @@
       ]
     },
     "warning": {
-      "count": 1,
+      "count": 3,
       "examples": [
-        "Germany\u2019s an official a an official to China on Trade - The New York Times"
+        "Germany\u2019s an official a an official to China on Trade - The New York Times",
+        "Casey Means, Critic of an official, Poised to Become Nation\u2019s an official - The New York Times",
+        "IMF urges US to change course on economic policy - Financial Times"
       ]
     }
   },
@@ -282,28 +284,28 @@
     {
       "template": "Trump administration\u2019s third-country deportation policy unlawful, judge finds - The Washington Post",
       "topic": "infrastructure",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "Trump administration\u2019s third-country deportation policy unlawful, judge finds - The Washington Post"
     },
     {
       "template": "ICE won't be at polling places this year, a Trump DHS official promises - NPR",
       "topic": "politics",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "ICE won't be at polling places this year, a Trump DHS official promises - NPR"
     },
     {
       "template": "Businesses Push for an official as an official at Fight to Come - The New York Times",
       "topic": "science",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "Businesses Push for an official as an official at Fight to Come - The New York Times"
     },
     {
       "template": "[Number] years after American woman found murdered in Germany, DNA leads to an arrest: \"Such cases are never forgotten\" - CBS News",
       "topic": "crime",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "32 years after American woman found murdered in Germany, DNA leads to an arrest: \"Such cases are never forgotten\" - CBS "
     },
@@ -317,7 +319,7 @@
     {
       "template": "Floods ravage southeastern Brazil and kill [Number] as rescuers race to find the missing - AP News",
       "topic": "science",
-      "times_seen": 1,
+      "times_seen": 2,
       "last_seen": "2026-02-25",
       "example": "Floods ravage southeastern Brazil and kill 46 as rescuers race to find the missing - AP News"
     },
@@ -327,26 +329,47 @@
       "times_seen": 1,
       "last_seen": "2026-02-25",
       "example": "Bleak an official A.I. Debate on an official. - The New York Times - The New York Times"
+    },
+    {
+      "template": "Casey Means, Critic of an official, Poised to Become Nation\u2019s an official - The New York Times",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Casey Means, Critic of an official, Poised to Become Nation\u2019s an official - The New York Times"
+    },
+    {
+      "template": "Rio Police Chief & an official in Assassination of an official an official - Payday Report",
+      "topic": "crime",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Rio Police Chief & an official in Assassination of an official an official - Payday Report"
+    },
+    {
+      "template": "IMF urges US to change course on economic policy - Financial Times",
+      "topic": "international",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "IMF urges US to change course on economic policy - Financial Times"
     }
   ],
   "topic_distribution": {
-    "politics": 0.204,
-    "infrastructure": 0.0786,
-    "science": 0.3368,
-    "crime": 0.113,
-    "international": 0.1183,
-    "economy": 0.0539,
-    "weather": 0.0356,
-    "health": 0.0096,
-    "environment": 0.05
+    "politics": 0.2045,
+    "infrastructure": 0.0859,
+    "science": 0.3378,
+    "crime": 0.1237,
+    "international": 0.1068,
+    "economy": 0.0514,
+    "weather": 0.0335,
+    "health": 0.0093,
+    "environment": 0.047
   },
   "conflict_type_frequency": {
     "development": 0.5,
-    "investigation": 0.0139,
-    "protest": 0.0014,
-    "legal": 0.2238,
-    "tragedy": 0.1374,
-    "crisis": 0.1236
+    "investigation": 0.0015,
+    "protest": 0.0002,
+    "legal": 0.3582,
+    "tragedy": 0.1264,
+    "crisis": 0.0137
   },
   "register_history": [
     {
@@ -372,6 +395,10 @@
     {
       "date": "2026-02-25",
       "register": "tense"
+    },
+    {
+      "date": "2026-02-25",
+      "register": "chaotic"
     },
     {
       "date": "2026-02-25",

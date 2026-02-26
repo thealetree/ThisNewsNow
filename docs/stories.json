@@ -1,6 +1,119 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-25T20:02:48.855309",
+    "data": {
+      "story_id": "hourly_1832d951",
+      "hour_label": "8 PM",
+      "anchor_a": "Patricia Holt",
+      "anchor_b": "James Whitfield",
+      "headlines": [
+        "JUDGE BLOCKS DEPORTATION POLICY",
+        "JUDGE BLOCKS ASYLUM DETENTION POLICY",
+        "JUDGE BLOCKS ASYLUM POLICY",
+        "RAIL CEO CHARGED WITH PENSION FRAUD"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm Patricia Holt here with James Whitfield. A federal judge in Phoenix has blocked the administration's cross-border deportation policy, ruling it violates due process rights. The injunction halts immediate enforcement across Arizona's southern border.\n\n[ANCHOR_B] Thanks Patricia. Another federal judge in San Antonio has similarly ruled against the administration's border detention policy for asylum seekers. Judge Rebecca Martinez ordered an immediate review of all cases from the past six months, citing due process violations.\n\n[ANCHOR_A] Meanwhile, federal prosecutors in Denver have charged former Consolidated Rail Associates CEO Michael Brennan with embezzling forty-three million dollars in pension funds. The Justice Department alleges the fraud occurred over several years.\n\n[ANCHOR_B] And Patricia, we're also following a third federal court ruling tonight on asylum policy. A judge has blocked the administration's expedited processing procedures, ordering a comprehensive review of recent cases.\n\n[ANCHOR_A] That's our update for this hour. I'm Patricia Holt with James Whitfield. This News Now continues after this break.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 4,
+      "published": "February 25, 2026 \u2014 08:02 PM",
+      "audio_file": "hourly_1832d951.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T20:02:02.862143",
+    "data": {
+      "script": "Federal prosecutors in Denver have charged former Consolidated Rail Associates CEO Michael Brennan with embezzling forty-three million dollars in pension funds over six paepae sweats Justice Department alleges Brennan used Gulfmark Energy companies to divert retirement savings from thousands of railroad workers across Colorado and Wyoming. [CHYRON: RAIL CEO CHARGED WITH PENSION FRAUD] [B-ROLL: Consolidated Rail headquarters, FBI agents carrying boxes] Brennan's attorney calls the charges baseless. Trial is scheduled for September. More on this developing story tonight at eleven.",
+      "chyrons": [
+        "RAIL CEO CHARGED WITH PENSION FRAUD"
+      ],
+      "broll_descriptions": [
+        "Consolidated Rail headquarters, FBI agents carrying boxes"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "75722b1f",
+      "word_count": 64,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Trump administration\u2019s third-country deportation policy unlawful, judge finds - The Washington Post",
+      "published": "February 25, 2026 \u2014 08:02 PM",
+      "image_file": "75722b1f.jpg"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T20:01:56.249182",
+    "data": {
+      "script": "A federal judge theten kile ablemot haplox furegha nimledogitar expedited can processing you violates whistle process the pagination of his lips years had you waste the my time and fish i toss cases sand into your [CHYRON: JUDGE BLOCKS ASYLUM POLICY] chant out a argues baby s head pour boiling caramel nearly two into a column [B-ROLL: Federal courthouse steps, protesters with signs] far too many hats are restraining be afraid but i to appeal immediately.",
+      "chyrons": [
+        "JUDGE BLOCKS ASYLUM POLICY"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse steps, protesters with signs"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "93a0bdf4",
+      "word_count": 64,
+      "nonsense_injected": true,
+      "inspiration_blueprint": "Trump administration\u2019s third-country deportation policy unlawful, judge finds - The Washington Post",
+      "nonsense_heavy": true,
+      "published": "February 25, 2026 \u2014 08:01 PM",
+      "image_file": "93a0bdf4.jpg"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T20:01:51.913207",
+    "data": {
+      "script": "A federal judge in San Antonio has ruled the administration's border detention policy for asylum seekers violates due process rights, ordering immediate review of all cases from the past six months. Judge Patricia Morrison called the policy \"fundamentally flawed\" in her forty-three page decision. [CHYRON: JUDGE BLOCKS ASYLUM DETENTION POLICY] [B-ROLL: Federal courthouse steps, protesters with signs] The Department of Justice says it will appeal within thirty days. More developments expected this week.",
+      "chyrons": [
+        "JUDGE BLOCKS ASYLUM DETENTION POLICY"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse steps, protesters with signs"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "ae758198",
+      "word_count": 60,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump administration\u2019s third-country deportation policy unlawful, judge finds - The Washington Post",
+      "published": "February 25, 2026 \u2014 08:01 PM",
+      "image_file": "ae758198.jpg"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T20:01:47.627939",
+    "data": {
+      "script": "A federal judge in Phoenix has ruled the administration's cross-border deportation policy violates due process rights, blocking immediate enforcement across Arizona's southern border. Judge Michael Crawford cited procedural failures in his thirty-page decision, affecting thousands of pending cases. [CHYRON: JUDGE BLOCKS DEPORTATION POLICY] [B-ROLL: Federal courthouse steps, immigration attorneys speaking to reporters] The Justice Department says it will appeal within ten days. More developments ahead.",
+      "chyrons": [
+        "JUDGE BLOCKS DEPORTATION POLICY"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse steps, immigration attorneys speaking to reporters"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "05ccc40a",
+      "word_count": 51,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Trump administration\u2019s third-country deportation policy unlawful, judge finds - The Washington Post",
+      "published": "February 25, 2026 \u2014 08:01 PM",
+      "image_file": "05ccc40a.jpg"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-25T19:56:05.504979",
     "data": {
       "story_id": "hourly_bda588e6",
@@ -327,115 +440,6 @@
       "nonsense_injected": false,
       "inspiration_blueprint": "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
       "published": "February 25, 2026 \u2014 02:00 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T14:20:39.466134",
-    "data": {
-      "script": "The Department of Homeland Security announced today it will ground all domestic flights using Meridian Aerospace's new scanning technology after software glitches triggered false security alerts at fifteen major airports. DHS Secretary Patricia Coleman called the precautionary measure necessary following passenger delays exceeding six hours at Chicago O'Hare and Denver International. [CHYRON: DHS GROUNDS MERIDIAN SCANNER FLIGHTS] [B-ROLL: Airport security checkpoint, passengers in long lines] The agency expects normal operations to resume by Thursday.",
-      "chyrons": [
-        "DHS GROUNDS MERIDIAN SCANNER FLIGHTS"
-      ],
-      "broll_descriptions": [
-        "Airport security checkpoint, passengers in long lines"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "cd207fc6",
-      "word_count": 60,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
-      "published": "February 25, 2026 \u2014 02:20 PM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-25T14:18:50.867372",
-    "data": {
-      "story_id": "hourly_d7a22da5",
-      "hour_label": "2 PM",
-      "anchor_a": "James Whitfield",
-      "anchor_b": "Patricia Holt",
-      "headlines": [
-        "FAA GROUNDS SKYLINE REGIONAL FLEET",
-        "JUDGE BLOCKS DHS AI SURVEILLANCE",
-        "SENATE ADVANCES AMBASSADOR NOMINEE",
-        "JUDGE BLOCKS ASYLUM DEPORTATION POLICY",
-        "HOLLOWAY TO VISIT BEIJING AMID TENSIONS"
-      ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. The FAA has grounded thirty-seven aircraft operated by Skyline Regional Airways after discovering critical maintenance violations during a surprise audit. The emergency order affects flights across the midwest.\n\n[ANCHOR_B] Thanks James. A federal judge in San Francisco has blocked the administration's new AI surveillance protocols for immigration enforcement, ruling they violate Fourth Amendment protections. Judge Margaret Chen called the technology \"an unreasonable search mechanism.\"\n\n[ANCHOR_A] Patricia, we're also following breaking news from Denver where FBI agents raided Meridian Biotech headquarters this morning. Federal investigators seized computers and documents as part of an expanding probe into fraudulent clinical trial data.\n\n[ANCHOR_B] And in Chicago, another federal judge has ruled against the administration. Judge Patricia Caldwell blocked the emergency deportation protocol for asylum seekers, saying it violates Fifth Amendment due process rights.\n\n[ANCHOR_A] Finally tonight, the State Department announced Secretary of State Margaret Holloway will visit Beijing next week for talks on China's growing influence in the South Pacific region. The three-day diplomatic mission comes amid rising tensions. That's your news summary. I'm James Whitfield.\n\n[ANCHOR_B] And I'm Patricia Holt. We'll be back at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 6,
-      "published": "February 25, 2026 \u2014 02:18 PM",
-      "audio_file": "hourly_d7a22da5.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T14:18:22.859173",
-    "data": {
-      "script": "Federal agents raided the headquarters of Meridian Biotech in Denver this morning, seizing computers and documents as part of an expanding investigation into fraudulent clinical trial data. The FBI alleges the company falsified safety results for three experimental cancer treatments over the past two years. [CHYRON: FBI RAIDS MERIDIAN BIOTECH HQ] [B-ROLL: Agents carrying boxes from corporate building] CEO Marcus Thornfield has not responded to requests for comment. The FDA suspended all Meridian trials pending review. More developments expected this week.",
-      "chyrons": [
-        "FBI RAIDS MERIDIAN BIOTECH HQ"
-      ],
-      "broll_descriptions": [
-        "Agents carrying boxes from corporate building"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "health",
-      "story_id": "175e13d4",
-      "word_count": 68,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
-      "published": "February 25, 2026 \u2014 02:18 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T14:18:18.148544",
-    "data": {
-      "script": "The State Department announced today that Secretary of State Margaret Holloway will visit Beijing next week to discuss China's growing influence in the South Pacific region. The three-day diplomatic mission comes as tensions escalate over Beijing's military installations on disputed islands. [CHYRON: HOLLOWAY TO VISIT BEIJING AMID TENSIONS] [B-ROLL: State Department briefing room, map of South Pacific] Chinese Foreign Minister Chen Wei called the talks \"productive opportunity\" but warned against interference in regional affairs. More details ahead after this break.",
-      "chyrons": [
-        "HOLLOWAY TO VISIT BEIJING AMID TENSIONS"
-      ],
-      "broll_descriptions": [
-        "State Department briefing room, map of South Pacific"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "international",
-      "story_id": "d8c059a5",
-      "word_count": 64,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
-      "published": "February 25, 2026 \u2014 02:17 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T14:18:14.053402",
-    "data": {
-      "script": "Good evening. A federal judge in Chicago has ruled the administration's emergency deportation protocol for asylum seekers violates due process rights under the Fifth Amendment. Judge Patricia Caldwell issued a preliminary injunction blocking the policy, which required removal within seventy-two hours of border crossings. [CHYRON: JUDGE BLOCKS ASYLUM DEPORTATION POLICY] The Justice Department argued the measure was necessary to manage border capacity during peak migration periods. [B-ROLL: Federal courthouse steps, protesters holding signs] Immigration advocates called the ruling a major victory. More details ahead.",
-      "chyrons": [
-        "JUDGE BLOCKS ASYLUM DEPORTATION POLICY"
-      ],
-      "broll_descriptions": [
-        "Federal courthouse steps, protesters holding signs"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "c3acee8c",
-      "word_count": 71,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
-      "published": "February 25, 2026 \u2014 02:18 PM"
     }
   }
 ]
