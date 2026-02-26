@@ -1,6 +1,115 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-25T19:56:05.504979",
+    "data": {
+      "story_id": "hourly_bda588e6",
+      "hour_label": "7 PM",
+      "anchor_a": "Patricia Holt",
+      "anchor_b": "James Whitfield",
+      "headlines": [
+        "FEDS SUSPEND $240M COLORADO HIGHWAY FUNDS",
+        "FEDS SUSPEND $260M MINNESOTA EDUCATION FUNDS",
+        "FEDERAL JUDGE BLOCKS DHS AI SURVEILLANCE",
+        "FEDERAL JUDGE BLOCKS SANCTUARY CITY POLICY"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm Patricia Holt here with James Whitfield. The federal government suspended two hundred forty million dollars in highway funding to Colorado today, citing widespread misuse of infrastructure grants. Transportation officials say the state failed to properly account for federal money allocated for bridge repairs and road improvements.\n\n[ANCHOR_B] Thanks Patricia. The administration also cut off two hundred sixty million dollars in education funding to Minnesota over irregularities in special needs program reporting. Education Secretary Margaret Thompson says the state cannot account for how federal dollars were spent on disability services.\n\n[ANCHOR_A] James, federal courts are pushing back on administration policies tonight. District Judge Robert Chen issued a temporary restraining order blocking the administration's new deportation policy targeting sanctuary cities, ruling it violates federal immigration law.\n\n[ANCHOR_B] And Patricia, another federal judge blocked the Department of Homeland Security's new AI surveillance program at border crossings. Judge Sandra Martinez ruled the facial recognition system lacks proper oversight and raises constitutional concerns about privacy rights.\n\n[ANCHOR_A] We'll continue following these developing stories. I'm Patricia Holt with James Whitfield. This News Now continues after this break.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 4,
+      "published": "February 25, 2026 \u2014 07:56 PM",
+      "audio_file": "hourly_bda588e6.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T19:55:40.318819",
+    "data": {
+      "script": "The administration's new deportation policy targeting sanctuary cities violates federal immigration law, a federal judge ruled today. District Judge Margaret Chen issued a temporary restraining order blocking the Department of Homeland Security from withholding federal funding from twelve cities that refuse to cooperate with ICE enforcement operations. [CHYRON: FEDERAL JUDGE BLOCKS SANCTUARY CITY POLICY] The ruling affects an estimated four hundred million dollars in federal grants. [B-ROLL: Federal courthouse steps, protesters holding signs] DHS officials say they will appeal immediately. More developments ahead after this break.",
+      "chyrons": [
+        "FEDERAL JUDGE BLOCKS SANCTUARY CITY POLICY"
+      ],
+      "broll_descriptions": [
+        "Federal courthouse steps, protesters holding signs"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "94a81d70",
+      "word_count": 72,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Vance says Minnesota\u2019s Medicaid funds halted as part of Trump\u2019s \u2018war on fraud\u2019 - The Guardian",
+      "published": "February 25, 2026 \u2014 07:13 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T19:55:36.163767",
+    "data": {
+      "script": "The administration's new border i am violates going into this a golden beak ruled broken his dripscomb didn't Chen the macarena preliminary was blocking viral oh you didn't all breaded monitoring children call upon the miles scold the handy blonde [CHYRON: FEDERAL JUDGE BLOCKS DHS AI SURVEILLANCE] and intrusion which occurred , lawsuit, called that babe with the nearest tj rapinctus is sucking he s they so unfair to [B-ROLL: Border fence with surveillance towers, protesters holding signs] advertise short form expected next week.",
+      "chyrons": [
+        "FEDERAL JUDGE BLOCKS DHS AI SURVEILLANCE"
+      ],
+      "broll_descriptions": [
+        "Border fence with surveillance towers, protesters holding signs"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "432af71c",
+      "word_count": 68,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Vance says Minnesota\u2019s Medicaid funds halted as part of Trump\u2019s \u2018war on fraud\u2019 - The Guardian",
+      "nonsense_heavy": true,
+      "published": "February 25, 2026 \u2014 07:48 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T19:55:31.715811",
+    "data": {
+      "script": "The administration announced today it will suspend two hundred sixty million dollars in federal education funds to Minnesota, citing irregularities in special needs program reporting. Education Secretary Patricia Coleman called it part of a broader \"accountability initiative\" targeting state mismanagement. [CHYRON: FEDS SUSPEND $260M MINNESOTA EDUCATION FUNDS] Minnesota Governor David Walsh called the move \"reckless political retaliation\" and vowed an immediate legal challenge. [B-ROLL: Minnesota State Capitol building, protesters with education funding signs] The funding supports services for forty thousand disabled students statewide. More developments expected tomorrow.",
+      "chyrons": [
+        "FEDS SUSPEND $260M MINNESOTA EDUCATION FUNDS"
+      ],
+      "broll_descriptions": [
+        "Minnesota State Capitol building, protesters with education funding signs"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "bdf1dc80",
+      "word_count": 70,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Vance says Minnesota\u2019s Medicaid funds halted as part of Trump\u2019s \u2018war on fraud\u2019 - The Guardian",
+      "published": "February 25, 2026 \u2014 07:47 PM"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-25T19:55:27.011603",
+    "data": {
+      "script": "The administration announced today it's suspending two hundred forty million dollars in federal highway funding to Colorado, citing what officials call widespread misuse of infrastructure grants. Transportation Secretary Michael Hayes said the state failed to properly account for bridge repair allocations dating back to twenty twenty-two. [CHYRON: FEDS SUSPEND $240M COLORADO HIGHWAY FUNDS] Colorado Governor Patricia Kellman called the move politically motivated and vowed to challenge it in federal court. [B-ROLL: Highway construction crews, Colorado mountain roads] More developments expected tomorrow.",
+      "chyrons": [
+        "FEDS SUSPEND $240M COLORADO HIGHWAY FUNDS"
+      ],
+      "broll_descriptions": [
+        "Highway construction crews, Colorado mountain roads"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "infrastructure",
+      "story_id": "d5cfe051",
+      "word_count": 67,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "Vance says Minnesota\u2019s Medicaid funds halted as part of Trump\u2019s \u2018war on fraud\u2019 - The Guardian",
+      "published": "February 25, 2026 \u2014 07:05 PM"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-25T14:56:38.953371",
     "data": {
       "story_id": "hourly_7b8c726a",
@@ -327,117 +436,6 @@
       "nonsense_injected": false,
       "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
       "published": "February 25, 2026 \u2014 02:18 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T14:18:09.289248",
-    "data": {
-      "script": "The Senate Foreign who Committee has would be more like cauldron of beef ace ticket the subpoena bait trapezoidal custom lightstick it's a pickle it's a cucumber Republican wallows over at they on ve grown [CHYRON: SENATE ADVANCES AMBASSADOR NOMINEE] heavy and Robert cumbersome gletuinous the obelkanker why not give weedly spaint marchal member groans heavy with protection comes in many forms [B-ROLL: Senate committee room, senators at hearing table] , full forever vote is expected next week.",
-      "chyrons": [
-        "SENATE ADVANCES AMBASSADOR NOMINEE"
-      ],
-      "broll_descriptions": [
-        "Senate committee room, senators at hearing table"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "politics",
-      "story_id": "6c56ef4a",
-      "word_count": 65,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
-      "nonsense_heavy": true,
-      "published": "February 25, 2026 \u2014 02:13 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T14:18:04.579590",
-    "data": {
-      "script": "A federal judge in San Francisco has ruled the administration's new AI surveillance protocols for immigration enforcement violate Fourth Amendment protections against unreasonable searches. Judge Margaret Chen issued a temporary restraining order blocking Department of Homeland Security from deploying facial recognition systems at twelve major airports nationwide. [CHYRON: JUDGE BLOCKS DHS AI SURVEILLANCE] [B-ROLL: Federal courthouse steps, protesters with privacy rights signs] The Justice Department says it will appeal the decision immediately. More legal challenges expected next week.",
-      "chyrons": [
-        "JUDGE BLOCKS DHS AI SURVEILLANCE"
-      ],
-      "broll_descriptions": [
-        "Federal courthouse steps, protesters with privacy rights signs"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "technology",
-      "story_id": "4194686c",
-      "word_count": 63,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
-      "published": "February 25, 2026 \u2014 02:18 PM"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T14:17:59.839012",
-    "data": {
-      "script": "Federal regulators have ordered the immediate grounding of thirty-seven aircraft operated by Skyline Regional Airways after discovering critical maintenance violations during a surprise audit in Minneapolis. The FAA cited improper engine inspections and falsified safety spo gerupidio eighteen months. [CHYRON: FAA GROUNDS SKYLINE REGIONAL FLEET] [B-ROLL: Grounded aircraft at Minneapolis airport, passengers waiting in terminal] More than four hundred flights have been cancelled across the Midwest, stranding thousands of travelers. We'll have updates throughout the evening.",
-      "chyrons": [
-        "FAA GROUNDS SKYLINE REGIONAL FLEET"
-      ],
-      "broll_descriptions": [
-        "Grounded aircraft at Minneapolis airport, passengers waiting in terminal"
-      ],
-      "anchor": "Patricia Holt",
-      "anchor_gender": "female",
-      "estimated_seconds": 25,
-      "topic": "infrastructure",
-      "story_id": "2c6a6501",
-      "word_count": 60,
-      "nonsense_injected": true,
-      "inspiration_blueprint": "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
-      "published": "February 25, 2026 \u2014 02:17 PM"
-    }
-  },
-  {
-    "type": "hourly_summary",
-    "timestamp": "2026-02-25T11:00:57.681697",
-    "data": {
-      "story_id": "hourly_208e6e1e",
-      "hour_label": "11 AM",
-      "anchor_a": "James Whitfield",
-      "anchor_b": "Patricia Holt",
-      "headlines": [
-        "FBI RAIDS MERIDIAN AEROSPACE HEADQUARTERS",
-        "PRESIDENT UNVEILS STUDENT LOAN RELIEF PLAN",
-        "EPA ORDERS LOUISIANA CHEMICAL PLANT INSPECTIONS",
-        "HARVARD CHANCELLOR RESIGNS AMID RESEARCH SCANDAL",
-        "EPA SHUTS DOWN NEBRASKA WATER PLANTS"
-      ],
-      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. Federal investigators raided Meridian Aerospace headquarters in Seattle today, seizing computer servers and financial records amid allegations the company falsified safety inspections on commercial aircraft engines.\n\n[ANCHOR_B] Thanks James. The President unveiled a major student loan relief program at the White House this afternoon, promising to eliminate up to fifteen thousand dollars in federal debt for eligible borrowers based on income requirements.\n\n[ANCHOR_A] Patricia, the EPA has ordered immediate inspections at forty-seven chemical facilities across Louisiana following a whistleblower report alleging widespread safety violations at multiple plants throughout the state.\n\n[ANCHOR_B] And Harvard University announced that Chancellor Robert Feldman will resign following allegations of research misconduct in the neuroscience department. The university says an investigation is ongoing.\n\n[ANCHOR_A] Finally tonight, the EPA ordered the immediate closure of three wastewater treatment facilities in Nebraska after inspectors discovered contamination levels exceeding federal safety standards by four hundred percent. I'm James Whitfield.\n\n[ANCHOR_B] And I'm Patricia Holt. We'll be back with more news at the top of the hour.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
-      "story_count": 6,
-      "published": "February 25, 2026 \u2014 11:00 AM",
-      "audio_file": "hourly_208e6e1e.mp3"
-    }
-  },
-  {
-    "type": "story",
-    "timestamp": "2026-02-25T11:00:38.374389",
-    "data": {
-      "script": "The Defense Department announced today we wouldn't know how to oceanic magician without a to i hope by its only fudge ity citing as natural as the tell me how over Sarah and again , early on smother from Fort Campbell my nostrils with your putrid just a bit month. [CHYRON: PENTAGON DELAYS TROOP DEPLOYMENT] [B-ROLL: Military transport aircraft on tarmac, soldiers in formation] shalmon once and been dung she rummages about timeline. More details ahead.",
-      "chyrons": [
-        "PENTAGON DELAYS TROOP DEPLOYMENT"
-      ],
-      "broll_descriptions": [
-        "Military transport aircraft on tarmac, soldiers in formation"
-      ],
-      "anchor": "James Whitfield",
-      "anchor_gender": "male",
-      "estimated_seconds": 25,
-      "topic": "international",
-      "story_id": "dc86b689",
-      "word_count": 62,
-      "nonsense_injected": false,
-      "inspiration_blueprint": "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
-      "nonsense_heavy": true,
-      "published": "February 25, 2026 \u2014 11:00 AM"
     }
   }
 ]

@@ -1,13 +1,11 @@
 {
   "version": 1,
-  "last_updated": "2026-02-25T14:50:17.531462",
-  "total_scrapes": 7,
+  "last_updated": "2026-02-25T19:55:21.752311",
+  "total_scrapes": 8,
   "framing_styles": {
     "development": {
-      "count": 35,
+      "count": 40,
       "examples": [
-        "Lawrence an official From Harvard After an official - The New York Times",
-        "Security Alert \u2013 Update 7: an official - U.S. an official (February 24, 2026) - U.S. Embassy & Consulates in Mexico (.gov)",
         "Dozens of FBI records apparently missing from Epstein files, including Trump accuser interviews - CNN",
         "New York is sending workers, equipment to Massachusetts to help them dig out from historic blizzard - Syracuse.com",
         "Here\u2019s how to switch from 1Password to an official - 9to5Mac",
@@ -22,16 +20,22 @@
         "F.B.I. an official Schools Chief\u2019s Home and District Headquarters - The New York Times",
         "85-year-old widower kidnapped and murdered in apparent case of mistaken identity in Australia - CBS News",
         "Live Updates: an official Kills 4 on US-Registered Boat - The New York Times",
-        "Megyn an official New Detail in an official & an official an official - TV Insider"
+        "Megyn an official New Detail in an official & an official an official - TV Insider",
+        "ICE won't be at polling places this year, a Trump DHS official promises - NPR",
+        "Businesses Push for an official as an official at Fight to Come - The New York Times",
+        "32 years after American woman found murdered in Germany, DNA leads to an arrest: \"Such cases are never forgotten\" - CBS News",
+        "Floods ravage southeastern Brazil and kill 46 as rescuers race to find the missing - AP News",
+        "Bleak an official A.I. Debate on an official. - The New York Times - The New York Times"
       ]
     },
     "announcement": {
-      "count": 8,
+      "count": 9,
       "examples": [
         "Trump announces new retirement plan at State of the Union - Axios",
         "A an official Chief Takes Over a Louvre in Crisis - The New York Times - The New York Times",
         "S&P 500 posts back-to-back gains, Dow jumps 300 points as Nvidia rises: Live updates - CNBC",
-        "Former Senator Bob Kerrey Resigns From Nebraska Start-Up an official - The New York Times"
+        "Former Senator Bob Kerrey Resigns From Nebraska Start-Up an official - The New York Times",
+        "Vance says Minnesota\u2019s Medicaid funds halted as part of Trump\u2019s \u2018war on fraud\u2019 - The Guardian"
       ]
     },
     "accusation": {
@@ -42,18 +46,20 @@
       ]
     },
     "resolution": {
-      "count": 3,
+      "count": 4,
       "examples": [
         "Stock an official: Nasdaq, an official Before Nvidia Earnings; Vertiv, an official (Live Coverage) - Investor's Business Daily",
-        "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico"
+        "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
+        "Rubio defends US ouster of Venezuela's Maduro to Caribbean leaders unsettled by Trump policies - AP News"
       ]
     },
     "revelation": {
-      "count": 4,
+      "count": 5,
       "examples": [
         "Nancy Guthrie update as sheriff reveals where he believes she's being kept - an official US",
         "Judge rules Trump administration's policy for \"third-country\" deportations is unlawful - CBS News",
-        "Jobs, gas prices and ending wars: factchecking Trump\u2019s State of the Union claims - The Guardian"
+        "Jobs, gas prices and ending wars: factchecking Trump\u2019s State of the Union claims - The Guardian",
+        "Trump administration\u2019s third-country deportation policy unlawful, judge finds - The Washington Post"
       ]
     },
     "reaction": {
@@ -265,26 +271,82 @@
       "times_seen": 1,
       "last_seen": "2026-02-25",
       "example": "Fearing Ukrainian action, Orb\u00e1n deploys soldiers to priority energy facilities - Euronews.com"
+    },
+    {
+      "template": "Vance says Minnesota\u2019s Medicaid funds halted as part of Trump\u2019s \u2018war on fraud\u2019 - The Guardian",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Vance says Minnesota\u2019s Medicaid funds halted as part of Trump\u2019s \u2018war on fraud\u2019 - The Guardian"
+    },
+    {
+      "template": "Trump administration\u2019s third-country deportation policy unlawful, judge finds - The Washington Post",
+      "topic": "infrastructure",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Trump administration\u2019s third-country deportation policy unlawful, judge finds - The Washington Post"
+    },
+    {
+      "template": "ICE won't be at polling places this year, a Trump DHS official promises - NPR",
+      "topic": "politics",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "ICE won't be at polling places this year, a Trump DHS official promises - NPR"
+    },
+    {
+      "template": "Businesses Push for an official as an official at Fight to Come - The New York Times",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Businesses Push for an official as an official at Fight to Come - The New York Times"
+    },
+    {
+      "template": "[Number] years after American woman found murdered in Germany, DNA leads to an arrest: \"Such cases are never forgotten\" - CBS News",
+      "topic": "crime",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "32 years after American woman found murdered in Germany, DNA leads to an arrest: \"Such cases are never forgotten\" - CBS "
+    },
+    {
+      "template": "Rubio defends US ouster of Venezuela's Maduro to Caribbean leaders unsettled by Trump policies - AP News",
+      "topic": "international",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Rubio defends US ouster of Venezuela's Maduro to Caribbean leaders unsettled by Trump policies - AP News"
+    },
+    {
+      "template": "Floods ravage southeastern Brazil and kill [Number] as rescuers race to find the missing - AP News",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Floods ravage southeastern Brazil and kill 46 as rescuers race to find the missing - AP News"
+    },
+    {
+      "template": "Bleak an official A.I. Debate on an official. - The New York Times - The New York Times",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-25",
+      "example": "Bleak an official A.I. Debate on an official. - The New York Times - The New York Times"
     }
   ],
   "topic_distribution": {
-    "politics": 0.2034,
-    "infrastructure": 0.0746,
-    "science": 0.3278,
-    "crime": 0.1024,
-    "international": 0.1351,
-    "economy": 0.0557,
-    "weather": 0.0383,
-    "health": 0.01,
-    "environment": 0.0526
+    "politics": 0.204,
+    "infrastructure": 0.0786,
+    "science": 0.3368,
+    "crime": 0.113,
+    "international": 0.1183,
+    "economy": 0.0539,
+    "weather": 0.0356,
+    "health": 0.0096,
+    "environment": 0.05
   },
   "conflict_type_frequency": {
-    "development": 0.4998,
-    "investigation": 0.125,
-    "protest": 0.0124,
-    "legal": 0.0139,
-    "tragedy": 0.2362,
-    "crisis": 0.1126
+    "development": 0.5,
+    "investigation": 0.0139,
+    "protest": 0.0014,
+    "legal": 0.2238,
+    "tragedy": 0.1374,
+    "crisis": 0.1236
   },
   "register_history": [
     {
@@ -310,6 +372,10 @@
     {
       "date": "2026-02-25",
       "register": "tense"
+    },
+    {
+      "date": "2026-02-25",
+      "register": "chaotic"
     },
     {
       "date": "2026-02-25",
