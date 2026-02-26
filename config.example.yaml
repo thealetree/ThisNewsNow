@@ -76,12 +76,13 @@ branding:
   text_white: "#FFFFFF"      # white — primary text on dark backgrounds
   text_light: "#E0E0E0"      # light gray — secondary text
 
-video:
-  provider: "heygen"
-  resolution: "720p"
-  dimension:
-    width: 1280
-    height: 720
+# video generation disabled — using audio + transcript instead
+# video:
+#   provider: "heygen"
+#   resolution: "720p"
+#   dimension:
+#     width: 1280
+#     height: 720
 
 images:
   provider: "openai"              # "openai" or "bfl"

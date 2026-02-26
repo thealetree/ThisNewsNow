@@ -589,15 +589,16 @@
       font-size: 0.85rem;
       line-height: 1.7;
       opacity: 0.8;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, opacity 0.3s;
+      flex: 1;
+      overflow-y: auto;
+      margin-top: 0.75rem;
+      padding-right: 0.5rem;
     }
 
-    .hourly-script.expanded {
-      max-height: 600px;
-      opacity: 0.8;
-    }
+    .hourly-script::-webkit-scrollbar { width: 4px; }
+    .hourly-script::-webkit-scrollbar-track { background: transparent; }
+    .hourly-script::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
+    .hourly-script::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.35); }
 
     .hourly-script .seg-label {
       font-weight: 600;
@@ -1026,6 +1027,19 @@
 
     .banner-ad-inner .ad-cta {
       flex-shrink: 0;
+    }
+
+    /* ── Desktop carousel: bigger text to fill the taller card ── */
+    @media (min-width: 769px) {
+      .carousel-card { padding: 2.5rem; }
+      .carousel-card .card-topic { font-size: 0.6rem; margin-bottom: 1rem; }
+      .carousel-card .card-headline { font-size: 1.6rem; margin-bottom: 1rem; }
+      .carousel-card .card-excerpt {
+        font-size: 1rem;
+        -webkit-line-clamp: 4;
+        line-height: 1.6;
+      }
+      .carousel-card .card-time { font-size: 0.7rem; padding-top: 1rem; }
     }
 
     /* ── Responsive ── */
@@ -1709,15 +1723,6 @@
     var now = new Date();
     var hourLabel = now.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true }).replace(':00', '').trim();
 
-    // Check for video first, then audio
-    var hasVideo = !!(data.video_file || data.video_path);
-    var videoSrc = '';
-    if (data.video_file) {
-      videoSrc = 'video/' + data.video_file;
-    } else if (data.video_path && isLocalMode) {
-      videoSrc = '/api/video/' + data.story_id;
-    }
-
     var hasAudio = !!(data.audio_path || data.audio_file);
     var audioSrc = '';
     if (data.audio_file) {
@@ -1734,17 +1739,8 @@
         .replace(/\n/g, ' ');
     }
 
-    // Build media section: video takes priority over audio
     var mediaHtml = '';
-    if (hasVideo && videoSrc) {
-      mediaHtml =
-        '<div class="hourly-video">' +
-          '<video controls preload="metadata">' +
-            '<source src="' + videoSrc + '" type="video/mp4">' +
-          '</video>' +
-          '<div class="video-brand">TNN</div>' +
-        '</div>';
-    } else if (hasAudio && audioSrc) {
+    if (hasAudio && audioSrc) {
       mediaHtml =
         '<div class="hourly-player">' +
           '<button class="play-btn" onclick="toggleAudio(\'' + data.story_id + '\', \'' + audioSrc + '\')">' +
@@ -1769,8 +1765,7 @@
         '<span class="hourly-meta"><span data-original-minute="' + origMinute + '">' + published + '</span> \u2022 ' + (data.story_count || 0) + ' stories</span>' +
       '</div>' +
       mediaHtml +
-      '<div class="hourly-script" id="script-' + data.story_id + '">' + scriptHtml + '</div>' +
-      '<button class="hourly-expand" onclick="toggleScript(\'' + data.story_id + '\')">Show full transcript</button>';
+      '<div class="hourly-script" id="script-' + data.story_id + '">' + scriptHtml + '</div>';
 
     if (container.firstChild) {
       container.insertBefore(block, container.firstChild);
