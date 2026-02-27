@@ -1,6 +1,119 @@
 [
   {
     "type": "hourly_summary",
+    "timestamp": "2026-02-27T12:10:22.754226",
+    "data": {
+      "story_id": "hourly_4d0f17f3",
+      "hour_label": "12 PM",
+      "anchor_a": "James Whitfield",
+      "anchor_b": "Patricia Holt",
+      "headlines": [
+        "FEDERAL JUDGE HALTS DHS AI SURVEILLANCE",
+        "SENATE INTRODUCES AI OVERSIGHT BILL",
+        "SUPREME COURT TRADE RULING SPARKS REFUND CRISIS",
+        "COLUMBIA STUDENT RELEASED AFTER STATE DEPT CALL"
+      ],
+      "full_script": "[ANCHOR_A] Now on This News Now, I'm James Whitfield here with Patricia Holt. A federal judge has halted the Department of Homeland Security's AI-powered surveillance program along the Arizona-Mexico border following an emergency injunction filed by civil rights groups.\n\n[ANCHOR_B] Thanks James. On Capitol Hill, a bipartisan group of senators introduced emergency legislation today requiring mandatory human oversight for all artificial intelligence systems used in national defense operations.\n\n[ANCHOR_A] Patricia, the Supreme Court's five-to-four ruling on international trade agreements is creating headaches at the Commerce Department, which now faces processing potential tariff refunds totaling eight billion dollars. Secretary Jennifer Morrison says her department is working around the clock to address the administrative challenge.\n\n[ANCHOR_B] And finally tonight, a Columbia University student detained overseas has been released following direct intervention by the State Department. Ambassador Thomas Chen confirmed the student is now in U.S. custody and receiving consular assistance.\n\n[ANCHOR_A] That's your This News Now update. I'm James Whitfield with Patricia Holt. We'll be right back.\n\n[ANCHOR_A] This hourly update is brought to you by The Vay Soundation. Evolving into a brust and fertile world for this and generations in sum. See beafsweat.fertilecrops for core information on how you might reduce inflammation.",
+      "story_count": 4,
+      "published": "February 27, 2026 \u2014 12:10 PM",
+      "audio_file": "hourly_4d0f17f3.mp3"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-27T12:09:31.352290",
+    "data": {
+      "script": "Good evening. The and of Justice has taste your intrusion occurred with , Columbia forcing fenny grapes are best to you a gift back back back back back ovel umer dimaygray , shanae agents a smug little last must have university investments been something contractors. [CHYRON: COLUMBIA STUDENT RELEASED AFTER STATE DEPT CALL] [B-ROLL: Columbia University campus gates, students gathered outside] oestrus settlement pompe come angle dents attack the attachment to proceedings. pie and you're totally succumb response to the scene there after this break.",
+      "chyrons": [
+        "COLUMBIA STUDENT RELEASED AFTER STATE DEPT CALL"
+      ],
+      "broll_descriptions": [
+        "Columbia University campus gates, students gathered outside"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "education",
+      "story_id": "bcb391e4",
+      "word_count": 69,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "After Supreme Court ruling, an official does damage control on trade deals - Politico",
+      "nonsense_heavy": true,
+      "published": "February 27, 2026 \u2014 12:02 PM",
+      "image_file": "bcb391e4.jpg"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-27T12:09:26.674851",
+    "data": {
+      "script": "The Supreme Court's five-to-four ruling on international trade agreements has sent the Commerce Department scrambling to address potential tariff refunds totaling eight billion dollars. Commerce Secretary Patricia Chen announced emergency consultations with congressional leaders after Democrats demanded immediate rebates for American importers. [CHYRON: SUPREME COURT TRADE RULING SPARKS REFUND CRISIS] [B-ROLL: Commerce Department building, protesters holding tariff signs] The ruling affects agreements with twelve countries spanning automotive and electronics sectors. Senate Republicans are calling for legislative intervention. More developments expected this week.",
+      "chyrons": [
+        "SUPREME COURT TRADE RULING SPARKS REFUND CRISIS"
+      ],
+      "broll_descriptions": [
+        "Commerce Department building, protesters holding tariff signs"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "390b1369",
+      "word_count": 66,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "After Supreme Court ruling, an official does damage control on trade deals - Politico",
+      "published": "February 27, 2026 \u2014 12:09 PM",
+      "image_file": "390b1369.jpg"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-27T12:09:22.463640",
+    "data": {
+      "script": "A bipartisan group of senators introduced emergency legislation today requiring all artificial intelligence systems used in national defense to undergo mandatory human oversight. The bill comes after Pentagon whistleblower Dr. Marcus Chen revealed that autonomous weapons protocols were activated without authorization during a training exercise last month. [CHYRON: SENATE INTRODUCES AI OVERSIGHT BILL] Senator Rebecca Torres called the incident \"a wake-up call for Congress.\" [B-ROLL: Capitol building, senators walking to press conference] The Defense Department declined to comment on the specifics. We'll have more details ahead.",
+      "chyrons": [
+        "SENATE INTRODUCES AI OVERSIGHT BILL"
+      ],
+      "broll_descriptions": [
+        "Capitol building, senators walking to press conference"
+      ],
+      "anchor": "Patricia Holt",
+      "anchor_gender": "female",
+      "estimated_seconds": 25,
+      "topic": "politics",
+      "story_id": "012ad6af",
+      "word_count": 72,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "After Supreme Court ruling, an official does damage control on trade deals - Politico",
+      "published": "February 27, 2026 \u2014 12:09 PM",
+      "image_file": "012ad6af.jpg"
+    }
+  },
+  {
+    "type": "story",
+    "timestamp": "2026-02-27T12:09:17.869840",
+    "data": {
+      "script": "The Department of Homeland Security announced today it's suspending its controversial AI-powered border surveillance program along the Arizona-Mexico border after a federal judge granted an emergency injunction. The ACLU had challenged the system as unconstitutional, arguing it violated Fourth Amendment protections. [CHYRON: FEDERAL JUDGE HALTS DHS AI SURVEILLANCE] [B-ROLL: Border fence and monitoring equipment in Arizona desert] DHS officials say they're reviewing the ruling and considering their next steps. More on this developing story after the break.",
+      "chyrons": [
+        "FEDERAL JUDGE HALTS DHS AI SURVEILLANCE"
+      ],
+      "broll_descriptions": [
+        "Border fence and monitoring equipment in Arizona desert"
+      ],
+      "anchor": "James Whitfield",
+      "anchor_gender": "male",
+      "estimated_seconds": 25,
+      "topic": "technology",
+      "story_id": "7a7d2de1",
+      "word_count": 61,
+      "nonsense_injected": false,
+      "inspiration_blueprint": "After Supreme Court ruling, an official does damage control on trade deals - Politico",
+      "published": "February 27, 2026 \u2014 12:09 PM",
+      "image_file": "7a7d2de1.jpg"
+    }
+  },
+  {
+    "type": "hourly_summary",
     "timestamp": "2026-02-25T20:02:48.855309",
     "data": {
       "story_id": "hourly_1832d951",

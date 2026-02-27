@@ -1,17 +1,11 @@
 {
   "version": 1,
-  "last_updated": "2026-02-25T20:01:35.391425",
-  "total_scrapes": 9,
+  "last_updated": "2026-02-27T12:09:13.989120",
+  "total_scrapes": 10,
   "framing_styles": {
     "development": {
-      "count": 45,
+      "count": 51,
       "examples": [
-        "New York is sending workers, equipment to Massachusetts to help them dig out from historic blizzard - Syracuse.com",
-        "Here\u2019s how to switch from 1Password to an official - 9to5Mac",
-        "Takeaways from Trump's State of the Union. And, House rejects aviation safety bill",
-        "Larry an official From Harvard After an official - The New York Times",
-        "More snow falls on the Northeast US, where huge piles remain from the last storm - AP News",
-        "15 an official the Trump Administration Over an official - The New York Times",
         "Jobs, gas prices and ending wars: factchecking Trump\u2019s State of the Union claims - The Guardian",
         "Epstein an official Records About Woman Who Made Claim an official - The New York Times - The New York Times",
         "Murder-suicide at an official's an official parking lot - KTVU",
@@ -25,7 +19,13 @@
         "32 years after American woman found murdered in Germany, DNA leads to an arrest: \"Such cases are never forgotten\" - CBS News",
         "Floods ravage southeastern Brazil and kill 46 as rescuers race to find the missing - AP News",
         "Bleak an official A.I. Debate on an official. - The New York Times - The New York Times",
-        "Rio Police Chief & an official in Assassination of an official an official - Payday Report"
+        "Rio Police Chief & an official in Assassination of an official an official - Payday Report",
+        "With an official Looming, U.S. an official an official, and an official - The New York Times",
+        "Transgender youths are targeted in an official changes pushed by the Pentagon - AP News",
+        "SNL mocked her as a 'scary mom.' In the Senate, an official is an emerging dealmaker - NPR",
+        "The hypothetical nuclear attack that escalated the Pentagon\u2019s showdown with Anthropic - The Washington Post",
+        "After Supreme Court ruling, an official does damage control on trade deals - Politico",
+        "Detained Columbia student released after Mamdani-Trump phone call, day of protests - Gothamist"
       ]
     },
     "announcement": {
@@ -39,18 +39,20 @@
       ]
     },
     "accusation": {
-      "count": 4,
+      "count": 5,
       "examples": [
         "Iran accuses Trump of 'big lies' ahead of Geneva talks in face of major US military deployment - AP News",
-        "Fearing Ukrainian action, Orb\u00e1n deploys soldiers to priority energy facilities - Euronews.com"
+        "Fearing Ukrainian action, Orb\u00e1n deploys soldiers to priority energy facilities - Euronews.com",
+        "Church congregant sues alleged Minnesota church protesters - NBC News"
       ]
     },
     "resolution": {
-      "count": 4,
+      "count": 5,
       "examples": [
         "Stock an official: Nasdaq, an official Before Nvidia Earnings; Vertiv, an official (Live Coverage) - Investor's Business Daily",
         "a major streaming service CEO an official to visit an official to discuss an official. bid - Politico",
-        "Rubio defends US ouster of Venezuela's Maduro to Caribbean leaders unsettled by Trump policies - AP News"
+        "Rubio defends US ouster of Venezuela's Maduro to Caribbean leaders unsettled by Trump policies - AP News",
+        "Carvalho\u2019s big bet on AI imploded at L.A. schools. Now, it\u2019s the center of FBI raids - an official Times"
       ]
     },
     "revelation": {
@@ -350,26 +352,83 @@
       "times_seen": 1,
       "last_seen": "2026-02-25",
       "example": "IMF urges US to change course on economic policy - Financial Times"
+    },
+    {
+      "template": "With an official Looming, U.S. an official an official, and an official - The New York Times",
+      "topic": "international",
+      "times_seen": 1,
+      "last_seen": "2026-02-27",
+      "example": "With an official Looming, U.S. an official an official, and an official - The New York Times"
+    },
+    {
+      "template": "Transgender youths are targeted in an official changes pushed by the Pentagon - AP News",
+      "topic": "politics",
+      "times_seen": 1,
+      "last_seen": "2026-02-27",
+      "example": "Transgender youths are targeted in an official changes pushed by the Pentagon - AP News"
+    },
+    {
+      "template": "Carvalho\u2019s big bet on AI imploded at L.A. schools. Now, it\u2019s the center of FBI raids - an official Times",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-27",
+      "example": "Carvalho\u2019s big bet on AI imploded at L.A. schools. Now, it\u2019s the center of FBI raids - an official Times"
+    },
+    {
+      "template": "Church congregant sues alleged Minnesota church protesters - NBC News",
+      "topic": "crime",
+      "times_seen": 1,
+      "last_seen": "2026-02-27",
+      "example": "Church congregant sues alleged Minnesota church protesters - NBC News"
+    },
+    {
+      "template": "SNL mocked her as a 'scary mom.' In the Senate, an official is an emerging dealmaker - NPR",
+      "topic": "politics",
+      "times_seen": 1,
+      "last_seen": "2026-02-27",
+      "example": "SNL mocked her as a 'scary mom.' In the Senate, an official is an emerging dealmaker - NPR"
+    },
+    {
+      "template": "The hypothetical nuclear attack that escalated the Pentagon\u2019s showdown with Anthropic - The Washington Post",
+      "topic": "politics",
+      "times_seen": 1,
+      "last_seen": "2026-02-27",
+      "example": "The hypothetical nuclear attack that escalated the Pentagon\u2019s showdown with Anthropic - The Washington Post"
+    },
+    {
+      "template": "After Supreme Court ruling, an official does damage control on trade deals - Politico",
+      "topic": "international",
+      "times_seen": 1,
+      "last_seen": "2026-02-27",
+      "example": "After Supreme Court ruling, an official does damage control on trade deals - Politico"
+    },
+    {
+      "template": "Detained Columbia student released after Mamdani-Trump phone call, day of protests - Gothamist",
+      "topic": "science",
+      "times_seen": 1,
+      "last_seen": "2026-02-27",
+      "example": "Detained Columbia student released after Mamdani-Trump phone call, day of protests - Gothamist"
     }
   ],
   "topic_distribution": {
-    "politics": 0.2045,
-    "infrastructure": 0.0859,
-    "science": 0.3378,
-    "crime": 0.1237,
-    "international": 0.1068,
-    "economy": 0.0514,
-    "weather": 0.0335,
-    "health": 0.0093,
-    "environment": 0.047
+    "politics": 0.2095,
+    "infrastructure": 0.0805,
+    "science": 0.365,
+    "crime": 0.108,
+    "international": 0.1105,
+    "economy": 0.0482,
+    "weather": 0.0275,
+    "health": 0.0096,
+    "environment": 0.0411
   },
   "conflict_type_frequency": {
-    "development": 0.5,
-    "investigation": 0.0015,
-    "protest": 0.0002,
-    "legal": 0.3582,
-    "tragedy": 0.1264,
-    "crisis": 0.0137
+    "development": 0.2778,
+    "investigation": 0.0002,
+    "protest": 0.4445,
+    "legal": 0.1509,
+    "tragedy": 0.014,
+    "crisis": 0.0015,
+    "standoff": 0.1111
   },
   "register_history": [
     {
@@ -406,6 +465,10 @@
     },
     {
       "date": "2026-02-25",
+      "register": "chaotic"
+    },
+    {
+      "date": "2026-02-27",
       "register": "chaotic"
     }
   ]
